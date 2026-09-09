@@ -1990,10 +1990,14 @@ a {
 .site-footer {
 
     padding-top:
-        55px;
+        60px;
 
     background:
-        #100705;
+        linear-gradient(
+            180deg,
+            #130806,
+            #100705
+        );
 
     border-top:
         1px solid var(--border-dark);
@@ -2001,13 +2005,17 @@ a {
 }
 
 
+/* =========================================================
+   FOOTER GRID
+========================================================= */
+
 .footer-grid {
 
     display:
         grid;
 
     grid-template-columns:
-        1.1fr 1fr 1fr;
+        1.15fr 1.25fr 0.85fr;
 
     gap:
         55px;
@@ -2016,10 +2024,14 @@ a {
         center;
 
     padding-bottom:
-        45px;
+        55px;
 
 }
 
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
 
 .footer-brand {
 
@@ -2046,6 +2058,9 @@ a {
     object-fit:
         contain;
 
+    flex-shrink:
+        0;
+
 }
 
 
@@ -2059,7 +2074,13 @@ a {
         serif;
 
     font-size:
-        1.5rem;
+        1.55rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.04em;
 
 }
 
@@ -2067,22 +2088,25 @@ a {
 .footer-brand p {
 
     max-width:
-        220px;
+        230px;
+
+    margin-top:
+        5px;
 
     color:
         var(--text-muted);
 
     font-size:
-        0.72rem;
+        0.7rem;
 
     font-weight:
-        600;
+        700;
 
     letter-spacing:
-        0.05em;
+        0.06em;
 
     line-height:
-        1.5;
+        1.55;
 
     text-transform:
         uppercase;
@@ -2090,10 +2114,17 @@ a {
 }
 
 
+/* =========================================================
+   FOOTER QUOTE
+========================================================= */
+
 .footer-quote {
 
+    position:
+        relative;
+
     padding:
-        15px 40px;
+        18px 45px;
 
     border-left:
         1px solid var(--gold-dark);
@@ -2103,6 +2134,26 @@ a {
 
     text-align:
         center;
+
+}
+
+
+.footer-quote::before {
+
+    content:
+        "✦";
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--gold);
+
+    font-size:
+        0.8rem;
 
 }
 
@@ -2117,13 +2168,24 @@ a {
         serif;
 
     font-size:
-        1.2rem;
+        clamp(
+            1.15rem,
+            1.8vw,
+            1.35rem
+        );
 
     font-style:
         italic;
 
+    line-height:
+        1.45;
+
 }
 
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
 
 .footer-links {
 
@@ -2137,18 +2199,24 @@ a {
         flex-end;
 
     gap:
-        12px 20px;
+        12px 22px;
 
 }
 
 
 .footer-links a {
 
+    position:
+        relative;
+
     color:
         var(--text-muted);
 
     font-size:
         0.72rem;
+
+    font-weight:
+        600;
 
     transition:
         color 0.2s ease;
@@ -2164,10 +2232,17 @@ a {
 }
 
 
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
 .footer-bottom {
 
     display:
         flex;
+
+    align-items:
+        center;
 
     justify-content:
         space-between;
