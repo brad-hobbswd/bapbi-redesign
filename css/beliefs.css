@@ -1,0 +1,2044 @@
+/* =========================================================
+   BAPBI REDESIGN
+   BELIEFS PAGE STYLESHEET
+
+   Bethesda Apostolic Pentecostal Bible Institute
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --espresso: #120906;
+    --espresso-light: #211008;
+    --brown: #351707;
+    --bronze: #6d350c;
+
+    --gold-dark: #9f6816;
+    --gold: #d5a32f;
+    --gold-light: #f1cc72;
+
+    --ivory: #f6f0e5;
+    --cream: #e9dfcf;
+
+    --white: #ffffff;
+
+    --text-light: #e9e4dc;
+    --text-muted: #b9b0a7;
+
+    --border-dark: rgba(213, 163, 47, 0.22);
+    --border-light: rgba(38, 20, 8, 0.15);
+
+    --shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+    --container-width: 1180px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background:
+        var(--espresso);
+
+    color:
+        var(--text-light);
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    line-height:
+        1.7;
+
+    overflow-x:
+        hidden;
+
+}
+
+
+img {
+
+    display:
+        block;
+
+    max-width:
+        100%;
+
+}
+
+
+a {
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+
+}
+
+
+button {
+
+    font:
+        inherit;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.content-container {
+
+    width:
+        min(
+            calc(100% - 48px),
+            var(--container-width)
+        );
+
+    margin:
+        0 auto;
+
+}
+
+
+/* =========================================================
+   TOP MESSAGE
+========================================================= */
+
+.site-header {
+
+    position:
+        relative;
+
+    z-index:
+        1000;
+
+    background:
+        linear-gradient(
+            180deg,
+            #160b07,
+            #100807
+        );
+
+    border-bottom:
+        1px solid var(--border-dark);
+
+}
+
+
+.top-message {
+
+    min-height:
+        34px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-end;
+
+    padding:
+        0 5%;
+
+    border-bottom:
+        1px solid rgba(213, 163, 47, 0.14);
+
+}
+
+
+.top-message p {
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        0.68rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.11em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.top-message span {
+
+    color:
+        var(--gold);
+
+    padding:
+        0 5px;
+
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.main-navigation {
+
+    width:
+        min(
+            calc(100% - 48px),
+            1400px
+        );
+
+    min-height:
+        82px;
+
+    margin:
+        0 auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        34px;
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.brand-logo {
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    object-fit:
+        contain;
+
+}
+
+
+.brand span {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        1.45rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.04em;
+
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.desktop-nav {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        26px;
+
+    margin-left:
+        auto;
+
+}
+
+
+.desktop-nav > a,
+.dropdown-button {
+
+    position:
+        relative;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+
+    background:
+        none;
+
+    border:
+        none;
+
+    color:
+        var(--text-light);
+
+    cursor:
+        pointer;
+
+    font-size:
+        0.73rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.07em;
+
+    text-transform:
+        uppercase;
+
+    padding:
+        30px 0;
+
+    transition:
+        color 0.25s ease;
+
+}
+
+
+.desktop-nav > a:hover,
+.dropdown-button:hover {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+.desktop-nav > a.active::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        20px;
+
+    height:
+        2px;
+
+    background:
+        var(--gold);
+
+}
+
+
+/* =========================================================
+   DROPDOWNS
+========================================================= */
+
+.nav-dropdown {
+
+    position:
+        relative;
+
+}
+
+
+.dropdown-button span {
+
+    color:
+        var(--gold);
+
+    font-size:
+        0.85rem;
+
+}
+
+
+.dropdown-menu {
+
+    position:
+        absolute;
+
+    top:
+        calc(100% - 8px);
+
+    left:
+        -18px;
+
+    width:
+        220px;
+
+    padding:
+        10px;
+
+    background:
+        #1a0d08;
+
+    border:
+        1px solid var(--border-dark);
+
+    box-shadow:
+        var(--shadow);
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+}
+
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.dropdown-menu a {
+
+    display:
+        block;
+
+    padding:
+        11px 14px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.85rem;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.dropdown-menu a:hover {
+
+    color:
+        var(--gold-light);
+
+    background:
+        rgba(213, 163, 47, 0.08);
+
+}
+
+
+/* =========================================================
+   ENROLL BUTTON
+========================================================= */
+
+.enroll-button {
+
+    flex-shrink:
+        0;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        46px;
+
+    padding:
+        0 23px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold)
+        );
+
+    color:
+        #241506;
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.07em;
+
+    text-transform:
+        uppercase;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+
+    display:
+        none;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-direction:
+        column;
+
+    gap:
+        6px;
+
+    background:
+        transparent;
+
+    border:
+        1px solid var(--border-dark);
+
+    cursor:
+        pointer;
+
+}
+
+
+.mobile-menu-button span {
+
+    display:
+        block;
+
+    width:
+        21px;
+
+    height:
+        2px;
+
+    background:
+        var(--gold-light);
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-navigation {
+
+    display:
+        none;
+
+}
+
+
+/* =========================================================
+   BELIEFS INTRODUCTION
+========================================================= */
+
+.beliefs-hero {
+
+    position:
+        relative;
+
+    padding:
+        115px 0 105px;
+
+    overflow:
+        hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(213, 163, 47, 0.14),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(109, 53, 12, 0.28),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #0e0705,
+            #1c0d07
+        );
+
+}
+
+
+.beliefs-hero::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(213, 163, 47, 0.04),
+            transparent
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+.beliefs-hero-content {
+
+    position:
+        relative;
+
+    max-width:
+        900px;
+
+}
+
+
+.section-eyebrow {
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.2em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.beliefs-hero h1 {
+
+    margin:
+        18px 0 25px;
+
+    color:
+        var(--ivory);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            6rem
+        );
+
+    font-weight:
+        600;
+
+    line-height:
+        1;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.beliefs-hero h1 span {
+
+    display:
+        block;
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.beliefs-hero p {
+
+    max-width:
+        720px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        1.05rem;
+
+}
+
+
+/* =========================================================
+   BELIEFS INTRO QUOTE
+========================================================= */
+
+.beliefs-statement {
+
+    padding:
+        75px 0;
+
+    background:
+        #160a06;
+
+    border-top:
+        1px solid var(--border-dark);
+
+    border-bottom:
+        1px solid var(--border-dark);
+
+}
+
+
+.beliefs-statement blockquote {
+
+    max-width:
+        1000px;
+
+    margin:
+        0 auto;
+
+    color:
+        var(--cream);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            1.8rem,
+            3vw,
+            3rem
+        );
+
+    font-style:
+        italic;
+
+    line-height:
+        1.35;
+
+    text-align:
+        center;
+
+}
+
+
+.beliefs-statement p {
+
+    margin-top:
+        25px;
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.16em;
+
+    text-align:
+        center;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =========================================================
+   BELIEFS CONTENT
+========================================================= */
+
+.beliefs-content {
+
+    padding:
+        110px 0;
+
+    background:
+        var(--ivory);
+
+    color:
+        #2b1d16;
+
+}
+
+
+/* =========================================================
+   BELIEF SECTION
+========================================================= */
+
+.belief-section {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        260px minmax(0, 1fr);
+
+    gap:
+        70px;
+
+    padding:
+        85px 0;
+
+    border-bottom:
+        1px solid rgba(109, 53, 12, 0.16);
+
+}
+
+
+.belief-section:first-child {
+
+    padding-top:
+        0;
+
+}
+
+
+.belief-section:last-child {
+
+    padding-bottom:
+        0;
+
+    border-bottom:
+        none;
+
+}
+
+
+/* =========================================================
+   BELIEF NUMBER
+========================================================= */
+
+.belief-number {
+
+    color:
+        var(--gold-dark);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        0.75rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.18em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.belief-number::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        70px;
+
+    height:
+        1px;
+
+    margin-top:
+        22px;
+
+    background:
+        var(--gold);
+
+}
+
+
+/* =========================================================
+   BELIEF TEXT
+========================================================= */
+
+.belief-text h2 {
+
+    margin-bottom:
+        25px;
+
+    color:
+        #2a1a12;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.2rem
+        );
+
+    font-weight:
+        600;
+
+    line-height:
+        1.15;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.belief-text h2 span {
+
+    color:
+        var(--bronze);
+
+}
+
+
+.belief-text p {
+
+    max-width:
+        800px;
+
+    margin-bottom:
+        24px;
+
+    color:
+        #665a52;
+
+    font-size:
+        1rem;
+
+}
+
+
+.belief-text p:last-child {
+
+    margin-bottom:
+        0;
+
+}
+
+
+/* =========================================================
+   SCRIPTURE REFERENCES
+========================================================= */
+
+.scripture-references {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+
+    margin-top:
+        35px;
+
+}
+
+
+.scripture-references span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    min-height:
+        34px;
+
+    padding:
+        0 14px;
+
+    background:
+        #efe5d6;
+
+    color:
+        var(--bronze);
+
+    border:
+        1px solid rgba(109, 53, 12, 0.14);
+
+    font-size:
+        0.7rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.06em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =========================================================
+   EMPHASIS PANEL
+========================================================= */
+
+.belief-emphasis {
+
+    margin-top:
+        38px;
+
+    padding:
+        30px 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2a1408,
+            #4a250d
+        );
+
+    border-left:
+        3px solid var(--gold);
+
+    box-shadow:
+        0 15px 35px rgba(40, 20, 8, 0.12);
+
+}
+
+
+.belief-emphasis p {
+
+    margin:
+        0;
+
+    color:
+        var(--cream);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        1.35rem;
+
+    font-style:
+        italic;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* =========================================================
+   FOUNDATION SECTION
+========================================================= */
+
+.foundation-section {
+
+    padding:
+        110px 0;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(213, 163, 47, 0.16),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #110805,
+            #211008
+        );
+
+}
+
+
+.foundation-content {
+
+    max-width:
+        900px;
+
+}
+
+
+.foundation-content h2 {
+
+    margin:
+        15px 0 25px;
+
+    color:
+        var(--ivory);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(
+            2.3rem,
+            5vw,
+            4.2rem
+        );
+
+    font-weight:
+        600;
+
+    line-height:
+        1.1;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.foundation-content h2 span {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.foundation-content > p:not(.section-eyebrow) {
+
+    max-width:
+        750px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        1.05rem;
+
+}
+
+
+/* =========================================================
+   FOUNDATION GRID
+========================================================= */
+
+.foundation-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        25px;
+
+    margin-top:
+        55px;
+
+}
+
+
+.foundation-card {
+
+    padding:
+        35px 30px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid var(--border-dark);
+
+}
+
+
+.foundation-card h3 {
+
+    margin-bottom:
+        15px;
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        1.15rem;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.foundation-card p {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.9rem;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    padding-top:
+        55px;
+
+    background:
+        #100705;
+
+    border-top:
+        1px solid var(--border-dark);
+
+}
+
+
+.footer-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.1fr 1fr 1fr;
+
+    gap:
+        55px;
+
+    align-items:
+        center;
+
+    padding-bottom:
+        45px;
+
+}
+
+
+.footer-brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        16px;
+
+}
+
+
+.footer-brand img {
+
+    width:
+        78px;
+
+    height:
+        78px;
+
+    object-fit:
+        contain;
+
+}
+
+
+.footer-brand h2 {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        1.5rem;
+
+}
+
+
+.footer-brand p {
+
+    max-width:
+        220px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.05em;
+
+    line-height:
+        1.5;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.footer-quote {
+
+    padding:
+        15px 40px;
+
+    border-left:
+        1px solid var(--gold-dark);
+
+    border-right:
+        1px solid var(--gold-dark);
+
+    text-align:
+        center;
+
+}
+
+
+.footer-quote p {
+
+    color:
+        var(--cream);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        1.2rem;
+
+    font-style:
+        italic;
+
+}
+
+
+.footer-links {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    justify-content:
+        flex-end;
+
+    gap:
+        12px 20px;
+
+}
+
+
+.footer-links a {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.72rem;
+
+    transition:
+        color 0.2s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.footer-bottom {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding:
+        25px 0;
+
+    border-top:
+        1px solid rgba(213, 163, 47, 0.13);
+
+}
+
+
+.footer-bottom p {
+
+    color:
+        #82756d;
+
+    font-size:
+        0.68rem;
+
+}
+
+
+.footer-bottom p:last-child {
+
+    color:
+        var(--gold-dark);
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.08em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .desktop-nav {
+
+        gap:
+            17px;
+
+    }
+
+
+    .desktop-nav > a,
+    .dropdown-button {
+
+        font-size:
+            0.65rem;
+
+    }
+
+
+    .main-navigation {
+
+        gap:
+            20px;
+
+    }
+
+
+    .foundation-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .belief-section {
+
+        grid-template-columns:
+            200px minmax(0, 1fr);
+
+        gap:
+            45px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .top-message {
+
+        display:
+            none;
+
+    }
+
+
+    .main-navigation {
+
+        min-height:
+            74px;
+
+        width:
+            min(
+                calc(100% - 32px),
+                100%
+            );
+
+    }
+
+
+    .desktop-nav,
+    .enroll-button {
+
+        display:
+            none;
+
+    }
+
+
+    .mobile-menu-button {
+
+        display:
+            flex;
+
+        margin-left:
+            auto;
+
+    }
+
+
+    .mobile-navigation {
+
+        position:
+            fixed;
+
+        top:
+            0;
+
+        right:
+            0;
+
+        width:
+            min(
+                380px,
+                88vw
+            );
+
+        height:
+            100vh;
+
+        padding:
+            22px;
+
+        background:
+            #130b08;
+
+        border-left:
+            1px solid var(--border-dark);
+
+        box-shadow:
+            -20px 0 60px rgba(0, 0, 0, 0.5);
+
+        transform:
+            translateX(110%);
+
+        transition:
+            transform 0.35s ease;
+
+        overflow-y:
+            auto;
+
+    }
+
+
+    .mobile-navigation.open {
+
+        transform:
+            translateX(0);
+
+    }
+
+
+    .mobile-nav-header {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-between;
+
+        padding:
+            0 0 20px;
+
+        margin-bottom:
+            10px;
+
+        border-bottom:
+            1px solid var(--border-dark);
+
+    }
+
+
+    .mobile-nav-header span {
+
+        color:
+            var(--gold-light);
+
+        font-family:
+            "Cinzel",
+            serif;
+
+        font-size:
+            1.1rem;
+
+    }
+
+
+    .mobile-nav-header button {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        background:
+            transparent;
+
+        border:
+            1px solid var(--border-dark);
+
+        color:
+            var(--gold-light);
+
+        font-size:
+            1.8rem;
+
+        cursor:
+            pointer;
+
+    }
+
+
+    .mobile-navigation a {
+
+        display:
+            block;
+
+        padding:
+            16px;
+
+        margin-bottom:
+            3px;
+
+        color:
+            var(--text-light);
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.05);
+
+        font-size:
+            1rem;
+
+        font-weight:
+            700;
+
+    }
+
+
+    .mobile-navigation a.mobile-active {
+
+        color:
+            var(--gold-light);
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(213, 163, 47, 0.17),
+                transparent
+            );
+
+        border:
+            1px solid var(--border-dark);
+
+    }
+
+
+    .beliefs-hero {
+
+        padding:
+            90px 0;
+
+    }
+
+
+    .belief-section {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            25px;
+
+        padding:
+            65px 0;
+
+    }
+
+
+    .belief-number::after {
+
+        width:
+            55px;
+
+        margin-top:
+            15px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+
+    }
+
+
+    .footer-brand {
+
+        justify-content:
+            center;
+
+    }
+
+
+    .footer-quote {
+
+        border:
+            none;
+
+        border-top:
+            1px solid var(--gold-dark);
+
+        border-bottom:
+            1px solid var(--gold-dark);
+
+    }
+
+
+    .footer-links {
+
+        justify-content:
+            center;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .content-container {
+
+        width:
+            min(
+                calc(100% - 32px),
+                var(--container-width)
+            );
+
+    }
+
+
+    .brand-logo {
+
+        width:
+            50px;
+
+        height:
+            50px;
+
+    }
+
+
+    .brand span {
+
+        font-size:
+            1.2rem;
+
+    }
+
+
+    .beliefs-hero {
+
+        padding:
+            75px 0;
+
+    }
+
+
+    .beliefs-hero h1 {
+
+        font-size:
+            2.7rem;
+
+    }
+
+
+    .beliefs-hero p {
+
+        font-size:
+            0.98rem;
+
+    }
+
+
+    .beliefs-statement {
+
+        padding:
+            60px 0;
+
+    }
+
+
+    .beliefs-content {
+
+        padding:
+            75px 0;
+
+    }
+
+
+    .belief-section {
+
+        padding:
+            55px 0;
+
+    }
+
+
+    .belief-text h2 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    .belief-text p {
+
+        font-size:
+            0.96rem;
+
+    }
+
+
+    .belief-emphasis {
+
+        padding:
+            25px;
+
+    }
+
+
+    .belief-emphasis p {
+
+        font-size:
+            1.2rem;
+
+    }
+
+
+    .foundation-section {
+
+        padding:
+            75px 0;
+
+    }
+
+
+    .foundation-grid {
+
+        gap:
+            18px;
+
+        margin-top:
+            40px;
+
+    }
+
+
+    .foundation-card {
+
+        padding:
+            28px 24px;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+    }
+
+}
