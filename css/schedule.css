@@ -12,6 +12,16 @@
     --font-body: "Inter", Arial, sans-serif;
 }
 
+/* =========================================================
+   BAPBI
+   SCHEDULE PAGE STYLESHEET
+   Version: 2026.09.10
+   Page-specific styles only.
+   Shared site shell is provided by css/styles.css.
+========================================================= */
+
+/* Global fonts and theme variables are provided by css/styles.css. */
+
 
 /* =========================================================
    PAGE INTRO
@@ -485,16 +495,6 @@
 
 
 /* =========================================================
-   MASTER FOOTER COMPATIBILITY
-   The footer markup now matches index.html exactly.
-========================================================= */
-
-.schedule-page .site-footer {
-    /* Reserved for future page-specific footer adjustments. */
-}
-
-
-/* =========================================================
    RESPONSIVE PAGE CONTENT
 ========================================================= */
 
@@ -592,48 +592,44 @@
 
 }
 
+
+
 /* =========================================================
    BETHESDA TABERNACLE LIGHT SECTION FIX
+   Keeps text readable on ivory backgrounds.
 ========================================================= */
 
 .church-schedule-section {
     background: var(--ivory);
 }
 
-
 .church-schedule-section .section-heading h2 {
     color: var(--dark-text);
 }
-
 
 .church-schedule-section .section-heading p {
     color: var(--dark-muted);
 }
 
-
-/* SERVICE CARDS */
+.church-schedule-section .eyebrow {
+    color: var(--gold-dark);
+}
 
 .service-card {
     background: var(--white);
 }
 
-
 .service-card h3 {
     color: var(--dark-text);
 }
-
 
 .service-card p {
     color: var(--dark-muted);
 }
 
-
 .service-time {
     color: var(--gold-dark);
 }
-
-
-/* FEATURED SERVICE CARD */
 
 .service-card.featured {
     background:
@@ -644,17 +640,21 @@
         );
 }
 
-
 .service-card.featured h3 {
     color: var(--ivory);
 }
-
 
 .service-card.featured p {
     color: var(--cream);
 }
 
-
 .service-card.featured .service-time {
     color: var(--gold-light);
 }
+
+
+/* =========================================================
+   MASTER SITE SHELL
+   Header, navigation, fonts, containers, and footer
+   are controlled by css/styles.css.
+========================================================= */
