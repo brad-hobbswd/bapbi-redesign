@@ -1,0 +1,358 @@
+/* =========================================================
+   BAPBI REDESIGN
+   SHARED NAVIGATION STYLESHEET
+   Based on the Leadership Page Navigation
+   Bethesda Apostolic Pentecostal Bible Institute
+========================================================= */
+
+.top-message {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 5%;
+    background: var(--espresso);
+    border-bottom: 1px solid rgba(213, 163, 47, 0.14);
+}
+
+.top-message p {
+    color: var(--gold-light);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.top-message span {
+    color: var(--gold);
+    padding: 0 5px;
+}
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+    background: linear-gradient(180deg, #160b07, #100807);
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.main-navigation {
+    width: min(calc(100% - 48px), 1400px);
+    min-height: 82px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.brand-name,
+.brand > span {
+    color: var(--gold-light);
+    font-family: "Cinzel", serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.brand-name strong {
+    display: block;
+}
+
+.brand-name small {
+    display: none;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-left: auto;
+}
+
+.desktop-nav > a,
+.dropdown-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 0.73rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 30px 0;
+    transition: color 0.25s ease;
+}
+
+.desktop-nav > a:hover,
+.dropdown-button:hover,
+.dropdown-button:focus-visible {
+    color: var(--gold-light);
+}
+
+.desktop-nav > a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    outline: none;
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    margin-left: 6px;
+    color: var(--gold);
+    font-size: 0.8rem;
+    line-height: 1;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.dropdown-button:hover .dropdown-arrow,
+.dropdown-button:focus-visible .dropdown-arrow {
+    color: var(--gold-light);
+    transform: translateY(1px);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% - 8px);
+    left: -18px;
+    width: 220px;
+    padding: 10px;
+    background: #1a0d08;
+    border: 1px solid var(--border-dark);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 11px 14px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible,
+.dropdown-menu a.active {
+    color: var(--gold-light);
+    background: rgba(213, 163, 47, 0.08);
+}
+
+.enroll-button {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 23px;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    color: #241506;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.enroll-button:hover,
+.enroll-button:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(213, 163, 47, 0.25);
+}
+
+.mobile-menu-button {
+    display: none;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: auto;
+    background: transparent;
+    border: 1px solid var(--border-dark);
+    cursor: pointer;
+}
+
+.mobile-menu-button span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    background: var(--gold-light);
+}
+
+.mobile-navigation {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .main-navigation {
+        width: calc(100% - 32px);
+        gap: 20px;
+    }
+
+    .desktop-nav {
+        gap: 18px;
+    }
+
+    .desktop-nav > a,
+    .dropdown-button {
+        font-size: 0.68rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .top-message {
+        display: none;
+    }
+
+    .main-navigation {
+        width: calc(100% - 32px);
+        min-height: 74px;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .desktop-nav,
+    .enroll-button {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    .mobile-navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2000;
+        display: flex;
+        flex-direction: column;
+        width: min(86vw, 360px);
+        height: 100vh;
+        overflow-y: auto;
+        padding: 76px 0 30px;
+        background: linear-gradient(180deg, #1b0d08, #0b0504);
+        border-left: 1px solid var(--border-dark);
+        box-shadow: -20px 0 60px rgba(0, 0, 0, 0.45);
+        transform: translateX(100%);
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
+    }
+
+    .mobile-navigation.open {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .mobile-navigation > a,
+    .mobile-navigation summary {
+        display: block;
+        padding: 15px 24px;
+        color: var(--text-light);
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        cursor: pointer;
+    }
+
+    .mobile-navigation > a:hover,
+    .mobile-navigation > a:focus-visible,
+    .mobile-navigation summary:hover {
+        color: var(--gold-light);
+        background: rgba(213, 163, 47, 0.07);
+    }
+
+    .mobile-navigation details {
+        margin: 0;
+    }
+
+    .mobile-navigation summary {
+        list-style: none;
+        position: relative;
+    }
+
+    .mobile-navigation summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .mobile-navigation summary::after {
+        content: "▾";
+        position: absolute;
+        right: 24px;
+        color: var(--gold);
+        transition: transform 0.2s ease;
+    }
+
+    .mobile-navigation details[open] summary::after {
+        transform: rotate(180deg);
+    }
+
+    .mobile-navigation details > a {
+        display: block;
+        padding: 12px 24px 12px 42px;
+        color: var(--text-muted);
+        font-size: 0.88rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .mobile-navigation details > a:hover,
+    .mobile-navigation details > a:focus-visible,
+    .mobile-navigation details > a.active {
+        color: var(--gold-light);
+        background: rgba(213, 163, 47, 0.08);
+    }
+
+    .mobile-enroll {
+        margin: 20px 24px 0;
+        padding: 14px 20px !important;
+        text-align: center;
+        color: #241506 !important;
+        background: linear-gradient(135deg, var(--gold-light), var(--gold));
+        border: 0 !important;
+    }
+}
