@@ -1,12 +1,32 @@
-/* =========================================================
-   BAPBI
-   SCHEDULE PAGE STYLESHEET
-   Version: 2026.09.10
-   Page-specific styles only.
-   Shared site shell is provided by css/styles.css.
-========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap");
 
 :root {
+    --espresso: #120906;
+    --espresso-light: #211008;
+    --brown: #351707;
+    --bronze: #6d350c;
+
+    --gold-dark: #9f6816;
+    --gold: #d5a32f;
+    --gold-light: #f1cc72;
+
+    --ivory: #f6f0e5;
+    --cream: #e9dfcf;
+    --white: #ffffff;
+
+    --text-light: #e9e4dc;
+    --text-muted: #b9b0a7;
+
+    --dark-text: #271c16;
+    --dark-muted: #766960;
+
+    --border-dark: rgba(213, 163, 47, 0.22);
+    --border-light: rgba(38, 20, 8, 0.14);
+
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+    --container-width: 1280px;
+
     --font-display: "Cinzel", Georgia, serif;
     --font-serif: "Cormorant Garamond", Georgia, serif;
     --font-body: "Inter", Arial, sans-serif;
@@ -19,9 +39,6 @@
    Page-specific styles only.
    Shared site shell is provided by css/styles.css.
 ========================================================= */
-
-/* Global fonts and theme variables are provided by css/styles.css. */
-
 
 /* =========================================================
    PAGE INTRO
@@ -592,46 +609,60 @@
 
 }
 
-
-
 /* =========================================================
-   BETHESDA TABERNACLE LIGHT SECTION FIX
-   Keeps text readable on ivory backgrounds.
+   SCHEDULE PAGE VISUAL AUTHORITY
+   This stylesheet loads after styles.css.
+   These rules intentionally control the Schedule page
+   visuals where the page uses light backgrounds.
 ========================================================= */
 
-.church-schedule-section {
+.schedule-page .top-message {
+    background:
+        linear-gradient(
+            90deg,
+            var(--brown),
+            var(--espresso-light)
+        );
+    color: var(--gold-light);
+}
+
+.schedule-page .top-message p {
+    color: var(--gold-light);
+}
+
+.schedule-page .church-schedule-section {
     background: var(--ivory);
 }
 
-.church-schedule-section .section-heading h2 {
+.schedule-page .church-schedule-section .section-heading h2 {
     color: var(--dark-text);
 }
 
-.church-schedule-section .section-heading p {
+.schedule-page .church-schedule-section .section-heading p {
     color: var(--dark-muted);
 }
 
-.church-schedule-section .eyebrow {
+.schedule-page .church-schedule-section .eyebrow {
     color: var(--gold-dark);
 }
 
-.service-card {
+.schedule-page .church-schedule-section .service-card {
     background: var(--white);
 }
 
-.service-card h3 {
+.schedule-page .church-schedule-section .service-card h3 {
     color: var(--dark-text);
 }
 
-.service-card p {
+.schedule-page .church-schedule-section .service-card p {
     color: var(--dark-muted);
 }
 
-.service-time {
+.schedule-page .church-schedule-section .service-time {
     color: var(--gold-dark);
 }
 
-.service-card.featured {
+.schedule-page .church-schedule-section .service-card.featured {
     background:
         linear-gradient(
             145deg,
@@ -640,21 +671,28 @@
         );
 }
 
-.service-card.featured h3 {
+.schedule-page .church-schedule-section .service-card.featured h3 {
     color: var(--ivory);
 }
 
-.service-card.featured p {
-    color: var(--cream);
+.schedule-page .church-schedule-section .service-card.featured p {
+    color: var(--text-light);
 }
 
-.service-card.featured .service-time {
+.schedule-page .church-schedule-section .service-card.featured .service-time {
     color: var(--gold-light);
 }
 
+.schedule-page .class-details {
+    background: var(--ivory);
+}
 
-/* =========================================================
-   MASTER SITE SHELL
-   Header, navigation, fonts, containers, and footer
-   are controlled by css/styles.css.
-========================================================= */
+.schedule-page .class-details .detail-label {
+    color: var(--gold-dark);
+}
+
+.schedule-page .class-details .schedule-detail strong {
+    color: var(--dark-text);
+}
+
+/* Keep the shared footer owned by styles.css. */
