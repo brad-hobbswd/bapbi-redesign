@@ -279,19 +279,13 @@ a {
         0 auto;
 
     display:
-        grid;
-
-    grid-template-columns:
-        auto minmax(0, 1fr) auto;
+        flex;
 
     align-items:
         center;
 
-    column-gap:
+    gap:
         34px;
-
-    flex-wrap:
-        nowrap;
 
 }
 
@@ -358,6 +352,71 @@ a {
 }
 
 
+.brand-name {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    gap:
+        1px;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.brand-name strong {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        1.45rem;
+
+    font-weight:
+        700;
+
+    line-height:
+        1;
+
+}
+
+
+.brand-name small {
+
+    color:
+        var(--gold);
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size:
+        0.53rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.075em;
+
+    line-height:
+        1.2;
+
+}
+
+
 /* =========================================================
    DESKTOP NAVIGATION
    ========================================================= */
@@ -379,8 +438,8 @@ a {
     min-width:
         0;
 
-    margin:
-        0;
+    margin-left:
+        auto;
 
 }
 
@@ -1765,10 +1824,17 @@ button:focus-visible {
     }
 
 
-    .brand span {
+    .brand-name strong {
 
         font-size:
             1.2rem;
+
+    }
+
+    .brand-name small {
+
+        display:
+            none;
 
     }
 
