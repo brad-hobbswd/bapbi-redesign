@@ -2,497 +2,9 @@
    BAPBI
    SCHEDULE PAGE STYLESHEET
    Version: 2026.09.10
+   Page-specific styles only.
+   Shared site shell is provided by css/styles.css.
 ========================================================= */
-
-
-/* =========================================================
-   ROOT
-========================================================= */
-
-:root {
-
-    --espresso: #120906;
-    --espresso-light: #211008;
-    --brown: #351707;
-    --bronze: #6d350c;
-
-    --gold-dark: #9f6816;
-    --gold: #d5a32f;
-    --gold-light: #f1cc72;
-
-    --ivory: #f6f0e5;
-    --cream: #e9dfcf;
-    --white: #ffffff;
-
-    --text-light: #e9e4dc;
-    --text-muted: #b9b0a7;
-
-    --dark-text: #271c16;
-    --dark-muted: #766960;
-
-    --border-dark: rgba(213, 163, 47, 0.22);
-    --border-light: rgba(38, 20, 8, 0.14);
-
-    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-
-    --container-width: 1280px;
-
-    --font-display: "Cinzel", Georgia, serif;
-    --font-serif: "Cormorant Garamond", Georgia, serif;
-    --font-body: "Inter", Arial, sans-serif;
-
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background: var(--espresso);
-    color: var(--text-light);
-    font-family: var(--font-body);
-    line-height: 1.7;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button {
-    font: inherit;
-}
-
-.content-container {
-    width: min(calc(100% - 48px), var(--container-width));
-    margin-inline: auto;
-}
-
-
-/* =========================================================
-   TOP MESSAGE
-========================================================= */
-
-.top-message {
-    min-height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7px 20px;
-    background: var(--gold);
-    color: var(--espresso);
-    text-align: center;
-}
-
-.top-message p {
-    margin: 0;
-    font-family: var(--font-display);
-    font-size: 0.66rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    line-height: 1.2;
-}
-
-.top-message span {
-    margin: 0 8px;
-}
-
-
-/* =========================================================
-   MAIN NAVIGATION
-========================================================= */
-
-.main-navigation {
-    position: relative;
-    z-index: 1000;
-
-    width: min(calc(100% - 48px), 1400px);
-    min-height: 82px;
-    margin-inline: auto;
-
-    display: flex;
-    align-items: center;
-    gap: 34px;
-
-    background: var(--espresso-light);
-    border-bottom: 1px solid var(--border-dark);
-}
-
-
-/* BRAND */
-
-.brand {
-    flex: 0 0 auto;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 13px;
-
-    min-width: 250px;
-}
-
-.brand img {
-    width: 58px;
-    height: 58px;
-    flex: 0 0 58px;
-    object-fit: contain;
-}
-
-.brand-name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 0;
-}
-
-.brand-name strong {
-    color: var(--gold-light);
-    font-family: var(--font-display);
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    line-height: 1.05;
-}
-
-.brand-name small {
-    max-width: 265px;
-    margin-top: 5px;
-    color: var(--cream);
-    font-family: var(--font-body);
-    font-size: 0.48rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    line-height: 1.35;
-}
-
-
-/* =========================================================
-   DESKTOP NAVIGATION
-========================================================= */
-
-.desktop-nav {
-    flex: 1 1 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 26px;
-}
-
-.desktop-nav > a,
-.dropdown-toggle {
-    position: relative;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-
-    min-height: 82px;
-    padding: 30px 0;
-
-    border: 0;
-    background: transparent;
-
-    color: var(--cream);
-    cursor: pointer;
-
-    font-family: var(--font-body);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.desktop-nav > a::after,
-.dropdown-toggle::after {
-    content: "";
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 20px;
-
-    height: 2px;
-
-    background: var(--gold);
-
-    transform: scaleX(0);
-    transform-origin: center;
-
-    transition: transform 0.2s ease;
-}
-
-.desktop-nav > a:hover,
-.desktop-nav > a.active,
-.dropdown-toggle:hover {
-    color: var(--gold-light);
-}
-
-.desktop-nav > a:hover::after,
-.desktop-nav > a.active::after,
-.nav-dropdown:hover .dropdown-toggle::after {
-    transform: scaleX(1);
-}
-
-.dropdown-arrow {
-    color: var(--gold);
-    font-size: 0.72rem;
-}
-
-
-/* =========================================================
-   DROPDOWNS
-========================================================= */
-
-.nav-dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    position: absolute;
-
-    top: calc(100% - 1px);
-    left: 50%;
-
-    min-width: 215px;
-    padding: 10px;
-
-    background: var(--espresso-light);
-    border: 1px solid var(--border-dark);
-    box-shadow: var(--shadow);
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    transform: translate(-50%, 10px);
-
-    transition:
-        opacity 0.2s ease,
-        visibility 0.2s ease,
-        transform 0.2s ease;
-}
-
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translate(-50%, 0);
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 12px 14px;
-
-    color: var(--cream);
-
-    font-size: 0.76rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-
-    border-left: 2px solid transparent;
-
-    transition:
-        color 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.dropdown-menu a:hover,
-.dropdown-menu a.active {
-    color: var(--gold-light);
-    background: rgba(213, 163, 47, 0.08);
-    border-left-color: var(--gold);
-}
-
-
-/* =========================================================
-   ENROLL BUTTON
-========================================================= */
-
-.enroll-button {
-    flex: 0 0 auto;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 46px;
-    padding: 0 20px;
-
-    background: var(--gold);
-    color: var(--espresso);
-
-    border: 1px solid var(--gold);
-
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.enroll-button:hover {
-    background: var(--gold-light);
-    color: var(--espresso);
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   MOBILE MENU BUTTON
-========================================================= */
-
-.mobile-menu-button {
-    display: none;
-
-    width: 46px;
-    height: 46px;
-
-    padding: 9px;
-
-    border: 1px solid var(--border-dark);
-    background: transparent;
-    cursor: pointer;
-}
-
-.mobile-menu-button span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    margin: 5px 0;
-
-    background: var(--gold-light);
-}
-
-
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
-
-.mobile-navigation {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 2000;
-
-    width: min(86vw, 360px);
-    height: 100vh;
-
-    overflow-y: auto;
-
-    padding: 0 0 30px;
-
-    background:
-        linear-gradient(
-            180deg,
-            var(--espresso-light),
-            var(--espresso)
-        );
-
-    border-left: 1px solid var(--border-dark);
-    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.45);
-
-    transform: translateX(100%);
-    visibility: hidden;
-    opacity: 0;
-
-    transition:
-        transform 0.25s ease,
-        visibility 0.25s ease,
-        opacity 0.25s ease;
-}
-
-.mobile-navigation.open {
-    transform: translateX(0);
-    visibility: visible;
-    opacity: 1;
-}
-
-.mobile-nav-header {
-    min-height: 74px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 22px;
-
-    border-bottom: 1px solid var(--border-dark);
-
-    color: var(--gold-light);
-    font-family: var(--font-display);
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-}
-
-.mobile-nav-close {
-    width: 42px;
-    height: 42px;
-
-    border: 1px solid var(--border-dark);
-    background: transparent;
-
-    color: var(--gold-light);
-    cursor: pointer;
-
-    font-size: 1.7rem;
-    line-height: 1;
-}
-
-.mobile-navigation > a:not(.mobile-nav-header) {
-    display: flex;
-    align-items: center;
-
-    min-height: 58px;
-    padding: 0 22px;
-
-    border-bottom: 1px solid rgba(213, 163, 47, 0.1);
-
-    color: var(--cream);
-
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-
-    transition:
-        color 0.2s ease,
-        background 0.2s ease,
-        padding 0.2s ease;
-}
-
-.mobile-navigation > a:not(.mobile-nav-header):hover,
-.mobile-navigation > a.active {
-    padding-left: 28px;
-    color: var(--gold-light);
-    background: rgba(213, 163, 47, 0.08);
-}
 
 
 /* =========================================================
@@ -517,9 +29,11 @@ button {
     border-bottom: 1px solid var(--border-dark);
 }
 
-.eyebrow {
+.page-intro .eyebrow,
+.section-heading .eyebrow,
+.hours-heading .eyebrow,
+.enrollment-card .eyebrow {
     display: inline-block;
-
     margin-bottom: 14px;
 
     color: var(--gold-light);
@@ -602,7 +116,6 @@ button {
 
 .class-schedule-section {
     padding: 88px 0;
-
     background: var(--espresso);
 }
 
@@ -617,9 +130,6 @@ button {
     border: 1px solid var(--border-dark);
     box-shadow: var(--shadow);
 }
-
-
-/* CLASS DAY */
 
 .class-day {
     min-height: 330px;
@@ -673,9 +183,6 @@ button {
     font-weight: 600;
 }
 
-
-/* CLASS DETAILS */
-
 .class-details {
     display: flex;
     flex-direction: column;
@@ -702,7 +209,6 @@ button {
 
 .detail-label {
     display: block;
-
     margin-bottom: 7px;
 
     color: var(--gold-dark);
@@ -731,7 +237,6 @@ button {
 
 .church-schedule-section {
     padding: 92px 0;
-
     background: var(--ivory);
 }
 
@@ -838,7 +343,6 @@ button {
 
 .hours-section {
     padding: 88px 0;
-
     background: var(--espresso);
 }
 
@@ -869,7 +373,6 @@ button {
 
 .hours-details {
     padding-left: 38px;
-
     border-left: 1px solid var(--border-dark);
 }
 
@@ -885,7 +388,6 @@ button {
 
 .hours-details p {
     margin: 0 0 5px;
-
     color: var(--text-muted);
 }
 
@@ -977,125 +479,20 @@ button {
 
 
 /* =========================================================
-   FOOTER
+   MASTER FOOTER COMPATIBILITY
+   The footer markup now matches index.html exactly.
 ========================================================= */
 
-.site-footer {
-    padding-top: 70px;
-
-    background: #0b0503;
-    border-top: 1px solid var(--border-dark);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr repeat(3, 1fr);
-    gap: 45px;
-
-    padding-bottom: 55px;
-}
-
-.footer-brand img {
-    width: 58px;
-    height: 58px;
-    object-fit: contain;
-}
-
-.footer-brand h2 {
-    margin: 16px 0 4px;
-
-    color: var(--gold-light);
-
-    font-family: var(--font-display);
-    font-size: 1.15rem;
-    letter-spacing: 0.1em;
-}
-
-.footer-brand p {
-    max-width: 270px;
-    margin: 0;
-
-    color: var(--text-muted);
-
-    font-size: 0.78rem;
-    line-height: 1.6;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.footer-links h3 {
-    margin: 0 0 15px;
-
-    color: var(--gold-light);
-
-    font-family: var(--font-display);
-    font-size: 0.72rem;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-}
-
-.footer-links a {
-    margin: 4px 0;
-
-    color: var(--text-muted);
-
-    font-size: 0.78rem;
-
-    transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: var(--gold-light);
-}
-
-.footer-bottom {
-    padding: 20px 24px;
-
-    border-top: 1px solid rgba(213, 163, 47, 0.1);
-
-    text-align: center;
-}
-
-.footer-bottom p {
-    margin: 0;
-
-    color: #8f857c;
-
-    font-size: 0.68rem;
-    letter-spacing: 0.03em;
+.schedule-page .site-footer {
+    /* Reserved for future page-specific footer adjustments. */
 }
 
 
 /* =========================================================
-   TABLET
+   RESPONSIVE PAGE CONTENT
 ========================================================= */
 
 @media (max-width: 1100px) {
-
-    .main-navigation {
-        gap: 20px;
-    }
-
-    .brand {
-        min-width: 220px;
-    }
-
-    .brand-name small {
-        max-width: 220px;
-    }
-
-    .desktop-nav {
-        gap: 18px;
-    }
-
-    .desktop-nav > a,
-    .dropdown-toggle {
-        font-size: 0.72rem;
-    }
 
     .service-grid {
         gap: 16px;
@@ -1104,47 +501,7 @@ button {
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 900px) {
-
-    .top-message {
-        display: none;
-    }
-
-    .main-navigation {
-        width: calc(100% - 32px);
-        min-height: 74px;
-        gap: 0;
-
-        justify-content: space-between;
-    }
-
-    .desktop-nav,
-    .enroll-button {
-        display: none;
-    }
-
-    .mobile-menu-button {
-        display: block;
-    }
-
-    .brand img {
-        width: 52px;
-        height: 52px;
-        flex-basis: 52px;
-    }
-
-    .brand-name strong {
-        font-size: 1rem;
-    }
-
-    .brand-name small {
-        max-width: 210px;
-        font-size: 0.42rem;
-    }
 
     .class-schedule-card {
         grid-template-columns: 1fr;
@@ -1170,62 +527,14 @@ button {
     .hours-details {
         padding-left: 0;
         padding-top: 28px;
-
         border-left: 0;
         border-top: 1px solid var(--border-dark);
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 600px) {
-
-    .content-container {
-        width: calc(100% - 28px);
-    }
-
-    .main-navigation {
-        width: calc(100% - 24px);
-        min-height: 68px;
-    }
-
-    .brand {
-        gap: 9px;
-        min-width: 0;
-    }
-
-    .brand img {
-        width: 48px;
-        height: 48px;
-        flex-basis: 48px;
-    }
-
-    .brand-name strong {
-        font-size: 0.9rem;
-    }
-
-    .brand-name small {
-        max-width: 175px;
-        font-size: 0.36rem;
-        letter-spacing: 0.08em;
-    }
-
-    .mobile-menu-button {
-        width: 44px;
-        height: 44px;
-    }
-
-    .mobile-navigation {
-        width: min(92vw, 340px);
-    }
 
     .page-intro {
         padding: 68px 0 60px;
@@ -1273,15 +582,6 @@ button {
 
     .enrollment-card {
         padding: 42px 25px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .site-footer {
-        padding-top: 55px;
     }
 
 }
