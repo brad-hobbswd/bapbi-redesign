@@ -204,8 +204,11 @@ a {
 
 .top-message {
 
+    height:
+        35px;
+
     min-height:
-        34px;
+        35px;
 
     display:
         flex;
@@ -251,17 +254,31 @@ a {
    ========================================================= */
 
 .main-navigation {
-    width: min(
-        calc(100% - 48px),
-        1400px
-    );
 
-    min-height: 82px;
-    margin: 0 auto;
+    width:
+        min(
+            calc(100% - 48px),
+            1400px
+        );
 
-    display: flex;
-    align-items: center;
-    gap: 34px;
+    height:
+        84px;
+
+    min-height:
+        84px;
+
+    margin:
+        0 auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        34px;
+
 }
 
 
@@ -270,10 +287,19 @@ a {
    ========================================================= */
 
 .brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    flex-shrink: 0;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    flex-shrink:
+        0;
+
 }
 
 
@@ -317,10 +343,19 @@ a {
    ========================================================= */
 
 .desktop-nav {
-    display: flex;
-    align-items: center;
-    gap: 26px;
-    margin-left: auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        26px;
+
+    margin-left:
+        auto;
+
 }
 
 
@@ -338,6 +373,9 @@ a {
 
     gap:
         5px;
+
+    height:
+        84px;
 
     background:
         none;
@@ -364,7 +402,7 @@ a {
         uppercase;
 
     padding:
-        30px 0;
+        0;
 
     transition:
         color 0.25s ease;
@@ -396,7 +434,7 @@ a {
         0;
 
     bottom:
-        20px;
+        18px;
 
     height:
         2px;
