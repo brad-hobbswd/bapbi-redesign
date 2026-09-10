@@ -1,3 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+    --espresso: #120906;
+    --espresso-light: #211008;
+    --brown: #351707;
+    --bronze: #6d350c;
+
+    --gold-dark: #9f6816;
+    --gold: #d5a32f;
+    --gold-light: #f1cc72;
+
+    --ivory: #f6f0e5;
+    --cream: #e9dfcf;
+    --white: #ffffff;
+
+    --text-light: #e9e4dc;
+    --text-muted: #b9b0a7;
+
+    --dark-text: #271c16;
+    --dark-muted: #766960;
+
+    --border-dark: rgba(213, 163, 47, 0.22);
+    --border-light: rgba(38, 20, 8, 0.14);
+
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+    --container-width: 1280px;
+
+    --font-display: "Cinzel", Georgia, serif;
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+    --font-body: "Inter", Arial, sans-serif;
+}
+
 /* =========================================================
    BAPBI
    STUDENT PORTAL PAGE STYLESHEET
@@ -10,12 +44,6 @@
 
    This file controls Student Portal content only.
 ========================================================= */
-
-/* =========================================================
-   GOOGLE FONTS
-========================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* =========================================================
    PAGE INTRO
@@ -698,37 +726,63 @@
 ========================================================= */
 
 /* =========================================================
-   STUDENT PORTAL LIGHT SECTION TEXT FIXES
-   Uses the BAPBI master theme from styles.css
+   STUDENT PORTAL PAGE VISUAL AUTHORITY
+   This stylesheet loads after styles.css and intentionally
+   controls Student Portal page visuals.
 ========================================================= */
 
-.archive-section .section-heading h2,
-.archive-content h3 {
+.student-portal-page .top-message {
+    background:
+        linear-gradient(
+            90deg,
+            var(--brown),
+            var(--espresso-light)
+        );
+    color: var(--gold-light);
+}
+
+.student-portal-page .top-message p {
+    color: var(--gold-light);
+}
+
+/* Light archive/content areas */
+.student-portal-page .archive-section {
+    background: var(--ivory);
+}
+
+.student-portal-page .archive-section .section-heading h2,
+.student-portal-page .archive-section h3 {
     color: var(--dark-text);
 }
 
-.archive-section .section-heading p,
-.archive-content p {
+.student-portal-page .archive-section .section-heading p,
+.student-portal-page .archive-section p {
     color: var(--dark-muted);
 }
 
-.archive-card {
-    color: var(--dark-text);
-}
-
-.service-card {
-    color: var(--text-light);
-}
-
-.service-card h3 {
+/* Dark student service area */
+.student-portal-page .services-section .service-card h3 {
     color: var(--ivory);
 }
 
-.service-card p {
-    color: var(--text-muted);
+.student-portal-page .services-section .service-card p {
+    color: var(--text-light);
 }
 
-/* Keep page CSS focused on content only.
-   Header, navigation, fonts, containers, and footer
-   are controlled by css/styles.css.
-*/
+/* If the services area contains a light card, make its text dark. */
+.student-portal-page .services-section .service-card.light,
+.student-portal-page .services-section .service-card.white {
+    background: var(--white);
+}
+
+.student-portal-page .services-section .service-card.light h3,
+.student-portal-page .services-section .service-card.white h3 {
+    color: var(--dark-text);
+}
+
+.student-portal-page .services-section .service-card.light p,
+.student-portal-page .services-section .service-card.white p {
+    color: var(--dark-muted);
+}
+
+/* Keep the shared footer owned by styles.css. */
