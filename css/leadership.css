@@ -1,6 +1,6 @@
 /* =========================================================
    BAPBI REDESIGN
-   ABOUT PAGE STYLESHEET
+   LEADERSHIP PAGE STYLESHEET
    Bethesda Apostolic Pentecostal Bible Institute
 ========================================================= */
 
@@ -436,13 +436,36 @@ a {
 }
 
 
-.dropdown-button span {
+
+.dropdown-button:hover::after {
 
     color:
-        var(--gold);
+        var(--gold-light);
 
-    font-size:
-        0.85rem;
+}
+
+
+.dropdown-arrow {
+
+    display: inline-block;
+
+    margin-left: 6px;
+
+    color: var(--gold);
+
+    font-size: 0.8rem;
+
+    line-height: 1;
+
+    transition: color 0.25s ease, transform 0.25s ease;
+
+}
+
+.dropdown-button:hover .dropdown-arrow {
+
+    color: var(--gold-light);
+
+    transform: translateY(1px);
 
 }
 
