@@ -2,6 +2,12 @@
    PAGE INTRO
 ========================================================= */
 
+:root {
+    --font-display: "Cinzel", Georgia, serif;
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+    --font-body: "Inter", Arial, sans-serif;
+}
+
 .page-intro {
     padding: 96px 0 82px;
 
