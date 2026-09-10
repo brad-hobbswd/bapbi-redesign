@@ -204,11 +204,8 @@ a {
 
 .top-message {
 
-    height:
-        35px;
-
     min-height:
-        35px;
+        34px;
 
     display:
         flex;
@@ -231,6 +228,9 @@ a {
 
 .top-message p {
 
+    margin:
+        0;
+
     color:
         var(--gold-light);
 
@@ -249,6 +249,17 @@ a {
 }
 
 
+.top-message span {
+
+    color:
+        var(--gold);
+
+    padding:
+        0 5px;
+
+}
+
+
 /* =========================================================
    MAIN NAVIGATION
    ========================================================= */
@@ -261,23 +272,26 @@ a {
             1400px
         );
 
-    height:
-        84px;
-
     min-height:
-        84px;
+        82px;
 
     margin:
         0 auto;
 
     display:
-        flex;
+        grid;
+
+    grid-template-columns:
+        auto minmax(0, 1fr) auto;
 
     align-items:
         center;
 
-    gap:
+    column-gap:
         34px;
+
+    flex-wrap:
+        nowrap;
 
 }
 
@@ -299,6 +313,9 @@ a {
 
     flex-shrink:
         0;
+
+    min-width:
+        max-content;
 
 }
 
@@ -335,6 +352,9 @@ a {
     letter-spacing:
         0.04em;
 
+    white-space:
+        nowrap;
+
 }
 
 
@@ -350,11 +370,17 @@ a {
     align-items:
         center;
 
+    justify-content:
+        flex-end;
+
     gap:
         26px;
 
-    margin-left:
-        auto;
+    min-width:
+        0;
+
+    margin:
+        0;
 
 }
 
@@ -371,11 +397,11 @@ a {
     align-items:
         center;
 
+    justify-content:
+        center;
+
     gap:
         5px;
-
-    height:
-        84px;
 
     background:
         none;
@@ -398,11 +424,17 @@ a {
     letter-spacing:
         0.07em;
 
+    line-height:
+        1;
+
     text-transform:
         uppercase;
 
+    white-space:
+        nowrap;
+
     padding:
-        0;
+        30px 0;
 
     transition:
         color 0.25s ease;
@@ -434,7 +466,7 @@ a {
         0;
 
     bottom:
-        18px;
+        20px;
 
     height:
         2px;
@@ -453,6 +485,9 @@ a {
 
     position:
         relative;
+
+    flex-shrink:
+        0;
 
 }
 
@@ -580,6 +615,9 @@ a {
     min-height:
         46px;
 
+    min-width:
+        134px;
+
     padding:
         0 23px;
 
@@ -608,6 +646,9 @@ a {
     border:
         1px solid
         rgba(255, 255, 255, 0.25);
+
+    white-space:
+        nowrap;
 
     transition:
         transform 0.25s ease,
@@ -1395,6 +1436,12 @@ button:focus-visible {
                 100%
             );
 
+        display:
+            flex;
+
+        align-items:
+            center;
+
     }
 
     .desktop-nav,
@@ -1412,6 +1459,9 @@ button:focus-visible {
 
         margin-left:
             auto;
+
+        flex-shrink:
+            0;
 
     }
 
