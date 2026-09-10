@@ -290,6 +290,7 @@ a {
 
 /* =========================================================
    DESKTOP NAVIGATION
+   SMOOTH LEADERSHIP STYLE
 ========================================================= */
 
 .desktop-nav {
@@ -322,13 +323,19 @@ a {
         center;
 
     gap:
-        5px;
+        7px;
+
+    height:
+        82px;
+
+    padding:
+        0;
 
     background:
-        none;
+        transparent;
 
     border:
-        none;
+        0;
 
     color:
         var(--text-light);
@@ -348,8 +355,8 @@ a {
     text-transform:
         uppercase;
 
-    padding:
-        30px 0;
+    white-space:
+        nowrap;
 
     transition:
         color 0.25s ease;
@@ -357,8 +364,24 @@ a {
 }
 
 
+/* ---------------------------------------------------------
+   NAVIGATION HOVER
+--------------------------------------------------------- */
+
 .desktop-nav > a:hover,
 .dropdown-button:hover {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVE PAGE
+--------------------------------------------------------- */
+
+.desktop-nav > a.active {
 
     color:
         var(--gold-light);
@@ -381,13 +404,19 @@ a {
         0;
 
     bottom:
-        20px;
+        19px;
 
     height:
         2px;
 
     background:
         var(--gold);
+
+    transform:
+        scaleX(1);
+
+    transform-origin:
+        center;
 
 }
 
@@ -401,19 +430,63 @@ a {
     position:
         relative;
 
+    height:
+        82px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
 }
 
 
-.dropdown-button span {
+/* ---------------------------------------------------------
+   REAL ARROW
+   Uses the arrow already present in the HTML.
+--------------------------------------------------------- */
+
+.dropdown-button > span {
+
+    display:
+        inline-block;
 
     color:
         var(--gold);
 
     font-size:
-        0.85rem;
+        0.82rem;
+
+    line-height:
+        1;
+
+    transform:
+        translateY(-1px);
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
 
 }
 
+
+.nav-dropdown:hover .dropdown-button > span,
+.nav-dropdown:focus-within .dropdown-button > span {
+
+    color:
+        var(--gold-light);
+
+    transform:
+        translateY(-1px)
+        rotate(180deg);
+
+}
+
+
+/* =========================================================
+   DROPDOWN MENU
+========================================================= */
 
 .dropdown-menu {
 
@@ -421,25 +494,29 @@ a {
         absolute;
 
     top:
-        calc(100% - 8px);
+        calc(100% - 1px);
 
     left:
-        -18px;
+        50%;
 
     width:
-        220px;
+        225px;
 
     padding:
-        10px;
+        8px;
 
     background:
-        #1a0d08;
+        linear-gradient(
+            180deg,
+            #211008,
+            #160a06
+        );
 
     border:
         1px solid var(--border-dark);
 
     box-shadow:
-        var(--shadow);
+        0 18px 45px rgba(0, 0, 0, 0.42);
 
     opacity:
         0;
@@ -447,16 +524,26 @@ a {
     visibility:
         hidden;
 
+    pointer-events:
+        none;
+
     transform:
-        translateY(8px);
+        translate(-50%, 10px);
+
+    transform-origin:
+        top center;
 
     transition:
-        opacity 0.2s ease,
-        transform 0.2s ease,
-        visibility 0.2s ease;
+        opacity 0.22s ease,
+        transform 0.22s ease,
+        visibility 0.22s ease;
 
 }
 
+
+/* ---------------------------------------------------------
+   DROPDOWN OPEN
+--------------------------------------------------------- */
 
 .nav-dropdown:hover .dropdown-menu,
 .nav-dropdown:focus-within .dropdown-menu {
@@ -467,43 +554,126 @@ a {
     visibility:
         visible;
 
+    pointer-events:
+        auto;
+
     transform:
-        translateY(0);
+        translate(-50%, 0);
 
 }
 
 
+/* =========================================================
+   DROPDOWN LINKS
+========================================================= */
+
 .dropdown-menu a {
 
+    position:
+        relative;
+
     display:
-        block;
+        flex;
+
+    align-items:
+        center;
+
+    min-height:
+        44px;
 
     padding:
-        11px 14px;
+        0 15px;
 
     color:
         var(--text-muted);
 
     font-size:
-        0.85rem;
+        0.76rem;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.035em;
+
+    text-transform:
+        none;
 
     transition:
+        color 0.2s ease,
         background 0.2s ease,
-        color 0.2s ease;
+        padding-left 0.2s ease;
 
 }
 
 
+/* ---------------------------------------------------------
+   DROPDOWN LINK HOVER
+--------------------------------------------------------- */
+
 .dropdown-menu a:hover {
+
+    padding-left:
+        19px;
 
     color:
         var(--gold-light);
 
     background:
-        rgba(213, 163, 47, 0.08);
+        rgba(213, 163, 47, 0.07);
 
 }
 
+
+/* ---------------------------------------------------------
+   SUBTLE GOLD EDGE
+--------------------------------------------------------- */
+
+.dropdown-menu a::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        7px;
+
+    bottom:
+        7px;
+
+    width:
+        2px;
+
+    background:
+        var(--gold);
+
+    opacity:
+        0;
+
+    transform:
+        scaleY(0.5);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.dropdown-menu a:hover::before {
+
+    opacity:
+        1;
+
+    transform:
+        scaleY(1);
+
+}
 
 /* =========================================================
    ENROLL BUTTON
@@ -2561,12 +2731,12 @@ a {
     }
 
     .desktop-nav {
-        gap: 18px;
+        gap: 20px;
     }
 
     .desktop-nav > a,
     .dropdown-button {
-        font-size: 0.68rem;
+        font-size: 0.67rem;
     }
 
     .intro-grid {
