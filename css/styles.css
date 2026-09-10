@@ -2547,3 +2547,1263 @@ a {
         uppercase;
 
 }
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .main-navigation {
+
+        width:
+            min(
+                calc(100% - 40px),
+                1400px
+            );
+
+        gap:
+            22px;
+
+    }
+
+
+    .desktop-nav {
+
+        gap:
+            18px;
+
+    }
+
+
+    .desktop-nav > a,
+    .dropdown-button {
+
+        font-size:
+            0.68rem;
+
+    }
+
+
+    .enroll-button {
+
+        padding:
+            0 18px;
+
+    }
+
+
+    .intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            55px;
+
+    }
+
+
+    .intro-content {
+
+        max-width:
+            850px;
+
+    }
+
+
+    .scripture-panel {
+
+        max-width:
+            760px;
+
+        padding:
+            25px 0 25px 35px;
+
+    }
+
+
+    .explore-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
+
+    }
+
+
+    .current-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .current-information {
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .purpose-panel {
+
+        min-height:
+            500px;
+
+        padding:
+            80px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            45px;
+
+    }
+
+
+    .footer-links-section {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .top-message {
+
+        display:
+            none;
+
+    }
+
+
+    .main-navigation {
+
+        width:
+            calc(
+                100% - 32px
+            );
+
+        min-height:
+            74px;
+
+        gap:
+            0;
+
+    }
+
+
+    .brand {
+
+        gap:
+            10px;
+
+    }
+
+
+    .brand-logo {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+    }
+
+
+    .brand span {
+
+        font-size:
+            1.2rem;
+
+    }
+
+
+    .desktop-nav,
+    .enroll-button {
+
+        display:
+            none;
+
+    }
+
+
+    .mobile-menu-button {
+
+        display:
+            flex;
+
+        margin-left:
+            auto;
+
+        flex-shrink:
+            0;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE DRAWER
+       ----------------------------------------------------- */
+
+    .mobile-navigation {
+
+        position:
+            fixed;
+
+        top:
+            0;
+
+        right:
+            0;
+
+        z-index:
+            2000;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        width:
+            min(
+                86vw,
+                360px
+            );
+
+        height:
+            100vh;
+
+        padding:
+            0 24px 30px;
+
+        overflow-y:
+            auto;
+
+        background:
+            linear-gradient(
+                180deg,
+                #1a0d08,
+                #0d0604
+            );
+
+        border-left:
+            1px solid
+            var(--border-dark);
+
+        box-shadow:
+            -20px 0 60px
+            rgba(
+                0,
+                0,
+                0,
+                0.45
+            );
+
+        transform:
+            translateX(
+                100%
+            );
+
+        visibility:
+            hidden;
+
+        opacity:
+            0;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+    }
+
+
+    .mobile-navigation.open {
+
+        transform:
+            translateX(
+                0
+            );
+
+        visibility:
+            visible;
+
+        opacity:
+            1;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE NAV HEADER
+       ----------------------------------------------------- */
+
+    .mobile-nav-header {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-between;
+
+        min-height:
+            74px;
+
+        margin-bottom:
+            15px;
+
+        border-bottom:
+            1px solid
+            var(--border-dark);
+
+    }
+
+
+    .mobile-nav-header span {
+
+        color:
+            var(--gold-light);
+
+        font-family:
+            "Cinzel",
+            serif;
+
+        font-size:
+            0.9rem;
+
+        font-weight:
+            700;
+
+        letter-spacing:
+            0.12em;
+
+        text-transform:
+            uppercase;
+
+    }
+
+
+    .mobile-nav-header button {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        padding:
+            0;
+
+        color:
+            var(--gold-light);
+
+        background:
+            transparent;
+
+        border:
+            1px solid
+            var(--border-dark);
+
+        font-size:
+            1.7rem;
+
+        line-height:
+            1;
+
+        cursor:
+            pointer;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE LINKS
+       ----------------------------------------------------- */
+
+    .mobile-navigation a {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        min-height:
+            52px;
+
+        padding:
+            0 8px;
+
+        color:
+            var(--text-light);
+
+        border-bottom:
+            1px solid
+            rgba(
+                213,
+                163,
+                47,
+                0.10
+            );
+
+        font-size:
+            0.78rem;
+
+        font-weight:
+            700;
+
+        letter-spacing:
+            0.08em;
+
+        text-transform:
+            uppercase;
+
+        transition:
+            color 0.2s ease,
+            padding-left 0.2s ease,
+            background 0.2s ease;
+
+    }
+
+
+    .mobile-navigation a:hover {
+
+        padding-left:
+            15px;
+
+        color:
+            var(--gold-light);
+
+        background:
+            rgba(
+                213,
+                163,
+                47,
+                0.06
+            );
+
+    }
+
+
+    .mobile-navigation a.mobile-active {
+
+        color:
+            var(--gold-light);
+
+        border-left:
+            2px solid
+            var(--gold);
+
+        padding-left:
+            14px;
+
+        background:
+            rgba(
+                213,
+                163,
+                47,
+                0.08
+            );
+
+    }
+
+
+    /* -----------------------------------------------------
+       HOMEPAGE CONTENT
+       ----------------------------------------------------- */
+
+    .content-container {
+
+        width:
+            min(
+                calc(
+                    100% - 32px
+                ),
+                var(--container-width)
+            );
+
+    }
+
+
+    .banner-section {
+
+        width:
+            100%;
+
+    }
+
+
+    .bapbi-banner {
+
+        width:
+            100%;
+
+        max-height:
+            none;
+
+        height:
+            auto;
+
+        object-fit:
+            contain;
+
+    }
+
+
+    .introduction-section {
+
+        padding:
+            70px 0;
+
+    }
+
+
+    .intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            50px;
+
+    }
+
+
+    .intro-content h1 {
+
+        font-size:
+            clamp(
+                2.2rem,
+                9vw,
+                3.5rem
+            );
+
+    }
+
+
+    .intro-lead {
+
+        font-size:
+            0.98rem;
+
+    }
+
+
+    .scripture-panel {
+
+        max-width:
+            none;
+
+        padding:
+            25px 0 25px 25px;
+
+    }
+
+
+    .scripture-panel blockquote {
+
+        font-size:
+            1.45rem;
+
+    }
+
+
+    .intro-actions {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+    }
+
+
+    .intro-actions .button {
+
+        width:
+            100%;
+
+    }
+
+
+    /* -----------------------------------------------------
+       THREE PILLARS
+       ----------------------------------------------------- */
+
+    .pillars-section {
+
+        padding:
+            55px 0;
+
+    }
+
+
+    .pillars-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            0;
+
+    }
+
+
+    .pillar {
+
+        padding:
+            35px 20px;
+
+    }
+
+
+    .pillar:not(:last-child)::after {
+
+        top:
+            auto;
+
+        right:
+            10%;
+
+        bottom:
+            0;
+
+        left:
+            10%;
+
+        width:
+            80%;
+
+        height:
+            1px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       EXPLORE
+       ----------------------------------------------------- */
+
+    .explore-section {
+
+        padding:
+            75px 0;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom:
+            40px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            clamp(
+                1.8rem,
+                7vw,
+                2.7rem
+            );
+
+    }
+
+
+    .explore-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            18px;
+
+    }
+
+
+    .explore-card {
+
+        min-height:
+            auto;
+
+    }
+
+
+    .card-symbol {
+
+        min-height:
+            125px;
+
+    }
+
+
+    .card-content {
+
+        padding:
+            28px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       CURRENT AT BAPBI
+       ----------------------------------------------------- */
+
+    .current-grid {
+
+        grid-template-columns:
+            1fr;
+
+        min-height:
+            0;
+
+    }
+
+
+    .current-information {
+
+        padding:
+            70px 0;
+
+    }
+
+
+    .current-information h2 {
+
+        font-size:
+            clamp(
+                2rem,
+                8vw,
+                3rem
+            );
+
+    }
+
+
+    .current-links a {
+
+        gap:
+            15px;
+
+    }
+
+
+    .purpose-panel {
+
+        min-height:
+            0;
+
+        padding:
+            70px 30px;
+
+    }
+
+
+    .purpose-panel h2 {
+
+        font-size:
+            clamp(
+                2rem,
+                8vw,
+                3rem
+            );
+
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    .site-footer {
+
+        padding-top:
+            55px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            40px;
+
+        padding-bottom:
+            45px;
+
+    }
+
+
+    .footer-brand-section {
+
+        max-width:
+            none;
+
+    }
+
+
+    .footer-links-section {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .footer-links {
+
+        width:
+            100%;
+
+    }
+
+
+    .footer-bottom {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            15px;
+
+        text-align:
+            center;
+
+    }
+
+
+    .footer-legal {
+
+        justify-content:
+            center;
+
+    }
+
+
+    .footer-motto {
+
+        justify-self:
+            center;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .main-navigation {
+
+        width:
+            calc(
+                100% - 24px
+            );
+
+        min-height:
+            68px;
+
+    }
+
+
+    .brand-logo {
+
+        width:
+            44px;
+
+        height:
+            44px;
+
+    }
+
+
+    .brand span {
+
+        font-size:
+            1.05rem;
+
+    }
+
+
+    .mobile-menu-button {
+
+        width:
+            44px;
+
+        height:
+            44px;
+
+    }
+
+
+    .mobile-navigation {
+
+        width:
+            min(
+                92vw,
+                340px
+            );
+
+        padding-left:
+            20px;
+
+        padding-right:
+            20px;
+
+    }
+
+
+    .content-container {
+
+        width:
+            calc(
+                100% - 24px
+            );
+
+    }
+
+
+    .bapbi-banner {
+
+        max-width:
+            100%;
+
+    }
+
+
+    .introduction-section {
+
+        padding:
+            55px 0;
+
+    }
+
+
+    .intro-content h1 {
+
+        font-size:
+            2.15rem;
+
+        line-height:
+            1.08;
+
+    }
+
+
+    .intro-lead {
+
+        font-size:
+            0.92rem;
+
+    }
+
+
+    .scripture-panel {
+
+        padding:
+            22px 0 22px 20px;
+
+    }
+
+
+    .scripture-panel blockquote {
+
+        font-size:
+            1.25rem;
+
+    }
+
+
+    .scripture-panel p {
+
+        font-size:
+            0.65rem;
+
+    }
+
+
+    .button {
+
+        min-height:
+            50px;
+
+        padding:
+            0 20px;
+
+        font-size:
+            0.7rem;
+
+    }
+
+
+    .pillars-section {
+
+        padding:
+            35px 0;
+
+    }
+
+
+    .pillar {
+
+        padding:
+            30px 10px;
+
+    }
+
+
+    .pillar-icon {
+
+        font-size:
+            2.1rem;
+
+    }
+
+
+    .pillar h2 {
+
+        font-size:
+            1.25rem;
+
+    }
+
+
+    .pillar p {
+
+        font-size:
+            0.85rem;
+
+    }
+
+
+    .explore-section {
+
+        padding:
+            60px 0;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            1.8rem;
+
+    }
+
+
+    .section-heading > p:last-child {
+
+        font-size:
+            0.9rem;
+
+    }
+
+
+    .explore-card {
+
+        min-height:
+            auto;
+
+    }
+
+
+    .card-symbol {
+
+        min-height:
+            110px;
+
+    }
+
+
+    .card-symbol span {
+
+        font-size:
+            2.8rem;
+
+    }
+
+
+    .card-content {
+
+        padding:
+            25px 22px;
+
+    }
+
+
+    .card-content h3 {
+
+        font-size:
+            1.1rem;
+
+    }
+
+
+    .card-content > p:not(.card-number) {
+
+        font-size:
+            0.86rem;
+
+    }
+
+
+    .current-information {
+
+        padding:
+            55px 0;
+
+    }
+
+
+    .current-information h2 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    .current-introduction {
+
+        font-size:
+            0.9rem;
+
+    }
+
+
+    .current-link-content strong {
+
+        font-size:
+            0.88rem;
+
+    }
+
+
+    .current-arrow {
+
+        font-size:
+            1.25rem;
+
+    }
+
+
+    .purpose-panel {
+
+        padding:
+            55px 22px;
+
+    }
+
+
+    .purpose-panel h2 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    .purpose-lead {
+
+        font-size:
+            1.15rem;
+
+    }
+
+
+    .purpose-statement {
+
+        font-size:
+            0.88rem;
+
+    }
+
+
+    .footer-links {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .footer-bottom {
+
+        padding:
+            22px 0;
+
+    }
+
+
+    .footer-bottom p {
+
+        font-size:
+            0.62rem;
+
+    }
+
+
+    .footer-legal {
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            12px;
+
+    }
+
+}
