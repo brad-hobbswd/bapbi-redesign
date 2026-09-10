@@ -1,19 +1,8 @@
 /* =========================================================
    BAPBI
    CURRICULUM PAGE STYLESHEET
-
    Bethesda Apostolic Pentecostal Bible Institute
-   Designed to match the established BAPBI page theme
    ========================================================= */
-
-
-/* =========================================================
-   GOOGLE FONTS
-   ========================================================= */
-
-@import url(
-    'https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap'
-);
 
 
 /* =========================================================
@@ -33,7 +22,6 @@
 
     --ivory: #f6f0e5;
     --cream: #e9dfcf;
-
     --white: #ffffff;
 
     --text-light: #e9e4dc;
@@ -42,18 +30,12 @@
     --dark-text: #271c16;
     --dark-muted: #766960;
 
-    --border-dark:
-        rgba(213, 163, 47, 0.22);
+    --border-dark: rgba(213, 163, 47, 0.22);
+    --border-light: rgba(38, 20, 8, 0.14);
 
-    --border-light:
-        rgba(38, 20, 8, 0.14);
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 
-    --shadow:
-        0 20px 60px
-        rgba(0, 0, 0, 0.35);
-
-    --container-width:
-        1280px;
+    --container-width: 1280px;
 
 }
 
@@ -62,72 +44,41 @@
    RESET
    ========================================================= */
 
-* {
-
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-
 }
 
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 
 body {
-
-    background:
-        var(--espresso);
-
-    color:
-        var(--text-light);
-
-    font-family:
-        "Inter",
-        sans-serif;
-
-    line-height:
-        1.7;
-
-    overflow-x:
-        hidden;
-
+    margin: 0;
+    background: var(--ivory);
+    color: var(--dark-text);
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.7;
 }
 
 
 img {
-
-    display: block;
     max-width: 100%;
-
+    height: auto;
 }
 
 
 a {
-
     color: inherit;
     text-decoration: none;
-
 }
 
 
 button {
-
     font: inherit;
-
-}
-
-
-button,
-a {
-
-    -webkit-tap-highlight-color:
-        transparent;
-
 }
 
 
@@ -136,127 +87,48 @@ a {
    ========================================================= */
 
 .content-container {
-
-    width:
-        min(
-            calc(100% - 48px),
-            var(--container-width)
-        );
-
-    margin:
-        0 auto;
-
+    width: min(100% - 48px, var(--container-width));
+    margin-inline: auto;
 }
 
 
 /* =========================================================
-   SHARED EYEBROW
-   ========================================================= */
-
-.section-eyebrow {
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        0.72rem;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        0.18em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-/* =========================================================
-   SITE HEADER
+   HEADER
    ========================================================= */
 
 .site-header {
-
-    position:
-        relative;
-
-    z-index:
-        1000;
-
-    background:
-        linear-gradient(
-            180deg,
-            #160b07,
-            #100807
-        );
-
-    border-bottom:
-        1px solid var(--border-dark);
-
+    position: relative;
+    z-index: 1000;
 }
 
 
-/* =========================================================
-   TOP MESSAGE
-   ========================================================= */
-
 .top-message {
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    min-height:
-        34px;
+    padding: 7px 20px;
 
-    display:
-        flex;
+    background: var(--gold);
+    color: var(--espresso);
 
-    align-items:
-        center;
-
-    justify-content:
-        flex-end;
-
-    padding:
-        0 5%;
-
-    border-bottom:
-        1px solid
-        rgba(213, 163, 47, 0.14);
-
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
 .top-message p {
-
-    margin:
-        0;
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        0.68rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.11em;
-
-    text-transform:
-        uppercase;
-
+    margin: 0;
 }
 
 
 .top-message span {
-
-    color:
-        var(--gold);
-
-    padding:
-        0 5px;
-
+    margin: 0 9px;
+    opacity: 0.7;
 }
 
 
@@ -265,981 +137,573 @@ a {
    ========================================================= */
 
 .main-navigation {
+    min-height: 84px;
 
-    width:
-        min(
-            calc(100% - 48px),
-            1400px
-        );
+    display: flex;
+    align-items: center;
 
-    min-height:
-        82px;
+    padding: 12px clamp(22px, 4vw, 60px);
 
-    margin:
-        0 auto;
+    background: var(--espresso);
+    border-bottom: 1px solid var(--border-dark);
 
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        34px;
-
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 
-/* =========================================================
-   BRAND
-   ========================================================= */
-
 .brand {
+    min-width: 300px;
 
-    display:
-        inline-flex;
+    display: flex;
+    align-items: center;
+    gap: 13px;
 
-    align-items:
-        center;
-
-    gap:
-        14px;
-
-    flex-shrink:
-        0;
-
-    min-width:
-        max-content;
-
+    color: var(--ivory);
 }
 
 
 .brand-logo {
+    width: 50px;
+    height: 50px;
 
-    width:
-        58px;
+    object-fit: contain;
 
-    height:
-        58px;
-
-    object-fit:
-        contain;
-
-}
-
-
-.brand span {
-
-    color:
-        var(--gold-light);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        1.45rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.04em;
-
-    white-space:
-        nowrap;
-
+    flex: 0 0 auto;
 }
 
 
 .brand-name {
+    display: flex;
+    flex-direction: column;
 
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    justify-content:
-        center;
-
-    gap:
-        1px;
-
-    white-space:
-        nowrap;
-
+    line-height: 1.1;
 }
 
 
 .brand-name strong {
+    color: var(--gold-light);
 
-    color:
-        var(--gold-light);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        1.45rem;
-
-    font-weight:
-        700;
-
-    line-height:
-        1;
-
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
 }
 
 
 .brand-name small {
+    margin-top: 5px;
 
-    color:
-        var(--gold);
+    color: var(--cream);
 
-    font-family:
-        "Inter",
-        sans-serif;
-
-    font-size:
-        0.53rem;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        0.075em;
-
-    line-height:
-        1.2;
-
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
 }
 
 
-/* =========================================================
-   DESKTOP NAVIGATION
-   ========================================================= */
-
 .desktop-nav {
+    margin-left: auto;
 
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        flex-end;
-
-    gap:
-        26px;
-
-    min-width:
-        0;
-
-    margin-left:
-        auto;
-
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 
 .desktop-nav > a,
 .dropdown-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 
-    position:
-        relative;
+    padding: 10px 12px;
 
-    display:
-        inline-flex;
+    border: 0;
+    background: transparent;
 
-    align-items:
-        center;
+    color: var(--cream);
 
-    justify-content:
-        center;
+    cursor: pointer;
 
-    gap:
-        5px;
-
-    background:
-        none;
-
-    border:
-        none;
-
-    color:
-        var(--text-light);
-
-    cursor:
-        pointer;
-
-    font-size:
-        0.73rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.07em;
-
-    line-height:
-        1;
-
-    text-transform:
-        uppercase;
-
-    white-space:
-        nowrap;
-
-    padding:
-        30px 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
 
     transition:
-        color 0.25s ease;
-
+        color 0.2s ease,
+        background 0.2s ease;
 }
 
 
 .desktop-nav > a:hover,
-.dropdown-button:hover {
-
-    color:
-        var(--gold-light);
-
+.dropdown-button:hover,
+.dropdown-button.active {
+    color: var(--gold-light);
 }
 
-
-.desktop-nav > a.active::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    left:
-        0;
-
-    right:
-        0;
-
-    bottom:
-        20px;
-
-    height:
-        2px;
-
-    background:
-        var(--gold);
-
-}
-
-
-/* =========================================================
-   DROPDOWNS
-   ========================================================= */
 
 .nav-dropdown {
-
-    position:
-        relative;
-
-    flex-shrink:
-        0;
-
+    position: relative;
 }
 
 
 .dropdown-button span {
-
-    color:
-        var(--gold);
-
-    font-size:
-        0.85rem;
-
+    font-size: 13px;
+    line-height: 1;
 }
 
 
 .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
 
-    position:
-        absolute;
+    min-width: 210px;
 
-    top:
-        calc(100% - 8px);
+    display: flex;
+    flex-direction: column;
 
-    left:
-        -18px;
+    padding: 8px;
 
-    width:
-        220px;
+    background: var(--espresso-light);
+    border: 1px solid var(--border-dark);
 
-    padding:
-        10px;
+    box-shadow: var(--shadow);
 
-    background:
-        #1a0d08;
-
-    border:
-        1px solid var(--border-dark);
-
-    box-shadow:
-        var(--shadow);
-
-    opacity:
-        0;
-
-    visibility:
-        hidden;
-
-    transform:
-        translateY(8px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
 
     transition:
-        opacity 0.2s ease,
-        transform 0.2s ease,
-        visibility 0.2s ease;
-
+        opacity 0.18s ease,
+        transform 0.18s ease,
+        visibility 0.18s ease;
 }
 
 
 .nav-dropdown:hover .dropdown-menu,
 .nav-dropdown:focus-within .dropdown-menu {
-
-    opacity:
-        1;
-
-    visibility:
-        visible;
-
-    transform:
-        translateY(0);
-
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 
 .dropdown-menu a {
+    padding: 10px 12px;
 
-    display:
-        block;
+    color: var(--cream);
 
-    padding:
-        11px 14px;
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        0.85rem;
+    font-size: 12px;
+    font-weight: 600;
 
     transition:
-        background 0.2s ease,
-        color 0.2s ease;
-
+        color 0.2s ease,
+        background 0.2s ease;
 }
 
 
 .dropdown-menu a:hover,
-.dropdown-menu a.active {
-
-    color:
-        var(--gold-light);
-
-    background:
-        rgba(213, 163, 47, 0.08);
-
+.dropdown-menu a.dropdown-active {
+    color: var(--gold-light);
+    background: rgba(213, 163, 47, 0.09);
 }
 
 
-/* =========================================================
-   ENROLL BUTTON
-   ========================================================= */
-
 .enroll-button {
+    margin-left: 18px;
 
-    flex-shrink:
-        0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    display:
-        inline-flex;
+    min-height: 42px;
+    padding: 0 18px;
 
-    align-items:
-        center;
+    background: var(--gold);
+    color: var(--espresso);
 
-    justify-content:
-        center;
+    border: 1px solid var(--gold);
 
-    min-height:
-        46px;
-
-    min-width:
-        134px;
-
-    padding:
-        0 23px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--gold-light),
-            var(--gold)
-        );
-
-    color:
-        #241506;
-
-    font-size:
-        0.72rem;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        0.07em;
-
-    text-transform:
-        uppercase;
-
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.25);
-
-    white-space:
-        nowrap;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 
 .enroll-button:hover {
-
-    transform:
-        translateY(-2px);
-
-    box-shadow:
-        0 10px 28px
-        rgba(213, 163, 47, 0.25);
-
+    background: var(--gold-light);
+    color: var(--espresso);
+    transform: translateY(-1px);
 }
 
 
-/* =========================================================
-   MOBILE MENU BUTTON
-   ========================================================= */
-
-.mobile-menu-button {
-
-    display:
-        none;
-
-    width:
-        48px;
-
-    height:
-        48px;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    flex-direction:
-        column;
-
-    gap:
-        6px;
-
-    background:
-        transparent;
-
-    border:
-        1px solid var(--border-dark);
-
-    cursor:
-        pointer;
-
-}
-
-
-.mobile-menu-button span {
-
-    display:
-        block;
-
-    width:
-        21px;
-
-    height:
-        2px;
-
-    background:
-        var(--gold-light);
-
-}
-
-
-/* =========================================================
-   MOBILE NAVIGATION
-   ========================================================= */
-
+.mobile-menu-button,
 .mobile-navigation {
-
-    display:
-        none;
-
+    display: none;
 }
 
 
 /* =========================================================
-   CURRICULUM INTRODUCTION
+   PAGE INTRODUCTION
    ========================================================= */
 
 .page-intro {
+    position: relative;
 
-    position:
-        relative;
-
-    padding:
-        130px 0 120px;
-
-    overflow:
-        hidden;
+    padding: 105px 0 92px;
 
     background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(125, 63, 14, 0.26),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 85% 75%,
-            rgba(213, 163, 47, 0.08),
-            transparent 35%
-        ),
         linear-gradient(
             135deg,
-            #0f0806,
-            #1c0d08
+            var(--espresso) 0%,
+            var(--brown) 58%,
+            var(--bronze) 100%
         );
 
+    color: var(--ivory);
+
+    overflow: hidden;
 }
 
 
-.page-intro::before {
+.page-intro::after {
+    content: "";
 
-    content:
-        "";
+    position: absolute;
+    right: -120px;
+    bottom: -170px;
 
-    position:
-        absolute;
+    width: 440px;
+    height: 440px;
 
-    inset:
-        0;
+    border: 1px solid rgba(241, 204, 114, 0.18);
+    border-radius: 50%;
 
-    pointer-events:
-        none;
+    box-shadow:
+        0 0 0 50px rgba(241, 204, 114, 0.025),
+        0 0 0 100px rgba(241, 204, 114, 0.02);
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(213, 163, 47, 0.025),
-            transparent
-        );
-
+    pointer-events: none;
 }
 
 
-.page-intro .content-container {
+.section-eyebrow {
+    margin: 0 0 13px;
 
-    position:
-        relative;
+    color: var(--gold);
 
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+    text-transform: uppercase;
 }
 
 
 .page-intro h1 {
+    max-width: 850px;
 
-    max-width:
-        950px;
+    margin: 0;
 
-    margin:
-        18px 0 28px;
+    color: var(--white);
 
-    color:
-        var(--ivory);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        clamp(
-            3rem,
-            6vw,
-            6rem
-        );
-
-    font-weight:
-        600;
-
-    line-height:
-        1.05;
-
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: 0.015em;
 }
 
 
 .intro-lead {
+    max-width: 760px;
 
-    max-width:
-        760px;
+    margin: 23px 0 15px;
 
-    color:
-        var(--text-muted);
+    color: var(--gold-light);
 
-    font-size:
-        1.08rem;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(25px, 3vw, 37px);
+    font-weight: 600;
+    line-height: 1.15;
+}
 
+
+.intro-support {
+    max-width: 820px;
+
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+    line-height: 1.9;
 }
 
 
 /* =========================================================
-   OVERVIEW
+   GENERAL CONTENT
    ========================================================= */
 
 .content-section {
-
-    padding:
-        120px 0;
-
+    padding: 100px 0;
 }
 
 
-.content-section:nth-of-type(odd) {
-
-    background:
-        var(--ivory);
-
-    color:
-        var(--dark-text);
-
+.curriculum-overview {
+    background: var(--ivory);
 }
 
-
-.content-section:nth-of-type(even) {
-
-    background:
-        #eee5d8;
-
-    color:
-        var(--dark-text);
-
-}
-
-
-.content-panel {
-
-    max-width:
-        900px;
-
-    margin:
-        0 auto;
-
-}
-
-
-.content-panel > p {
-
-    margin-bottom:
-        24px;
-
-    color:
-        var(--dark-muted);
-
-    font-size:
-        1.02rem;
-
-}
-
-
-.content-panel > p:last-child {
-
-    margin-bottom:
-        0;
-
-}
-
-
-/* =========================================================
-   CURRICULUM SECTION HEADINGS
-   ========================================================= */
 
 .section-heading {
-
-    max-width:
-        900px;
-
-    margin:
-        0 auto 55px;
-
+    max-width: 820px;
+    margin-bottom: 58px;
 }
 
 
-.section-heading .section-eyebrow {
+.section-heading h2,
+.progression-panel h2,
+.purpose-panel h2 {
+    margin: 0;
 
-    color:
-        var(--bronze);
+    color: var(--dark-text);
 
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.18;
 }
 
 
-.section-heading h2 {
+.section-lead {
+    max-width: 760px;
 
-    margin-top:
-        18px;
+    margin: 18px 0 0;
 
-    color:
-        var(--dark-text);
+    color: var(--dark-muted);
 
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        clamp(
-            2.5rem,
-            4vw,
-            4.3rem
-        );
-
-    font-weight:
-        600;
-
-    line-height:
-        1.1;
-
+    font-size: 16px;
+    line-height: 1.85;
 }
 
 
 /* =========================================================
-   CURRICULUM CARDS
+   CURRICULUM AREAS
    ========================================================= */
 
-.card-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(
-            3,
-            minmax(0, 1fr)
-        );
-
-    gap:
-        22px;
-
+.curriculum-path {
+    display: grid;
+    gap: 28px;
 }
 
 
-.content-card {
+.curriculum-area {
+    display: grid;
+    grid-template-columns: 100px 1fr;
 
-    position:
-        relative;
+    overflow: hidden;
 
-    min-height:
-        250px;
+    background: var(--white);
 
-    padding:
-        32px 28px;
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--gold-dark);
 
-    background:
-        #fffdf9;
-
-    border:
-        1px solid var(--border-light);
-
-    box-shadow:
-        0 15px 35px
-        rgba(38, 20, 8, 0.07);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-
+    box-shadow: 0 12px 35px rgba(39, 28, 22, 0.08);
 }
 
 
-.content-card:hover {
+.curriculum-number {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 
-    transform:
-        translateY(-4px);
+    padding: 34px 12px;
 
-    box-shadow:
-        0 20px 45px
-        rgba(38, 20, 8, 0.12);
+    background: var(--espresso);
 
-    border-color:
-        rgba(213, 163, 47, 0.35);
+    color: var(--gold-light);
 
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
 }
 
 
-.content-card::before {
-
-    content:
-        "";
-
-    display:
-        block;
-
-    width:
-        42px;
-
-    height:
-        2px;
-
-    margin-bottom:
-        28px;
-
-    background:
-        var(--gold);
-
+.curriculum-area-content {
+    padding: 34px 42px 40px;
 }
 
 
-.content-card h3 {
+.area-label {
+    margin: 0 0 8px;
 
-    margin-bottom:
-        15px;
+    color: var(--gold-dark);
 
-    color:
-        var(--dark-text);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        1.25rem;
-
-    line-height:
-        1.25;
-
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
 }
 
 
-.content-card p {
+.curriculum-area h3 {
+    margin: 0;
 
-    color:
-        var(--dark-muted);
+    color: var(--dark-text);
 
-    font-size:
-        0.92rem;
+    font-family: "Cinzel", Georgia, serif;
+    font-size: clamp(23px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.25;
+}
 
-    line-height:
-        1.65;
 
+.curriculum-area-content > p:not(.area-label) {
+    max-width: 850px;
+
+    margin: 12px 0 27px;
+
+    color: var(--dark-muted);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+.study-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px 28px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid var(--border-light);
+}
+
+
+.study-list > div {
+    padding-left: 17px;
+
+    border-left: 2px solid rgba(213, 163, 47, 0.5);
+}
+
+
+.study-list h4 {
+    margin: 0 0 4px;
+
+    color: var(--dark-text);
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+.study-list p {
+    margin: 0;
+
+    color: var(--dark-muted);
+
+    font-size: 13px;
+    line-height: 1.65;
 }
 
 
 /* =========================================================
-   SERVICE PATHWAYS
+   PROGRESSION
    ========================================================= */
 
-.service-pathway-section {
+.progression-section {
+    padding: 85px 0;
+
+    background: var(--espresso);
+}
+
+
+.progression-panel {
+    position: relative;
+
+    padding: 55px clamp(28px, 6vw, 75px);
+
+    border: 1px solid var(--border-dark);
 
     background:
         linear-gradient(
             135deg,
-            #120906,
-            #211008
-        ) !important;
-
-    color:
-        var(--text-light) !important;
-
-}
-
-
-.service-pathway-section .content-panel {
-
-    max-width:
-        900px;
-
-    padding:
-        55px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #241108,
-            #51270c
+            rgba(53, 23, 7, 0.95),
+            rgba(18, 9, 6, 0.98)
         );
 
-    border:
-        1px solid var(--border-dark);
-
-    box-shadow:
-        var(--shadow);
-
+    box-shadow: var(--shadow);
 }
 
 
-.service-pathway-section .section-eyebrow {
+.progression-panel h2 {
+    max-width: 1000px;
 
-    margin-bottom:
-        18px;
+    color: var(--gold-light);
 
+    font-size: clamp(27px, 4vw, 45px);
 }
 
 
-.emphasis-panel h2 {
+.progression-panel p:last-child {
+    max-width: 850px;
 
-    margin-bottom:
-        20px;
+    margin: 20px 0 0;
 
-    color:
-        var(--ivory);
+    color: var(--text-light);
 
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        clamp(
-            2.2rem,
-            4vw,
-            3.5rem
-        );
-
-    font-weight:
-        600;
-
-    line-height:
-        1.1;
-
+    font-size: 16px;
+    line-height: 1.85;
 }
 
 
-.emphasis-panel p:last-child {
+/* =========================================================
+   PURPOSE
+   ========================================================= */
 
-    margin:
-        0;
+.purpose-section {
+    padding: 100px 0;
 
-    color:
-        var(--text-muted);
+    background: var(--cream);
+}
 
-    font-size:
-        1.02rem;
 
+.purpose-panel {
+    max-width: 900px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.purpose-panel h2 {
+    color: var(--dark-text);
+}
+
+
+.purpose-panel p:last-child {
+    max-width: 720px;
+
+    margin: 22px auto 0;
+
+    color: var(--dark-muted);
+
+    font-size: 16px;
+    line-height: 1.85;
 }
 
 
@@ -1248,721 +712,375 @@ a {
    ========================================================= */
 
 .site-footer {
+    padding: 60px 0 45px;
 
-    padding-top:
-        55px;
+    background: var(--espresso);
+    color: var(--text-light);
 
-    background:
-        #100705;
-
-    border-top:
-        1px solid var(--border-dark);
-
+    border-top: 1px solid var(--border-dark);
 }
 
 
 .footer-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1.1fr 1fr 1fr;
-
-    gap:
-        55px;
-
-    align-items:
-        center;
-
-    padding-bottom:
-        45px;
-
-}
-
-
-.footer-brand {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        16px;
-
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 0.7fr;
+    gap: 45px;
 }
 
 
 .footer-brand h2 {
+    margin: 0 0 8px;
 
-    color:
-        var(--gold-light);
+    color: var(--gold-light);
 
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        1.5rem;
-
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 25px;
+    letter-spacing: 0.08em;
 }
 
 
 .footer-brand p {
+    max-width: 330px;
 
-    max-width:
-        260px;
+    margin: 0;
 
-    color:
-        var(--text-muted);
+    color: var(--text-muted);
 
-    font-size:
-        0.72rem;
-
-    font-weight:
-        600;
-
-    letter-spacing:
-        0.05em;
-
-    line-height:
-        1.5;
-
-    text-transform:
-        uppercase;
-
+    font-size: 13px;
 }
 
 
-.footer-links {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    justify-content:
-        flex-end;
-
-    gap:
-        12px 20px;
-
-}
-
-
-.footer-links a {
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        0.72rem;
-
-    transition:
-        color 0.2s ease;
-
-}
-
-
-.footer-links a:hover {
-
-    color:
-        var(--gold-light);
-
-}
-
-
+.footer-links,
 .footer-legal {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    justify-content:
-        flex-end;
-
-    gap:
-        12px 20px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 
+.footer-links a,
 .footer-legal a {
+    width: fit-content;
 
-    color:
-        var(--text-muted);
+    color: var(--text-muted);
 
-    font-size:
-        0.72rem;
+    font-size: 12px;
 
-    transition:
-        color 0.2s ease;
-
+    transition: color 0.2s ease;
 }
 
 
+.footer-links a:hover,
 .footer-legal a:hover {
-
-    color:
-        var(--gold-light);
-
+    color: var(--gold-light);
 }
 
 
 /* =========================================================
-   FOCUS STATES
-   ========================================================= */
-
-a:focus-visible,
-button:focus-visible {
-
-    outline:
-        2px solid var(--gold-light);
-
-    outline-offset:
-        3px;
-
-}
-
-
-/* =========================================================
-   TABLET
+   MOBILE NAVIGATION
    ========================================================= */
 
 @media (max-width: 1100px) {
 
-    .desktop-nav {
+    .brand {
+        min-width: 250px;
+    }
 
-        gap:
-            17px;
-
+    .brand-name small {
+        font-size: 7px;
     }
 
     .desktop-nav > a,
     .dropdown-button {
-
-        font-size:
-            0.65rem;
-
+        padding-inline: 8px;
+        font-size: 11px;
     }
 
-    .main-navigation {
-
-        gap:
-            20px;
-
-    }
-
-    .card-grid {
-
-        grid-template-columns:
-            repeat(
-                2,
-                minmax(0, 1fr)
-            );
-
+    .enroll-button {
+        margin-left: 10px;
+        padding-inline: 14px;
     }
 
 }
 
-
-/* =========================================================
-   MOBILE NAVIGATION AND LAYOUT
-   ========================================================= */
 
 @media (max-width: 900px) {
 
-    .top-message {
-
-        display:
-            none;
-
-    }
-
     .main-navigation {
-
-        min-height:
-            74px;
-
-        width:
-            min(
-                calc(100% - 32px),
-                100%
-            );
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
+        min-height: 76px;
+        padding: 10px 20px;
     }
+
 
     .desktop-nav,
     .enroll-button {
-
-        display:
-            none;
-
-    }
-
-    .mobile-menu-button {
-
-        display:
-            flex;
-
-        margin-left:
-            auto;
-
-        flex-shrink:
-            0;
-
-    }
-
-    .mobile-navigation {
-
-        display:
-            flex;
-
-        flex-direction:
-            column;
-
-        position:
-            fixed;
-
-        top:
-            0;
-
-        right:
-            0;
-
-        z-index:
-            2000;
-
-        width:
-            min(
-                380px,
-                88vw
-            );
-
-        height:
-            100vh;
-
-        padding:
-            22px;
-
-        background:
-            #130b08;
-
-        border-left:
-            1px solid var(--border-dark);
-
-        box-shadow:
-            -20px 0 60px
-            rgba(0, 0, 0, 0.5);
-
-        transform:
-            translateX(110%);
-
-        transition:
-            transform 0.35s ease;
-
-        overflow-y:
-            auto;
-
+        display: none;
     }
 
 
-    .mobile-navigation.open {
-
-        transform:
-            translateX(0);
-
-    }
-
-
-    .mobile-navigation-header {
-
-        display:
-            flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            space-between;
-
-        padding:
-            0 0 20px;
-
-        margin-bottom:
-            10px;
-
-        border-bottom:
-            1px solid var(--border-dark);
-
-    }
-
-
-    .mobile-navigation-header span {
-
-        color:
-            var(--gold-light);
-
-        font-family:
-            "Cinzel",
-            serif;
-
-        font-size:
-            1.1rem;
-
-    }
-
-
-    .mobile-navigation-header button {
-
-        width:
-            40px;
-
-        height:
-            40px;
-
-        background:
-            transparent;
-
-        border:
-            1px solid var(--border-dark);
-
-        color:
-            var(--gold-light);
-
-        font-size:
-            1.8rem;
-
-        cursor:
-            pointer;
-
-    }
-
-
-    .mobile-navigation a {
-
-        display:
-            block;
-
-        padding:
-            16px;
-
-        margin-bottom:
-            3px;
-
-        color:
-            var(--text-light);
-
-        border-bottom:
-            1px solid
-            rgba(255, 255, 255, 0.05);
-
-        font-size:
-            1rem;
-
-        font-weight:
-            700;
-
-    }
-
-
-    .mobile-navigation a:hover,
-    .mobile-navigation a.active {
-
-        color:
-            var(--gold-light);
-
-        background:
-            linear-gradient(
-                90deg,
-                rgba(213, 163, 47, 0.17),
-                transparent
-            );
-
-    }
-
-
-    body.mobile-menu-open {
-
-        overflow:
-            hidden;
-
-    }
-
-
-    .content-container {
-
-        width:
-            min(
-                calc(100% - 32px),
-                var(--container-width)
-            );
-
-    }
-
-
-    .page-intro {
-
-        padding:
-            90px 0 80px;
-
-    }
-
-
-    .page-intro h1 {
-
-        font-size:
-            3.6rem;
-
-    }
-
-
-    .content-section {
-
-        padding:
-            90px 0;
-
-    }
-
-
-    .card-grid {
-
-        grid-template-columns:
-            1fr;
-
-        gap:
-            18px;
-
-    }
-
-
-    .content-card {
-
-        min-height:
-            auto;
-
-    }
-
-
-    .service-pathway-section .content-panel {
-
-        padding:
-            42px 35px;
-
-    }
-
-
-    .footer-grid {
-
-        grid-template-columns:
-            1fr;
-
-        gap:
-            28px;
-
-        text-align:
-            center;
-
-    }
-
-
-    .footer-brand {
-
-        justify-content:
-            center;
-
-    }
-
-
-    .footer-links,
-    .footer-legal {
-
-        justify-content:
-            center;
-
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-    .content-container {
-
-        width:
-            min(
-                calc(100% - 32px),
-                var(--container-width)
-            );
-
+    .brand {
+        min-width: 0;
     }
 
 
     .brand-logo {
-
-        width:
-            50px;
-
-        height:
-            50px;
-
+        width: 46px;
+        height: 46px;
     }
 
 
     .brand-name strong {
-
-        font-size:
-            1.2rem;
-
+        font-size: 18px;
     }
 
-    .brand-name small {
 
-        display:
-            none;
+    .mobile-menu-button {
+        width: 45px;
+        height: 45px;
 
+        margin-left: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        padding: 0;
+
+        background: transparent;
+        border: 1px solid var(--border-dark);
+
+        cursor: pointer;
+    }
+
+
+    .mobile-menu-button span {
+        width: 20px;
+        height: 2px;
+
+        background: var(--gold-light);
+    }
+
+
+    .mobile-navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 12px 20px 22px;
+
+        background: var(--espresso);
+
+        border-top: 1px solid var(--border-dark);
+        border-bottom: 1px solid var(--border-dark);
+
+        box-shadow: var(--shadow);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+
+        transition:
+            opacity 0.2s ease,
+            visibility 0.2s ease,
+            transform 0.2s ease;
+    }
+
+
+    .mobile-navigation.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+
+    .mobile-nav-header {
+        min-height: 45px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 8px;
+
+        color: var(--gold-light);
+
+        font-family: "Cinzel", Georgia, serif;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+    }
+
+
+    .mobile-nav-header button {
+        width: 38px;
+        height: 38px;
+
+        display: grid;
+        place-items: center;
+
+        padding: 0;
+
+        background: transparent;
+        color: var(--gold-light);
+
+        border: 1px solid var(--border-dark);
+
+        cursor: pointer;
+
+        font-size: 25px;
+        line-height: 1;
+    }
+
+
+    .mobile-navigation > a {
+        padding: 13px 8px;
+
+        color: var(--cream);
+
+        border-bottom: 1px solid rgba(213, 163, 47, 0.1);
+
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+
+    .mobile-navigation > a:hover,
+    .mobile-navigation > a.mobile-active {
+        color: var(--gold-light);
     }
 
 
     .page-intro {
-
-        padding:
-            90px 0 80px;
-
-    }
-
-
-    .page-intro h1 {
-
-        font-size:
-            2.55rem;
-
-    }
-
-
-    .intro-lead {
-
-        font-size:
-            0.98rem;
-
+        padding: 80px 0 72px;
     }
 
 
     .content-section {
-
-        padding:
-            80px 0;
-
+        padding: 78px 0;
     }
 
 
-    .section-heading {
-
-        margin-bottom:
-            40px;
-
-    }
-
-
-    .section-heading h2 {
-
-        font-size:
-            2.35rem;
-
-    }
-
-
-    .content-panel > p {
-
-        font-size:
-            0.96rem;
-
-    }
-
-
-    .content-card {
-
-        padding:
-            28px 24px;
-
-    }
-
-
-    .content-card h3 {
-
-        font-size:
-            1.15rem;
-
-    }
-
-
-    .service-pathway-section .content-panel {
-
-        padding:
-            36px 25px;
-
-    }
-
-
-    .emphasis-panel h2 {
-
-        font-size:
-            2.3rem;
-
-    }
-
-
-    .footer-brand {
-
-        flex-direction:
-            column;
-
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
 
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
+@media (max-width: 600px) {
+
+    .content-container {
+        width: min(100% - 32px, var(--container-width));
+    }
+
+
+    .top-message {
+        min-height: 32px;
+
+        padding: 6px 12px;
+
+        font-size: 8px;
+        letter-spacing: 0.11em;
+    }
+
+
+    .top-message span {
+        margin: 0 5px;
+    }
+
+
+    .brand-name small {
+        display: none;
+    }
+
+
+    .page-intro {
+        padding: 68px 0 60px;
+    }
+
+
+    .page-intro h1 {
+        font-size: 43px;
+    }
+
+
+    .intro-lead {
+        font-size: 27px;
+    }
+
+
+    .intro-support {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .curriculum-area {
+        grid-template-columns: 1fr;
+    }
+
+
+    .curriculum-number {
+        min-height: 62px;
+
+        justify-content: flex-start;
+
+        padding: 20px 24px;
+
+        font-size: 20px;
+    }
+
+
+    .curriculum-area-content {
+        padding: 27px 24px 30px;
+    }
+
+
+    .study-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .progression-section,
+    .purpose-section {
+        padding: 70px 0;
+    }
+
+
+    .progression-panel {
+        padding: 38px 24px;
+    }
+
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
 
 @media (prefers-reduced-motion: reduce) {
 
     html {
-
-        scroll-behavior:
-            auto;
-
+        scroll-behavior: auto;
     }
+
 
     *,
     *::before,
     *::after {
-
-        transition-duration:
-            0.01ms !important;
-
-        animation-duration:
-            0.01ms !important;
-
-        animation-iteration-count:
-            1 !important;
-
+        transition: none !important;
     }
 
 }
