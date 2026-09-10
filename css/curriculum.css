@@ -2,8 +2,12 @@
    BAPBI
    CURRICULUM PAGE STYLESHEET
    Bethesda Apostolic Pentecostal Bible Institute
+
+   The shared BAPBI visual system is controlled by styles.css.
+   This file controls Curriculum content only.
    ========================================================= */
 
+/* Curriculum page active navigation state */
 .dropdown-button.active {
     color: var(--gold-light);
 }
@@ -14,6 +18,13 @@
 
 .dropdown-active {
     color: var(--gold-light) !important;
+}
+
+/* Curriculum uses the same dark text tones as the homepage's light sections. */
+.curriculum-overview,
+.purpose-section {
+    --curriculum-dark-text: #271c16;
+    --curriculum-dark-muted: #766960;
 }
 
 /* =========================================================
@@ -91,7 +102,6 @@
     line-height: 1.8;
 }
 
-
 /* =========================================================
    CURRICULUM CONTENT
    ========================================================= */
@@ -102,7 +112,7 @@
 
 .curriculum-overview {
     background: var(--ivory);
-    color: var(--dark-text);
+    color: var(--curriculum-dark-text);
 }
 
 .section-heading {
@@ -111,7 +121,7 @@
 }
 
 .section-heading h2 {
-    color: var(--dark-text);
+    color: var(--curriculum-dark-text);
     font-family: "Cinzel", serif;
     font-size: clamp(2rem, 4vw, 3.4rem);
     font-weight: 600;
@@ -122,7 +132,7 @@
 .section-lead {
     max-width: 760px;
     margin-top: 15px;
-    color: var(--dark-muted);
+    color: var(--curriculum-dark-muted);
     font-size: 1rem;
     line-height: 1.8;
 }
@@ -166,7 +176,7 @@
 }
 
 .curriculum-area h3 {
-    color: var(--dark-text);
+    color: var(--curriculum-dark-text);
     font-family: "Cinzel", serif;
     font-size: clamp(1.45rem, 3vw, 2rem);
     font-weight: 600;
@@ -176,7 +186,7 @@
 .curriculum-area-content > p:not(.area-label) {
     max-width: 820px;
     margin-top: 12px;
-    color: var(--dark-muted);
+    color: var(--curriculum-dark-muted);
     font-size: 0.95rem;
     line-height: 1.8;
 }
@@ -196,7 +206,7 @@
 }
 
 .study-list h4 {
-    color: var(--dark-text);
+    color: var(--curriculum-dark-text);
     font-family: "Cormorant Garamond", serif;
     font-size: 1.35rem;
     font-weight: 700;
@@ -205,11 +215,10 @@
 
 .study-list p {
     margin-top: 4px;
-    color: var(--dark-muted);
+    color: var(--curriculum-dark-muted);
     font-size: 0.82rem;
     line-height: 1.65;
 }
-
 
 /* =========================================================
    CURRICULUM PROGRESSION
@@ -256,7 +265,6 @@
     line-height: 1.85;
 }
 
-
 /* =========================================================
    PURPOSE
    ========================================================= */
@@ -264,7 +272,7 @@
 .purpose-section {
     padding: 120px 0;
     background: var(--cream);
-    color: var(--dark-text);
+    color: var(--curriculum-dark-text);
 }
 
 .purpose-panel {
@@ -274,7 +282,7 @@
 }
 
 .purpose-panel h2 {
-    color: var(--dark-text);
+    color: var(--curriculum-dark-text);
     font-family: "Cinzel", serif;
     font-size: clamp(2rem, 4vw, 3.4rem);
     font-weight: 600;
@@ -284,17 +292,68 @@
 .purpose-panel p {
     max-width: 720px;
     margin: 20px auto 0;
-    color: var(--dark-muted);
+    color: var(--curriculum-dark-muted);
     font-size: 1rem;
     line-height: 1.85;
 }
 
+/* =========================================================
+   CURRICULUM FOOTER COMPATIBILITY
+   The current Curriculum footer markup is simpler than the
+   homepage footer. These rules make it visually belong to
+   the same BAPBI master theme without changing its content.
+   ========================================================= */
+
+.site-footer .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.site-footer .footer-brand h2 {
+    color: var(--gold-light);
+    font-family: "Cinzel", serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.site-footer .footer-brand p {
+    max-width: 300px;
+    margin-top: 5px;
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.55;
+    text-transform: uppercase;
+}
+
+.site-footer .footer-links,
+.site-footer .footer-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site-footer .footer-links a,
+.site-footer .footer-legal a {
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-legal a:hover {
+    color: var(--gold-light);
+}
 
 /* =========================================================
    RESPONSIVE
-   Curriculum page-specific responsive rules
-   Shared site shell is controlled by css/styles.css.
-========================================================= */
+   Curriculum page-specific responsive rules.
+   Shared site shell remains controlled by styles.css.
+   ========================================================= */
 
 @media (max-width: 900px) {
 
@@ -312,6 +371,11 @@
 
     .progression-panel {
         padding: 50px;
+    }
+
+    .site-footer .content-container.footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
     }
 }
 
@@ -370,5 +434,16 @@
 
     .progression-panel {
         padding: 38px 24px;
+    }
+
+    .site-footer .content-container.footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .site-footer .footer-legal {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 14px 18px;
     }
 }
