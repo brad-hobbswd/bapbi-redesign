@@ -251,28 +251,17 @@ a {
    ========================================================= */
 
 .main-navigation {
+    width: min(
+        calc(100% - 48px),
+        1400px
+    );
 
-    width:
-        min(
-            calc(100% - 48px),
-            1400px
-        );
+    min-height: 82px;
+    margin: 0 auto;
 
-    min-height:
-        82px;
-
-    margin:
-        0 auto;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        34px;
-
+    display: flex;
+    align-items: center;
+    gap: 34px;
 }
 
 
@@ -281,19 +270,10 @@ a {
    ========================================================= */
 
 .brand {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    gap:
-        14px;
-
-    flex-shrink:
-        0;
-
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
 }
 
 
@@ -337,19 +317,10 @@ a {
    ========================================================= */
 
 .desktop-nav {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        26px;
-
-    margin-left:
-        auto;
-
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-left: auto;
 }
 
 
