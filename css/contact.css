@@ -1,18 +1,6 @@
-/* =========================================================
-   BAPBI
-   CONTACT PAGE STYLESHEET
-   Bethesda Apostolic Pentecostal Bible Institute
-
-   Version: 1.0
-   ========================================================= */
-
-
-/* =========================================================
-   ROOT
-   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap");
 
 :root {
-
     --espresso: #120906;
     --espresso-light: #211008;
     --brown: #351707;
@@ -35,13 +23,27 @@
     --border-dark: rgba(213, 163, 47, 0.22);
     --border-light: rgba(38, 20, 8, 0.14);
 
-    --shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35);
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 
     --container-width: 1280px;
 
+    --font-display: "Cinzel", Georgia, serif;
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+    --font-body: "Inter", Arial, sans-serif;
 }
 
+/* =========================================================
+   BAPBI
+   CONTACT PAGE STYLESHEET
+   Bethesda Apostolic Pentecostal Bible Institute
+
+   Version: 1.0
+   ========================================================= */
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
 
 /* =========================================================
    RESET
@@ -1864,3 +1866,74 @@ textarea {
     }
 
 }
+
+
+/* =========================================================
+   CONTACT PAGE FINAL VISUAL AUTHORITY
+   Loads after styles.css so Contact follows the BAPBI theme.
+========================================================= */
+
+.contact-page .top-message {
+    background:
+        linear-gradient(
+            90deg,
+            var(--brown),
+            var(--espresso-light)
+        );
+    color: var(--gold-light);
+}
+
+.contact-page .top-message p {
+    color: var(--gold-light);
+}
+
+.contact-page .contact-overview {
+    background: var(--ivory);
+}
+
+.contact-page .contact-info-card {
+    background: var(--white);
+}
+
+.contact-page .contact-info-card h2 {
+    color: var(--dark-text);
+}
+
+.contact-page .contact-info-card p {
+    color: var(--dark-muted);
+}
+
+.contact-page .contact-detail a,
+.contact-page .contact-detail strong {
+    color: var(--dark-text);
+}
+
+.contact-page .contact-form-card {
+    background: var(--espresso-light);
+}
+
+.contact-page .form-field input,
+.contact-page .form-field textarea {
+    background: var(--espresso);
+    color: var(--ivory);
+}
+
+.contact-page .support-section {
+    background: var(--cream);
+}
+
+.contact-page .support-content h2,
+.contact-page .support-card h3 {
+    color: var(--dark-text);
+}
+
+.contact-page .support-content p,
+.contact-page .support-card p {
+    color: var(--dark-muted);
+}
+
+.contact-page .location-section {
+    background: var(--espresso-light);
+}
+
+/* Keep footer consistent with the updated master footer. */
