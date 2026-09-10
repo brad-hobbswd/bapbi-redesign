@@ -23,6 +23,10 @@
 
     <link
         rel="stylesheet"
+        href="css/styles.css">
+
+    <link
+        rel="stylesheet"
         href="css/student-portal.css?v=20260910-portal">
 
     <title>
@@ -36,293 +40,162 @@
 
 
 <!-- =========================================================
-     TOP MESSAGE
+     SITE HEADER
 ========================================================= -->
 
-<div class="top-message">
+<header class="site-header">
 
-    <p>
-        EQUIPPING BELIEVERS
-        <span>•</span>
-        BUILDING LEADERS
-        <span>•</span>
-        ADVANCING THE KINGDOM
-    </p>
+    <div class="top-message">
+        <p>
+            EQUIPPING BELIEVERS
+            <span>•</span>
+            BUILDING LEADERS
+            <span>•</span>
+            ADVANCING THE KINGDOM
+        </p>
+    </div>
 
-</div>
+    <div class="main-navigation">
 
-
-<!-- =========================================================
-     MAIN NAVIGATION
-========================================================= -->
-
-<header class="main-navigation">
-
-    <a
-        href="index.html"
-        class="brand"
-        aria-label="BAPBI Home">
-
-        <img
-            src="assets/images/IMG_0639.png"
-            alt="BAPBI Logo">
-
-        <span class="brand-name">
-
-            <strong>
-                BAPBI
-            </strong>
-
-            <small>
-                BETHESDA APOSTOLIC PENTECOSTAL BIBLE INSTITUTE
-            </small>
-
-        </span>
-
-    </a>
-
-
-    <!-- DESKTOP NAVIGATION -->
-
-    <nav
-        class="desktop-nav"
-        aria-label="Main Navigation">
-
-
-        <a href="index.html">
-            Home
+        <a href="index.html" class="brand" aria-label="BAPBI Home">
+            <img
+                src="assets/images/IMG_0639.png"
+                class="brand-logo"
+                alt="BAPBI Logo">
+            <span>BAPBI</span>
         </a>
 
+        <nav class="desktop-nav" aria-label="Main Navigation">
 
-        <!-- ABOUT -->
+            <a href="index.html">Home</a>
 
-        <div class="nav-dropdown">
+            <div class="nav-dropdown">
 
-            <button
-                type="button"
-                class="dropdown-toggle">
+                <button
+                    type="button"
+                    class="dropdown-button"
+                    aria-haspopup="true">
 
-                About
+                    About
+                    <span aria-hidden="true">▾</span>
 
-                <span
-                    class="dropdown-arrow"
-                    aria-hidden="true">
-                    ▾
-                </span>
+                </button>
 
-            </button>
-
-            <div class="dropdown-menu">
-
-                <a href="about.html">
-                    About BAPBI
-                </a>
-
-                <a href="beliefs.html">
-                    Beliefs
-                </a>
-
-                <a href="leadership.html">
-                    Leadership
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-                <a href="connect.html">
-                    Connect
-                </a>
+                <div class="dropdown-menu">
+                    <a href="about.html">About BAPBI</a>
+                    <a href="beliefs.html">Beliefs</a>
+                    <a href="leadership.html">Leadership</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="connect.html">Connect</a>
+                </div>
 
             </div>
 
-        </div>
+            <div class="nav-dropdown">
 
+                <button
+                    type="button"
+                    class="dropdown-button"
+                    aria-haspopup="true">
 
-        <!-- ACADEMICS -->
+                    Academics
+                    <span aria-hidden="true">▾</span>
 
-        <div class="nav-dropdown">
+                </button>
 
-            <button
-                type="button"
-                class="dropdown-toggle">
-
-                Academics
-
-                <span
-                    class="dropdown-arrow"
-                    aria-hidden="true">
-                    ▾
-                </span>
-
-            </button>
-
-            <div class="dropdown-menu">
-
-                <a href="curriculum.html">
-                    Curriculum
-                </a>
-
-                <a href="schedule.html">
-                    Schedule
-                </a>
+                <div class="dropdown-menu">
+                    <a href="curriculum.html">Curriculum</a>
+                    <a href="schedule.html">Schedule</a>
+                </div>
 
             </div>
 
-        </div>
+            <div class="nav-dropdown">
 
+                <button
+                    type="button"
+                    class="dropdown-button"
+                    aria-haspopup="true">
 
-        <!-- STUDENTS -->
+                    Students
+                    <span aria-hidden="true">▾</span>
 
-        <div class="nav-dropdown">
+                </button>
 
-            <button
-                type="button"
-                class="dropdown-toggle">
-
-                Students
-
-                <span
-                    class="dropdown-arrow"
-                    aria-hidden="true">
-                    ▾
-                </span>
-
-            </button>
-
-            <div class="dropdown-menu">
-
-                <a
-                    href="student-portal.html"
-                    class="active"
-                    aria-current="page">
-
-                    Student Portal
-
-                </a>
-
-                <a href="resources.html">
-                    Resources
-                </a>
+                <div class="dropdown-menu">
+                    <a
+                        href="student-portal.html"
+                        class="active"
+                        aria-current="page">
+                        Student Portal
+                    </a>
+                    <a href="resources.html">Resources</a>
+                </div>
 
             </div>
 
-        </div>
+        </nav>
 
-
-    </nav>
-
-
-    <!-- ENROLL -->
-
-    <a
-        href="enrollment.html"
-        class="enroll-button">
-
-        Enroll Now
-
-    </a>
-
-
-    <!-- MOBILE MENU -->
-
-    <button
-        type="button"
-        class="mobile-menu-button"
-        aria-label="Open navigation"
-        aria-expanded="false">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </button>
-
-</header>
-
-
-<!-- =========================================================
-     MOBILE NAVIGATION
-========================================================= -->
-
-<nav
-    class="mobile-navigation"
-    aria-label="Mobile Navigation">
-
-
-    <div class="mobile-nav-header">
-
-        <span>
-            BAPBI
-        </span>
+        <a href="enrollment.html" class="enroll-button">
+            Enroll Now
+        </a>
 
         <button
             type="button"
-            class="mobile-nav-close"
-            aria-label="Close navigation">
+            class="mobile-menu-button"
+            aria-label="Open navigation"
+            aria-expanded="false">
 
-            ×
+            <span></span>
+            <span></span>
+            <span></span>
 
         </button>
 
     </div>
 
+    <nav class="mobile-navigation" aria-label="Mobile Navigation">
 
-    <a href="index.html">
-        Home
-    </a>
+        <div class="mobile-nav-header">
 
-    <a href="about.html">
-        About BAPBI
-    </a>
+            <span>BAPBI</span>
 
-    <a href="beliefs.html">
-        Beliefs
-    </a>
+            <button
+                type="button"
+                class="mobile-nav-close"
+                aria-label="Close navigation">
+                ×
+            </button>
 
-    <a href="curriculum.html">
-        Curriculum
-    </a>
+        </div>
 
-    <a href="schedule.html">
-        Schedule
-    </a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About BAPBI</a>
+        <a href="beliefs.html">Beliefs</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="schedule.html">Schedule</a>
 
-    <a
-        href="student-portal.html"
-        class="active"
-        aria-current="page">
+        <a
+            href="student-portal.html"
+            class="active"
+            aria-current="page">
+            Student Portal
+        </a>
 
-        Student Portal
+        <a href="resources.html">Resources</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="enrollment.html">Enrollment</a>
+        <a href="contact.html">Contact</a>
+        <a href="connect.html">Connect</a>
 
-    </a>
+    </nav>
 
-    <a href="resources.html">
-        Resources
-    </a>
-
-    <a href="leadership.html">
-        Leadership
-    </a>
-
-    <a href="enrollment.html">
-        Enrollment
-    </a>
-
-    <a href="contact.html">
-        Contact
-    </a>
-
-    <a href="connect.html">
-        Connect
-    </a>
-
-
-</nav>
+</header>
 
 
 <!-- =========================================================
      MAIN CONTENT
+========================================================= -->
 ========================================================= -->
 
 <main>
@@ -636,122 +509,105 @@
 
 
 <!-- =========================================================
-     FOOTER
+     MASTER SITE FOOTER
 ========================================================= -->
 
 <footer class="site-footer">
 
     <div class="content-container footer-grid">
 
+        <div class="footer-brand-section">
 
-        <div class="footer-brand">
+            <a href="index.html" class="footer-brand">
 
-            <img
-                src="assets/images/IMG_0639.png"
-                alt="BAPBI Logo">
+                <img
+                    src="assets/images/IMG_0639.png"
+                    alt="BAPBI Logo">
 
-            <h2>
-                BAPBI
-            </h2>
+                <div>
 
-            <p>
-                Bethesda Apostolic Pentecostal Bible Institute
+                    <h2>BAPBI</h2>
+
+                    <p>
+                        Bethesda Apostolic Pentecostal
+                        Bible Institute
+                    </p>
+
+                </div>
+
+            </a>
+
+            <p class="footer-description">
+                Equipping believers, building leaders,
+                and advancing the Kingdom through
+                Apostolic biblical education.
             </p>
 
         </div>
 
+        <div class="footer-quote">
 
-        <div class="footer-links">
+            <span class="footer-eyebrow">
+                Our Purpose
+            </span>
 
-            <h3>
-                Explore
-            </h3>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="beliefs.html">
-                Beliefs
-            </a>
-
-            <a href="curriculum.html">
-                Curriculum
-            </a>
-
-            <a href="schedule.html">
-                Schedule
-            </a>
+            <p>
+                “Equipping believers for today.
+                Preparing leaders for tomorrow.”
+            </p>
 
         </div>
 
+        <div class="footer-links-section">
 
-        <div class="footer-links">
+            <p class="footer-eyebrow">
+                Institute Information
+            </p>
 
-            <h3>
-                Students
-            </h3>
+            <div class="footer-links">
 
-            <a
-                href="student-portal.html"
-                class="active">
+                <a href="about.html">About BAPBI</a>
+                <a href="curriculum.html">Academics</a>
+                <a href="enrollment.html">Enrollment</a>
 
-                Student Portal
+                <a
+                    href="student-portal.html"
+                    class="active"
+                    aria-current="page">
+                    Student Portal
+                </a>
 
-            </a>
+                <a href="contact.html">Contact</a>
 
-            <a href="resources.html">
-                Resources
-            </a>
-
-            <a href="enrollment.html">
-                Enrollment
-            </a>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h3>
-                Connect
-            </h3>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-            <a href="connect.html">
-                Connect
-            </a>
-
-            <a href="privacy.html">
-                Privacy
-            </a>
-
-            <a href="terms.html">
-                Terms
-            </a>
-
-            <a href="copyright.html">
-                Copyright
-            </a>
+            </div>
 
         </div>
-
 
     </div>
 
+    <div class="footer-divider">
+        <div class="content-container">
+            <span></span>
+        </div>
+    </div>
 
-    <div class="footer-bottom">
+    <div class="content-container footer-bottom">
 
         <p>
-            &copy; 2026 Bethesda Apostolic Pentecostal Bible Institute.
+            © 2026 Bethesda Apostolic Pentecostal Bible Institute.
             All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="copyright.html">Copyright</a>
+
+        </div>
+
+        <p class="footer-motto">
+            For the Kingdom. For His Glory.
         </p>
 
     </div>
