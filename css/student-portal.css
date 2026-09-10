@@ -1,12 +1,21 @@
 /* =========================================================
+   BAPBI
+   STUDENT PORTAL PAGE STYLESHEET
+   Uses global theme from css/styles.css
+
+   Google Fonts are loaded by styles.css:
+   - Cinzel
+   - Cormorant Garamond
+   - Inter
+
+   This file controls Student Portal content only.
+========================================================= */
+
+/* =========================================================
    PAGE INTRO
 ========================================================= */
 
-:root {
-    --font-display: "Cinzel", Georgia, serif;
-    --font-serif: "Cormorant Garamond", Georgia, serif;
-    --font-body: "Inter", Arial, sans-serif;
-}
+/* Global fonts and variables are provided by css/styles.css */
 
 .page-intro {
     padding: 96px 0 82px;
@@ -554,10 +563,6 @@
         min-height: 280px;
     }
 
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
 }
 
 
@@ -609,16 +614,6 @@
         min-height: 300px;
 
         padding: 30px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-    }
-
-    .site-footer {
-        padding-top: 55px;
     }
 
 }
@@ -695,3 +690,39 @@
    Header, navigation, mobile navigation, typography tokens,
    containers, and footer are supplied by css/styles.css.
 ========================================================= */
+
+/* =========================================================
+   STUDENT PORTAL LIGHT SECTION TEXT FIXES
+   Uses the BAPBI master theme from styles.css
+========================================================= */
+
+.archive-section .section-heading h2,
+.archive-content h3 {
+    color: var(--dark-text);
+}
+
+.archive-section .section-heading p,
+.archive-content p {
+    color: var(--dark-muted);
+}
+
+.archive-card {
+    color: var(--dark-text);
+}
+
+.service-card {
+    color: var(--text-light);
+}
+
+.service-card h3 {
+    color: var(--ivory);
+}
+
+.service-card p {
+    color: var(--text-muted);
+}
+
+/* Keep page CSS focused on content only.
+   Header, navigation, fonts, containers, and footer
+   are controlled by css/styles.css.
+*/
