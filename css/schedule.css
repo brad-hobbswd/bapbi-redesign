@@ -6,6 +6,12 @@
    Shared site shell is provided by css/styles.css.
 ========================================================= */
 
+:root {
+    --font-display: "Cinzel", Georgia, serif;
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+    --font-body: "Inter", Arial, sans-serif;
+}
+
 
 /* =========================================================
    PAGE INTRO
