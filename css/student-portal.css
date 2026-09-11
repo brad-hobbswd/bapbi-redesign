@@ -951,3 +951,133 @@
     }
 }
 
+/*========================================================
+    STUDENT SERVICES
+    Email has been moved to the page introduction.
+    Only Technical Support and Administrative Support
+    remain in this section.
+========================================================*/
+
+.student-portal-page .services-section {
+    background: var(--espresso);
+}
+
+.student-portal-page .services-section .section-heading h2 {
+    color: var(--ivory);
+}
+
+.student-portal-page .services-section .section-heading p {
+    color: rgba(247, 240, 230, 0.62);
+}
+
+.student-portal-page .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.student-portal-page .services-section .service-card,
+.student-portal-page .services-section .service-card.featured {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 330px;
+    padding: 2.75rem 2.5rem;
+    box-sizing: border-box;
+    color: var(--ivory);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.015)
+        );
+    border: 1px solid rgba(200, 164, 93, 0.5);
+    box-shadow: none;
+}
+
+.student-portal-page .services-section .service-card:hover,
+.student-portal-page .services-section .service-card.featured:hover {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.09),
+            rgba(255, 255, 255, 0.025)
+        );
+    border-color: var(--gold);
+}
+
+.student-portal-page .services-section .service-number {
+    display: block;
+    margin-bottom: 2rem;
+    color: var(--gold);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    line-height: 1;
+}
+
+.student-portal-page .services-section .service-card h3 {
+    margin: 0 0 1.25rem;
+    color: var(--ivory);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.student-portal-page .services-section .service-card p {
+    margin: 0;
+    color: rgba(247, 240, 230, 0.76);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.student-portal-page .services-section .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 2rem;
+    color: var(--gold);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.student-portal-page .services-section .service-link span {
+    transition: transform 0.25s ease;
+}
+
+.student-portal-page .services-section .service-link:hover {
+    color: var(--ivory);
+}
+
+.student-portal-page .services-section .service-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/*========================================================
+    RESPONSIVE SERVICES
+========================================================*/
+
+@media (max-width: 760px) {
+
+    .student-portal-page .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-portal-page .services-section .service-card,
+    .student-portal-page .services-section .service-card.featured {
+        min-height: auto;
+        padding: 2.25rem 2rem;
+    }
+
+}
