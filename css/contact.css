@@ -3104,3 +3104,94 @@ a {
     }
 
 }
+/* =========================================================
+   CONTACT PAGE REBUILD
+========================================================= */
+
+.contact-page .contact-banner-section {
+    width: 100%;
+    background: var(--espresso);
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.contact-page .contact-banner-image {
+    display: block;
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-page .contact-introduction-section {
+    padding: 100px 0;
+    background: var(--espresso);
+}
+
+.contact-page .contact-intro-grid,
+.contact-page .contact-form-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.contact-page .contact-intro-content h1 {
+    margin: 12px 0 24px;
+    color: var(--ivory);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+}
+
+.contact-page .contact-intro-content h1 span { color: var(--gold-light); }
+.contact-page .contact-intro-lead { max-width: 700px; color: var(--ivory); font-size: 1.3rem; }
+.contact-page .contact-intro-content p:not(.contact-intro-lead) { max-width: 650px; margin-top: 18px; color: var(--text-muted); }
+.contact-page .section-eyebrow { color: var(--gold-light); }
+
+.contact-page .contact-information-panel {
+    padding: 42px;
+    background: var(--ivory);
+    color: var(--espresso);
+    border-top: 4px solid var(--gold);
+    box-shadow: var(--shadow);
+}
+
+.contact-page .contact-panel-label { display: block; margin-bottom: 12px; color: var(--gold-dark); font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.contact-page .contact-information-panel > a { display: block; color: var(--espresso); font-family: "Cormorant Garamond", serif; font-size: 2.3rem; font-weight: 700; }
+.contact-page .contact-information-panel p { margin-top: 4px; color: #5b5047; }
+.contact-page .contact-hours { display: grid; gap: 3px; margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(18,9,6,.18); color: #5b5047; }
+.contact-page .contact-hours strong { color: var(--espresso); }
+
+.contact-page .contact-form-section { padding: 100px 0; background: var(--ivory); color: var(--espresso); }
+.contact-page .contact-section-heading { align-self: start; }
+.contact-page .contact-section-heading h2,
+.contact-page .contact-address-section h2 { margin: 12px 0 20px; color: var(--espresso); font-family: "Cormorant Garamond", serif; font-size: clamp(2.4rem, 4vw, 4rem); line-height: 1.05; }
+.contact-page .contact-section-heading p { max-width: 520px; color: #665a50; }
+.contact-page .contact-form-card { padding: 42px; background: var(--espresso); box-shadow: var(--shadow); }
+.contact-page .bapbi-contact-form { display: grid; gap: 20px; }
+.contact-page .form-field { display: grid; gap: 8px; }
+.contact-page .form-field label { color: var(--ivory); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.contact-page .form-field input,
+.contact-page .form-field textarea { width: 100%; padding: 14px 16px; border: 1px solid rgba(213,163,47,.3); border-radius: 0; background: #211008; color: var(--ivory); font: inherit; outline: none; }
+.contact-page .form-field textarea { resize: vertical; min-height: 150px; }
+.contact-page .form-field input:focus,
+.contact-page .form-field textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(213,163,47,.18); }
+.contact-page .bapbi-contact-form .button { width: fit-content; cursor: pointer; }
+.contact-page .form-note { color: var(--text-muted); font-size: .85rem; }
+.contact-page .contact-address-section { padding: 80px 0; background: var(--espresso-light); }
+.contact-page .contact-address-section h2 { color: var(--ivory); }
+.contact-page .contact-address-section p { color: var(--text-muted); font-size: 1.1rem; }
+
+@media (max-width: 900px) {
+    .contact-page .contact-intro-grid,
+    .contact-page .contact-form-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 600px) {
+    .contact-page .contact-introduction-section,
+    .contact-page .contact-form-section { padding: 65px 0; }
+    .contact-page .contact-information-panel,
+    .contact-page .contact-form-card { padding: 28px 22px; }
+    .contact-page .contact-information-panel > a { font-size: 1.9rem; }
+    .contact-page .bapbi-contact-form .button { width: 100%; }
+}
