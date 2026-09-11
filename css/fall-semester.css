@@ -1,36 +1,306 @@
 /* =========================================================
-   BAPBI
-   FALL SEMESTER PAGE STYLESHEET
-
-   Page-specific styles only.
-   Shared site shell is controlled by css/styles.css.
-
-   Bethesda Apostolic Pentecostal Bible Institute
+   BAPBI FALL SEMESTER PAGE STYLESHEET
+   Page-specific styles only. Shared shell is controlled by
+   css/styles.css.
 ========================================================= */
 
-
-/* =========================================================
-   GOOGLE FONTS
-========================================================= */
-
-@import url(
-    'https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap'
-);
-
-
-/* =========================================================
-   PAGE-SPECIFIC NAVIGATION STATE
-   Shared navigation styling is controlled by styles.css.
-========================================================= */
-
-.dropdown-button.active {
-    color: var(--gold-light);
+.fall-semester-page .semester-introduction {
+    padding: 7rem 0 6rem;
+    background: var(--espresso);
+    border-bottom: 1px solid rgba(200,164,93,.22);
 }
 
-.dropdown-button.active > span {
-    color: var(--gold-light);
+.fall-semester-page .semester-intro-grid {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(280px,390px);
+    align-items:center;
+    gap:clamp(3rem,7vw,8rem);
 }
 
-.dropdown-active {
-    color: var(--gold-light) !important;
+.fall-semester-page .section-eyebrow {
+    display:inline-block;
+    margin-bottom:1.25rem;
+    color:var(--gold);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.2em;
+    line-height:1.5;
+    text-transform:uppercase;
+}
+
+.fall-semester-page .semester-introduction h1 {
+    margin:0;
+    color:var(--ivory);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:clamp(3.8rem,7vw,7rem);
+    font-weight:600;
+    letter-spacing:-.035em;
+    line-height:.9;
+    text-transform:uppercase;
+}
+
+.fall-semester-page .semester-introduction h1 span {
+    display:block;
+    color:var(--gold);
+}
+
+.fall-semester-page .intro-lead {
+    max-width:760px;
+    margin:2rem 0 1rem;
+    color:var(--ivory);
+    font-family:Inter,Arial,sans-serif;
+    font-size:1.08rem;
+    line-height:1.9;
+}
+
+.fall-semester-page .intro-supporting {
+    max-width:700px;
+    margin:0;
+    color:rgba(247,240,230,.62);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.95rem;
+    line-height:1.8;
+}
+
+.fall-semester-page .semester-status-panel {
+    padding:2.75rem 2.5rem;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(200,164,93,.55);
+}
+
+.fall-semester-page .status-label {
+    display:block;
+    margin-bottom:1.5rem;
+    color:var(--gold);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+}
+
+.fall-semester-page .semester-status-panel strong {
+    display:block;
+    color:var(--ivory);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:2.8rem;
+    font-weight:600;
+    line-height:1;
+    text-transform:uppercase;
+}
+
+.fall-semester-page .semester-status-panel p {
+    margin:1.5rem 0 0;
+    color:rgba(247,240,230,.68);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.9rem;
+    line-height:1.8;
+}
+
+.fall-semester-page .semester-content-section {
+    padding:7rem 0;
+    background:var(--ivory);
+}
+
+.fall-semester-page .section-heading {
+    max-width:760px;
+    margin-bottom:2.5rem;
+}
+
+.fall-semester-page .section-heading h2,
+.fall-semester-page .student-access-panel h2 {
+    margin:0;
+    color:var(--espresso);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    font-weight:600;
+    letter-spacing:-.025em;
+    line-height:1;
+    text-transform:uppercase;
+}
+
+.fall-semester-page .section-heading p {
+    margin:1.25rem 0 0;
+    color:var(--text-muted);
+    font-family:Inter,Arial,sans-serif;
+    font-size:1rem;
+    line-height:1.8;
+}
+
+.fall-semester-page .course-study-panel {
+    display:grid;
+    grid-template-columns:90px minmax(0,1fr);
+    gap:2rem;
+    padding:3rem;
+    margin-bottom:7rem;
+    background:var(--espresso);
+    border:1px solid rgba(200,164,93,.5);
+}
+
+.fall-semester-page .course-study-number,
+.fall-semester-page .resource-number {
+    color:var(--gold);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.18em;
+}
+
+.fall-semester-page .course-study-panel h3 {
+    margin:0;
+    color:var(--ivory);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    font-weight:600;
+    line-height:1;
+    text-transform:uppercase;
+}
+
+.fall-semester-page .course-study-author {
+    margin:.75rem 0 1.75rem;
+    color:var(--gold);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.85rem;
+    font-weight:600;
+    line-height:1.6;
+}
+
+.fall-semester-page .course-study-panel p:not(.course-study-author) {
+    max-width:800px;
+    margin:0 0 1rem;
+    color:rgba(247,240,230,.75);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.98rem;
+    line-height:1.85;
+}
+
+.fall-semester-page .resources-heading {
+    margin-bottom:2.5rem;
+}
+
+.fall-semester-page .semester-resource-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1.5rem;
+}
+
+.fall-semester-page .semester-resource-card {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    min-height:340px;
+    padding:2.5rem;
+    background:var(--white);
+    border:1px solid rgba(16,27,43,.12);
+    box-shadow:0 1rem 2.5rem rgba(16,27,43,.06);
+}
+
+.fall-semester-page .semester-resource-card h3 {
+    margin:2rem 0 1.25rem;
+    color:var(--espresso);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:clamp(1.9rem,3vw,2.6rem);
+    font-weight:600;
+    line-height:1.05;
+    text-transform:uppercase;
+}
+
+.fall-semester-page .semester-resource-card p {
+    margin:0;
+    color:var(--text-muted);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.94rem;
+    line-height:1.8;
+}
+
+.fall-semester-page .resource-link {
+    display:inline-flex;
+    align-items:center;
+    gap:1rem;
+    margin-top:auto;
+    padding-top:2rem;
+    color:var(--espresso);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+.fall-semester-page .resource-link span {
+    color:var(--gold);
+    font-size:1.2rem;
+    transition:transform .25s ease;
+}
+
+.fall-semester-page .resource-link:hover span {
+    transform:translateX(5px);
+}
+
+.fall-semester-page .student-access-panel {
+    display:grid;
+    grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+    gap:4rem;
+    margin-top:7rem;
+    padding:3.5rem;
+    background:var(--espresso);
+}
+
+.fall-semester-page .student-access-panel .section-eyebrow {
+    margin-bottom:1.25rem;
+}
+
+.fall-semester-page .student-access-panel h2 {
+    color:var(--ivory);
+}
+
+.fall-semester-page .student-access-copy p {
+    margin:0 0 1.25rem;
+    color:rgba(247,240,230,.72);
+    font-family:Inter,Arial,sans-serif;
+    font-size:.96rem;
+    line-height:1.9;
+}
+
+.fall-semester-page .semester-actions {
+    display:flex;
+    justify-content:flex-start;
+    margin-top:2.5rem;
+}
+
+@media (max-width:900px) {
+    .fall-semester-page .semester-intro-grid,
+    .fall-semester-page .student-access-panel {
+        grid-template-columns:1fr;
+        gap:2.5rem;
+    }
+    .fall-semester-page .semester-resource-grid {
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:600px) {
+    .fall-semester-page .semester-introduction,
+    .fall-semester-page .semester-content-section {
+        padding:4.5rem 0;
+    }
+    .fall-semester-page .semester-introduction h1 {
+        font-size:3.5rem;
+    }
+    .fall-semester-page .semester-status-panel,
+    .fall-semester-page .course-study-panel,
+    .fall-semester-page .semester-resource-card,
+    .fall-semester-page .student-access-panel {
+        padding:2rem 1.5rem;
+    }
+    .fall-semester-page .course-study-panel {
+        grid-template-columns:1fr;
+        gap:1.25rem;
+        margin-bottom:4.5rem;
+    }
+    .fall-semester-page .student-access-panel {
+        margin-top:4.5rem;
+    }
 }
