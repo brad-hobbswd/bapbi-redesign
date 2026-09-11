@@ -106,52 +106,68 @@
 </nav>
 
 <main id="main">
-
-    <section class="section">
-      <div class="container">
-        <div class="contact-intro">
-          <h2>Contact Form</h2>
-          <p>Please send a text first before calling, unless a call is urgent.</p>
-          <p><strong>Main Contact:</strong> 706.614.3657 - Dean of Students</p>
-          <p><strong>Business Hours:</strong> Monday through Friday, 9 AM to 3 PM</p>
-        </div>
-
-        <div class="cards">
-          <div class="center-wrap">
-            <article class="card" 
-              <h3>Send a Message</h3>
-
-              <form action="https://formspree.io/f/xwvnrqlo" method="POST">
-                <input type="hidden" name="_subject" value="New Contact Submission - BAPBI">
-
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required>
-
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button class="btn primary" type="submit">Send Message</button>
-              </form>
-
-              <p class="muted" style="margin-top:12px;">
-                Messages are monitored during business hours. Responses are sent in a timely manner.
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
+    <section class="contact-banner-section">
+        <img src="assets/images/IMG_0638.png" alt="Bethesda Apostolic Pentecostal Bible Institute" class="contact-banner-image">
     </section>
 
-    <section class="section alt" id="address">
-      <div class="container">
-        <h2>Address</h2>
-        <p>124 E Tiverton Way, Lexington, KY 40517</p>
-      </div>
+    <section class="contact-introduction-section">
+        <div class="content-container contact-intro-grid">
+            <div class="contact-intro-content">
+                <span class="section-eyebrow">Get in Touch</span>
+                <h1>Contact <span>BAPBI</span></h1>
+                <p class="contact-intro-lead">We welcome your questions, messages, and inquiries about Bethesda Apostolic Pentecostal Bible Institute.</p>
+                <p>Please send a text message before calling unless your matter is urgent. Messages are monitored during business hours.</p>
+            </div>
+            <aside class="contact-information-panel">
+                <span class="contact-panel-label">Main Contact</span>
+                <a href="tel:17066143657">706.614.3657</a>
+                <p>Dean of Students</p>
+                <div class="contact-hours">
+                    <strong>Business Hours</strong>
+                    <span>Monday through Friday</span>
+                    <span>9 AM to 3 PM</span>
+                </div>
+            </aside>
+        </div>
     </section>
-  </main>
+
+    <section class="contact-form-section">
+        <div class="content-container contact-form-grid">
+            <div class="contact-section-heading">
+                <span class="section-eyebrow">Send a Message</span>
+                <h2>We Would Be Glad to Hear From You</h2>
+                <p>Use the form below to send a message to BAPBI. Please provide accurate contact information so a response can be sent.</p>
+            </div>
+            <div class="contact-form-card">
+                <form class="bapbi-contact-form" action="https://formspree.io/f/xwvnrqlo" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Submission - BAPBI">
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="7" required></textarea>
+                    </div>
+                    <button class="button button-gold" type="submit">Send Message <span aria-hidden="true">→</span></button>
+                    <p class="form-note">Messages are monitored during business hours. Responses are sent in a timely manner.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-address-section">
+        <div class="content-container">
+            <span class="section-eyebrow">Visit Us</span>
+            <h2>Address</h2>
+            <p>124 E Tiverton Way, Lexington, KY 40517</p>
+        </div>
+    </section>
+</main>
 
   <footer class="site-footer" aria-label="Footer">
     <div class="container footer-row">
