@@ -91,11 +91,13 @@
         name="twitter:image"
         content="https://www.bapbi.net/bapbi-banner.png">
 
+
     <!-- MASTER STYLESHEET -->
 
     <link
         rel="stylesheet"
         href="css/styles.css">
+
 
     <!-- CONNECT PAGE STYLESHEET -->
 
@@ -110,259 +112,283 @@
 
 
     <!-- ======================================================
-         SITE HEADER
+         FACEBOOK SDK
     ====================================================== -->
 
-    <header class="site-header">
+    <div id="fb-root"></div>
 
-        <div class="top-message">
+    <script
+        async
+        defer
+        crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0">
+    </script>
 
-            <p>
-                EQUIPPING BELIEVERS
-                <span>•</span>
-                BUILDING LEADERS
-                <span>•</span>
-                ADVANCING THE KINGDOM
-            </p>
 
-        </div>
+<header class="site-header">
 
 
-        <div class="main-navigation">
+    <!-- TOP MESSAGE -->
 
+    <div class="top-message">
 
-            <!-- BRAND -->
+        <p>
+            EQUIPPING BELIEVERS
+            <span>•</span>
+            BUILDING LEADERS
+            <span>•</span>
+            ADVANCING THE KINGDOM
+        </p>
 
-            <a
-                href="index.html"
-                class="brand">
+    </div>
 
-                <img
-                    src="assets/images/IMG_0639.png"
-                    alt="BAPBI Logo"
-                    class="brand-logo">
 
-                <span>BAPBI</span>
+    <!-- MAIN NAVIGATION -->
 
-            </a>
+    <div class="main-navigation">
 
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="BAPBI Home">
 
-            <!-- DESKTOP NAVIGATION -->
+            <img
+                src="assets/images/IMG_0639.png"
+                class="brand-logo"
+                alt="BAPBI Logo">
 
-            <nav
-                class="desktop-nav"
-                aria-label="Primary Navigation">
+            <span>BAPBI</span>
 
+        </a>
 
-                <a href="index.html">
-                    Home
-                </a>
 
+        <!-- DESKTOP NAVIGATION -->
 
-                <div class="nav-dropdown">
-
-                    <button
-                        class="dropdown-button"
-                        type="button">
-
-                        About
-
-                        <span>⌄</span>
-
-                    </button>
-
-
-                    <div class="dropdown-menu">
-
-                        <a href="about.html">
-                            About BAPBI
-                        </a>
-
-                        <a href="beliefs.html">
-                            Beliefs
-                        </a>
-
-                        <a href="leadership.html">
-                            Leadership
-                        </a>
-
-                        <a
-                            href="contact.html"
-                            class="active">
-
-                            Contact
-
-                        </a>
-
-                        <a href="connect.html">
-                            Connect
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="nav-dropdown">
-
-                    <button
-                        class="dropdown-button"
-                        type="button">
-
-                        Academics
-
-                        <span>⌄</span>
-
-                    </button>
-
-
-                    <div class="dropdown-menu">
-
-                        <a href="curriculum.html">
-                            Curriculum
-                        </a>
-
-                        <a href="schedule.html">
-                            Schedule
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="nav-dropdown">
-
-                    <button
-                        class="dropdown-button"
-                        type="button">
-
-                        Students
-
-                        <span>⌄</span>
-
-                    </button>
-
-
-                    <div class="dropdown-menu">
-
-                        <a href="student-portal.html">
-                            Student Portal
-                        </a>
-
-                        <a href="resources.html">
-                            Resources
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </nav>
-
-
-            <!-- ENROLLMENT BUTTON -->
-
-            <a
-                href="enrollment.html"
-                class="enroll-button">
-
-                Enroll Now
-
-            </a>
-
-
-            <!-- MOBILE MENU BUTTON -->
-
-            <button
-                class="mobile-menu-button"
-                id="mobileMenuButton"
-                type="button"
-                aria-label="Open navigation">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </div>
-
-
-        <!-- MOBILE NAVIGATION -->
-
-        <div
-            class="mobile-navigation"
-            id="mobileNavigation">
-
-
-            <div class="mobile-nav-header">
-
-                <span>Navigation</span>
-
-                <button
-                    id="mobileMenuClose"
-                    type="button"
-                    aria-label="Close navigation">
-
-                    ×
-
-                </button>
-
-            </div>
-
+        <nav
+            class="desktop-nav"
+            aria-label="Main Navigation">
 
             <a href="index.html">
                 Home
             </a>
 
-            <a href="about.html">
-                About
-            </a>
 
-            <a href="beliefs.html">
-                Beliefs
-            </a>
+            <!-- ABOUT -->
 
-            <a href="curriculum.html">
-                Curriculum
-            </a>
+            <div class="nav-dropdown">
 
-            <a href="schedule.html">
-                Schedule
-            </a>
+                <button
+                    type="button"
+                    class="dropdown-button"
+                    aria-haspopup="true">
 
-            <a href="student-portal.html">
-                Student Portal
-            </a>
+                    About
 
-            <a href="resources.html">
-                Resources
-            </a>
+                    <span aria-hidden="true">
+                        ▾
+                    </span>
 
-            <a href="leadership.html">
-                Leadership
-            </a>
+                </button>
 
-            <a href="enrollment.html">
-                Enrollment
-            </a>
+                <div class="dropdown-menu">
 
-            <a
-                href="contact.html"
-                class="mobile-active">
+                    <a href="about.html">
+                        About BAPBI
+                    </a>
 
-                Contact
+                    <a href="beliefs.html">
+                        Beliefs
+                    </a>
 
-            </a>
+                    <a href="leadership.html">
+                        Leadership
+                    </a>
 
-            <a href="connect.html">
-                Connect
-            </a>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="connect.html" class="active">
+                        Connect
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACADEMICS -->
+
+            <div class="nav-dropdown">
+
+                <button
+                    type="button"
+                    class="dropdown-button"
+                    aria-haspopup="true">
+
+                    Academics
+
+                    <span aria-hidden="true">
+                        ▾
+                    </span>
+
+                </button>
+
+                <div class="dropdown-menu">
+
+                    <a href="curriculum.html">
+                        Curriculum
+                    </a>
+
+                    <a
+                        href="schedule.html">
+
+                        Schedule
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDENTS -->
+
+            <div class="nav-dropdown">
+
+                <button
+                    type="button"
+                    class="dropdown-button"
+                    aria-haspopup="true">
+
+                    Students
+
+                    <span aria-hidden="true">
+                        ▾
+                    </span>
+
+                </button>
+
+                <div class="dropdown-menu">
+
+                    <a href="student-portal.html">
+                        Student Portal
+                    </a>
+
+                    <a href="resources.html">
+                        Resources
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ENROLL BUTTON -->
+
+        <a
+            href="enrollment.html"
+            class="enroll-button">
+
+            Enroll Now
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            type="button"
+            class="mobile-menu-button"
+            aria-label="Open navigation"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE NAVIGATION -->
+
+    <nav
+        class="mobile-navigation"
+        aria-label="Mobile Navigation">
+
+        <div class="mobile-nav-header">
+
+            <span>
+                BAPBI
+            </span>
+
+            <button
+                type="button"
+                class="mobile-nav-close"
+                aria-label="Close navigation">
+
+                ×
+
+            </button>
 
         </div>
 
-    </header>
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About BAPBI
+        </a>
+
+        <a href="beliefs.html">
+            Beliefs
+        </a>
+
+        <a href="curriculum.html">
+            Curriculum
+        </a>
+
+        <a
+            href="schedule.html"
+            class="active"
+            aria-current="page">
+
+            Schedule
+
+        </a>
+
+        <a href="student-portal.html">
+            Student Portal
+        </a>
+
+        <a href="resources.html">
+            Resources
+        </a>
+
+        <a href="leadership.html">
+            Leadership
+        </a>
+
+        <a href="enrollment.html">
+            Enrollment
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="connect.html">
+            Connect
+        </a>
+
+    </nav>
+
+</header>
 
 
     <!-- ======================================================
@@ -372,149 +398,104 @@
     <main>
 
 
-        <!-- CONTACT INTRODUCTION -->
+        <!-- ==================================================
+             PAGE INTRODUCTION
+        ================================================== -->
 
-        <section class="contact-page-section">
+        <section class="page-intro">
 
             <div class="content-container">
 
-                <div class="contact-page-intro">
+                <p class="eyebrow">
+                    STAY CONNECTED
+                </p>
 
-                    <p class="section-eyebrow">
-                        GET IN TOUCH
+                <h1>
+                    Connect With BAPBI
+                </h1>
+
+                <p class="page-intro-text">
+                    Stay connected with BAPBI through official
+                    announcements, updates, ministry information,
+                    and live services from Bethesda Tabernacle.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             BAPBI FACEBOOK
+        ================================================== -->
+
+        <section class="facebook-section">
+
+            <div class="content-container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        OFFICIAL BAPBI PAGE
                     </p>
 
-                    <h1>
-                        Contact BAPBI
-                    </h1>
+                    <h2>
+                        Bethesda Apostolic Pentecostal Bible Institute
+                    </h2>
 
-                    <p class="contact-page-lead">
-                        Please send a text first before calling,
-                        unless a call is urgent.
+                    <p>
+                        Follow the official BAPBI Facebook page for
+                        updates, announcements, and the latest news
+                        related to the Bible Institute.
                     </p>
 
-                    <div class="contact-details">
+                    <a
+                        class="connect-button"
+                        href="https://www.facebook.com/profile.php?id=61586495520132"
+                        target="_blank"
+                        rel="noopener noreferrer">
 
-                        <p>
-                            <strong>Main Contact:</strong>
-                            706.614.3657
-                            <span>•</span>
-                            Dean of Students
-                        </p>
+                        Follow on Facebook
 
-                        <p>
-                            <strong>Business Hours:</strong>
-                            Monday through Friday,
-                            9 AM to 3 PM
-                        </p>
+                        <span aria-hidden="true">
+                            →
+                        </span>
 
-                    </div>
+                    </a>
 
                 </div>
 
 
-                <!-- CONTACT FORM -->
+                <div class="facebook-feed-card">
 
-                <div class="contact-form-layout">
+                    <div class="facebook-feed">
 
-                    <article class="contact-form-card">
+                        <div
+                            class="fb-page"
+                            data-href="https://www.facebook.com/profile.php?id=61586495520132"
+                            data-tabs="timeline"
+                            data-width=""
+                            data-height="500"
+                            data-adapt-container-width="true"
+                            data-hide-cover="false"
+                            data-show-facepile="false">
 
-                        <div class="contact-card-heading">
+                            <blockquote
+                                cite="https://www.facebook.com/profile.php?id=61586495520132"
+                                class="fb-xfbml-parse-ignore">
 
-                            <p class="section-eyebrow">
-                                SEND A MESSAGE
-                            </p>
+                                <a
+                                    href="https://www.facebook.com/profile.php?id=61586495520132">
 
-                            <h2>
-                                We Would Love to Hear From You
-                            </h2>
+                                    Bethesda Apostolic Pentecostal Bible Institute
 
-                            <p>
-                                Complete the form below and someone
-                                from BAPBI will respond as soon as possible.
-                            </p>
+                                </a>
+
+                            </blockquote>
 
                         </div>
 
-
-                        <form
-                            class="contact-form"
-                            action="https://formspree.io/f/xwvnrqlo"
-                            method="POST">
-
-
-                            <input
-                                type="hidden"
-                                name="_subject"
-                                value="New Contact Submission - BAPBI">
-
-
-                            <div class="form-field">
-
-                                <label for="name">
-                                    Name
-                                </label>
-
-                                <input
-                                    id="name"
-                                    name="name"
-                                    type="text"
-                                    autocomplete="name"
-                                    required>
-
-                            </div>
-
-
-                            <div class="form-field">
-
-                                <label for="email">
-                                    Email Address
-                                </label>
-
-                                <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    autocomplete="email"
-                                    required>
-
-                            </div>
-
-
-                            <div class="form-field">
-
-                                <label for="message">
-                                    Message
-                                </label>
-
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows="8"
-                                    required></textarea>
-
-                            </div>
-
-
-                            <button
-                                class="button button-gold contact-submit"
-                                type="submit">
-
-                                Send Message
-
-                                <span>→</span>
-
-                            </button>
-
-                        </form>
-
-
-                        <p class="contact-form-note">
-                            Messages are monitored during business hours.
-                            Responses are sent in a timely manner.
-                        </p>
-
-                    </article>
+                    </div>
 
                 </div>
 
@@ -523,26 +504,170 @@
         </section>
 
 
-        <!-- ADDRESS -->
+        <!-- ==================================================
+             BETHESDA TABERNACLE
+        ================================================== -->
 
-        <section
-            class="contact-address-section"
-            id="address">
+        <section class="tabernacle-section">
 
             <div class="content-container">
 
-                <p class="section-eyebrow">
-                    VISIT BAPBI
-                </p>
+                <div class="section-heading">
 
-                <h2>
-                    Our Address
-                </h2>
+                    <p class="eyebrow">
+                        SPIRITUAL COVERING
+                    </p>
 
-                <p>
-                    124 E Tiverton Way,
-                    Lexington, KY 40517
-                </p>
+                    <h2>
+                        Bethesda Tabernacle
+                    </h2>
+
+                    <p>
+                        Bethesda Tabernacle is the spiritual covering
+                        connected with BAPBI and provides live worship
+                        services each Sunday morning.
+                    </p>
+
+                </div>
+
+
+                <div class="facebook-feed-card">
+
+                    <div class="feed-header">
+
+                        <div>
+
+                            <span class="feed-label">
+                                LIVE WORSHIP
+                            </span>
+
+                            <h3>
+                                Bethesda Tabernacle Feed
+                            </h3>
+
+                        </div>
+
+                        <span class="service-time">
+                            Sundays · 11:00 AM
+                        </span>
+
+                    </div>
+
+
+                    <div class="facebook-feed">
+
+                        <div
+                            class="fb-page"
+                            data-href="https://www.facebook.com/bethesdatabernaclelexington"
+                            data-tabs="timeline"
+                            data-width=""
+                            data-height="500"
+                            data-adapt-container-width="true"
+                            data-hide-cover="false"
+                            data-show-facepile="false">
+
+                            <blockquote
+                                cite="https://www.facebook.com/bethesdatabernaclelexington"
+                                class="fb-xfbml-parse-ignore">
+
+                                <a
+                                    href="https://www.facebook.com/bethesdatabernaclelexington">
+
+                                    Bethesda Tabernacle
+
+                                </a>
+
+                            </blockquote>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             NEXT LIVE SERVICE
+        ================================================== -->
+
+        <section class="service-section">
+
+            <div class="content-container">
+
+                <div class="service-card">
+
+                    <div class="service-content">
+
+                        <p class="eyebrow">
+                            NEXT LIVE SERVICE
+                        </p>
+
+                        <h2>
+                            Bethesda Tabernacle Worship Service
+                        </h2>
+
+                        <p>
+                            Join Bethesda Tabernacle for Sunday morning
+                            worship at 11:00 AM.
+                        </p>
+
+                        <div
+                            class="service-countdown"
+                            aria-live="polite">
+
+                            <span id="serviceCountdown">
+                                Loading...
+                            </span>
+
+                        </div>
+
+                        <p class="service-caption">
+                            Service begins Sunday at 11:00 AM.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-actions">
+
+                        <a
+                            class="connect-button"
+                            href="https://www.facebook.com/bethesdatabernaclelexington"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Bethesda Tabernacle Facebook
+
+                            <span aria-hidden="true">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            class="connect-button live-button"
+                            id="liveButton"
+                            href="https://www.facebook.com/bethesdatabernaclelexington"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style="display: none;">
+
+                            Watch Live Now
+
+                            <span aria-hidden="true">
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -558,154 +683,296 @@
 
     <footer class="site-footer">
 
+    <div class="content-container footer-grid">
 
-        <div class="content-container footer-grid">
+        <div class="footer-brand-section">
 
+            <a
+                href="index.html"
+                class="footer-brand">
 
-            <!-- BAPBI IDENTITY -->
+                <img
+                    src="assets/images/IMG_0639.png"
+                    alt="BAPBI Logo">
 
-            <div class="footer-brand-section">
+                <div>
 
-                <a
-                    href="index.html"
-                    class="footer-brand">
+                    <h2>
+                        BAPBI
+                    </h2>
 
-                    <img
-                        src="assets/images/IMG_0639.png"
-                        alt="BAPBI Logo">
-
-                    <div>
-
-                        <h2>
-                            BAPBI
-                        </h2>
-
-                        <p>
-                            Bethesda Apostolic Pentecostal
-                            Bible Institute
-                        </p>
-
-                    </div>
-
-                </a>
-
-
-                <p class="footer-description">
-
-                    Equipping believers, building leaders,
-                    and advancing the Kingdom through
-                    Apostolic biblical education.
-
-                </p>
-
-            </div>
-
-
-            <!-- INSTITUTE PURPOSE -->
-
-            <div class="footer-quote">
-
-                <span class="footer-eyebrow">
-                    Our Purpose
-                </span>
-
-                <p>
-                    “Equipping believers for today.
-                    Preparing leaders for tomorrow.”
-                </p>
-
-            </div>
-
-
-            <!-- QUICK LINKS -->
-
-            <div class="footer-links-section">
-
-                <p class="footer-eyebrow">
-                    Institute Information
-                </p>
-
-
-                <div class="footer-links">
-
-                    <a href="about.html">
-                        About BAPBI
-                    </a>
-
-                    <a href="curriculum.html">
-                        Academics
-                    </a>
-
-                    <a href="enrollment.html">
-                        Enrollment
-                    </a>
-
-                    <a href="student-portal.html">
-                        Student Portal
-                    </a>
-
-                    <a href="contact.html">
-                        Contact
-                    </a>
+                    <p>
+                        Bethesda Apostolic Pentecostal
+                        Bible Institute
+                    </p>
 
                 </div>
 
-            </div>
+            </a>
+
+            <p class="footer-description">
+                Equipping believers, building leaders,
+                and advancing the Kingdom through
+                Apostolic biblical education.
+            </p>
 
         </div>
 
 
-        <!-- FOOTER DIVIDER -->
+        <div class="footer-quote">
 
-        <div class="footer-divider">
-
-            <div class="content-container">
-
-                <span></span>
-
-            </div>
-
-        </div>
-
-
-        <!-- FOOTER BOTTOM -->
-
-        <div class="content-container footer-bottom">
-
+            <span class="footer-eyebrow">
+                Our Purpose
+            </span>
 
             <p>
-                © 2026 Bethesda Apostolic Pentecostal Bible Institute.
-                All rights reserved.
-            </p>
-
-
-            <div class="footer-legal">
-
-                <a href="privacy.html">
-                    Privacy
-                </a>
-
-                <a href="terms.html">
-                    Terms
-                </a>
-
-                <a href="copyright.html">
-                    Copyright
-                </a>
-
-            </div>
-
-
-            <p class="footer-motto">
-                For the Kingdom. For His Glory.
+                “Equipping believers for today.
+                Preparing leaders for tomorrow.”
             </p>
 
         </div>
 
-    </footer>
+
+        <div class="footer-links-section">
+
+            <p class="footer-eyebrow">
+                Institute Information
+            </p>
+
+            <div class="footer-links">
+
+                <a href="about.html">
+                    About BAPBI
+                </a>
+
+                <a href="curriculum.html">
+                    Academics
+                </a>
+
+                <a href="enrollment.html">
+                    Enrollment
+                </a>
+
+                <a href="student-portal.html">
+                    Student Portal
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
-    <script src="js/main.js"></script>
+    <div class="footer-divider">
+
+        <div class="content-container">
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <div class="content-container footer-bottom">
+
+        <p>
+            © 2026 Bethesda Apostolic Pentecostal Bible Institute.
+            All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+            <a href="terms.html">
+                Terms
+            </a>
+
+            <a href="copyright.html">
+                Copyright
+            </a>
+
+        </div>
+
+        <p class="footer-motto">
+            For the Kingdom. For His Glory.
+        </p>
+
+    </div>
+
+</footer>
+
+
+    <!-- ======================================================
+         SERVICE COUNTDOWN
+    ====================================================== -->
+
+    <script>
+
+        function getNextService() {
+
+            const now = new Date();
+            const next = new Date();
+
+            next.setHours(11, 0, 0, 0);
+
+            const day = next.getDay();
+
+            const daysUntilSunday =
+                (7 - day) % 7;
+
+            if (
+                day === 0 &&
+                now > next
+            ) {
+
+                next.setDate(
+                    next.getDate() + 7
+                );
+
+            } else {
+
+                next.setDate(
+                    next.getDate() + daysUntilSunday
+                );
+
+            }
+
+            return next;
+
+        }
+
+
+        function updateCountdown() {
+
+            const now = new Date();
+
+            const today =
+                now.getDay();
+
+            const hour =
+                now.getHours();
+
+            const countdown =
+                document.getElementById(
+                    "serviceCountdown"
+                );
+
+            const liveButton =
+                document.getElementById(
+                    "liveButton"
+                );
+
+
+            if (!countdown) {
+                return;
+            }
+
+
+            if (
+                today === 0 &&
+                hour >= 11 &&
+                hour < 13
+            ) {
+
+                countdown.textContent =
+                    "LIVE NOW";
+
+
+                if (liveButton) {
+
+                    liveButton.style.display =
+                        "inline-flex";
+
+                }
+
+                return;
+
+            }
+
+
+            if (liveButton) {
+
+                liveButton.style.display =
+                    "none";
+
+            }
+
+
+            const nextService =
+                getNextService();
+
+            const difference =
+                nextService - now;
+
+
+            const days =
+                Math.floor(
+                    difference /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            const hours =
+                Math.floor(
+                    (
+                        difference /
+                        (1000 * 60 * 60)
+                    ) % 24
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (
+                        difference /
+                        (1000 * 60)
+                    ) % 60
+                );
+
+
+            const seconds =
+                Math.floor(
+                    (
+                        difference /
+                        1000
+                    ) % 60
+                );
+
+
+            countdown.textContent =
+                days +
+                "d " +
+                hours +
+                "h " +
+                minutes +
+                "m " +
+                seconds +
+                "s";
+
+        }
+
+
+        setInterval(
+            updateCountdown,
+            1000
+        );
+
+        updateCountdown();
+
+    </script>
+
+
+    <script
+        defer
+        src="js/main.js?v=20260910-connect">
+    </script>
 
 </body>
 
