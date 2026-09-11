@@ -304,3 +304,47 @@
         margin-top:4.5rem;
     }
 }
+
+/* =========================================================
+   RETURN TO STUDENT PORTAL BUTTON
+========================================================= */
+
+.fall-semester-page .semester-actions .button-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 52px;
+    padding: 0 25px;
+    background: var(--espresso);
+    color: var(--ivory);
+    border: 1px solid var(--espresso);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.fall-semester-page .semester-actions .button-outline span {
+    color: var(--gold-light, var(--gold));
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.fall-semester-page .semester-actions .button-outline:hover,
+.fall-semester-page .semester-actions .button-outline:focus-visible {
+    background: var(--gold);
+    color: #261606;
+    border-color: var(--gold);
+}
+
+.fall-semester-page .semester-actions .button-outline:hover span,
+.fall-semester-page .semester-actions .button-outline:focus-visible span {
+    color: #261606;
+}
+
+@media (max-width: 600px) {
+    .fall-semester-page .semester-actions .button-outline {
+        width: 100%;
+        white-space: normal;
+        text-align: center;
+    }
+}
