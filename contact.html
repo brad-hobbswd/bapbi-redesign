@@ -17,125 +17,192 @@
         name="robots"
         content="index, follow">
 
-    <link
-        rel="icon"
-        href="assets/images/IMG_0639.png">
+    <title>Contact | BAPBI</title>
 
     <link
         rel="stylesheet"
-        href="css/styles.css?v=20260910">
+        href="css/styles.css">
 
     <link
         rel="stylesheet"
         href="css/contact.css?v=20260910-contact">
 
-    <title>Contact | Bethesda Apostolic Pentecostal Bible Institute</title>
-
 </head>
 
 
-<body class="contact-page">
+<body>
 
 
-    <!-- Top Message -->
-
-    <div class="top-message">
-        <div class="content-container">
-            <p>
-                Enrollment is now open.
-                <a href="enrollment.html">Learn more</a>
-            </p>
-        </div>
-    </div>
-
-
-    <!-- Site Header -->
+    <!-- ======================================================
+         SITE HEADER
+    ====================================================== -->
 
     <header class="site-header">
 
-        <div class="main-navigation content-container">
+        <div class="top-message">
+
+            <p>
+                EQUIPPING BELIEVERS
+                <span>•</span>
+                BUILDING LEADERS
+                <span>•</span>
+                ADVANCING THE KINGDOM
+            </p>
+
+        </div>
 
 
-            <!-- Brand -->
+        <div class="main-navigation">
+
+
+            <!-- BRAND -->
 
             <a
-                class="brand"
                 href="index.html"
-                aria-label="Bethesda Apostolic Pentecostal Bible Institute home">
+                class="brand">
 
                 <img
-                    class="brand-logo"
                     src="assets/images/IMG_0639.png"
-                    alt="BAPBI logo"
-                    width="58"
-                    height="58">
+                    alt="BAPBI Logo"
+                    class="brand-logo">
 
-                <span class="brand-text">
-                    <span class="brand-name">BAPBI</span>
-                    
-                </span>
+                <span>BAPBI</span>
 
             </a>
 
 
-            <!-- Desktop Navigation -->
+            <!-- DESKTOP NAVIGATION -->
 
             <nav
                 class="desktop-nav"
-                aria-label="Main navigation">
+                aria-label="Primary Navigation">
 
-                <a href="index.html">Home</a>
 
-                <a href="about.html">About</a>
+                <a href="index.html">
+                    Home
+                </a>
 
-                <a href="beliefs.html">Beliefs</a>
 
                 <div class="nav-dropdown">
 
                     <button
                         class="dropdown-button"
-                        type="button"
-                        aria-expanded="false">
+                        type="button">
 
-                        Academics
-                        <span aria-hidden="true">⌄</span>
+                        About
+
+                        <span>⌄</span>
 
                     </button>
 
+
                     <div class="dropdown-menu">
 
-                        <a href="academics.html">Academics</a>
-                        <a href="courses.html">Courses</a>
-                        <a href="calendar.html">Academic Calendar</a>
-                        <a href="recordings.html">Recordings</a>
+                        <a href="about.html">
+                            About BAPBI
+                        </a>
+
+                        <a href="beliefs.html">
+                            Beliefs
+                        </a>
+
+                        <a href="leadership.html">
+                            Leadership
+                        </a>
+
+                        <a
+                            href="contact.html"
+                            class="active">
+
+                            Contact
+
+                        </a>
+
+                        <a href="connect.html">
+                            Connect
+                        </a>
 
                     </div>
 
                 </div>
 
-                <a href="enrollment.html">Enrollment</a>
 
-                <a href="contact.html" aria-current="page">Contact</a>
+                <div class="nav-dropdown">
 
-                <a
-                    class="enroll-button"
-                    href="enrollment.html">
+                    <button
+                        class="dropdown-button"
+                        type="button">
 
-                    Enroll Now
+                        Academics
 
-                </a>
+                        <span>⌄</span>
+
+                    </button>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="curriculum.html">
+                            Curriculum
+                        </a>
+
+                        <a href="schedule.html">
+                            Schedule
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="nav-dropdown">
+
+                    <button
+                        class="dropdown-button"
+                        type="button">
+
+                        Students
+
+                        <span>⌄</span>
+
+                    </button>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="student-portal.html">
+                            Student Portal
+                        </a>
+
+                        <a href="resources.html">
+                            Resources
+                        </a>
+
+                    </div>
+
+                </div>
 
             </nav>
 
 
-            <!-- Mobile Menu Button -->
+            <!-- ENROLLMENT BUTTON -->
+
+            <a
+                href="enrollment.html"
+                class="enroll-button">
+
+                Enroll Now
+
+            </a>
+
+
+            <!-- MOBILE MENU BUTTON -->
 
             <button
                 class="mobile-menu-button"
+                id="mobileMenuButton"
                 type="button"
-                aria-controls="mobile-navigation"
-                aria-expanded="false"
-                aria-label="Open navigation menu">
+                aria-label="Open navigation">
 
                 <span></span>
                 <span></span>
@@ -145,174 +212,233 @@
 
         </div>
 
+
+        <!-- MOBILE NAVIGATION -->
+
+        <div
+            class="mobile-navigation"
+            id="mobileNavigation">
+
+
+            <div class="mobile-nav-header">
+
+                <span>Navigation</span>
+
+                <button
+                    id="mobileMenuClose"
+                    type="button"
+                    aria-label="Close navigation">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="beliefs.html">
+                Beliefs
+            </a>
+
+            <a href="curriculum.html">
+                Curriculum
+            </a>
+
+            <a href="schedule.html">
+                Schedule
+            </a>
+
+            <a href="student-portal.html">
+                Student Portal
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="leadership.html">
+                Leadership
+            </a>
+
+            <a href="enrollment.html">
+                Enrollment
+            </a>
+
+            <a
+                href="contact.html"
+                class="mobile-active">
+
+                Contact
+
+            </a>
+
+            <a href="connect.html">
+                Connect
+            </a>
+
+        </div>
+
     </header>
 
 
-    <!-- Mobile Navigation -->
-
-    <nav
-        id="mobile-navigation"
-        class="mobile-navigation"
-        aria-label="Mobile navigation">
-
-        <a href="index.html">Home</a>
-
-        <a href="about.html">About</a>
-
-        <a href="beliefs.html">Beliefs</a>
-
-        <a href="academics.html">Academics</a>
-
-        <a href="courses.html">Courses</a>
-
-        <a href="calendar.html">Academic Calendar</a>
-
-        <a href="recordings.html">Recordings</a>
-
-        <a href="enrollment.html">Enrollment</a>
-
-        <a
-            href="contact.html"
-            aria-current="page">
-
-            Contact
-
-        </a>
-
-        <a
-            class="enroll-button"
-            href="enrollment.html">
-
-            Enroll Now
-
-        </a>
-
-    </nav>
-
-
-    <!-- Main Content -->
+    <!-- ======================================================
+         MAIN CONTENT
+    ====================================================== -->
 
     <main>
 
 
-        <!-- Contact Section -->
+        <!-- CONTACT INTRODUCTION -->
 
-        <section class="section contact-section">
+        <section class="contact-page-section">
 
-            <div class="container">
+            <div class="content-container">
 
+                <div class="contact-page-intro">
 
-                <div class="contact-intro">
+                    <p class="section-eyebrow">
+                        GET IN TOUCH
+                    </p>
 
-                    <p class="eyebrow">Get in Touch</p>
+                    <h1>
+                        Contact BAPBI
+                    </h1>
 
-                    <h1>Contact Form</h1>
-
-                    <p>
+                    <p class="contact-page-lead">
                         Please send a text first before calling,
                         unless a call is urgent.
                     </p>
 
-                    <p>
-                        <strong>Main Contact:</strong>
-                        706.614.3657
-                        <span aria-hidden="true">|</span>
-                        Dean of Students
-                    </p>
+                    <div class="contact-details">
 
-                    <p>
-                        <strong>Business Hours:</strong>
-                        Monday through Friday, 9 AM to 3 PM
-                    </p>
+                        <p>
+                            <strong>Main Contact:</strong>
+                            706.614.3657
+                            <span>•</span>
+                            Dean of Students
+                        </p>
+
+                        <p>
+                            <strong>Business Hours:</strong>
+                            Monday through Friday,
+                            9 AM to 3 PM
+                        </p>
+
+                    </div>
 
                 </div>
 
 
-                <div class="cards">
+                <!-- CONTACT FORM -->
 
-                    <div class="center-wrap">
+                <div class="contact-form-layout">
 
-                        <article class="card contact-card">
+                    <article class="contact-form-card">
 
-                            <h2>Send a Message</h2>
+                        <div class="contact-card-heading">
 
-                            <form
-                                class="contact-form"
-                                action="https://formspree.io/f/xwvnrqlo"
-                                method="POST">
-
-                                <input
-                                    type="hidden"
-                                    name="_subject"
-                                    value="New Contact Submission - BAPBI">
-
-
-                                <div class="form-group">
-
-                                    <label for="name">
-                                        Name
-                                    </label>
-
-                                    <input
-                                        id="name"
-                                        name="name"
-                                        type="text"
-                                        autocomplete="name"
-                                        required>
-
-                                </div>
-
-
-                                <div class="form-group">
-
-                                    <label for="email">
-                                        Email
-                                    </label>
-
-                                    <input
-                                        id="email"
-                                        name="email"
-                                        type="email"
-                                        autocomplete="email"
-                                        required>
-
-                                </div>
-
-
-                                <div class="form-group">
-
-                                    <label for="message">
-                                        Message
-                                    </label>
-
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        rows="7"
-                                        required></textarea>
-
-                                </div>
-
-
-                                <button
-                                    class="btn primary"
-                                    type="submit">
-
-                                    Send Message
-
-                                </button>
-
-                            </form>
-
-
-                            <p class="muted">
-                                Messages are monitored during business
-                                hours. Responses are sent in a timely manner.
+                            <p class="section-eyebrow">
+                                SEND A MESSAGE
                             </p>
 
-                        </article>
+                            <h2>
+                                We Would Love to Hear From You
+                            </h2>
 
-                    </div>
+                            <p>
+                                Complete the form below and someone
+                                from BAPBI will respond as soon as possible.
+                            </p>
+
+                        </div>
+
+
+                        <form
+                            class="contact-form"
+                            action="https://formspree.io/f/xwvnrqlo"
+                            method="POST">
+
+
+                            <input
+                                type="hidden"
+                                name="_subject"
+                                value="New Contact Submission - BAPBI">
+
+
+                            <div class="form-field">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    autocomplete="name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="8"
+                                    required></textarea>
+
+                            </div>
+
+
+                            <button
+                                class="button button-gold contact-submit"
+                                type="submit">
+
+                                Send Message
+
+                                <span>→</span>
+
+                            </button>
+
+                        </form>
+
+
+                        <p class="contact-form-note">
+                            Messages are monitored during business hours.
+                            Responses are sent in a timely manner.
+                        </p>
+
+                    </article>
 
                 </div>
 
@@ -321,17 +447,21 @@
         </section>
 
 
-        <!-- Address Section -->
+        <!-- ADDRESS -->
 
         <section
-            class="section alt address-section"
+            class="contact-address-section"
             id="address">
 
-            <div class="container">
+            <div class="content-container">
 
-                <p class="eyebrow">Visit Us</p>
+                <p class="section-eyebrow">
+                    VISIT BAPBI
+                </p>
 
-                <h2>Address</h2>
+                <h2>
+                    Our Address
+                </h2>
 
                 <p>
                     124 E Tiverton Way,
@@ -342,88 +472,162 @@
 
         </section>
 
+
     </main>
 
 
-    <!-- Footer -->
+    <!-- ======================================================
+         FOOTER
+    ====================================================== -->
 
     <footer class="site-footer">
 
-        <div class="content-container">
 
-            <div class="footer-content">
-
-                <div class="footer-brand">
-
-                    <a
-                        class="brand"
-                        href="index.html"
-                        aria-label="BAPBI home">
-
-                        <img
-                            class="brand-logo"
-                            src="assets/images/IMG_0639.png"
-                            alt="BAPBI logo"
-                            width="48"
-                            height="48">
-
-                        <span class="brand-text">
-                            <span class="brand-name">BAPBI</span>
-                            <span class="brand-subtitle">
-                                Bethesda Apostolic Pentecostal Bible Institute
-                            </span>
-                        </span>
-
-                    </a>
-
-                    <p>
-                        Preparing students for faithful service,
-                        biblical understanding, and ministry.
-                    </p>
-
-                </div>
+        <div class="content-container footer-grid">
 
 
-                <div class="footer-links">
+            <!-- BAPBI IDENTITY -->
 
-                    <h2>Quick Links</h2>
+            <div class="footer-brand-section">
 
-                    <a href="about.html">About</a>
-                    <a href="beliefs.html">Beliefs</a>
-                    <a href="enrollment.html">Enrollment</a>
-                    <a href="contact.html">Contact</a>
+                <a
+                    href="index.html"
+                    class="footer-brand">
 
-                </div>
+                    <img
+                        src="assets/images/IMG_0639.png"
+                        alt="BAPBI Logo">
+
+                    <div>
+
+                        <h2>
+                            BAPBI
+                        </h2>
+
+                        <p>
+                            Bethesda Apostolic Pentecostal
+                            Bible Institute
+                        </p>
+
+                    </div>
+
+                </a>
 
 
-                <div class="footer-links">
+                <p class="footer-description">
 
-                    <h2>Information</h2>
+                    Equipping believers, building leaders,
+                    and advancing the Kingdom through
+                    Apostolic biblical education.
 
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Use</a>
-                    <a href="copyright.html">Copyright</a>
-
-                </div>
+                </p>
 
             </div>
 
 
-            <div class="footer-bottom">
+            <!-- INSTITUTE PURPOSE -->
+
+            <div class="footer-quote">
+
+                <span class="footer-eyebrow">
+                    Our Purpose
+                </span>
 
                 <p>
-                    © 2026 Bethesda Apostolic Pentecostal Bible Institute.
-                    All rights reserved.
+                    “Equipping believers for today.
+                    Preparing leaders for tomorrow.”
                 </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-links-section">
+
+                <p class="footer-eyebrow">
+                    Institute Information
+                </p>
+
+
+                <div class="footer-links">
+
+                    <a href="about.html">
+                        About BAPBI
+                    </a>
+
+                    <a href="curriculum.html">
+                        Academics
+                    </a>
+
+                    <a href="enrollment.html">
+                        Enrollment
+                    </a>
+
+                    <a href="student-portal.html">
+                        Student Portal
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
+
+        <!-- FOOTER DIVIDER -->
+
+        <div class="footer-divider">
+
+            <div class="content-container">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="content-container footer-bottom">
+
+
+            <p>
+                © 2026 Bethesda Apostolic Pentecostal Bible Institute.
+                All rights reserved.
+            </p>
+
+
+            <div class="footer-legal">
+
+                <a href="privacy.html">
+                    Privacy
+                </a>
+
+                <a href="terms.html">
+                    Terms
+                </a>
+
+                <a href="copyright.html">
+                    Copyright
+                </a>
+
+            </div>
+
+
+            <p class="footer-motto">
+                For the Kingdom. For His Glory.
+            </p>
+
+        </div>
+
     </footer>
 
-
-    <!-- Shared Navigation Script -->
 
     <script src="js/main.js"></script>
 
