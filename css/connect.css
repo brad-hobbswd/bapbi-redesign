@@ -1,1306 +1,492 @@
-/* =========================================================
-   BAPBI
-   CONNECT PAGE STYLESHEET
-   Bethesda Apostolic Pentecostal Bible Institute
-   ========================================================= */
+/*========================================================
+
+    BAPBI CONNECT PAGE STYLESHEET
+
+    Master stylesheet:
+    css/styles.css
+
+    This file is loaded after styles.css.
+    It styles only the Connect page content.
+
+========================================================*/
 
 
-/* =========================================================
-   ROOT
-   ========================================================= */
-
-:root {
-    --espresso: #120906;
-    --espresso-light: #211008;
-    --brown: #351707;
-    --bronze: #6d350c;
-
-    --gold-dark: #9f6816;
-    --gold: #d5a32f;
-    --gold-light: #f1cc72;
-
-    --ivory: #f6f0e5;
-    --cream: #e9dfcf;
-    --white: #ffffff;
-
-    --text-light: #e9e4dc;
-    --text-muted: #b9b0a7;
-
-    --dark-text: #271c16;
-    --dark-muted: #766960;
-
-    --border-dark: rgba(213, 163, 47, 0.22);
-    --border-light: rgba(38, 20, 8, 0.14);
-
-    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-
-    --container-width: 1280px;
-}
-
-
-/* =========================================================
-   PAGE FOUNDATION
-   ========================================================= */
+/*========================================================
+    CONNECT PAGE FOUNDATION
+========================================================*/
 
 .connect-page {
-    background: var(--espresso);
+    background: var(--ivory);
 }
 
+.connect-page main {
+    overflow: hidden;
+}
 
-/* =========================================================
-   CONTENT CONTAINER
-   ========================================================= */
-
-.content-container {
+.connect-page .content-container {
     width: min(
-        calc(100% - 48px),
-        var(--container-width)
+        calc(100% - 4rem),
+        var(--container-width, 1200px)
     );
-
     margin-inline: auto;
 }
 
 
-/* =========================================================
-   TOP MESSAGE
-   ========================================================= */
-
-.top-message {
-    min-height: 34px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 7px 24px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--bronze),
-            var(--gold-dark),
-            var(--bronze)
-        );
-
-    color: var(--ivory);
-
-    text-align: center;
-}
-
-.top-message p {
-    margin: 0;
-
-    font-size: 0.68rem;
-    font-weight: 700;
-
-    letter-spacing: 0.16em;
-    line-height: 1.3;
-}
-
-.top-message span {
-    margin: 0 9px;
-    color: var(--gold-light);
-}
-
-
-/* =========================================================
-   MAIN NAVIGATION
-   ========================================================= */
-
-.main-navigation {
-    width: min(
-        calc(100% - 48px),
-        1400px
-    );
-
-    min-height: 82px;
-
-    margin-inline: auto;
-
-    display: flex;
-    align-items: center;
-
-    gap: 34px;
-
-    position: relative;
-    z-index: 100;
-}
-
-.brand {
-    flex: 0 0 auto;
-
-    display: flex;
-    align-items: center;
-
-    gap: 13px;
-
-    color: var(--ivory);
-    text-decoration: none;
-}
-
-.brand img {
-    width: 58px;
-    height: 58px;
-
-    object-fit: contain;
-}
-
-.brand-name {
-    display: flex;
-    flex-direction: column;
-
-    line-height: 1.1;
-}
-
-.brand-name strong {
-    color: var(--gold-light);
-
-    font-family: "Cinzel", Georgia, serif;
-
-    font-size: 1.3rem;
-    font-weight: 700;
-
-    letter-spacing: 0.08em;
-}
-
-.brand-name small {
-    max-width: 285px;
-
-    margin-top: 5px;
-
-    color: var(--text-muted);
-
-    font-family: "Inter", Arial, sans-serif;
-
-    font-size: 0.53rem;
-    font-weight: 600;
-
-    letter-spacing: 0.08em;
-    line-height: 1.35;
-}
-
-
-/* =========================================================
-   DESKTOP NAVIGATION
-   ========================================================= */
-
-.desktop-nav {
-    margin-left: auto;
-
-    display: flex;
-    align-items: center;
-
-    gap: 26px;
-}
-
-.desktop-nav > a,
-.nav-dropdown-toggle {
-    padding: 30px 0;
-
-    border: 0;
-
-    background: transparent;
-
-    color: var(--text-light);
-
-    text-decoration: none;
-
-    font-family: "Inter", Arial, sans-serif;
-
-    font-size: 0.78rem;
-    font-weight: 600;
-
-    letter-spacing: 0.04em;
-
-    white-space: nowrap;
-
-    cursor: pointer;
-
-    transition:
-        color 0.2s ease,
-        opacity 0.2s ease;
-}
-
-.desktop-nav > a:hover,
-.nav-dropdown-toggle:hover {
-    color: var(--gold-light);
-}
-
-.desktop-nav > a.active {
-    color: var(--gold-light);
-}
-
-
-/* =========================================================
-   NAV DROPDOWNS
-   ========================================================= */
-
-.nav-dropdown {
-    position: relative;
-}
-
-.nav-dropdown-toggle {
-    display: flex;
-    align-items: center;
-
-    gap: 6px;
-}
-
-.nav-dropdown-toggle span {
-    color: var(--gold);
-
-    font-size: 0.7rem;
-}
-
-.nav-dropdown-menu {
-    position: absolute;
-
-    top: calc(100% - 10px);
-    left: 50%;
-
-    min-width: 220px;
-
-    padding: 10px;
-
-    transform:
-        translateX(-50%)
-        translateY(8px);
-
-    background: var(--espresso-light);
-
-    border: 1px solid var(--border-dark);
-
-    box-shadow: var(--shadow);
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    transition:
-        opacity 0.2s ease,
-        transform 0.2s ease,
-        visibility 0.2s ease;
-}
-
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu {
-    opacity: 1;
-
-    visibility: visible;
-
-    pointer-events: auto;
-
-    transform:
-        translateX(-50%)
-        translateY(0);
-}
-
-.nav-dropdown-menu a {
-    display: block;
-
-    padding: 11px 14px;
-
-    color: var(--text-light);
-
-    text-decoration: none;
-
-    font-size: 0.76rem;
-    font-weight: 600;
-
-    letter-spacing: 0.03em;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
-}
-
-.nav-dropdown-menu a:hover,
-.nav-dropdown-menu a.active {
-    background:
-        rgba(213, 163, 47, 0.1);
-
-    color: var(--gold-light);
-}
-
-
-/* =========================================================
-   ENROLL BUTTON
-   ========================================================= */
-
-.enroll-button {
-    flex: 0 0 auto;
-
-    min-height: 46px;
-
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 0 22px;
-
-    border: 1px solid var(--gold);
-
-    background: var(--gold);
-
-    color: var(--espresso);
-
-    text-decoration: none;
-
-    font-family: "Inter", Arial, sans-serif;
-
-    font-size: 0.72rem;
-    font-weight: 800;
-
-    letter-spacing: 0.08em;
-
-    text-transform: uppercase;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.enroll-button:hover {
-    background: transparent;
-
-    color: var(--gold-light);
-
-    border-color: var(--gold-light);
-}
-
-
-/* =========================================================
-   MOBILE MENU BUTTON
-   ========================================================= */
-
-.mobile-menu-button {
-    display: none;
-
-    width: 46px;
-    height: 46px;
-
-    margin-left: auto;
-
-    padding: 10px;
-
-    border: 1px solid var(--border-dark);
-
-    background: transparent;
-
-    cursor: pointer;
-}
-
-.mobile-menu-button span {
-    display: block;
-
-    width: 100%;
-    height: 2px;
-
-    margin: 5px 0;
-
-    background: var(--gold-light);
-}
-
-
-/* =========================================================
-   MOBILE NAVIGATION
-   ========================================================= */
-
-.mobile-navigation {
-    display: none;
-}
-
-
-/* =========================================================
-   PAGE INTRO
-   ========================================================= */
-
-.page-intro {
-    padding: 100px 0 92px;
-
+/*========================================================
+    PAGE INTRODUCTION
+========================================================*/
+
+.connect-page .page-intro {
+    padding: 6rem 0 5rem;
     background:
         linear-gradient(
             180deg,
-            var(--espresso-light),
-            var(--espresso)
+            var(--ivory) 0%,
+            var(--cream) 100%
         );
-
-    border-top:
-        1px solid
-        rgba(213, 163, 47, 0.08);
-
-    border-bottom:
-        1px solid
-        var(--border-dark);
+    text-align: center;
 }
 
-.eyebrow {
-    margin: 0 0 13px;
+.connect-page .page-intro .content-container {
+    max-width: 900px;
+}
 
-    color: var(--gold-light);
-
+.connect-page .eyebrow {
+    margin: 0 0 1rem;
+    color: var(--gold);
     font-family: "Inter", Arial, sans-serif;
-
-    font-size: 0.68rem;
-    font-weight: 800;
-
+    font-size: 0.75rem;
+    font-weight: 700;
     letter-spacing: 0.2em;
-
+    line-height: 1.5;
     text-transform: uppercase;
 }
 
-.page-intro h1 {
-    max-width: 900px;
-
-    margin: 0;
-
-    color: var(--ivory);
-
-    font-family: "Cinzel", Georgia, serif;
-
-    font-size:
-        clamp(
-            2.6rem,
-            6vw,
-            5rem
-        );
-
+.connect-page .page-intro h1 {
+    margin: 0 0 1.25rem;
+    color: var(--espresso);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
     font-weight: 600;
+    line-height: 0.98;
+}
 
+.connect-page .page-intro-text {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+/*========================================================
+    SECTION HEADINGS
+========================================================*/
+
+.connect-page .section-heading {
+    max-width: 850px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.connect-page .section-heading h2 {
+    margin: 0 0 1rem;
+    color: var(--espresso);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    font-weight: 600;
     line-height: 1.05;
 }
 
-.page-intro-text {
-    max-width: 720px;
-
-    margin: 24px 0 0;
-
+.connect-page .section-heading p:not(.eyebrow) {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
     color: var(--text-muted);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.35rem;
-
-    line-height: 1.55;
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 
-/* =========================================================
-   GENERAL SECTION HEADING
-   ========================================================= */
+/*========================================================
+    CONNECT BUTTON
+========================================================*/
 
-.section-heading {
-    max-width: 820px;
-
-    margin-bottom: 45px;
-}
-
-.section-heading h2 {
-    margin: 0 0 17px;
-
-    color: var(--ivory);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            2rem,
-            4vw,
-            3.25rem
-        );
-
-    font-weight: 600;
-
-    line-height: 1.15;
-}
-
-.section-heading p:not(.eyebrow) {
-    max-width: 720px;
-
-    margin: 0;
-
-    color: var(--text-muted);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.2rem;
-
-    line-height: 1.55;
-}
-
-
-/* =========================================================
-   FACEBOOK SECTION
-   ========================================================= */
-
-.facebook-section {
-    padding: 95px 0 105px;
-
-    background: var(--ivory);
-
-    color: var(--dark-text);
-}
-
-.facebook-section .section-heading h2 {
-    color: var(--dark-text);
-}
-
-.facebook-section .section-heading p:not(.eyebrow) {
-    color: var(--dark-muted);
-}
-
-
-/* =========================================================
-   CONNECT BUTTON
-   ========================================================= */
-
-.connect-button {
+.connect-page .connect-button {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
-    gap: 11px;
-
-    min-height: 48px;
-
-    margin-top: 25px;
-
-    padding: 0 22px;
-
-    border: 1px solid var(--gold-dark);
-
-    background: var(--gold-dark);
-
-    color: var(--white);
-
-    text-decoration: none;
-
+    gap: 1rem;
+    min-height: 3.25rem;
+    padding: 0.9rem 1.5rem;
+    color: var(--espresso);
+    background: var(--gold);
+    border: 1px solid var(--gold);
     font-family: "Inter", Arial, sans-serif;
-
-    font-size: 0.7rem;
-    font-weight: 800;
-
+    font-size: 0.78rem;
+    font-weight: 700;
     letter-spacing: 0.08em;
-
+    line-height: 1.3;
+    text-decoration: none;
     text-transform: uppercase;
-
     transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease;
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
-.connect-button:hover {
-    background: var(--brown);
+.connect-page .connect-button span {
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
 
-    border-color: var(--brown);
-
+.connect-page .connect-button:hover {
     color: var(--white);
+    background: var(--espresso);
+    border-color: var(--espresso);
+    transform: translateY(-2px);
 }
 
-.connect-button span {
-    transition:
-        transform 0.2s ease;
-}
-
-.connect-button:hover span {
-    transform: translateX(5px);
+.connect-page .connect-button:hover span {
+    transform: translateX(4px);
 }
 
 
-/* =========================================================
-   FACEBOOK FEED CARD
-   ========================================================= */
+/*========================================================
+    BAPBI FACEBOOK SECTION
+========================================================*/
 
-.facebook-feed-card {
-    width: 100%;
-
-    overflow: hidden;
-
+.connect-page .facebook-section {
+    padding: 6rem 0;
     background: var(--white);
+}
 
-    border:
-        1px solid
-        var(--border-light);
-
+.connect-page .facebook-feed-card {
+    width: min(100%, 950px);
+    margin: 0 auto;
+    background: var(--ivory);
+    border: 1px solid rgba(72, 43, 20, 0.16);
     box-shadow:
-        0 18px 55px
-        rgba(38, 20, 8, 0.1);
+        0 1.5rem 4rem rgba(45, 26, 12, 0.1);
 }
 
-.facebook-feed {
-    width: 100%;
-
-    min-height: 500px;
-
-    padding: 28px;
-
+.connect-page .facebook-feed {
     display: flex;
-
     justify-content: center;
-
     align-items: flex-start;
-
-    background: var(--white);
-
-    overflow-x: auto;
+    min-height: 300px;
+    padding: 2rem;
+    overflow: hidden;
 }
 
-.facebook-feed .fb-page {
+.connect-page .fb-page {
     width: 100%;
+    max-width: 900px;
+}
+
+.connect-page .fb-page > span,
+.connect-page .fb-page iframe {
     max-width: 100%;
 }
 
 
-/* =========================================================
-   TABERNACLE SECTION
-   ========================================================= */
+/*========================================================
+    TABERNACLE SECTION
+========================================================*/
 
-.tabernacle-section {
-    padding: 105px 0;
+.connect-page .tabernacle-section {
+    padding: 6rem 0;
+    background:
+        linear-gradient(
+            180deg,
+            var(--cream) 0%,
+            var(--ivory) 100%
+        );
+}
 
+.connect-page .tabernacle-section .facebook-feed-card {
+    background: var(--white);
+}
+
+.connect-page .feed-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 2rem 1.5rem;
+    border-bottom: 1px solid rgba(72, 43, 20, 0.14);
+}
+
+.connect-page .feed-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--gold-dark, var(--gold));
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.connect-page .feed-header h3 {
+    margin: 0;
+    color: var(--espresso);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.connect-page .service-time {
+    flex-shrink: 0;
+    color: var(--gold-dark, var(--gold));
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+/*========================================================
+    SERVICE SECTION
+========================================================*/
+
+.connect-page .service-section {
+    padding: 6rem 0;
     background: var(--espresso);
 }
 
-.tabernacle-section .section-heading {
-    margin-bottom: 45px;
-}
-
-.feed-header {
-    min-height: 105px;
-
-    display: flex;
-
+.connect-page .service-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
-
-    padding: 28px 32px;
-
+    gap: 3rem;
+    padding: clamp(2rem, 5vw, 4rem);
     background:
         linear-gradient(
             135deg,
-            var(--espresso-light),
-            var(--brown)
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.015)
         );
-
-    border-bottom:
-        1px solid
-        var(--border-dark);
+    border: 1px solid rgba(200, 164, 93, 0.45);
 }
 
-.feed-label {
-    display: block;
-
-    margin-bottom: 7px;
-
-    color: var(--gold-light);
-
-    font-size: 0.62rem;
-    font-weight: 800;
-
-    letter-spacing: 0.17em;
-
-    text-transform: uppercase;
+.connect-page .service-content {
+    max-width: 700px;
 }
 
-.feed-header h3 {
-    margin: 0;
+.connect-page .service-content .eyebrow {
+    color: var(--gold-light, var(--gold));
+}
 
-    color: var(--ivory);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1.25rem;
-
+.connect-page .service-content h2 {
+    margin: 0 0 1.25rem;
+    color: var(--white);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 4rem);
     font-weight: 600;
+    line-height: 1.05;
 }
 
-.service-time {
-    flex: 0 0 auto;
-
-    color: var(--gold-light);
-
-    font-size: 0.7rem;
-    font-weight: 700;
-
-    letter-spacing: 0.08em;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================================
-   SERVICE SECTION
-   ========================================================= */
-
-.service-section {
-    padding: 90px 0;
-
-    background: var(--cream);
-
-    color: var(--dark-text);
-}
-
-.service-card {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.35fr)
-        minmax(280px, 0.65fr);
-
-    gap: 60px;
-
-    align-items: center;
-
-    padding: 55px;
-
-    background: var(--white);
-
-    border:
-        1px solid
-        var(--border-light);
-
-    box-shadow:
-        0 20px 60px
-        rgba(38, 20, 8, 0.1);
-}
-
-.service-content .eyebrow {
-    color: var(--gold-dark);
-}
-
-.service-content h2 {
-    margin: 0 0 18px;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            1.8rem,
-            4vw,
-            2.8rem
-        );
-
-    font-weight: 600;
-
-    line-height: 1.15;
-}
-
-.service-content > p:not(.eyebrow):not(.service-caption) {
-    max-width: 650px;
-
+.connect-page .service-content > p:not(.eyebrow) {
     margin: 0;
-
-    color: var(--dark-muted);
-
-    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
-.service-countdown {
-    margin-top: 30px;
-
-    padding: 22px 25px;
-
-    border-left:
-        4px solid
-        var(--gold);
-
-    background:
-        rgba(213, 163, 47, 0.08);
-}
-
-.service-countdown span {
-    display: block;
-
-    color: var(--gold-dark);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            1.35rem,
-            3vw,
-            2.1rem
-        );
-
-    font-weight: 700;
-
+.connect-page .service-countdown {
+    margin-top: 2rem;
+    color: var(--gold-light, var(--gold));
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 600;
     letter-spacing: 0.04em;
-
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
-.service-caption {
-    margin-top: 12px !important;
-
-    color: var(--dark-muted);
-
-    font-size: 0.78rem !important;
-
-    font-style: italic;
+.connect-page .service-caption {
+    margin: 0.75rem 0 0;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
-.service-actions {
+.connect-page .service-actions {
     display: flex;
-
     flex-direction: column;
-
     align-items: stretch;
-
-    gap: 12px;
+    gap: 1rem;
+    min-width: 230px;
 }
 
-.service-actions .connect-button {
+.connect-page .service-actions .connect-button {
     width: 100%;
-
-    margin-top: 0;
-
+    box-sizing: border-box;
     text-align: center;
 }
 
-.service-actions .live-button {
-    background: var(--bronze);
-
-    border-color: var(--bronze);
+.connect-page .service-actions .live-button {
+    color: var(--espresso);
+    background: var(--white);
+    border-color: var(--white);
 }
 
-.service-actions .live-button:hover {
-    background: var(--gold-dark);
-
-    border-color: var(--gold-dark);
+.connect-page .service-actions .live-button:hover {
+    color: var(--white);
+    background: transparent;
+    border-color: var(--white);
 }
 
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/*========================================================
+    FACEBOOK FALLBACK CONTENT
+========================================================*/
 
-.site-footer {
-    padding: 50px 0;
-
-    background: #0b0503;
-
-    border-top:
-        1px solid
-        var(--border-dark);
-}
-
-.footer-inner {
-    display: grid;
-
-    grid-template-columns:
-        1.5fr
-        1fr
-        auto;
-
-    gap: 45px;
-
-    align-items: center;
-}
-
-.footer-brand {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-}
-
-.footer-brand img {
-    width: 50px;
-    height: 50px;
-
-    object-fit: contain;
-}
-
-.footer-brand div {
-    display: flex;
-
-    flex-direction: column;
-}
-
-.footer-brand strong {
-    color: var(--gold-light);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1.05rem;
-
-    letter-spacing: 0.08em;
-}
-
-.footer-brand span {
+.connect-page .fb-xfbml-parse-ignore {
+    margin: 0;
+    padding: 2rem;
     color: var(--text-muted);
-
-    font-size: 0.7rem;
-
-    line-height: 1.5;
+    text-align: center;
 }
 
-.footer-links {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px 20px;
-}
-
-.footer-links a {
-    color: var(--text-muted);
-
-    font-size: 0.7rem;
-
-    text-decoration: none;
-
-    transition:
-        color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: var(--gold-light);
-}
-
-.footer-webmaster {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-end;
-
-    gap: 4px;
-}
-
-.footer-webmaster span {
-    color: var(--gold);
-
-    font-size: 0.62rem;
-    font-weight: 800;
-
-    letter-spacing: 0.15em;
-}
-
-.footer-webmaster a {
-    color: var(--text-muted);
-
-    font-size: 0.72rem;
-
+.connect-page .fb-xfbml-parse-ignore a {
+    color: var(--gold-dark, var(--gold));
+    font-weight: 700;
     text-decoration: none;
 }
 
-.footer-webmaster a:hover {
-    color: var(--gold-light);
+.connect-page .fb-xfbml-parse-ignore a:hover {
+    text-decoration: underline;
 }
 
 
-/* =========================================================
-   LARGE TABLET
-   ========================================================= */
-
-@media (max-width: 1100px) {
-
-    .main-navigation {
-        gap: 20px;
-    }
-
-    .desktop-nav {
-        gap: 17px;
-    }
-
-    .desktop-nav > a,
-    .nav-dropdown-toggle {
-        font-size: 0.7rem;
-    }
-
-    .brand-name small {
-        max-width: 220px;
-    }
-
-    .service-card {
-        gap: 40px;
-        padding: 45px;
-    }
-
-    .footer-inner {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-webmaster {
-        align-items: flex-start;
-    }
-}
-
-
-/* =========================================================
-   TABLET / MOBILE NAV
-   ========================================================= */
+/*========================================================
+    RESPONSIVE DESIGN
+========================================================*/
 
 @media (max-width: 900px) {
 
-    .main-navigation {
+    .connect-page .content-container {
         width: min(
-            calc(100% - 32px),
-            1400px
+            calc(100% - 3rem),
+            var(--container-width, 1200px)
         );
-
-        min-height: 76px;
     }
 
-    .desktop-nav,
-    .enroll-button {
-        display: none;
+    .connect-page .page-intro {
+        padding: 5rem 0 4rem;
     }
 
-    .mobile-menu-button {
-        display: block;
+    .connect-page .facebook-section,
+    .connect-page .tabernacle-section,
+    .connect-page .service-section {
+        padding: 5rem 0;
     }
 
-    .mobile-navigation {
-        display: flex;
-
-        flex-direction: column;
-
-        max-height: 0;
-
-        overflow: hidden;
-
-        padding: 0 16px;
-
-        background: var(--espresso-light);
-
-        border-bottom:
-            1px solid
-            transparent;
-
-        transition:
-            max-height 0.3s ease,
-            padding 0.3s ease,
-            border-color 0.3s ease;
-    }
-
-    .mobile-navigation.open {
-        max-height: 800px;
-
-        padding: 10px 16px 20px;
-
-        border-color:
-            var(--border-dark);
-    }
-
-    .mobile-navigation a {
-        padding: 13px 8px;
-
-        border-bottom:
-            1px solid
-            rgba(213, 163, 47, 0.1);
-
-        color: var(--text-light);
-
-        text-decoration: none;
-
-        font-size: 0.82rem;
-        font-weight: 600;
-    }
-
-    .mobile-navigation a:last-child {
-        border-bottom: 0;
-    }
-
-    .mobile-navigation a:hover,
-    .mobile-navigation a.active {
-        color: var(--gold-light);
-    }
-
-    .page-intro {
-        padding: 75px 0 70px;
-    }
-
-    .feed-header {
-        align-items: flex-start;
-
-        flex-direction: column;
-
-        gap: 12px;
-    }
-
-    .service-card {
+    .connect-page .service-card {
         grid-template-columns: 1fr;
-
-        gap: 40px;
+        gap: 2rem;
     }
 
-    .service-actions {
-        max-width: 420px;
+    .connect-page .service-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        min-width: 0;
     }
 
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+@media (max-width: 700px) {
 
-@media (max-width: 600px) {
-
-    .content-container {
+    .connect-page .content-container {
         width: min(
-            calc(100% - 28px),
-            var(--container-width)
+            calc(100% - 2rem),
+            var(--container-width, 1200px)
         );
     }
 
-    .top-message {
-        padding-inline: 12px;
+    .connect-page .page-intro {
+        padding: 4rem 0 3.5rem;
     }
 
-    .top-message p {
-        font-size: 0.55rem;
-
-        letter-spacing: 0.1em;
+    .connect-page .page-intro h1 {
+        font-size: 3.2rem;
     }
 
-    .top-message span {
-        margin: 0 4px;
+    .connect-page .page-intro-text {
+        font-size: 1rem;
     }
 
-    .main-navigation {
-        width: calc(100% - 28px);
-
-        min-height: 70px;
+    .connect-page .section-heading h2 {
+        font-size: 2.6rem;
     }
 
-    .brand {
-        gap: 9px;
+    .connect-page .facebook-section,
+    .connect-page .tabernacle-section,
+    .connect-page .service-section {
+        padding: 4rem 0;
     }
 
-    .brand img {
-        width: 48px;
-        height: 48px;
+    .connect-page .facebook-feed {
+        padding: 1rem;
     }
 
-    .brand-name strong {
-        font-size: 1.05rem;
+    .connect-page .feed-header {
+        display: block;
+        padding: 1.5rem;
     }
 
-    .brand-name small {
-        max-width: 190px;
-
-        font-size: 0.42rem;
-
-        letter-spacing: 0.05em;
+    .connect-page .service-time {
+        display: block;
+        margin-top: 1rem;
+        text-align: left;
     }
 
-    .mobile-menu-button {
-        width: 42px;
-        height: 42px;
+    .connect-page .service-card {
+        padding: 2rem 1.5rem;
     }
 
-    .page-intro {
-        padding: 62px 0 58px;
-    }
-
-    .page-intro h1 {
+    .connect-page .service-content h2 {
         font-size: 2.5rem;
     }
 
-    .page-intro-text {
-        font-size: 1.15rem;
-    }
-
-    .facebook-section,
-    .tabernacle-section {
-        padding: 65px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-        font-size: 2rem;
-    }
-
-    .facebook-feed {
-        min-height: 500px;
-
-        padding: 18px 10px;
-    }
-
-    .feed-header {
-        padding: 24px 22px;
-    }
-
-    .feed-header h3 {
-        font-size: 1.05rem;
-    }
-
-    .service-section {
-        padding: 65px 0;
-    }
-
-    .service-card {
-        padding: 30px 22px;
-
-        gap: 32px;
-    }
-
-    .service-countdown {
-        padding: 18px;
-    }
-
-    .service-countdown span {
-        font-size: 1.25rem;
-
-        word-break: break-word;
-    }
-
-    .service-actions {
-        max-width: none;
-    }
-
-    .connect-button {
-        width: 100%;
-    }
-
-    .footer-inner {
+    .connect-page .service-actions {
         grid-template-columns: 1fr;
-
-        gap: 30px;
     }
 
-    .footer-links {
-        gap: 10px 17px;
+}
+
+
+@media (max-width: 480px) {
+
+    .connect-page .page-intro h1 {
+        font-size: 2.7rem;
     }
 
-    .footer-webmaster {
-        align-items: flex-start;
+    .connect-page .section-heading h2 {
+        font-size: 2.25rem;
+    }
+
+    .connect-page .connect-button {
+        width: 100%;
+        box-sizing: border-box;
+        padding-inline: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .connect-page .service-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .connect-page .service-countdown {
+        font-size: 2rem;
     }
 
 }
