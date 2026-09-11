@@ -1,0 +1,36 @@
+/* =========================================================
+   BAPBI
+   FALL SEMESTER PAGE STYLESHEET
+
+   Page-specific styles only.
+   Shared site shell is controlled by css/styles.css.
+
+   Bethesda Apostolic Pentecostal Bible Institute
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+@import url(
+    'https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap'
+);
+
+
+/* =========================================================
+   PAGE-SPECIFIC NAVIGATION STATE
+   Shared navigation styling is controlled by styles.css.
+========================================================= */
+
+.dropdown-button.active {
+    color: var(--gold-light);
+}
+
+.dropdown-button.active > span {
+    color: var(--gold-light);
+}
+
+.dropdown-active {
+    color: var(--gold-light) !important;
+}
