@@ -1,0 +1,110 @@
+/* =========================================================
+   FALL STUDY GUIDES
+   Uses the current BAPBI master theme
+========================================================= */
+
+.fall-study-guides-section {
+    padding: 96px 0 110px;
+    background: var(--ivory, #f7f0e6);
+}
+
+.fall-study-guides-section .section-heading {
+    max-width: 760px;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+
+.fall-study-guides-section .section-eyebrow {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--gold-dark, #9a7538);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+}
+
+.fall-study-guides-section h1 {
+    margin: 0;
+    color: var(--espresso, #271c16);
+}
+
+.fall-study-guides-section .section-lead {
+    max-width: 720px;
+    margin: 18px auto 42px;
+    color: var(--dark-muted, #766960);
+    font-size: 1.08rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.study-status-badge {
+    display: table;
+    margin: 0 auto;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.study-status-live {
+    background: #287a46;
+    color: #fff;
+}
+
+.fall-study-guides-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 560px);
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 38px;
+}
+
+.fall-study-guide-card {
+    padding: 38px;
+    border: 1px solid rgba(39, 28, 22, .12);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 16px 36px rgba(39, 28, 22, .09);
+    text-align: center;
+}
+
+.fall-highlight-card {
+    border: 2px solid var(--gold, #c8a45d);
+    background: #2a1c11;
+}
+
+.study-card-label {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--gold-light, #e2c47e);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+.fall-study-guide-card h2 {
+    margin: 0 0 16px;
+    color: #fff;
+}
+
+.fall-study-guide-card p {
+    margin: 0 0 28px;
+    color: #f3e9dc;
+    line-height: 1.75;
+}
+
+.fall-study-guide-card .button {
+    display: inline-flex;
+}
+
+.fall-study-guides-section > .content-container > .button {
+    display: table;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .fall-study-guides-section { padding: 70px 0 80px; }
+    .fall-study-guide-card { padding: 28px 22px; }
+}
