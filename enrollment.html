@@ -61,7 +61,7 @@
       Home
      </a>
      <div class="nav-dropdown">
-      <button class="dropdown-button" type="button">
+      <button class="dropdown-button" type="submit">
        About
        <span>
         ⌄
@@ -350,7 +350,12 @@
                     as needed before final enrollment confirmation.
        </p>
       </div>
-      <form action="https://docs.google.com/forms/d/e/1FAIpQLSdhTVnBqgugFXN6K8W9XS4MP1AmtkK_IcDzwUiWsahAytSn5w/formResponse" class="enrollment-form" id="enrollment-form" method="POST">
+      <form
+    action="https://docs.google.com/forms/d/e/1FAIpQLSdhTVnBqgugFXN6K8W9XS4MP1AmtkK_IcDzwUiWsahAytSn5w/formResponse"
+    method="POST"
+    target="_blank"
+    class="enrollment-form"
+    id="enrollment-form">
        <fieldset>
         <legend>
          Student Information
@@ -761,54 +766,6 @@
     </p>
    </div>
   </footer>
-
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-
-      const form = document.getElementById("enrollment-form");
-
-      if (!form) {
-          return;
-      }
-
-      form.addEventListener("submit", function (event) {
-
-          event.preventDefault();
-
-          const submitButton = form.querySelector("button[type=\"submit\"]");
-
-          if (submitButton) {
-              submitButton.disabled = true;
-              submitButton.textContent = "Submitting Application...";
-          }
-
-          const formData = new FormData(form);
-          const encodedData = new URLSearchParams();
-
-          for (const [key, value] of formData.entries()) {
-              encodedData.append(key, value);
-          }
-
-          fetch("https://docs.google.com/forms/d/e/1FAIpQLSdhTVnBqgugFXN6K8W9XS4MP1AmtkK_IcDzwUiWsahAytSn5w/formResponse", {
-              method: "POST",
-              mode: "no-cors",
-              headers: {
-                  "Content-Type": "application/x-www-form-urlencoded"
-              },
-              body: encodedData.toString()
-          })
-          .then(function () {
-              window.location.href = "https://www.bapbi.net/thank-you.html";
-          })
-          .catch(function () {
-              window.location.href = "https://www.bapbi.net/thank-you.html";
-          });
-
-      });
-
-  });
-  </script>
 
 </body>
 </html>
