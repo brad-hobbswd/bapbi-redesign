@@ -343,3 +343,25 @@
         font-size: 1.15rem;
     }
 }
+
+/* =========================================================
+   FORM SUBMISSION STATUS
+========================================================= */
+
+.form-status {
+    min-height: 1.5em;
+    margin: 0 0 1rem;
+    color: var(--espresso);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.form-status-error {
+    color: #9b241d;
+}
+
+.bapbi-contact-form button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
