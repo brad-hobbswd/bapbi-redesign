@@ -1,0 +1,192 @@
+/* =========================================================
+   WINTER STUDY GUIDES
+   Page-specific styles for winter-study-guides.html
+   The master stylesheet must load before this file.
+========================================================= */
+
+.winter-study-guides-page .winter-study-guides-introduction {
+    background: var(--espresso);
+    color: var(--ivory);
+    padding: 105px 0 90px;
+    border-bottom: 1px solid rgba(213, 163, 47, 0.25);
+}
+
+.winter-study-guides-page .section-eyebrow {
+    display: block;
+    color: var(--gold);
+    font-family: Inter, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.winter-study-guides-page .winter-study-guides-introduction h1 {
+    color: var(--ivory);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1;
+    margin: 0 0 24px;
+}
+
+.winter-study-guides-page .intro-lead {
+    max-width: 760px;
+    color: rgba(246, 240, 229, 0.88);
+    font-size: 1.12rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.winter-study-guides-page .winter-study-guides-section {
+    background: var(--ivory);
+    padding: 95px 0 110px;
+}
+
+.winter-study-guides-page .section-heading {
+    margin-bottom: 42px;
+}
+
+.winter-study-guides-page .section-heading h2 {
+    color: var(--espresso);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0 0 12px;
+}
+
+.winter-study-guides-page .section-lead {
+    max-width: 700px;
+    color: #5a4b42;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.winter-study-guides-page .winter-study-guides-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    max-width: 760px;
+}
+
+.winter-study-guides-page .winter-study-guide-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 330px;
+    padding: 38px;
+    background: #ffffff;
+    color: #241812;
+    border: 1px solid #d8cbbd;
+    border-top: 4px solid var(--gold);
+    box-shadow: 0 12px 30px rgba(18, 9, 6, 0.08);
+}
+
+.winter-study-guides-page .winter-study-guide-card-topline {
+    min-height: 30px;
+    margin-bottom: 22px;
+}
+
+.winter-study-guides-page .semester-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    border-radius: 4px;
+    font-family: Inter, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.winter-study-guides-page .badge-archived {
+    background: #6b625d;
+    color: #ffffff;
+}
+
+.winter-study-guides-page .winter-study-guide-card h3 {
+    color: #241812;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.55rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0 0 10px;
+}
+
+.winter-study-guides-page .winter-study-guide-card h4 {
+    color: #5a4b42;
+    font-family: Inter, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 16px;
+}
+
+.winter-study-guides-page .winter-study-guide-card p {
+    color: #5a4b42;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0 0 30px;
+    max-width: 520px;
+}
+
+.winter-study-guides-page .winter-study-guide-card .button {
+    margin-top: auto;
+    opacity: 1;
+}
+
+.winter-study-guides-page .winter-study-guide-card .button-primary {
+    background: #c8a45d;
+    color: #21140d;
+    border: 1px solid #c8a45d;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.winter-study-guides-page .winter-study-guide-card .button-primary:hover {
+    background: #a9823c;
+    color: #ffffff;
+    border-color: #a9823c;
+}
+
+.winter-study-guides-page .winter-study-guides-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 48px;
+}
+
+.winter-study-guides-page .winter-study-guides-actions .button-outline {
+    background: var(--espresso);
+    color: var(--ivory);
+    border-color: var(--espresso);
+}
+
+.winter-study-guides-page .winter-study-guides-actions .button-outline:hover {
+    background: var(--gold);
+    color: #21140d;
+    border-color: var(--gold);
+}
+
+@media (max-width: 700px) {
+    .winter-study-guides-page .winter-study-guides-introduction {
+        padding: 75px 0;
+    }
+
+    .winter-study-guides-page .winter-study-guides-section {
+        padding: 70px 0 80px;
+    }
+
+    .winter-study-guides-page .winter-study-guide-card {
+        min-height: 300px;
+        padding: 28px;
+    }
+
+    .winter-study-guides-page .winter-study-guides-actions .button {
+        width: 100%;
+        text-align: center;
+    }
+}
