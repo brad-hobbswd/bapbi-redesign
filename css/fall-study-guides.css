@@ -184,3 +184,20 @@
     background: var(--gold-light, #e2c47e);
     color: var(--espresso, #271c16) !important;
 }
+
+/* =========================================================
+   FALL STUDY GUIDES
+   Main page heading typography
+========================================================= */
+
+.fall-study-guides-section .section-heading h1,
+.fall-study-guides-section h1 {
+    margin: 0;
+    color: var(--espresso);
+    font-family: var(--font-display, "Cormorant Garamond", Georgia, serif);
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
