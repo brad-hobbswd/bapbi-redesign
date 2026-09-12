@@ -141,3 +141,46 @@
         padding: 28px 22px;
     }
 }
+
+/* =========================================================
+   FALL PAGE BUTTON CONTRAST FIX
+========================================================= */
+
+.fall-study-guides-section > .content-container > .button.button-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 14px 24px;
+    border: 1px solid var(--gold, #c8a45d);
+    border-radius: 0;
+    background: transparent;
+    color: var(--espresso, #271c16) !important;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.fall-study-guides-section > .content-container > .button.button-outline:hover,
+.fall-study-guides-section > .content-container > .button.button-outline:focus-visible {
+    background: var(--espresso, #271c16);
+    color: #ffffff !important;
+    border-color: var(--espresso, #271c16);
+}
+
+.fall-study-guide-card .button.button-primary {
+    min-height: 48px;
+    padding: 13px 24px;
+    background: var(--gold, #c8a45d);
+    color: var(--espresso, #271c16) !important;
+    border: 1px solid var(--gold, #c8a45d);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.fall-study-guide-card .button.button-primary:hover,
+.fall-study-guide-card .button.button-primary:focus-visible {
+    background: var(--gold-light, #e2c47e);
+    color: var(--espresso, #271c16) !important;
+}
