@@ -1,6 +1,10 @@
 /* =========================================================
-   BAPBI REDESIGN
-   MASTER STYLESHEET
+   BAPBI
+   BELIEFS PAGE STYLESHEET
+
+   Page-specific styles only.
+   Shared site shell is controlled by css/styles.css.
+
    Bethesda Apostolic Pentecostal Bible Institute
 ========================================================= */
 
@@ -9,7 +13,9 @@
    GOOGLE FONTS
 ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url(
+    'https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap'
+);
 
 
 /* =========================================================
@@ -31,16 +37,25 @@
     --cream: #e9dfcf;
 
     --white: #ffffff;
+
     --text-light: #e9e4dc;
     --text-muted: #b9b0a7;
 
-    --border-dark: rgba(213, 163, 47, 0.22);
-    --border-light: rgba(38, 20, 8, 0.15);
+    --dark-text: #271c16;
+    --dark-muted: #766960;
+
+    --border-dark:
+        rgba(213, 163, 47, 0.22);
+
+    --border-light:
+        rgba(38, 20, 8, 0.14);
 
     --shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35);
+        0 20px 60px
+        rgba(0, 0, 0, 0.35);
 
-    --container-width: 1280px;
+    --container-width:
+        1280px;
 
 }
 
@@ -68,15 +83,21 @@ html {
 
 body {
 
-    background: var(--espresso);
+    background:
+        var(--espresso);
 
-    color: var(--text-light);
+    color:
+        var(--text-light);
 
-    font-family: "Inter", sans-serif;
+    font-family:
+        "Inter",
+        sans-serif;
 
-    line-height: 1.7;
+    line-height:
+        1.7;
 
-    overflow-x: hidden;
+    overflow-x:
+        hidden;
 
 }
 
@@ -94,14 +115,16 @@ a {
 
     color: inherit;
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
 }
 
 
 button {
 
-    font: inherit;
+    font:
+        inherit;
 
 }
 
@@ -109,7 +132,8 @@ button {
 button,
 a {
 
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color:
+        transparent;
 
 }
 
@@ -120,570 +144,26 @@ a {
 
 .content-container {
 
-    width: min(
-        calc(100% - 48px),
-        var(--container-width)
-    );
-
-    margin: 0 auto;
-
-}
-
-
-/* =========================================================
-   TOP MESSAGE
-========================================================= */
-
-.site-header {
-
-    position: relative;
-
-    z-index: 1000;
-
-    background:
-        linear-gradient(
-            180deg,
-            #160b07,
-            #100807
-        );
-
-    border-bottom:
-        1px solid var(--border-dark);
-
-}
-
-
-.top-message {
-
-    min-height: 34px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: flex-end;
-
-    padding:
-        0 5%;
-
-    border-bottom:
-        1px solid rgba(213, 163, 47, 0.14);
-
-}
-
-
-.top-message p {
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        0.68rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.11em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.top-message span {
-
-    color:
-        var(--gold);
-
-    padding:
-        0 5px;
-
-}
-
-
-/* =========================================================
-   MAIN NAVIGATION
-========================================================= */
-
-.main-navigation {
-
     width:
         min(
             calc(100% - 48px),
-            1400px
+            var(--container-width)
         );
-
-    min-height:
-        82px;
 
     margin:
         0 auto;
 
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        34px;
-
 }
 
 
 /* =========================================================
-   BRAND
+   SHARED EYEBROW
 ========================================================= */
 
-.brand {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    gap:
-        14px;
-
-    flex-shrink:
-        0;
-
-}
-
-
-.brand-logo {
-
-    width:
-        58px;
-
-    height:
-        58px;
-
-    object-fit:
-        contain;
-
-}
-
-
-.brand span {
+.section-eyebrow {
 
     color:
         var(--gold-light);
-
-    font-family:
-        "Cinzel", serif;
-
-    font-size:
-        1.45rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.04em;
-
-}
-
-
-/* =========================================================
-   DESKTOP NAVIGATION
-   SMOOTH LEADERSHIP STYLE
-========================================================= */
-
-.desktop-nav {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        26px;
-
-    margin-left:
-        auto;
-
-}
-
-
-.desktop-nav > a,
-.dropdown-button {
-
-    position:
-        relative;
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    gap:
-        7px;
-
-    height:
-        82px;
-
-    padding:
-        0;
-
-    background:
-        transparent;
-
-    border:
-        0;
-
-    color:
-        var(--text-light);
-
-    cursor:
-        pointer;
-
-    font-size:
-        0.73rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.07em;
-
-    text-transform:
-        uppercase;
-
-    white-space:
-        nowrap;
-
-    transition:
-        color 0.25s ease;
-
-}
-
-
-.desktop-nav > a:hover,
-.dropdown-button:hover {
-
-    color:
-        var(--gold-light);
-
-}
-
-
-.desktop-nav > a.active {
-
-    color:
-        var(--gold-light);
-
-}
-
-
-.desktop-nav > a.active::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    left:
-        0;
-
-    right:
-        0;
-
-    bottom:
-        19px;
-
-    height:
-        2px;
-
-    background:
-        var(--gold);
-
-    transform:
-        scaleX(1);
-
-    transform-origin:
-        center;
-
-}
-
-
-/* =========================================================
-   DROPDOWNS
-========================================================= */
-
-.nav-dropdown {
-
-    position:
-        relative;
-
-    height:
-        82px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-}
-
-
-.dropdown-button > span {
-
-    display:
-        inline-block;
-
-    color:
-        var(--gold);
-
-    font-size:
-        0.82rem;
-
-    line-height:
-        1;
-
-    transform:
-        translateY(-1px);
-
-    transition:
-        transform 0.25s ease,
-        color 0.25s ease;
-
-}
-
-
-.nav-dropdown:hover .dropdown-button > span,
-.nav-dropdown:focus-within .dropdown-button > span {
-
-    color:
-        var(--gold-light);
-
-    transform:
-        translateY(-1px)
-        rotate(180deg);
-
-}
-
-
-/* =========================================================
-   DROPDOWN MENU
-========================================================= */
-
-.dropdown-menu {
-
-    position:
-        absolute;
-
-    top:
-        calc(100% - 1px);
-
-    left:
-        50%;
-
-    width:
-        225px;
-
-    padding:
-        8px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #211008,
-            #160a06
-        );
-
-    border:
-        1px solid var(--border-dark);
-
-    box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.42);
-
-    opacity:
-        0;
-
-    visibility:
-        hidden;
-
-    pointer-events:
-        none;
-
-    transform:
-        translate(-50%, 10px);
-
-    transform-origin:
-        top center;
-
-    transition:
-        opacity 0.22s ease,
-        transform 0.22s ease,
-        visibility 0.22s ease;
-
-}
-
-
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu {
-
-    opacity:
-        1;
-
-    visibility:
-        visible;
-
-    pointer-events:
-        auto;
-
-    transform:
-        translate(-50%, 0);
-
-}
-
-
-/* =========================================================
-   DROPDOWN LINKS
-========================================================= */
-
-.dropdown-menu a {
-
-    position:
-        relative;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    min-height:
-        44px;
-
-    padding:
-        0 15px;
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        0.76rem;
-
-    font-weight:
-        600;
-
-    letter-spacing:
-        0.035em;
-
-    text-transform:
-        none;
-
-    transition:
-        color 0.2s ease,
-        background 0.2s ease,
-        padding-left 0.2s ease;
-
-}
-
-
-.dropdown-menu a:hover {
-
-    padding-left:
-        19px;
-
-    color:
-        var(--gold-light);
-
-    background:
-        rgba(213, 163, 47, 0.07);
-
-}
-
-
-.dropdown-menu a::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    left:
-        0;
-
-    top:
-        7px;
-
-    bottom:
-        7px;
-
-    width:
-        2px;
-
-    background:
-        var(--gold);
-
-    opacity:
-        0;
-
-    transform:
-        scaleY(0.5);
-
-    transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-
-}
-
-
-.dropdown-menu a:hover::before {
-
-    opacity:
-        1;
-
-    transform:
-        scaleY(1);
-
-}
-
-
-/* =========================================================
-   ENROLL BUTTON
-========================================================= */
-
-.enroll-button {
-
-    flex-shrink:
-        0;
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    min-height:
-        46px;
-
-    padding:
-        0 23px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--gold-light),
-            var(--gold)
-        );
-
-    color:
-        #241506;
 
     font-size:
         0.72rem;
@@ -692,305 +172,29 @@ a {
         800;
 
     letter-spacing:
-        0.07em;
+        0.18em;
 
     text-transform:
         uppercase;
 
-    border:
-        1px solid rgba(255, 255, 255, 0.25);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-
-}
-
-
-.enroll-button:hover {
-
-    transform:
-        translateY(-2px);
-
-    box-shadow:
-        0 10px 28px rgba(213, 163, 47, 0.25);
-
 }
 
 
 /* =========================================================
-   MOBILE MENU BUTTON
+   PAGE-SPECIFIC NAVIGATION STATE
+   Shared navigation styling is controlled by styles.css.
 ========================================================= */
 
-.mobile-menu-button {
-
-    display:
-        none;
-
-    width:
-        48px;
-
-    height:
-        48px;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    flex-direction:
-        column;
-
-    gap:
-        6px;
-
-    background:
-        transparent;
-
-    border:
-        1px solid var(--border-dark);
-
-    cursor:
-        pointer;
-
+.dropdown-button.active {
+    color: var(--gold-light);
 }
 
-
-.mobile-menu-button span {
-
-    display:
-        block;
-
-    width:
-        21px;
-
-    height:
-        2px;
-
-    background:
-        var(--gold-light);
-
+.dropdown-button.active > span {
+    color: var(--gold-light);
 }
 
-
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
-
-.mobile-navigation {
-
-    display:
-        none;
-
-}
-
-
-/* =========================================================
-   BANNER
-========================================================= */
-
-.banner-section {
-
-    width:
-        100%;
-
-    background:
-        #120805;
-
-    border-bottom:
-        1px solid var(--border-dark);
-
-}
-
-
-.bapbi-banner {
-
-    width:
-        100%;
-
-    max-height:
-        430px;
-
-    object-fit:
-        cover;
-
-    object-position:
-        center;
-
-}
-
-
-/* =========================================================
-   INTRODUCTION
-========================================================= */
-
-.introduction-section {
-
-    position:
-        relative;
-
-    padding:
-        100px 0;
-
-    background:
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(119, 60, 15, 0.25),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #0f0806,
-            #1b0d08
-        );
-
-}
-
-
-.introduction-section::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    pointer-events:
-        none;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(213, 163, 47, 0.03),
-            transparent
-        );
-
-}
-
-
-.intro-grid {
-
-    position:
-        relative;
-
-    display:
-        grid;
-
-    grid-template-columns:
-        minmax(0, 1.25fr)
-        minmax(300px, 0.75fr);
-
-    gap:
-        80px;
-
-    align-items:
-        center;
-
-}
-
-
-.section-eyebrow {
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        0.75rem;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        0.2em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.section-eyebrow span {
-
-    color:
-        var(--gold);
-
-}
-
-
-.intro-content h1 {
-
-    max-width:
-        780px;
-
-    margin:
-        18px 0 25px;
-
-    color:
-        var(--ivory);
-
-    font-family:
-        "Cinzel", serif;
-
-    font-size:
-        clamp(
-            2.5rem,
-            5vw,
-            5rem
-        );
-
-    font-weight:
-        600;
-
-    line-height:
-        1.05;
-
-}
-
-
-.intro-content h1 span {
-
-    display:
-        block;
-
-    color:
-        var(--gold-light);
-
-}
-
-
-.intro-lead {
-
-    max-width:
-        670px;
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        1.05rem;
-
-}
-
-
-.intro-actions {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        15px;
-
-    margin-top:
-        32px;
-
+.dropdown-active {
+    color: var(--gold-light) !important;
 }
 
 
@@ -1032,17 +236,7 @@ a {
 
     transition:
         transform 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease,
         box-shadow 0.25s ease;
-
-}
-
-
-.button span {
-
-    font-size:
-        1.15rem;
 
 }
 
@@ -1065,20 +259,6 @@ a {
 }
 
 
-.button-outline {
-
-    background:
-        transparent;
-
-    color:
-        var(--ivory);
-
-    border:
-        1px solid rgba(241, 204, 114, 0.6);
-
-}
-
-
 .button:hover {
 
     transform:
@@ -1090,882 +270,48 @@ a {
 .button-gold:hover {
 
     box-shadow:
-        0 14px 30px rgba(213, 163, 47, 0.22);
-
-}
-
-
-.button-outline:hover {
-
-    background:
-        rgba(213, 163, 47, 0.1);
-
-    border-color:
-        var(--gold-light);
+        0 14px 30px
+        rgba(213, 163, 47, 0.22);
 
 }
 
 
 /* =========================================================
-   SCRIPTURE PANEL
+   BELIEFS INTRODUCTION
 ========================================================= */
 
-.scripture-panel {
+.beliefs-intro {
 
     position:
         relative;
 
     padding:
-        25px 0 25px 42px;
+        130px 0 120px;
 
-    border-left:
-        1px solid var(--gold-dark);
-
-}
-
-
-.scripture-panel blockquote {
-
-    color:
-        var(--cream);
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:
-        clamp(
-            1.45rem,
-            2.2vw,
-            2rem
-        );
-
-    font-style:
-        italic;
-
-    line-height:
-        1.45;
-
-}
-
-
-.scripture-panel p {
-
-    margin-top:
-        20px;
-
-    color:
-        var(--gold-light);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        0.72rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.16em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-/* =========================================================
-   THREE PILLARS
-========================================================= */
-
-.pillars-section {
-
-    padding:
-        70px 0;
+    overflow:
+        hidden;
 
     background:
         radial-gradient(
-            circle at center,
-            rgba(106, 52, 10, 0.18),
-            transparent 65%
+            circle at 15% 20%,
+            rgba(125, 63, 14, 0.26),
+            transparent 32%
         ),
-        #160a06;
-
-    border-top:
-        1px solid var(--border-dark);
-
-    border-bottom:
-        1px solid var(--border-dark);
-
-}
-
-
-.pillars-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-}
-
-
-.pillar {
-
-    position:
-        relative;
-
-    padding:
-        10px 50px;
-
-    text-align:
-        center;
-
-}
-
-
-.pillar:not(:last-child)::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        10%;
-
-    right:
-        0;
-
-    width:
-        1px;
-
-    height:
-        80%;
-
-    background:
-        var(--gold-dark);
-
-}
-
-
-.pillar-icon {
-
-    margin-bottom:
-        18px;
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        2.5rem;
-
-}
-
-
-.pillar h2 {
-
-    color:
-        var(--ivory);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        1.45rem;
-
-    line-height:
-        1.15;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.pillar p {
-
-    max-width:
-        290px;
-
-    margin:
-        16px auto 0;
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        0.9rem;
-
-}
-
-
-/* =========================================================
-   EXPLORE BAPBI
-========================================================= */
-
-.explore-section {
-
-    position:
-        relative;
-
-    padding:
-        110px 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            #f6f0e5,
-            #ede2d2
-        );
-
-    color:
-        #271c16;
-
-}
-
-
-.section-heading {
-
-    max-width:
-        780px;
-
-    margin:
-        0 auto 55px;
-
-    text-align:
-        center;
-
-}
-
-
-.explore-section .section-eyebrow {
-
-    color:
-        var(--gold-dark);
-
-}
-
-
-.section-heading h2 {
-
-    margin-top:
-        14px;
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        clamp(
-            2rem,
-            4vw,
-            3.4rem
-        );
-
-    font-weight:
-        600;
-
-    line-height:
-        1.15;
-
-    letter-spacing:
-        0.02em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.section-heading > p:last-child {
-
-    margin:
-        18px auto 0;
-
-    color:
-        #6d6058;
-
-    font-size:
-        1rem;
-
-    font-weight:
-        500;
-
-    letter-spacing:
-        normal;
-
-    text-transform:
-        none;
-
-}
-
-
-.explore-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap:
-        18px;
-
-}
-
-
-.explore-card {
-
-    position:
-        relative;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    min-height:
-        470px;
-
-    overflow:
-        hidden;
-
-    background:
-        rgba(255, 253, 249, 0.9);
-
-    border:
-        1px solid rgba(109, 53, 12, 0.16);
-
-    box-shadow:
-        0 15px 35px rgba(38, 20, 8, 0.08);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-
-}
-
-
-.explore-card::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        0;
-
-    left:
-        0;
-
-    width:
-        100%;
-
-    height:
-        3px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--gold),
-            transparent
-        );
-
-    opacity:
-        0;
-
-    transition:
-        opacity 0.3s ease;
-
-}
-
-
-.explore-card:hover {
-
-    transform:
-        translateY(-8px);
-
-    border-color:
-        rgba(159, 104, 22, 0.4);
-
-    box-shadow:
-        0 25px 50px rgba(38, 20, 8, 0.14);
-
-}
-
-
-.explore-card:hover::before {
-
-    opacity:
-        1;
-
-}
-
-
-/* =========================================================
-   CARD SYMBOL
-========================================================= */
-
-.card-symbol {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    min-height:
-        155px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #1d0d06,
-            #4b230a
-        );
-
-    border-bottom:
-        1px solid rgba(213, 163, 47, 0.25);
-
-}
-
-
-.card-symbol span {
-
-    color:
-        var(--gold-light);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        3.4rem;
-
-    line-height:
-        1;
-
-    text-shadow:
-        0 8px 22px rgba(0, 0, 0, 0.35);
-
-}
-
-
-/* =========================================================
-   CARD CONTENT
-========================================================= */
-
-.card-content {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    flex-grow:
-        1;
-
-    padding:
-        30px;
-
-}
-
-
-.card-number {
-
-    margin-bottom:
-        15px;
-
-    color:
-        var(--gold-dark);
-
-    font-size:
-        0.7rem;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        0.16em;
-
-}
-
-
-.card-content h3 {
-
-    color:
-        #291c16;
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        1.2rem;
-
-    line-height:
-        1.25;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.card-content > p:not(.card-number) {
-
-    margin:
-        18px 0 25px;
-
-    color:
-        #766960;
-
-    font-size:
-        0.9rem;
-
-    line-height:
-        1.7;
-
-}
-
-
-.card-link {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    gap:
-        9px;
-
-    margin-top:
-        auto;
-
-    color:
-        var(--gold-dark);
-
-    font-size:
-        0.72rem;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        0.08em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.card-link strong {
-
-    font-size:
-        1.1rem;
-
-    transition:
-        transform 0.25s ease;
-
-}
-
-
-.explore-card:hover .card-link strong {
-
-    transform:
-        translateX(5px);
-
-}
-
-
-/* =========================================================
-   CURRENT AT BAPBI
-========================================================= */
-
-.current-section {
-
-    background:
-        #140a06;
-
-}
-
-
-.current-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
-    min-height:
-        560px;
-
-}
-
-
-/* =========================================================
-   CURRENT INFORMATION
-========================================================= */
-
-.current-information {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    justify-content:
-        center;
-
-    padding:
-        90px 80px 90px 0;
-
-}
-
-
-.current-information h2 {
-
-    margin:
-        14px 0 18px;
-
-    color:
-        var(--ivory);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        clamp(
-            2.2rem,
-            4vw,
-            3.8rem
-        );
-
-    font-weight:
-        600;
-
-    line-height:
-        1.1;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.current-information h2 span {
-
-    display:
-        block;
-
-    color:
-        var(--gold-light);
-
-}
-
-
-.current-introduction {
-
-    max-width:
-        550px;
-
-    margin-bottom:
-        35px;
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        0.98rem;
-
-}
-
-
-/* =========================================================
-   CURRENT LINKS
-========================================================= */
-
-.current-links {
-
-    border-top:
-        1px solid var(--border-dark);
-
-}
-
-
-.current-links a {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        space-between;
-
-    gap:
-        25px;
-
-    padding:
-        20px 0;
-
-    border-bottom:
-        1px solid rgba(213, 163, 47, 0.15);
-
-    transition:
-        padding 0.25s ease,
-        background 0.25s ease;
-
-}
-
-
-.current-links a:hover {
-
-    padding-left:
-        15px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(213, 163, 47, 0.08),
-            transparent
-        );
-
-}
-
-
-.current-link-content {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    gap:
-        4px;
-
-}
-
-
-.current-link-label {
-
-    color:
-        var(--gold-dark);
-
-    font-size:
-        0.62rem;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        0.16em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.current-link-content strong {
-
-    color:
-        var(--ivory);
-
-    font-size:
-        0.98rem;
-
-    font-weight:
-        600;
-
-}
-
-
-.current-arrow {
-
-    flex-shrink:
-        0;
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        1.5rem;
-
-    transition:
-        transform 0.25s ease;
-
-}
-
-
-.current-links a:hover .current-arrow {
-
-    transform:
-        translateX(7px);
-
-}
-
-
-/* =========================================================
-   PURPOSE PANEL
-========================================================= */
-
-.purpose-panel {
-
-    position:
-        relative;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    overflow:
-        hidden;
-
-    padding:
-        90px;
-
-    background:
         radial-gradient(
-            circle at 85% 20%,
-            rgba(213, 163, 47, 0.22),
+            circle at 85% 75%,
+            rgba(213, 163, 47, 0.08),
             transparent 35%
         ),
         linear-gradient(
             135deg,
-            #321608,
-            #170a06
+            #0f0806,
+            #1c0d08
         );
 
 }
 
 
-.purpose-panel::before {
+.beliefs-intro::before {
 
     content:
         "";
@@ -1981,32 +327,33 @@ a {
 
     background:
         linear-gradient(
-            135deg,
-            transparent 35%,
-            rgba(213, 163, 47, 0.04)
+            90deg,
+            transparent,
+            rgba(213, 163, 47, 0.025),
+            transparent
         );
 
 }
 
 
-.purpose-content {
+.beliefs-intro-content {
 
     position:
         relative;
 
-    z-index:
-        1;
-
     max-width:
-        520px;
+        980px;
 
 }
 
 
-.purpose-panel h2 {
+.beliefs-intro h1 {
+
+    max-width:
+        950px;
 
     margin:
-        14px 0 24px;
+        18px 0 28px;
 
     color:
         var(--ivory);
@@ -2017,24 +364,21 @@ a {
 
     font-size:
         clamp(
-            2.3rem,
-            4vw,
-            4rem
+            3rem,
+            6vw,
+            6rem
         );
 
     font-weight:
         600;
 
     line-height:
-        1.08;
-
-    text-transform:
-        uppercase;
+        1.05;
 
 }
 
 
-.purpose-panel h2 span {
+.beliefs-intro h1 span {
 
     display:
         block;
@@ -2045,408 +389,45 @@ a {
 }
 
 
-.purpose-lead {
+.beliefs-intro-lead {
 
     max-width:
-        460px;
+        760px;
 
     color:
-        var(--cream);
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
+        var(--text-muted);
 
     font-size:
-        1.35rem;
-
-    font-style:
-        italic;
-
-    line-height:
-        1.45;
+        1.08rem;
 
 }
 
 
-.purpose-divider {
+.beliefs-intro-line {
 
     width:
-        100%;
-
-    max-width:
-        150px;
+        120px;
 
     height:
         1px;
 
     margin:
-        30px 0;
-
-    background:
-        var(--gold-dark);
-
-}
-
-
-.purpose-divider span {
-
-    display:
-        block;
-
-    width:
-        45px;
-
-    height:
-        3px;
-
-    transform:
-        translateY(-1px);
-
-    background:
-        var(--gold-light);
-
-}
-
-
-.purpose-statement {
-
-    max-width:
-        440px;
-
-    margin-bottom:
-        32px;
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        0.95rem;
-
-    line-height:
-        1.8;
-
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.site-footer {
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-    padding-top:
-        75px;
-
-    background:
-        radial-gradient(
-            circle at 15% 0%,
-            rgba(109, 53, 12, 0.18),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 85% 100%,
-            rgba(159, 104, 22, 0.10),
-            transparent 35%
-        ),
-        linear-gradient(
-            180deg,
-            #160a06,
-            #0b0504
-        );
-
-    border-top:
-        1px solid var(--border-dark);
-
-}
-
-
-.site-footer::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        0;
-
-    left:
-        50%;
-
-    width:
-        min(
-            90%,
-            900px
-        );
-
-    height:
-        1px;
+        38px 0;
 
     background:
         linear-gradient(
             90deg,
-            transparent,
-            var(--gold-dark),
+            var(--gold),
             transparent
         );
 
-    transform:
-        translateX(-50%);
-
 }
 
 
-/* =========================================================
-   FOOTER GRID
-========================================================= */
-
-.footer-grid {
-
-    position:
-        relative;
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1.2fr 1.1fr 0.9fr;
-
-    gap:
-        60px;
-
-    align-items:
-        center;
-
-    padding-bottom:
-        65px;
-
-}
-
-
-/* =========================================================
-   BRAND SECTION
-========================================================= */
-
-.footer-brand-section {
+.beliefs-intro-statement {
 
     max-width:
-        350px;
-
-}
-
-
-.footer-brand {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    gap:
-        16px;
-
-}
-
-
-.footer-brand img {
-
-    width:
-        78px;
-
-    height:
-        78px;
-
-    object-fit:
-        contain;
-
-}
-
-
-.footer-brand h2 {
-
-    color:
-        var(--gold-light);
-
-    font-family:
-        "Cinzel",
-        serif;
-
-    font-size:
-        1.55rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.05em;
-
-}
-
-
-.footer-brand p {
-
-    max-width:
-        220px;
-
-    margin-top:
-        5px;
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        0.68rem;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.06em;
-
-    line-height:
-        1.55;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.footer-description {
-
-    margin-top:
-        24px;
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        0.85rem;
-
-    line-height:
-        1.75;
-
-}
-
-
-/* =========================================================
-   FOOTER EYEBROW
-========================================================= */
-
-.footer-eyebrow {
-
-    display:
-        block;
-
-    margin-bottom:
-        18px;
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        0.68rem;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        0.16em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-/* =========================================================
-   QUOTE
-========================================================= */
-
-.footer-quote {
-
-    position:
-        relative;
-
-    padding:
-        25px 45px;
-
-    text-align:
-        center;
-
-}
-
-
-.footer-quote::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        0;
-
-    bottom:
-        0;
-
-    left:
-        0;
-
-    width:
-        1px;
-
-    background:
-        linear-gradient(
-            transparent,
-            var(--gold-dark),
-            transparent
-        );
-
-}
-
-
-.footer-quote::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        0;
-
-    bottom:
-        0;
-
-    right:
-        0;
-
-    width:
-        1px;
-
-    background:
-        linear-gradient(
-            transparent,
-            var(--gold-dark),
-            transparent
-        );
-
-}
-
-
-.footer-quote p {
+        700px;
 
     color:
         var(--cream);
@@ -2457,299 +438,935 @@ a {
 
     font-size:
         clamp(
-            1.2rem,
+            1.3rem,
             2vw,
-            1.55rem
+            1.7rem
         );
 
     font-style:
         italic;
 
     line-height:
-        1.4;
+        1.5;
 
 }
 
 
 /* =========================================================
-   LINKS SECTION
+   SHARED SECTION NUMBERS
 ========================================================= */
 
-.footer-links-section {
+.section-number {
 
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    align-items:
-        flex-start;
-
-}
-
-
-.footer-links {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(
-            2,
-            minmax(0, 1fr)
-        );
-
-    gap:
-        13px 25px;
-
-}
-
-
-.footer-links a {
-
-    position:
-        relative;
-
-    padding-left:
-        14px;
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        0.76rem;
-
-    transition:
-        color 0.2s ease,
-        padding-left 0.2s ease;
-
-}
-
-
-.footer-links a::before {
-
-    content:
-        "›";
-
-    position:
-        absolute;
-
-    left:
-        0;
+    margin-bottom:
+        18px;
 
     color:
         var(--gold);
 
-    font-size:
-        1rem;
+    font-family:
+        "Cinzel",
+        serif;
 
-    line-height:
-        1;
+    font-size:
+        0.85rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.18em;
 
 }
 
 
-.footer-links a:hover {
+/* =========================================================
+   FOUNDATION
+========================================================= */
 
-    padding-left:
-        19px;
+.foundation-section {
+
+    padding:
+        120px 0;
+
+    background:
+        var(--ivory);
 
     color:
-        var(--gold-light);
+        var(--dark-text);
 
 }
 
 
-/* =========================================================
-   FOOTER DIVIDER
-========================================================= */
-
-.footer-divider {
-
-    position:
-        relative;
-
-    height:
-        1px;
-
-    background:
-        rgba(213, 163, 47, 0.10);
-
-}
-
-
-.footer-divider span {
-
-    display:
-        block;
-
-    width:
-        100%;
-
-    height:
-        1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(213, 163, 47, 0.45),
-            transparent
-        );
-
-}
-
-
-/* =========================================================
-   FOOTER BOTTOM
-========================================================= */
-
-.footer-bottom {
+.foundation-grid {
 
     display:
         grid;
 
     grid-template-columns:
-        1fr auto 1fr;
-
-    align-items:
-        center;
+        minmax(280px, 0.85fr)
+        minmax(0, 1.15fr);
 
     gap:
-        25px;
+        100px;
 
-    padding:
-        28px 0;
+    align-items:
+        start;
 
 }
 
 
-.footer-bottom p {
+.foundation-heading {
+
+    position:
+        sticky;
+
+    top:
+        35px;
+
+}
+
+
+.foundation-heading .section-eyebrow {
 
     color:
-        #82756d;
-
-    font-size:
-        0.67rem;
+        var(--bronze);
 
 }
 
 
-.footer-legal {
+.foundation-heading h2 {
 
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
+    margin-top:
         18px;
 
-}
-
-
-.footer-legal a {
-
-    color:
-        var(--text-muted);
+    font-family:
+        "Cinzel",
+        serif;
 
     font-size:
-        0.67rem;
-
-    transition:
-        color 0.2s ease;
-
-}
-
-
-.footer-legal a:hover {
-
-    color:
-        var(--gold-light);
-
-}
-
-
-.footer-motto {
-
-    justify-self:
-        end;
-
-    color:
-        var(--gold-dark) !important;
-
-    font-size:
-        0.65rem !important;
+        clamp(
+            2.5rem,
+            4vw,
+            4.3rem
+        );
 
     font-weight:
-        800;
+        600;
+
+    line-height:
+        1.1;
+
+}
+
+
+.foundation-heading h2 span {
+
+    display:
+        block;
+
+    color:
+        var(--gold-dark);
+
+}
+
+
+.foundation-content {
+
+    max-width:
+        700px;
+
+}
+
+
+.foundation-content > p {
+
+    margin-bottom:
+        24px;
+
+    color:
+        var(--dark-muted);
+
+    font-size:
+        1.02rem;
+
+}
+
+
+.foundation-scripture {
+
+    margin-top:
+        42px;
+
+    padding:
+        34px 40px;
+
+    background:
+        #fffdf9;
+
+    border-left:
+        3px solid var(--gold);
+
+    box-shadow:
+        0 15px 40px
+        rgba(38, 20, 8, 0.08);
+
+}
+
+
+.foundation-scripture blockquote {
+
+    color:
+        #39271c;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            1.45rem,
+            2.3vw,
+            2rem
+        );
+
+    font-style:
+        italic;
+
+    line-height:
+        1.45;
+
+}
+
+
+.foundation-scripture p {
+
+    margin-top:
+        18px;
+
+    color:
+        var(--gold-dark);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        700;
 
     letter-spacing:
-        0.08em;
+        0.14em;
 
     text-transform:
         uppercase;
 
 }
 
+
 /* =========================================================
-   RESPONSIVE DESIGN
-   BAPBI HOMEPAGE
+   SHARED BELIEF SECTION
+========================================================= */
+
+.belief-section {
+
+    padding:
+        120px 0;
+
+}
+
+
+.belief-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(280px, 0.8fr)
+        minmax(0, 1.2fr);
+
+    gap:
+        100px;
+
+    align-items:
+        start;
+
+}
+
+
+.belief-heading {
+
+    position:
+        sticky;
+
+    top:
+        35px;
+
+}
+
+
+.belief-heading h2 {
+
+    margin-top:
+        18px;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(
+            2.5rem,
+            4vw,
+            4.3rem
+        );
+
+    font-weight:
+        600;
+
+    line-height:
+        1.1;
+
+}
+
+
+.belief-heading h2 span {
+
+    display:
+        block;
+
+}
+
+
+.belief-content {
+
+    max-width:
+        760px;
+
+}
+
+
+.belief-content > p {
+
+    margin-bottom:
+        25px;
+
+    font-size:
+        1.02rem;
+
+}
+
+
+/* =========================================================
+   ONENESS OF GOD
+========================================================= */
+
+.oneness-section {
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(213, 163, 47, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #120906,
+            #211008
+        );
+
+}
+
+
+.oneness-section .belief-heading h2 {
+
+    color:
+        var(--ivory);
+
+}
+
+
+.oneness-section .belief-heading h2 span {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.oneness-section .belief-content > p {
+
+    color:
+        var(--text-muted);
+
+}
+
+
+.belief-highlight {
+
+    margin: 42px 0;
+
+    color: var(--cream);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   SCRIPTURE REFERENCES
+========================================================= */
+
+.scripture-reference-panel {
+
+    display: grid;
+
+    grid-template-columns: minmax(180px, 0.3fr) minmax(0, 1fr);
+
+    gap: 35px;
+
+    align-items: center;
+
+    margin-top: 55px;
+
+    padding: 34px 40px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid var(--border-dark);
+
+}
+
+
+.scripture-reference-panel > p {
+
+    color: var(--gold-light);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+.scripture-reference-panel > div {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 0;
+
+}
+
+
+.scripture-reference-panel span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 38px;
+
+    padding: 8px 14px;
+
+    color: var(--cream);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(213, 163, 47, 0.16);
+
+    font-size: 0.82rem;
+
+    line-height: 1.3;
+
+}
+
+
+/* =========================================================
+   SALVATION
+========================================================= */
+
+.salvation-section {
+
+    background: #eee5d8;
+
+    color: var(--dark-text);
+
+}
+
+
+.salvation-section .section-eyebrow {
+
+    color: var(--bronze);
+
+}
+
+
+.salvation-section .belief-heading h2 span {
+
+    color: var(--gold-dark);
+
+}
+
+
+.salvation-section .belief-content > p {
+
+    color: var(--dark-muted);
+
+}
+
+
+.salvation-path {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-top: 55px;
+
+}
+
+
+.salvation-path article {
+
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 32px 28px;
+
+    background: #fffdf9;
+
+    border: 1px solid var(--border-light);
+
+    box-shadow: 0 15px 35px rgba(38, 20, 8, 0.07);
+
+}
+
+
+.salvation-path article > span {
+
+    display: block;
+
+    margin-bottom: 28px;
+
+    color: var(--gold-dark);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+.salvation-path article h3 {
+
+    margin-bottom: 15px;
+
+    color: var(--dark-text);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 1.25rem;
+
+    line-height: 1.25;
+
+}
+
+
+.salvation-path article p {
+
+    color: var(--dark-muted);
+
+    font-size: 0.9rem;
+
+    line-height: 1.65;
+
+}
+
+
+.acts-panel {
+
+    margin-top: 55px;
+
+    padding: 55px;
+
+    background: linear-gradient(135deg, #241108, #51270c);
+
+    color: var(--text-light);
+
+    border: 1px solid var(--border-dark);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.acts-panel .section-eyebrow {
+
+    margin-bottom: 18px;
+
+}
+
+
+.acts-panel blockquote {
+
+    max-width: 850px;
+
+    margin-top: 20px;
+
+    padding-left: 28px;
+
+    color: var(--cream);
+
+    border-left: 2px solid var(--gold);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+}
+
+
+.acts-reference {
+
+    margin-top: 22px;
+
+    color: var(--gold-light);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+/* =========================================================
+   HOLY LIVING
+========================================================= */
+
+.holiness-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #100705,
+            #1d0e08
+        );
+
+}
+
+
+.holiness-section .belief-heading h2 {
+
+    color:
+        var(--ivory);
+
+}
+
+
+.holiness-section .belief-heading h2 span {
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.holiness-section .belief-content > p {
+
+    color:
+        var(--text-muted);
+
+}
+
+
+.living-path {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+
+    gap: 0;
+
+    margin-top: 55px;
+
+    border-top: 1px solid var(--border-dark);
+
+    border-bottom: 1px solid var(--border-dark);
+
+}
+
+
+.living-path > div:not(.path-divider) {
+
+    padding: 42px 30px;
+
+    text-align: center;
+
+}
+
+
+.living-path > div:not(.path-divider) span {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--gold);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+.living-path > div:not(.path-divider) h3 {
+
+    color: var(--ivory);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 1.2rem;
+
+    line-height: 1.3;
+
+}
+
+
+.path-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 1px;
+
+    min-height: 100%;
+
+    background: var(--border-dark);
+
+    color: var(--gold);
+
+    font-size: 0;
+
+}
+
+
+/* =========================================================
+   BELIEFS CLOSING
+========================================================= */
+
+.beliefs-closing {
+
+    position:
+        relative;
+
+    padding:
+        130px 0;
+
+    overflow:
+        hidden;
+
+    text-align:
+        center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(213, 163, 47, 0.18),
+            transparent 35%
+        ),
+        #150a06;
+
+}
+
+
+.closing-content {
+
+    position:
+        relative;
+
+    max-width:
+        900px;
+
+}
+
+
+.closing-content h2 {
+
+    margin:
+        18px auto 28px;
+
+    color:
+        var(--ivory);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        clamp(
+            2.6rem,
+            5vw,
+            5rem
+        );
+
+    font-weight:
+        600;
+
+    line-height:
+        1.08;
+
+}
+
+
+.closing-content h2 span {
+
+    display:
+        block;
+
+    color:
+        var(--gold-light);
+
+}
+
+
+.closing-content > p {
+
+    max-width:
+        720px;
+
+    margin:
+        0 auto;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        1.03rem;
+
+}
+
+
+.closing-statement {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px 28px;
+
+    margin:
+        42px 0;
+
+}
+
+
+.closing-statement span {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size:
+        0.8rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.12em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =========================================================
+   TABLET
 ========================================================= */
 
 @media (max-width: 1100px) {
 
-    .main-navigation {
-        width: calc(100% - 32px);
-        gap: 20px;
-    }
-
     .desktop-nav {
-        gap: 20px;
+        gap: 17px;
     }
 
     .desktop-nav > a,
     .dropdown-button {
-        font-size: 0.67rem;
+        font-size: 0.65rem;
     }
 
-    .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
+    .main-navigation {
+        gap: 20px;
     }
 
-    .scripture-panel {
-        padding-left: 30px;
+    .foundation-grid,
+    .belief-grid {
+        gap: 60px;
     }
 
-    .explore-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .current-grid {
+    .salvation-path {
         grid-template-columns: 1fr;
     }
 
-    .current-information {
-        padding: 75px 0;
-    }
-
-    .purpose-panel {
-        padding: 75px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 45px;
-    }
-
-    .footer-links-section {
-        grid-column: 1 / -1;
+    .salvation-path article {
+        min-height: auto;
     }
 
 }
+
+
+/* =========================================================
+   MOBILE NAVIGATION AND TABLET LAYOUT
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -2758,10 +1375,8 @@ a {
     }
 
     .main-navigation {
-        width: calc(100% - 32px);
         min-height: 74px;
-        gap: 0;
-        justify-content: space-between;
+        width: min(calc(100% - 32px), 100%);
     }
 
     .desktop-nav,
@@ -2769,338 +1384,272 @@ a {
         display: none;
     }
 
-    .desktop-nav > a,
-    .dropdown-button,
-    .nav-dropdown {
-        height: auto;
-    }
-
     .mobile-menu-button {
         display: flex;
-        flex-shrink: 0;
+        margin-left: auto;
     }
 
     .mobile-navigation {
+        
+        display: flex;
+        flex-direction: column;
+        
         position: fixed;
         top: 0;
         right: 0;
         z-index: 2000;
-        display: flex;
-        flex-direction: column;
-        width: min(86vw, 360px);
+        width: min(380px, 88vw);
         height: 100vh;
-        overflow-y: auto;
-        padding: 0 0 30px;
-        background: linear-gradient(180deg, #1b0d08, #0b0504);
+        padding: 22px;
+        background: #130b08;
         border-left: 1px solid var(--border-dark);
-        box-shadow: -20px 0 60px rgba(0, 0, 0, 0.45);
-        transform: translateX(100%);
-        visibility: hidden;
-        opacity: 0;
-        transition: transform 0.3s ease, visibility 0.3s ease, opacity 0.3s ease;
+        box-shadow: -20px 0 60px rgba(0, 0, 0, 0.5);
+        transform: translateX(110%);
+        transition: transform 0.35s ease;
+        overflow-y: auto;
     }
 
     .mobile-navigation.open {
         transform: translateX(0);
-        visibility: visible;
-        opacity: 1;
     }
 
     .mobile-nav-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: 76px;
-        padding: 0 24px;
-        color: var(--gold-light);
-        font-family: "Cinzel", serif;
-        font-size: 0.9rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+        padding: 0 0 20px;
+        margin-bottom: 10px;
         border-bottom: 1px solid var(--border-dark);
     }
 
+    .mobile-nav-header span {
+        color: var(--gold-light);
+        font-family: "Cinzel", serif;
+        font-size: 1.1rem;
+    }
+
     .mobile-nav-header button {
-        width: 42px;
-        height: 42px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 40px;
+        height: 40px;
         background: transparent;
         border: 1px solid var(--border-dark);
         color: var(--gold-light);
+        font-size: 1.8rem;
         cursor: pointer;
-        font-size: 1.7rem;
-        line-height: 1;
     }
 
-    .mobile-navigation > a:not(.mobile-nav-header) {
-        display: flex;
-        align-items: center;
-        min-height: 58px;
-        padding: 0 24px;
+    .mobile-navigation a {
+        display: block;
+        padding: 16px;
+        margin-bottom: 3px;
         color: var(--text-light);
-        font-size: 0.78rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 1rem;
         font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        border-bottom: 1px solid rgba(213, 163, 47, 0.10);
-        transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
     }
 
-    .mobile-navigation > a:hover,
-    .mobile-navigation > a.mobile-active {
-        padding-left: 30px;
+    .mobile-navigation a.mobile-active {
         color: var(--gold-light);
-        background: rgba(213, 163, 47, 0.08);
+        background: linear-gradient(90deg, rgba(213, 163, 47, 0.17), transparent);
+        border: 1px solid var(--border-dark);
     }
 
-    .content-container {
-        width: calc(100% - 32px);
-    }
-
-    .banner-section {
-        width: 100%;
-    }
-
-    .bapbi-banner {
-        width: 100%;
-        max-height: none;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .introduction-section {
-        padding: 75px 0;
-    }
-
-    .intro-grid {
-        gap: 40px;
-    }
-
-    .intro-content h1 {
-        font-size: clamp(2.35rem, 8vw, 4rem);
-    }
-
-    .intro-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .intro-actions .button {
-        width: 100%;
-    }
-
-    .pillars-section {
-        padding: 60px 0;
-    }
-
-    .pillars-grid {
+    .foundation-grid,
+    .belief-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 50px;
     }
 
-    .pillar {
-        padding: 10px 20px 35px;
+    .foundation-heading,
+    .belief-heading {
+        position: static;
     }
 
-    .pillar:not(:last-child)::after {
-        top: auto;
-        right: 10%;
-        bottom: 0;
-        width: 80%;
+    .scripture-reference-panel {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .scripture-reference-panel > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .scripture-reference-panel span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 8px 14px;
+    }
+
+    .salvation-path {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .salvation-path article {
+        min-height: auto;
+    }
+
+    .living-path {
+        grid-template-columns: 1fr;
+    }
+
+    .living-path > div:not(.path-divider) {
+        padding: 38px 25px;
+    }
+
+    .path-divider {
+        width: 80px;
         height: 1px;
-    }
-
-    .explore-section {
-        padding: 80px 0;
-    }
-
-    .explore-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .explore-card {
-        min-height: 0;
-    }
-
-    .current-information {
-        padding: 70px 0;
-    }
-
-    .purpose-panel {
-        padding: 70px 0;
-    }
-
-    .purpose-content {
-        max-width: none;
+        min-height: 1px;
+        margin: 0 auto;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .footer-links-section {
-        grid-column: auto;
-    }
-
-    .footer-quote {
-        padding: 25px 0;
-    }
-
-    .footer-quote::before,
-    .footer-quote::after {
-        display: none;
-    }
-
-    .footer-bottom {
-        grid-template-columns: 1fr;
-        gap: 14px;
         text-align: center;
     }
 
-    .footer-legal {
+    .footer-brand {
         justify-content: center;
     }
 
-    .footer-motto {
-        justify-self: center;
+    .footer-quote {
+        border: none;
+        border-top: 1px solid var(--gold-dark);
+        border-bottom: 1px solid var(--gold-dark);
+    }
+
+    .footer-links {
+        justify-content: center;
     }
 
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
 
-    .main-navigation {
-        width: calc(100% - 24px);
-        min-height: 68px;
-    }
-
-    .brand {
-        gap: 10px;
+    .content-container {
+        width: min(calc(100% - 32px), var(--container-width));
     }
 
     .brand-logo {
-        width: 48px;
-        height: 48px;
+        width: 50px;
+        height: 50px;
     }
 
     .brand span {
         font-size: 1.2rem;
     }
 
-    .mobile-menu-button {
-        width: 44px;
-        height: 44px;
+    .beliefs-intro {
+        padding: 90px 0 80px;
     }
 
-    .mobile-navigation {
-        width: min(92vw, 340px);
+    .beliefs-intro h1 {
+        font-size: 2.55rem;
     }
 
-    .content-container {
-        width: calc(100% - 24px);
+    .beliefs-intro-lead {
+        font-size: 0.98rem;
     }
 
-    .introduction-section {
-        padding: 60px 0;
-    }
-
-    .section-eyebrow {
-        font-size: 0.66rem;
-        letter-spacing: 0.14em;
-    }
-
-    .intro-content h1 {
-        margin: 14px 0 20px;
-        font-size: clamp(2rem, 10vw, 3rem);
-    }
-
-    .intro-lead {
-        font-size: 0.95rem;
-    }
-
-    .scripture-panel {
-        padding: 20px 0 20px 22px;
-    }
-
-    .scripture-panel blockquote {
+    .beliefs-intro-statement {
         font-size: 1.3rem;
     }
 
-    .pillars-section {
-        padding: 50px 0;
+    .foundation-section,
+    .belief-section {
+        padding: 80px 0;
     }
 
-    .pillar {
-        padding-left: 10px;
-        padding-right: 10px;
+    .foundation-heading h2,
+    .belief-heading h2 {
+        font-size: 2.35rem;
     }
 
-    .pillar-icon {
-        font-size: 2.2rem;
+    .foundation-content > p,
+    .belief-content > p {
+        font-size: 0.96rem;
     }
 
-    .pillar h2 {
-        font-size: 1.25rem;
+    .foundation-scripture {
+        padding: 28px 24px;
     }
 
-    .explore-section {
-        padding: 65px 0;
+    .belief-highlight {
+        margin-top: 30px;
     }
 
-    .section-heading {
-        margin-bottom: 38px;
+    .scripture-reference-panel {
+        padding: 28px 24px;
     }
 
-    .section-heading h2 {
-        font-size: clamp(1.8rem, 9vw, 2.6rem);
+    .scripture-reference-panel > div {
+        padding: 0;
     }
 
-    .explore-card .card-symbol {
-        min-height: 125px;
+    .scripture-reference-panel span {
+        width: 100%;
+        justify-content: flex-start;
     }
 
-    .card-content {
-        padding: 25px;
+    .salvation-path {
+        margin-top: 40px;
     }
 
-    .current-information {
-        padding: 60px 0;
+    .salvation-path article {
+        padding: 28px 24px;
     }
 
-    .current-information h2,
-    .purpose-panel h2 {
-        font-size: clamp(2rem, 9vw, 2.8rem);
+    .acts-panel {
+        margin-top: 40px;
+        padding: 36px 25px;
     }
 
-    .current-links a {
-        gap: 15px;
-        padding: 18px 0;
+    .acts-panel blockquote {
+        padding-left: 20px;
+        font-size: 1.3rem;
     }
 
-    .current-link-content strong {
-        font-size: 0.9rem;
+    .living-path {
+        margin-top: 40px;
     }
 
-    .purpose-panel {
-        padding: 60px 0;
+    .living-path > div:not(.path-divider) {
+        padding: 34px 20px;
     }
 
-    .purpose-lead {
-        font-size: 1.2rem;
+    .beliefs-closing {
+        padding: 90px 0;
     }
 
-    .footer-brand img {
-        width: 65px;
-        height: 65px;
+    .closing-content h2 {
+        font-size: 2.55rem;
     }
 
-    .footer-links {
-        grid-template-columns: 1fr;
+    .closing-statement {
+        flex-direction: column;
         gap: 12px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .footer-brand {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
     }
 
 }
