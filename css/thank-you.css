@@ -1,0 +1,100 @@
+/* =========================================================
+   BAPBI THANK-YOU PAGE
+   Uses css/styles.css as the master stylesheet.
+========================================================= */
+
+.thank-you-page main {
+    background: var(--ivory, #f7f0e6);
+}
+
+.thank-you-section {
+    min-height: 62vh;
+    display: grid;
+    place-items: center;
+    padding: 110px 0;
+    background:
+        linear-gradient(rgba(247, 240, 230, .94), rgba(247, 240, 230, .94)),
+        url("../assets/images/IMG_0638.png") center / cover no-repeat;
+}
+
+.thank-you-card {
+    width: min(720px, 100%);
+    margin: 0 auto;
+    padding: clamp(38px, 6vw, 72px);
+    border: 1px solid rgba(43, 27, 18, .14);
+    background: #fffdf9;
+    box-shadow: 0 18px 50px rgba(43, 27, 18, .12);
+    text-align: center;
+}
+
+.thank-you-card .section-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--gold-dark, #9a6b18);
+    font-family: "Inter", sans-serif;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .2em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.thank-you-card h1 {
+    margin: 0 0 24px;
+    color: var(--espresso, #2b1b12);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(3.2rem, 7vw, 5.8rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -.025em;
+}
+
+.thank-you-card h1 span {
+    color: var(--gold-dark, #9a6b18);
+}
+
+.thank-you-card p {
+    max-width: 590px;
+    margin: 0 auto;
+    color: #3f3027;
+    font-size: 1.12rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.thank-you-card .thank-you-lead {
+    margin-bottom: 16px;
+    color: var(--espresso, #2b1b12);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.thank-you-card .thank-you-hours {
+    margin-top: 18px;
+    color: #5c4b3e;
+    font-size: 1rem;
+}
+
+.thank-you-card .button {
+    margin-top: 34px;
+    text-decoration: none;
+}
+
+@media (max-width: 640px) {
+    .thank-you-section {
+        min-height: 58vh;
+        padding: 72px 0;
+    }
+
+    .thank-you-card {
+        padding: 38px 24px;
+    }
+
+    .thank-you-card p {
+        font-size: 1.05rem;
+    }
+
+    .thank-you-card .thank-you-lead {
+        font-size: 1.2rem;
+    }
+}
