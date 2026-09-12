@@ -31,11 +31,14 @@
 .section-heading { display:grid; grid-template-columns:72px 1fr; gap:25px; align-items:start; margin-bottom:52px; }
 .section-number { display:flex; align-items:center; justify-content:center; width:56px; height:56px; color:var(--gold-dark); border:1px solid var(--gold-dark); font-family:"Cinzel",serif; font-size:.8rem; font-weight:700; letter-spacing:.12em; }
 .section-heading .eyebrow { display:inline-block; margin-bottom:12px; color:var(--bronze); font-size:.72rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
-.doctrine-section .section-heading .eyebrow, .videos-section .section-heading .eyebrow, .webmaster-section .section-heading .eyebrow { color:var(--gold-light); }
+.doctrine-section .section-heading .eyebrow, .webmaster-section .section-heading .eyebrow { color:var(--gold-light); }
+.videos-section .section-heading .eyebrow { color:var(--gold-dark); }
 .section-heading h2 { margin:0; color:var(--dark-text, #271c16); font-family:"Cinzel",serif; font-size:clamp(2rem,4vw,3.5rem); font-weight:600; line-height:1.1; text-transform:uppercase; }
-.doctrine-section .section-heading h2, .videos-section .section-heading h2, .webmaster-section .section-heading h2 { color:var(--ivory); }
+.doctrine-section .section-heading h2, .webmaster-section .section-heading h2 { color:var(--ivory); }
+.videos-section .section-heading h2 { color:var(--dark-text,#271c16); }
 .section-lead { max-width:700px; margin:14px 0 0; color:var(--dark-muted, #766960); font-size:.95rem; }
-.doctrine-section .section-lead, .videos-section .section-lead { color:var(--text-muted); }
+.doctrine-section .section-lead { color:var(--text-muted); }
+.videos-section .section-lead { color:var(--dark-muted,#766960); }
 
 /* COVERING */
 .covering-card { display:grid; grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr); gap:55px; align-items:center; padding:55px; background:#fffdf9; border:1px solid var(--border-light); box-shadow:0 20px 50px rgba(38,20,8,.10); }
@@ -62,6 +65,20 @@
 .resource-link { margin-top:auto; padding-top:28px; color:var(--gold-dark); font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
 .doctrine-section .resource-link { color:var(--gold-light); }
 .resource-link::after { content:" →"; }
+
+/* VIDEO SECTION THEME
+   This section uses the light BAPBI surface, so its heading remains
+   dark and readable rather than inheriting the dark-section heading color.
+*/
+.videos-section .section-number {
+    color:var(--gold-dark);
+    border-color:var(--gold-dark);
+}
+
+.videos-section .video-card {
+    background:#fffdf9;
+    border-color:var(--border-light);
+}
 
 /* VIDEOS */
 .video-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
