@@ -1,0 +1,291 @@
+/* =========================================================
+   BAPBI SEMESTER RECORDINGS ARCHIVE
+   Page-specific styles. Master styles.css loads first.
+========================================================= */
+
+.recap-recordings-page .recap-introduction {
+    background: var(--espresso);
+    color: var(--ivory);
+    padding: 92px 0 88px;
+}
+
+.recap-recordings-page .recap-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+    gap: 70px;
+    align-items: end;
+}
+
+.recap-recordings-page .section-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--gold);
+    font-family: Inter, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+}
+
+.recap-recordings-page .recap-intro-content h1 {
+    margin: 0;
+    color: var(--ivory);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 500;
+    line-height: .9;
+    letter-spacing: -.045em;
+    text-transform: uppercase;
+}
+
+.recap-recordings-page .recap-intro-content h1 span {
+    color: var(--gold);
+}
+
+.recap-recordings-page .intro-lead {
+    max-width: 700px;
+    margin: 30px 0 0;
+    color: rgba(247,240,230,.76);
+    font-size: 1.08rem;
+    line-height: 1.85;
+}
+
+.recap-recordings-page .recap-intro-note {
+    padding: 30px;
+    border: 1px solid rgba(200,164,93,.55);
+    background: rgba(255,255,255,.035);
+}
+
+.recap-recordings-page .note-label {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--gold);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.recap-recordings-page .recap-intro-note strong {
+    display: block;
+    color: var(--ivory);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.recap-recordings-page .recap-intro-note p {
+    margin: 16px 0 0;
+    color: rgba(247,240,230,.68);
+    font-size: .92rem;
+    line-height: 1.7;
+}
+
+.recap-recordings-page .recap-content-section {
+    background: var(--ivory);
+    padding: 92px 0 110px;
+}
+
+.recap-recordings-page .section-heading {
+    max-width: 760px;
+    margin-bottom: 34px;
+}
+
+.recap-recordings-page .section-heading h2 {
+    margin: 0;
+    color: var(--espresso);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4.4rem);
+    font-weight: 500;
+    line-height: .98;
+    text-transform: uppercase;
+}
+
+.recap-recordings-page .section-heading p {
+    max-width: 650px;
+    margin: 20px 0 0;
+    color: #6f6258;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.recap-recordings-page .semester-recording-card {
+    position: relative;
+    padding: 42px 46px 46px;
+    margin-bottom: 70px;
+    border: 1px solid rgba(16,27,43,.12);
+    box-shadow: 0 18px 42px rgba(35,23,13,.08);
+}
+
+.recap-recordings-page .current-recording-card {
+    background: var(--espresso);
+    border-color: var(--gold);
+}
+
+.recap-recordings-page .archived-recording-card {
+    background: #fffdf9;
+}
+
+.recap-recordings-page .recording-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.recap-recordings-page .recording-number {
+    color: var(--gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.35rem;
+    letter-spacing: .08em;
+}
+
+.recap-recordings-page .recording-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 13px;
+    font-family: Inter, sans-serif;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.recap-recordings-page .live-badge {
+    background: var(--gold);
+    color: #261606;
+}
+
+.recap-recordings-page .archived-badge {
+    background: #e8dfd2;
+    color: #5f5145;
+}
+
+.recap-recordings-page .semester-recording-card h3 {
+    margin: 0 0 18px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.recap-recordings-page .current-recording-card h3 {
+    color: var(--ivory);
+}
+
+.recap-recordings-page .archived-recording-card h3 {
+    color: var(--espresso);
+}
+
+.recap-recordings-page .semester-recording-card p {
+    max-width: 760px;
+    margin: 0 0 30px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.recap-recordings-page .current-recording-card p {
+    color: rgba(247,240,230,.75);
+}
+
+.recap-recordings-page .archived-recording-card p {
+    color: #6f6258;
+}
+
+.recap-recordings-page .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 52px;
+    padding: 0 24px;
+    font-family: Inter, sans-serif;
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.recap-recordings-page .button-gold {
+    background: var(--gold);
+    color: #261606;
+    border: 1px solid var(--gold);
+}
+
+.recap-recordings-page .button-gold:hover,
+.recap-recordings-page .button-gold:focus-visible {
+    background: var(--ivory);
+    color: var(--espresso);
+    border-color: var(--ivory);
+}
+
+.recap-recordings-page .button-outline {
+    background: transparent;
+    color: var(--espresso);
+    border: 1px solid var(--espresso);
+}
+
+.recap-recordings-page .button-outline:hover,
+.recap-recordings-page .button-outline:focus-visible {
+    background: var(--espresso);
+    color: var(--ivory);
+}
+
+.recap-recordings-page .current-recording-card .button-outline {
+    color: var(--ivory);
+    border-color: var(--gold);
+}
+
+.recap-recordings-page .archive-heading {
+    margin-top: 4px;
+}
+
+.recap-recordings-page .recap-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .recap-recordings-page .recap-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .recap-recordings-page .recap-intro-note {
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 600px) {
+    .recap-recordings-page .recap-introduction,
+    .recap-recordings-page .recap-content-section {
+        padding: 64px 0 76px;
+    }
+
+    .recap-recordings-page .recap-intro-content h1 {
+        font-size: clamp(3rem, 15vw, 4.8rem);
+    }
+
+    .recap-recordings-page .semester-recording-card {
+        padding: 30px 24px 32px;
+        margin-bottom: 52px;
+    }
+
+    .recap-recordings-page .recording-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .recap-recordings-page .button {
+        width: 100%;
+        text-align: center;
+    }
+}
