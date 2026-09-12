@@ -244,3 +244,74 @@
     }
 
 }
+
+/* =========================================================
+   FINAL CONTRAST OVERRIDES
+   Ensures archive card text remains clearly readable even
+   when the master stylesheet applies global text colors.
+========================================================= */
+
+.winter-semester-page .winter-recordings-section {
+    background: #f7f0e6 !important;
+}
+
+.winter-semester-page .winter-recording-card {
+    background: #ffffff !important;
+    color: #241812 !important;
+    border: 1px solid #d8cbbd !important;
+}
+
+.winter-semester-page .winter-recording-card .recording-number {
+    color: #8a651f !important;
+}
+
+.winter-semester-page .winter-recording-card h3 {
+    color: #241812 !important;
+}
+
+.winter-semester-page .winter-recording-card .recording-subtitle {
+    color: #35251d !important;
+}
+
+.winter-semester-page .winter-recording-card p {
+    color: #5a4b42 !important;
+}
+
+.winter-semester-page .winter-recording-card .button,
+.winter-semester-page .winter-recording-card .button-primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #c8a45d !important;
+    color: #21140d !important;
+    border: 1px solid #c8a45d !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+}
+
+.winter-semester-page .winter-recording-card .button:hover,
+.winter-semester-page .winter-recording-card .button-primary:hover {
+    background: #a9823c !important;
+    color: #ffffff !important;
+    border-color: #a9823c !important;
+}
+
+.winter-semester-page .winter-study-panel {
+    background: #241812 !important;
+    color: #f7f0e6 !important;
+}
+
+.winter-semester-page .winter-study-panel h2,
+.winter-semester-page .winter-study-panel p,
+.winter-semester-page .winter-study-panel .section-eyebrow {
+    opacity: 1 !important;
+}
+
+.winter-semester-page .winter-study-panel h2 {
+    color: #f7f0e6 !important;
+}
+
+.winter-semester-page .winter-study-panel p {
+    color: #e6d9ca !important;
+}
