@@ -764,21 +764,24 @@
   <!-- =====================================================
      FORM SUBMISSION
 ===================================================== -->
+  <iframe name="enrollment-submit-frame" id="enrollment-submit-frame" title="Enrollment submission" hidden></iframe>
   <script>
-    document
-      .querySelector(".enrollment-form")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".enrollment-form");
 
-        const form = this;
-        const submitButton = form.querySelector('button[type="submit"]');
-        const formData = new FormData(form);
+      if (!form) return;
 
+      form.target = "enrollment-submit-frame";
+
+      form.addEventListener("submit", function (event) {
         if (form.dataset.submitting === "true") {
+          event.preventDefault();
           return;
         }
 
         form.dataset.submitting = "true";
+
+        const submitButton = form.querySelector('button[type="submit"]');
 
         if (submitButton) {
           submitButton.disabled = true;
@@ -797,16 +800,11 @@
         statusMessage.textContent =
           "Your application is being submitted. Please wait...";
 
-        fetch(form.action, {
-          method: "POST",
-          mode: "no-cors",
-          body: formData
-        });
-
         setTimeout(function () {
           window.location.href = "thank-you.html";
-        }, 1000);
+        }, 1500);
       });
+    });
   </script>
   <script defer src="js/main.js?v=20260912-enrollment"></script>
 >
