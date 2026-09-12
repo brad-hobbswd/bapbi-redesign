@@ -1,0 +1,246 @@
+/* =========================================================
+   WINTER SEMESTER ARCHIVE
+   Page-specific styles for winter-semester.html
+   The master stylesheet must load before this file.
+========================================================= */
+
+/* =========================================================
+   ARCHIVE INTRODUCTION
+========================================================= */
+
+.winter-semester-page .winter-introduction {
+    background: var(--espresso);
+    color: var(--ivory);
+    padding: 110px 0 95px;
+    border-bottom: 1px solid rgba(213, 163, 47, 0.25);
+}
+
+.winter-semester-page .winter-introduction .section-eyebrow,
+.winter-semester-page .section-eyebrow {
+    display: block;
+    color: var(--gold);
+    font-family: Inter, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.winter-semester-page .winter-introduction h1 {
+    color: var(--ivory);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1;
+    margin: 0 0 25px;
+}
+
+.winter-semester-page .intro-lead {
+    max-width: 760px;
+    color: rgba(246, 240, 229, 0.78);
+    font-size: 1.12rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* =========================================================
+   RECORDINGS SECTION
+========================================================= */
+
+.winter-semester-page .winter-recordings-section {
+    background: var(--ivory);
+    padding: 95px 0 110px;
+}
+
+.winter-semester-page .section-heading {
+    margin-bottom: 42px;
+}
+
+.winter-semester-page .section-heading h2 {
+    color: var(--espresso);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0 0 12px;
+}
+
+.winter-semester-page .section-lead {
+    max-width: 700px;
+    color: #766960;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* =========================================================
+   RECORDING CARD GRID
+========================================================= */
+
+.winter-semester-page .winter-recordings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.winter-semester-page .winter-recording-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid rgba(18, 9, 6, 0.12);
+    box-shadow: 0 12px 30px rgba(18, 9, 6, 0.08);
+}
+
+.winter-semester-page .recording-number {
+    color: var(--gold-dark);
+    font-family: Inter, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    margin-bottom: 22px;
+}
+
+.winter-semester-page .winter-recording-card h3 {
+    color: var(--espresso);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0 0 8px;
+}
+
+.winter-semester-page .recording-subtitle {
+    color: #30231d;
+    font-family: Inter, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 14px;
+}
+
+.winter-semester-page .winter-recording-card p {
+    color: #766960;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0 0 25px;
+}
+
+.winter-semester-page .winter-recording-card .button {
+    margin-top: auto;
+}
+
+/* =========================================================
+   STUDY GUIDES PANEL
+========================================================= */
+
+.winter-semester-page .winter-study-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 25px 50px;
+    margin-top: 70px;
+    padding: 48px;
+    background: var(--espresso-light);
+    color: var(--ivory);
+}
+
+.winter-semester-page .winter-study-panel .section-eyebrow {
+    grid-column: 1 / -1;
+    margin-bottom: -8px;
+}
+
+.winter-semester-page .winter-study-panel h2 {
+    color: var(--ivory);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.winter-semester-page .winter-study-panel p {
+    color: rgba(246, 240, 229, 0.78);
+    line-height: 1.75;
+    margin: 0;
+}
+
+.winter-semester-page .winter-study-panel .button {
+    justify-self: start;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   RETURN BUTTON
+========================================================= */
+
+.winter-semester-page .winter-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.winter-semester-page .winter-actions .button-outline {
+    background: var(--espresso);
+    color: var(--ivory);
+    border-color: var(--espresso);
+}
+
+.winter-semester-page .winter-actions .button-outline:hover {
+    background: var(--gold);
+    color: #261606;
+    border-color: var(--gold);
+}
+
+/* =========================================================
+   RESPONSIVE LAYOUT
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .winter-semester-page .winter-recordings-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .winter-semester-page .winter-study-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .winter-semester-page .winter-study-panel .section-eyebrow {
+        grid-column: auto;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .winter-semester-page .winter-introduction {
+        padding: 75px 0;
+    }
+
+    .winter-semester-page .winter-recordings-section {
+        padding: 70px 0;
+    }
+
+    .winter-semester-page .winter-recordings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .winter-semester-page .winter-recording-card {
+        padding: 25px;
+    }
+
+    .winter-semester-page .winter-study-panel {
+        padding: 32px 25px;
+    }
+
+    .winter-semester-page .winter-actions .button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
