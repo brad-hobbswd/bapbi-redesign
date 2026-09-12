@@ -1,2545 +1,562 @@
 /* =========================================================
-   BAPBI
-   ENROLLMENT PAGE STYLESHEET
-
-   Bethesda Apostolic Pentecostal Bible Institute
-
-   Version: 2026.09.10
-
-   Purpose:
-   Fall Semester 2026 enrollment page.
-   Uses the established BAPBI institutional design system.
-   ========================================================= */
-
-
-/* =========================================================
-   01. ROOT VARIABLES
+   BAPBI ENROLLMENT PAGE
+   Page-specific styles
+   Master stylesheet must load first.
 ========================================================= */
 
-:root {
-
-    --espresso: #120906;
-    --espresso-light: #211008;
-
-    --brown: #351707;
-    --bronze: #6d350c;
-
-    --gold-dark: #9f6816;
-    --gold: #d5a32f;
-    --gold-light: #f1cc72;
-
-    --ivory: #f6f0e5;
-    --cream: #e9dfcf;
-
-    --white: #ffffff;
-
-    --text-light: #e9e4dc;
-    --text-muted: #b9b0a7;
-
-    --dark-text: #271c16;
-    --dark-muted: #766960;
-
-    --border-dark: rgba(213, 163, 47, 0.22);
-    --border-light: rgba(38, 20, 8, 0.14);
-
-    --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-
-    --container-width: 1280px;
-
-}
-
-
 /* =========================================================
-   02. RESET
+   PAGE INTRODUCTION
 ========================================================= */
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-body {
-    margin: 0;
-
+.enrollment-page main {
     background: var(--ivory);
-    color: var(--dark-text);
-
-    font-family:
-        "Inter",
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    line-height: 1.7;
-
-    -webkit-font-smoothing: antialiased;
-
-    text-rendering: optimizeLegibility;
 }
-
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-
-button,
-input,
-select,
-textarea {
-    font: inherit;
-}
-
-
-button {
-    cursor: pointer;
-}
-
-
-.content-container {
-    width: min(
-        calc(100% - 48px),
-        var(--container-width)
-    );
-
-    margin-inline: auto;
-}
-
-
-/* =========================================================
-   03. TOP MESSAGE
-========================================================= */
-
-.top-message {
-    min-height: 34px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 7px 24px;
-
-    background: var(--gold);
-
-    color: var(--espresso);
-
-    text-align: center;
-}
-
-
-.top-message p {
-    margin: 0;
-
-    font-family:
-        "Inter",
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 0.69rem;
-    font-weight: 800;
-
-    letter-spacing: 0.18em;
-    line-height: 1.3;
-
-    text-transform: uppercase;
-}
-
-
-.top-message span {
-    display: inline-block;
-
-    margin: 0 8px;
-
-    color: var(--espresso);
-}
-
-
-/* =========================================================
-   04. MAIN NAVIGATION
-========================================================= */
-
-.main-navigation {
-    width: min(
-        calc(100% - 48px),
-        1400px
-    );
-
-    min-height: 82px;
-
-    margin-inline: auto;
-
-    display: flex;
-    align-items: center;
-
-    gap: 34px;
-
-    position: relative;
-    z-index: 1000;
-
-    background: var(--espresso);
-
-    border-bottom: 1px solid var(--border-dark);
-}
-
-
-/* =========================================================
-   05. BRAND
-========================================================= */
-
-.brand {
-    flex: 0 0 auto;
-
-    display: flex;
-    align-items: center;
-
-    gap: 13px;
-
-    min-width: 0;
-
-    color: var(--white);
-}
-
-
-.brand img {
-    width: 58px;
-    height: 58px;
-
-    flex: 0 0 58px;
-
-    object-fit: contain;
-}
-
-
-.brand-name {
-    display: flex;
-    flex-direction: column;
-
-    min-width: 0;
-}
-
-
-.brand-name strong {
-    display: block;
-
-    color: var(--gold-light);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1.15rem;
-    font-weight: 700;
-
-    letter-spacing: 0.12em;
-    line-height: 1.1;
-}
-
-
-.brand-name small {
-    display: block;
-
-    margin-top: 4px;
-
-    max-width: 300px;
-
-    color: var(--text-muted);
-
-    font-family:
-        "Inter",
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 0.48rem;
-    font-weight: 600;
-
-    letter-spacing: 0.13em;
-    line-height: 1.35;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================================
-   06. DESKTOP NAVIGATION
-========================================================= */
-
-.desktop-nav {
-    margin-left: auto;
-
-    display: flex;
-    align-items: center;
-
-    gap: 26px;
-
-    min-width: 0;
-}
-
-
-.desktop-nav > a,
-.nav-dropdown > button {
-    display: inline-flex;
-    align-items: center;
-
-    min-height: 82px;
-
-    padding: 30px 0;
-
-    border: 0;
-
-    background: transparent;
-
-    color: var(--text-light);
-
-    font-family:
-        "Inter",
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 0.74rem;
-    font-weight: 700;
-
-    letter-spacing: 0.1em;
-
-    text-transform: uppercase;
-
-    transition:
-        color 180ms ease,
-        opacity 180ms ease;
-}
-
-
-.desktop-nav > a:hover,
-.desktop-nav > a:focus-visible,
-.nav-dropdown > button:hover,
-.nav-dropdown > button:focus-visible {
-    color: var(--gold-light);
-}
-
-
-/* =========================================================
-   07. ACTIVE ENROLLMENT
-========================================================= */
-
-.enroll-button.active {
-    background: var(--gold-light);
-
-    border-color: var(--gold-light);
-
-    color: var(--espresso);
-}
-
-
-.enroll-button.active:hover,
-.enroll-button.active:focus-visible {
-    background: var(--white);
-
-    border-color: var(--white);
-
-    color: var(--espresso);
-}
-
-
-/* =========================================================
-   08. NAV DROPDOWNS
-========================================================= */
-
-.nav-dropdown {
-    position: relative;
-}
-
-
-.nav-dropdown > button::after {
-    content: "⌄";
-
-    margin-left: 7px;
-
-    color: var(--gold);
-
-    font-size: 0.8rem;
-
-    transform: translateY(-1px);
-}
-
-
-.dropdown-menu {
-    position: absolute;
-
-    top: calc(100% - 2px);
-    left: 50%;
-
-    width: 220px;
-
-    padding: 10px;
-
-    opacity: 0;
-    visibility: hidden;
-
-    transform:
-        translate(-50%, 8px);
-
-    background: var(--espresso-light);
-
-    border: 1px solid var(--border-dark);
-
-    box-shadow: var(--shadow);
-
-    transition:
-        opacity 180ms ease,
-        visibility 180ms ease,
-        transform 180ms ease;
-
-    z-index: 1100;
-}
-
-
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-
-    transform:
-        translate(-50%, 0);
-}
-
-
-.dropdown-menu a {
-    display: block;
-
-    padding: 12px 14px;
-
-    color: var(--text-light);
-
-    font-size: 0.73rem;
-    font-weight: 600;
-
-    letter-spacing: 0.06em;
-
-    transition:
-        background 180ms ease,
-        color 180ms ease;
-}
-
-
-.dropdown-menu a:hover,
-.dropdown-menu a:focus-visible {
-    background: rgba(213, 163, 47, 0.1);
-
-    color: var(--gold-light);
-}
-
-
-/* =========================================================
-   09. ENROLL BUTTON
-========================================================= */
-
-.enroll-button {
-    flex: 0 0 auto;
-
-    min-height: 46px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0 20px;
-
-    background: var(--gold);
-
-    border: 1px solid var(--gold);
-
-    color: var(--espresso);
-
-    font-size: 0.7rem;
-    font-weight: 800;
-
-    letter-spacing: 0.11em;
-
-    text-transform: uppercase;
-
-    transition:
-        background 180ms ease,
-        border-color 180ms ease,
-        color 180ms ease,
-        transform 180ms ease;
-}
-
-
-.enroll-button:hover,
-.enroll-button:focus-visible {
-    background: var(--gold-light);
-
-    border-color: var(--gold-light);
-
-    color: var(--espresso);
-
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   10. MOBILE MENU BUTTON
-========================================================= */
-
-.mobile-menu-button {
-    display: none;
-
-    width: 46px;
-    height: 46px;
-
-    margin-left: auto;
-
-    padding: 10px;
-
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    gap: 5px;
-
-    background: transparent;
-
-    border: 1px solid var(--border-dark);
-
-    color: var(--gold-light);
-}
-
-
-.mobile-menu-button span {
-    display: block;
-
-    width: 21px;
-    height: 2px;
-
-    background: currentColor;
-
-    transition:
-        transform 180ms ease,
-        opacity 180ms ease;
-}
-
-
-.mobile-menu-button[aria-expanded="true"]
-span:nth-child(1) {
-    transform:
-        translateY(7px)
-        rotate(45deg);
-}
-
-
-.mobile-menu-button[aria-expanded="true"]
-span:nth-child(2) {
-    opacity: 0;
-}
-
-
-.mobile-menu-button[aria-expanded="true"]
-span:nth-child(3) {
-    transform:
-        translateY(-7px)
-        rotate(-45deg);
-}
-
-
-/* =========================================================
-   11. MOBILE NAVIGATION
-========================================================= */
-
-.mobile-navigation {
-    display: none;
-
-    width: min(
-        calc(100% - 48px),
-        1400px
-    );
-
-    margin: 0 auto;
-
-    padding: 14px;
-
-    background: var(--espresso-light);
-
-    border-top: 1px solid var(--border-dark);
-    border-bottom: 1px solid var(--border-dark);
-
-    position: relative;
-    z-index: 999;
-}
-
-
-.mobile-navigation.open {
-    display: block;
-}
-
-
-.mobile-navigation > a,
-.mobile-navigation details summary,
-.mobile-navigation details a {
-    display: block;
-
-    color: var(--text-light);
-
-    font-size: 0.76rem;
-    font-weight: 700;
-
-    letter-spacing: 0.08em;
-
-    text-transform: uppercase;
-}
-
-
-.mobile-navigation > a,
-.mobile-navigation details summary {
-    padding: 13px 12px;
-}
-
-
-.mobile-navigation > a:hover,
-.mobile-navigation details summary:hover,
-.mobile-navigation details a:hover,
-.mobile-navigation > a.active {
-    color: var(--gold-light);
-}
-
-
-.mobile-navigation details {
-    border-top: 1px solid rgba(213, 163, 47, 0.1);
-}
-
-
-.mobile-navigation details summary {
-    cursor: pointer;
-
-    list-style: none;
-}
-
-
-.mobile-navigation details summary::-webkit-details-marker {
-    display: none;
-}
-
-
-.mobile-navigation details summary::after {
-    content: "+";
-
-    float: right;
-
-    color: var(--gold);
-}
-
-
-.mobile-navigation details[open]
-summary::after {
-    content: "−";
-}
-
-
-.mobile-navigation details a {
-    padding: 9px 24px;
-
-    color: var(--text-muted);
-
-    font-size: 0.7rem;
-}
-
-
-.mobile-navigation .mobile-enroll {
-    margin-top: 12px;
-
-    background: var(--gold);
-
-    border: 1px solid var(--gold);
-
-    color: var(--espresso);
-
-    text-align: center;
-}
-
-
-.mobile-navigation .mobile-enroll:hover,
-.mobile-navigation .mobile-enroll.active {
-    background: var(--gold-light);
-
-    color: var(--espresso);
-}
-
-
-/* =========================================================
-   12. PAGE INTRO
-========================================================= */
 
 .page-intro {
-    padding: 105px 0 90px;
-
+    padding: 96px 0 88px;
     background:
         linear-gradient(
-            135deg,
+            180deg,
             var(--espresso) 0%,
-            var(--brown) 55%,
             var(--espresso-light) 100%
         );
-
-    color: var(--white);
-
-    border-bottom: 1px solid var(--border-dark);
+    color: var(--text-light);
+    text-align: center;
 }
-
 
 .page-intro .content-container {
     max-width: 980px;
 }
 
-
-.eyebrow {
+.page-intro .eyebrow,
+.enrollment-page .eyebrow {
     display: inline-block;
-
-    margin-bottom: 16px;
-
+    margin-bottom: 18px;
     color: var(--gold-light);
-
-    font-family:
-        "Inter",
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 0.69rem;
+    font-family: "Inter", sans-serif;
+    font-size: .78rem;
     font-weight: 800;
-
-    letter-spacing: 0.2em;
-
+    letter-spacing: .22em;
+    line-height: 1.4;
     text-transform: uppercase;
 }
 
-
 .page-intro h1 {
-    margin: 0 0 20px;
-
+    margin: 0 auto 22px;
     color: var(--white);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            2.5rem,
-            6vw,
-            4.8rem
-        );
-
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 600;
-
-    letter-spacing: 0.02em;
-
-    line-height: 1.08;
+    line-height: 1.05;
+    letter-spacing: -.025em;
 }
-
 
 .page-intro p {
     max-width: 760px;
-
-    margin: 0;
-
+    margin: 0 auto;
     color: var(--text-light);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            1.2rem,
-            2vw,
-            1.45rem
-        );
-
-    line-height: 1.65;
+    font-size: 1.08rem;
+    line-height: 1.85;
 }
-
 
 .intro-actions {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-
-    gap: 12px;
-
+    gap: 14px;
     margin-top: 34px;
 }
 
-
 /* =========================================================
-   13. BUTTONS
+   BUTTONS
 ========================================================= */
 
-.button-primary,
-.button-secondary {
+.enrollment-page .button-primary,
+.enrollment-page .button-secondary,
+.enrollment-page .submit-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-height: 48px;
-
-    padding: 10px 21px;
-
-    font-size: 0.69rem;
-    font-weight: 800;
-
-    letter-spacing: 0.1em;
-
-    text-transform: uppercase;
-
-    transition:
-        background 180ms ease,
-        border-color 180ms ease,
-        color 180ms ease,
-        transform 180ms ease;
-}
-
-
-.button-primary {
-    background: var(--gold);
-
+    padding: 13px 24px;
     border: 1px solid var(--gold);
+    border-radius: 0;
+    font-family: "Inter", sans-serif;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
 
+.enrollment-page .button-primary,
+.enrollment-page .submit-button {
+    background: var(--gold);
     color: var(--espresso);
 }
 
-
-.button-primary:hover,
-.button-primary:focus-visible {
+.enrollment-page .button-primary:hover,
+.enrollment-page .submit-button:hover {
     background: var(--gold-light);
-
     border-color: var(--gold-light);
-
     color: var(--espresso);
-
-    transform: translateY(-1px);
 }
 
-
-.button-secondary {
+.enrollment-page .button-secondary {
     background: transparent;
-
-    border: 1px solid var(--border-dark);
-
-    color: var(--gold-light);
-}
-
-
-.button-secondary:hover,
-.button-secondary:focus-visible {
-    background: rgba(213, 163, 47, 0.1);
-
-    border-color: var(--gold);
-
     color: var(--white);
 }
 
+.enrollment-page .button-secondary:hover {
+    background: var(--white);
+    color: var(--espresso);
+}
 
 /* =========================================================
-   14. ENROLLMENT OVERVIEW
+   OVERVIEW
 ========================================================= */
 
 .enrollment-overview {
-    padding: 105px 0;
-
+    padding: 96px 0;
     background: var(--ivory);
+    color: #2b211b;
 }
-
 
 .overview-grid {
     display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(300px, 400px);
-
-    gap: clamp(50px, 8vw, 110px);
-
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+    gap: 64px;
     align-items: center;
 }
 
-
-.overview-copy {
-    max-width: 760px;
-}
-
-
-.overview-copy .eyebrow {
+.overview-copy .eyebrow,
+.process-section .eyebrow,
+.class-section .eyebrow,
+.communication-section .eyebrow,
+.support-section .eyebrow {
     color: var(--gold-dark);
 }
 
-
-.overview-copy h2 {
-    margin: 0 0 24px;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            2rem,
-            4vw,
-            3.3rem
-        );
-
+.overview-copy h2,
+.section-heading h2,
+.application-heading h2,
+.accreditation-card h2 {
+    margin: 0 0 22px;
+    color: #2b211b;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
     font-weight: 600;
-
-    line-height: 1.15;
+    line-height: 1.08;
+    letter-spacing: -.02em;
 }
 
-
-.overview-copy p {
-    margin: 0 0 20px;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.2rem;
-
-    line-height: 1.72;
+.overview-copy p,
+.section-heading p,
+.application-heading p,
+.class-card p,
+.information-card p,
+.support-card p,
+.accreditation-card p {
+    color: #6f6258;
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
-
-.overview-copy strong {
-    color: var(--bronze);
+.overview-copy p + p,
+.application-heading p + p,
+.information-card p + p {
+    margin-top: 18px;
 }
-
-
-/* =========================================================
-   15. DEADLINE CARD
-========================================================= */
 
 .deadline-card {
-    padding: 42px 38px;
-
-    background:
-        linear-gradient(
-            145deg,
-            var(--espresso),
-            var(--brown)
-        );
-
-    border: 1px solid var(--border-dark);
-
+    padding: 38px 32px;
+    border: 1px solid var(--gold);
+    background: var(--espresso);
+    color: var(--text-light);
     box-shadow: var(--shadow);
-
-    color: var(--white);
-
-    text-align: center;
 }
 
-
-.deadline-label {
+.deadline-label,
+.card-label {
     display: block;
-
-    margin-bottom: 18px;
-
+    margin-bottom: 14px;
     color: var(--gold-light);
-
-    font-size: 0.67rem;
+    font-size: .75rem;
     font-weight: 800;
-
-    letter-spacing: 0.17em;
-
+    letter-spacing: .16em;
     text-transform: uppercase;
 }
 
-
 .deadline-date {
     display: block;
-
+    margin-bottom: 16px;
     color: var(--white);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            1.45rem,
-            3vw,
-            2rem
-        );
-
-    line-height: 1.3;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.1;
 }
-
 
 .deadline-card p {
-    margin: 20px 0 25px;
-
+    margin-bottom: 24px;
     color: var(--text-light);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.12rem;
-
-    line-height: 1.6;
 }
-
-
-.deadline-card .button-primary {
-    width: 100%;
-}
-
 
 /* =========================================================
-   16. SECTION HEADINGS
+   SECTION HEADINGS AND PROCESS
 ========================================================= */
 
-.section-heading {
-    max-width: 800px;
-
-    margin-bottom: 55px;
+.process-section,
+.class-section,
+.communication-section,
+.support-section {
+    padding: 96px 0;
+    background: var(--ivory);
+    color: #2b211b;
 }
-
-
-.section-heading .eyebrow {
-    color: var(--gold-dark);
-}
-
-
-.section-heading h2 {
-    margin: 0 0 17px;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            2rem,
-            4vw,
-            3.2rem
-        );
-
-    font-weight: 600;
-
-    line-height: 1.15;
-}
-
-
-.section-heading p {
-    margin: 0;
-
-    color: var(--dark-muted);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.2rem;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   17. PROCESS SECTION
-========================================================= */
 
 .process-section {
-    padding: 105px 0;
-
-    background: var(--cream);
-
-    border-top: 1px solid var(--border-light);
-    border-bottom: 1px solid var(--border-light);
+    background: #eee5d8;
 }
 
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
 
-.process-grid {
+.section-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.process-grid,
+.class-grid,
+.communication-grid,
+.support-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
 }
 
-
-.process-card {
-    min-height: 250px;
-
-    padding: 32px;
-
-    background: var(--white);
-
-    border: 1px solid var(--border-light);
-
-    box-shadow:
-        0 10px 35px rgba(38, 20, 8, 0.08);
+.process-card,
+.class-card,
+.information-card,
+.support-card {
+    padding: 34px 30px;
+    border: 1px solid rgba(38, 20, 8, .14);
+    background: #fffdf9;
+    box-shadow: 0 12px 35px rgba(38, 20, 8, .07);
 }
-
 
 .process-number {
     display: block;
-
     margin-bottom: 18px;
-
     color: var(--gold-dark);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 0.82rem;
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 1.5rem;
     font-weight: 700;
-
-    letter-spacing: 0.16em;
+    letter-spacing: .08em;
 }
 
-
-.process-card h3 {
-    margin: 0 0 12px;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1.3rem;
-
-    line-height: 1.25;
+.process-card h3,
+.class-card h3,
+.information-card h3,
+.support-card h3 {
+    margin-bottom: 14px;
+    color: #2b211b;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 600;
+    line-height: 1.15;
 }
 
-
-.process-card p {
-    margin: 0;
-
-    color: var(--dark-muted);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.08rem;
-
-    line-height: 1.65;
+.class-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.class-time {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--gold-dark);
+    font-size: 1.05rem;
+    letter-spacing: .04em;
+}
+
+.class-card ul {
+    margin: 18px 0 0 20px;
+    color: #6f6258;
+}
+
+.class-card li + li {
+    margin-top: 8px;
+}
 
 /* =========================================================
-   18. APPLICATION SECTION
+   APPLICATION
 ========================================================= */
 
 .application-section {
-    padding: 110px 0;
-
+    padding: 104px 0;
     background: var(--espresso);
-
-    border-top: 1px solid var(--border-dark);
 }
 
-
 .application-card {
-    max-width: 920px;
-
-    margin-inline: auto;
-
-    padding: clamp(30px, 5vw, 65px);
-
+    max-width: 900px;
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 64px);
     background: var(--ivory);
-
-    border: 1px solid var(--border-dark);
-
+    color: #2b211b;
     box-shadow: var(--shadow);
 }
 
-
 .application-heading {
-    max-width: 780px;
-
-    margin-bottom: 48px;
+    max-width: 760px;
+    margin-bottom: 42px;
 }
-
 
 .application-heading .eyebrow {
     color: var(--gold-dark);
 }
 
-
-.application-heading h2 {
-    margin: 0 0 20px;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            2rem,
-            4vw,
-            3rem
-        );
-
-    font-weight: 600;
-
-    line-height: 1.2;
-}
-
-
-.application-heading p {
-    margin: 0 0 15px;
-
-    color: var(--dark-muted);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.15rem;
-
-    line-height: 1.7;
-}
-
-
-.application-heading p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   19. FORM
-========================================================= */
-
 .enrollment-form {
-    width: 100%;
+    display: grid;
+    gap: 28px;
 }
-
 
 .enrollment-form fieldset {
-    margin: 0 0 38px;
-    padding: 0 0 38px;
-
-    border: 0;
-
-    border-bottom: 1px solid var(--border-light);
+    display: grid;
+    gap: 12px;
+    padding: 26px;
+    border: 1px solid rgba(38, 20, 8, .18);
+    background: #fffdf9;
 }
-
-
-.enrollment-form fieldset:last-of-type {
-    margin-bottom: 30px;
-}
-
 
 .enrollment-form legend {
-    width: 100%;
-
-    margin-bottom: 24px;
-
-    padding: 0;
-
-    color: var(--gold-dark);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1.05rem;
-    font-weight: 700;
-
-    letter-spacing: 0.05em;
-
-    line-height: 1.3;
+    padding: 0 10px;
+    color: #2b211b;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.55rem;
+    font-weight: 600;
 }
-
 
 .enrollment-form label {
-    display: block;
-
-    margin: 0 0 8px;
-
-    color: var(--dark-text);
-
-    font-size: 0.77rem;
-    font-weight: 800;
-
-    letter-spacing: 0.06em;
-
-    text-transform: uppercase;
+    color: #2b211b;
+    font-size: .9rem;
+    font-weight: 700;
 }
 
-
-.enrollment-form label > span {
+.enrollment-form label span {
     margin-left: 6px;
-
-    color: var(--dark-muted);
-
-    font-size: 0.64rem;
-    font-weight: 600;
-
-    letter-spacing: 0;
-
-    text-transform: none;
+    color: #8b7d70;
+    font-size: .8rem;
+    font-weight: 500;
 }
-
 
 .enrollment-form input[type="text"],
 .enrollment-form input[type="email"],
 .enrollment-form select,
 .enrollment-form textarea {
     width: 100%;
-
-    margin: 0 0 23px;
-
     padding: 13px 14px;
-
-    background: var(--white);
-
-    border: 1px solid rgba(38, 20, 8, 0.22);
-
+    border: 1px solid #cbbdad;
     border-radius: 0;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Inter",
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 0.92rem;
-
-    line-height: 1.5;
-
-    outline: none;
-
-    transition:
-        border-color 180ms ease,
-        box-shadow 180ms ease;
+    background: #ffffff;
+    color: #2b211b;
+    font: inherit;
+    font-size: .95rem;
 }
-
 
 .enrollment-form textarea {
-    min-height: 145px;
-
+    min-height: 140px;
     resize: vertical;
 }
-
 
 .enrollment-form input:focus,
 .enrollment-form select:focus,
 .enrollment-form textarea:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
     border-color: var(--gold-dark);
-
-    box-shadow:
-        0 0 0 3px
-        rgba(159, 104, 22, 0.12);
 }
-
-
-.enrollment-form select {
-    appearance: auto;
-
-    cursor: pointer;
-}
-
-
-/* =========================================================
-   20. CHECKBOXES
-========================================================= */
 
 .checkbox-row {
-    display: grid !important;
-
-    grid-template-columns:
-        22px minmax(0, 1fr);
-
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
     gap: 12px;
-
     align-items: start;
-
-    margin: 0 0 20px !important;
-
-    color: var(--dark-muted) !important;
-
-    font-size: 0.82rem !important;
     font-weight: 500 !important;
-
-    letter-spacing: 0 !important;
-
-    line-height: 1.6;
-
-    text-transform: none !important;
+    line-height: 1.65;
 }
 
-
-.checkbox-row input[type="checkbox"] {
+.checkbox-row input {
     width: 18px;
     height: 18px;
-
-    margin: 3px 0 0;
-
+    margin-top: 4px;
     accent-color: var(--gold-dark);
-
-    cursor: pointer;
 }
-
-
-.checkbox-row span {
-    margin: 0 !important;
-
-    color: var(--dark-muted) !important;
-
-    font-size: inherit !important;
-
-    font-weight: inherit !important;
-
-    letter-spacing: inherit !important;
-
-    text-transform: inherit !important;
-}
-
-
-/* =========================================================
-   21. SUBMIT BUTTON
-========================================================= */
 
 .submit-button {
     width: 100%;
-
-    min-height: 54px;
-
-    padding: 13px 20px;
-
-    background: var(--gold-dark);
-
-    border: 1px solid var(--gold-dark);
-
-    color: var(--white);
-
-    font-size: 0.72rem;
-    font-weight: 800;
-
-    letter-spacing: 0.1em;
-
-    text-transform: uppercase;
-
-    transition:
-        background 180ms ease,
-        border-color 180ms ease,
-        color 180ms ease,
-        transform 180ms ease;
+    cursor: pointer;
 }
-
-
-.submit-button:hover,
-.submit-button:focus-visible {
-    background: var(--bronze);
-
-    border-color: var(--bronze);
-
-    color: var(--white);
-
-    transform: translateY(-1px);
-}
-
 
 /* =========================================================
-   22. CLASS SECTION
+   COMMUNICATION, ACCREDITATION, SUPPORT
 ========================================================= */
 
-.class-section {
-    padding: 105px 0;
-
-    background: var(--ivory);
+.communication-grid,
+.support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-
-
-.class-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 22px;
-}
-
-
-.class-card {
-    min-height: 310px;
-
-    padding: 32px;
-
-    background: var(--white);
-
-    border: 1px solid var(--border-light);
-
-    box-shadow:
-        0 10px 35px rgba(38, 20, 8, 0.08);
-}
-
-
-.card-label {
-    display: block;
-
-    margin-bottom: 15px;
-
-    color: var(--gold-dark);
-
-    font-size: 0.65rem;
-    font-weight: 800;
-
-    letter-spacing: 0.15em;
-
-    text-transform: uppercase;
-}
-
-
-.class-card h3 {
-    margin: 0 0 14px;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1.4rem;
-
-    line-height: 1.3;
-}
-
-
-.class-time {
-    display: block;
-
-    margin-bottom: 20px;
-
-    color: var(--gold-dark);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1.25rem;
-}
-
-
-.class-card p,
-.class-card li {
-    color: var(--dark-muted);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.08rem;
-
-    line-height: 1.65;
-}
-
-
-.class-card p {
-    margin: 0 0 14px;
-}
-
-
-.class-card p:last-child {
-    margin-bottom: 0;
-}
-
-
-.class-card ul {
-    margin: 0;
-
-    padding-left: 20px;
-}
-
-
-.class-card li {
-    margin-bottom: 8px;
-}
-
-
-.class-card li:last-child {
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   23. COMMUNICATION
-========================================================= */
-
-.communication-section {
-    padding: 105px 0;
-
-    background: var(--cream);
-
-    border-top: 1px solid var(--border-light);
-}
-
-
-.communication-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 22px;
-}
-
-
-.information-card {
-    padding: 35px;
-
-    background: var(--white);
-
-    border: 1px solid var(--border-light);
-}
-
-
-.information-card h3 {
-    margin: 0 0 18px;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1.3rem;
-
-    line-height: 1.3;
-}
-
-
-.information-card p {
-    margin: 0 0 17px;
-
-    color: var(--dark-muted);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.1rem;
-
-    line-height: 1.7;
-}
-
-
-.information-card p:last-child {
-    margin-bottom: 0;
-}
-
-
-.information-card strong {
-    color: var(--dark-text);
-}
-
-
-/* =========================================================
-   24. ACCREDITATION
-========================================================= */
 
 .accreditation-section {
-    padding: 90px 0;
-
-    background: var(--espresso);
+    padding: 96px 0;
+    background: #eee5d8;
 }
 
-
 .accreditation-card {
-    max-width: 850px;
-
-    margin-inline: auto;
-
-    padding: 50px;
-
-    background: var(--espresso-light);
-
-    border: 1px solid var(--border-dark);
-
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px;
+    border: 1px solid var(--gold-dark);
+    background: var(--espresso);
     text-align: center;
 }
 
+.accreditation-card .eyebrow {
+    color: var(--gold-light);
+}
 
 .accreditation-card h2 {
-    margin: 0 0 20px;
-
     color: var(--white);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            1.9rem,
-            4vw,
-            2.8rem
-        );
-
-    font-weight: 600;
 }
-
 
 .accreditation-card p {
-    margin: 0;
-
     color: var(--text-light);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.18rem;
-
-    line-height: 1.72;
 }
 
-
-/* =========================================================
-   25. SUPPORT
-========================================================= */
-
 .support-section {
-    padding: 105px 0;
-
     background: var(--ivory);
 }
 
-
-.support-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 22px;
-}
-
-
-.support-card {
-    padding: 35px;
-
-    background: var(--white);
-
-    border: 1px solid var(--border-light);
-
-    box-shadow:
-        0 10px 35px rgba(38, 20, 8, 0.06);
-}
-
-
-.support-card h3 {
-    margin: 0 0 15px;
-
-    color: var(--dark-text);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1.25rem;
-}
-
-
-.support-card p {
-    margin: 0 0 20px;
-
-    color: var(--dark-muted);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.08rem;
-
-    line-height: 1.65;
-}
-
-
 .text-link {
+    display: inline-block;
+    margin-top: 20px;
     color: var(--gold-dark);
-
-    font-size: 0.75rem;
     font-weight: 800;
-
-    letter-spacing: 0.08em;
-
-    text-decoration: underline;
-
-    text-decoration-color:
-        rgba(159, 104, 22, 0.4);
-
-    text-underline-offset: 4px;
-
+    letter-spacing: .04em;
     text-transform: uppercase;
-
-    transition:
-        color 180ms ease,
-        text-decoration-color 180ms ease;
 }
 
-
-.text-link:hover,
-.text-link:focus-visible {
+.text-link:hover {
     color: var(--bronze);
-
-    text-decoration-color: var(--bronze);
+    text-decoration: underline;
 }
-
 
 /* =========================================================
-   26. FINAL CALLOUT
+   FINAL CALLOUT
 ========================================================= */
 
 .final-callout {
-    padding: 100px 0;
-
+    padding: 96px 0;
     background:
         linear-gradient(
             135deg,
-            var(--brown),
+            var(--espresso-light),
             var(--espresso)
         );
-
-    color: var(--white);
-
+    color: var(--text-light);
     text-align: center;
-
-    border-top: 1px solid var(--border-dark);
 }
-
 
 .final-callout .content-container {
-    max-width: 850px;
+    max-width: 800px;
 }
 
+.final-callout .eyebrow {
+    color: var(--gold-light);
+}
 
 .final-callout h2 {
-    margin: 0 0 20px;
-
+    margin-bottom: 18px;
     color: var(--white);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size:
-        clamp(
-            2rem,
-            5vw,
-            3.5rem
-        );
-
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.3rem, 5vw, 4rem);
     font-weight: 600;
-
-    line-height: 1.15;
+    line-height: 1.08;
 }
-
 
 .final-callout p {
-    max-width: 700px;
-
-    margin: 0 auto 30px;
-
+    max-width: 680px;
+    margin: 0 auto 28px;
     color: var(--text-light);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.2rem;
-
-    line-height: 1.7;
 }
-
-
-.final-callout .button-primary {
-    display: inline-flex;
-}
-
 
 /* =========================================================
-   27. FOOTER
-========================================================= */
-
-.site-footer {
-    padding: 70px 0 30px;
-
-    background: var(--espresso);
-
-    color: var(--text-light);
-
-    border-top: 1px solid var(--border-dark);
-}
-
-
-.footer-inner {
-    display: grid;
-
-    grid-template-columns:
-        minmax(220px, 1fr)
-        minmax(500px, 1.5fr);
-
-    gap: 55px;
-}
-
-
-.footer-brand {
-    display: flex;
-    align-items: flex-start;
-
-    gap: 15px;
-}
-
-
-.footer-brand img {
-    width: 52px;
-    height: 52px;
-
-    object-fit: contain;
-}
-
-
-.footer-brand strong {
-    display: block;
-
-    margin-bottom: 4px;
-
-    color: var(--gold-light);
-
-    font-family:
-        "Cinzel",
-        Georgia,
-        serif;
-
-    font-size: 1rem;
-
-    letter-spacing: 0.12em;
-}
-
-
-.footer-brand span {
-    display: block;
-
-    max-width: 300px;
-
-    color: var(--text-light);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1rem;
-
-    line-height: 1.4;
-}
-
-
-.footer-brand small {
-    display: block;
-
-    margin-top: 4px;
-
-    color: var(--text-muted);
-
-    font-size: 0.7rem;
-}
-
-
-.footer-links {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 30px;
-}
-
-
-.footer-links > div {
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-start;
-}
-
-
-.footer-label {
-    margin-bottom: 12px;
-
-    color: var(--gold-light);
-
-    font-size: 0.68rem;
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
-
-    text-transform: uppercase;
-}
-
-
-.footer-links a {
-    margin: 4px 0;
-
-    color: var(--text-muted);
-
-    font-size: 0.74rem;
-
-    transition: color 180ms ease;
-}
-
-
-.footer-links a:hover,
-.footer-links a:focus-visible {
-    color: var(--gold-light);
-}
-
-
-/* =========================================================
-   28. FOOTER BOTTOM
-========================================================= */
-
-.footer-bottom {
-    grid-column: 1 / -1;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-
-    margin-top: 25px;
-    padding-top: 25px;
-
-    border-top: 1px solid var(--border-dark);
-
-    color: var(--text-muted);
-
-    font-size: 0.68rem;
-}
-
-
-.footer-bottom a {
-    color: var(--gold-light);
-}
-
-
-.footer-bottom a:hover,
-.footer-bottom a:focus-visible {
-    color: var(--white);
-}
-
-
-/* =========================================================
-   29. ACCESSIBILITY
-========================================================= */
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-summary:focus-visible {
-    outline: 2px solid var(--gold-light);
-
-    outline-offset: 4px;
-}
-
-
-::selection {
-    background: var(--gold);
-
-    color: var(--espresso);
-}
-
-
-/* =========================================================
-   30. LARGE TABLETS
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .main-navigation {
-        gap: 22px;
-    }
-
-
-    .desktop-nav {
-        gap: 17px;
-    }
-
-
-    .desktop-nav > a,
-    .nav-dropdown > button {
-        font-size: 0.67rem;
-    }
-
-
-    .brand-name small {
-        max-width: 240px;
-
-        font-size: 0.43rem;
-    }
-
-
-    .overview-grid {
-        gap: 50px;
-    }
-
-
-    .footer-inner {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* =========================================================
-   31. TABLETS
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 900px) {
-
-    .top-message {
-        min-height: 34px;
-
-        padding: 7px 15px;
-    }
-
-
-    .top-message p {
-        font-size: 0.58rem;
-
-        letter-spacing: 0.11em;
-    }
-
-
-    .main-navigation {
-        width: min(
-            calc(100% - 32px),
-            1400px
-        );
-
-        min-height: 76px;
-
-        gap: 15px;
-    }
-
-
-    .desktop-nav,
-    .enroll-button {
-        display: none;
-    }
-
-
-    .mobile-menu-button {
-        display: flex;
-    }
-
-
-    .brand img {
-        width: 52px;
-        height: 52px;
-
-        flex-basis: 52px;
-    }
-
-
-    .brand-name strong {
-        font-size: 1rem;
-    }
-
-
-    .brand-name small {
-        max-width: 270px;
-
-        font-size: 0.42rem;
-    }
-
-
-    .mobile-navigation {
-        width: min(
-            calc(100% - 32px),
-            1400px
-        );
-    }
-
-
-    .page-intro {
-        padding: 80px 0 70px;
-    }
-
-
     .overview-grid {
         grid-template-columns: 1fr;
+        gap: 36px;
     }
-
-
-    .deadline-card {
-        max-width: 560px;
-
-        margin-inline: auto;
-    }
-
 
     .process-grid,
     .class-grid {
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
-
-    .process-card:last-child,
-    .class-card:last-child {
-        grid-column: 1 / -1;
-    }
-
-
-    .communication-grid,
-    .support-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .accreditation-card {
-        padding: 42px;
-    }
-
-
-    .footer-links {
-        grid-template-columns:
-            repeat(3, 1fr);
-    }
-
 }
 
-
-/* =========================================================
-   32. MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .content-container {
-        width: min(
-            calc(100% - 32px),
-            var(--container-width)
-        );
+@media (max-width: 640px) {
+    .page-intro,
+    .enrollment-overview,
+    .process-section,
+    .application-section,
+    .class-section,
+    .communication-section,
+    .accreditation-section,
+    .support-section,
+    .final-callout {
+        padding: 68px 0;
     }
-
-
-    .top-message {
-        min-height: 32px;
-
-        padding: 6px 10px;
-    }
-
-
-    .top-message p {
-        font-size: 0.48rem;
-
-        letter-spacing: 0.08em;
-    }
-
-
-    .top-message span {
-        margin: 0 4px;
-    }
-
-
-    .main-navigation {
-        width: 100%;
-
-        min-height: 70px;
-
-        padding: 8px 16px;
-    }
-
-
-    .mobile-navigation {
-        width: 100%;
-    }
-
-
-    .brand {
-        gap: 9px;
-    }
-
-
-    .brand img {
-        width: 46px;
-        height: 46px;
-
-        flex-basis: 46px;
-    }
-
-
-    .brand-name strong {
-        font-size: 0.9rem;
-
-        letter-spacing: 0.1em;
-    }
-
-
-    .brand-name small {
-        max-width: 210px;
-
-        margin-top: 3px;
-
-        font-size: 0.34rem;
-
-        letter-spacing: 0.09em;
-    }
-
-
-    .mobile-menu-button {
-        width: 42px;
-        height: 42px;
-
-        flex: 0 0 42px;
-    }
-
-
-    .page-intro {
-        padding: 65px 0 55px;
-    }
-
 
     .page-intro h1 {
-        font-size:
-            clamp(
-                2.25rem,
-                12vw,
-                3.2rem
-            );
+        font-size: clamp(2.35rem, 11vw, 3.4rem);
     }
-
 
     .page-intro p {
-        font-size: 1.15rem;
+        font-size: .98rem;
     }
-
 
     .intro-actions {
+        align-items: stretch;
         flex-direction: column;
     }
-
 
     .intro-actions a {
         width: 100%;
     }
 
-
-    .enrollment-overview,
-    .process-section,
-    .class-section,
-    .communication-section,
-    .support-section {
-        padding: 70px 0;
-    }
-
-
-    .overview-copy h2,
-    .section-heading h2 {
-        font-size: 2rem;
-    }
-
-
-    .deadline-card {
-        padding: 34px 24px;
-    }
-
-
     .process-grid,
-    .class-grid {
+    .class-grid,
+    .communication-grid,
+    .support-grid {
         grid-template-columns: 1fr;
     }
-
-
-    .process-card:last-child,
-    .class-card:last-child {
-        grid-column: auto;
-    }
-
-
-    .process-card,
-    .class-card,
-    .information-card,
-    .support-card {
-        padding: 28px;
-    }
-
-
-    .application-section {
-        padding: 70px 0;
-    }
-
 
     .application-card {
-        padding: 28px 20px;
+        padding: 24px 18px;
     }
 
-
-    .application-heading {
-        margin-bottom: 35px;
+    .enrollment-form fieldset {
+        padding: 20px 16px;
     }
-
-
-    .application-heading h2 {
-        font-size: 2rem;
-    }
-
-
-    .enrollment-form legend {
-        font-size: 0.95rem;
-    }
-
-
-    .enrollment-form label {
-        font-size: 0.7rem;
-    }
-
-
-    .submit-button {
-        min-height: 58px;
-
-        padding: 12px 16px;
-
-        font-size: 0.64rem;
-
-        line-height: 1.4;
-    }
-
-
-    .accreditation-section {
-        padding: 65px 0;
-    }
-
 
     .accreditation-card {
-        padding: 35px 24px;
+        padding: 32px 22px;
     }
-
-
-    .final-callout {
-        padding: 75px 0;
-    }
-
-
-    .final-callout h2 {
-        font-size: 2rem;
-    }
-
-
-    .footer-links {
-        grid-template-columns:
-            1fr 1fr;
-
-        gap: 35px 20px;
-    }
-
-
-    .footer-links > div:last-child {
-        grid-column: 1 / -1;
-    }
-
-
-    .footer-bottom {
-        align-items: flex-start;
-
-        flex-direction: column;
-
-        gap: 8px;
-    }
-
 }
-
-
-/* =========================================================
-   33. VERY SMALL SCREENS
-========================================================= */
-
-@media (max-width: 380px) {
-
-    .brand-name small {
-        max-width: 175px;
-
-        font-size: 0.3rem;
-    }
-
-
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
-
-
-    .footer-links > div:last-child {
-        grid-column: auto;
-    }
-
-
-    .checkbox-row {
-        grid-template-columns:
-            20px minmax(0, 1fr);
-    }
-
-}
-
-
-/* =========================================================
-   END ENROLLMENT STYLESHEET
-========================================================= */
