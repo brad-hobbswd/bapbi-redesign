@@ -764,47 +764,37 @@
   <!-- =====================================================
      FORM SUBMISSION
 ===================================================== -->
-  <iframe name="enrollment-submit-frame" id="enrollment-submit-frame" title="Enrollment submission" hidden></iframe>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.querySelector(".enrollment-form");
 
-      if (!form) return;
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-      form.target = "enrollment-submit-frame";
+    const form = document.querySelector(".enrollment-form");
 
-      form.addEventListener("submit", function (event) {
-        if (form.dataset.submitting === "true") {
-          event.preventDefault();
-          return;
-        }
+    if (!form) {
+        return;
+    }
 
-        form.dataset.submitting = "true";
+    form.addEventListener("submit", function (event) {
 
-        const submitButton = form.querySelector('button[type="submit"]');
+        event.preventDefault();
 
-        if (submitButton) {
-          submitButton.disabled = true;
-          submitButton.textContent = "Submitting Application...";
-        }
+        const formData = new FormData(form);
 
-        let statusMessage = form.querySelector(".form-status");
-
-        if (!statusMessage) {
-          statusMessage = document.createElement("p");
-          statusMessage.className = "form-status";
-          statusMessage.setAttribute("role", "status");
-          form.appendChild(statusMessage);
-        }
-
-        statusMessage.textContent =
-          "Your application is being submitted. Please wait...";
+        fetch(form.action, {
+            method: "POST",
+            mode: "no-cors",
+            body: formData
+        });
 
         setTimeout(function () {
-          window.location.href = "thank-you.html";
-        }, 1500);
-      });
+            window.location.href = "thank-you.html";
+        }, 1000);
+
     });
-  </script>
-  <script defer src="js/main.js?v=20260912-enrollment"></script>
->
+
+});
+</script>
+
+<script defer src="js/main.js?v=20260912-enrollment"></script>
+</body>
+</html>
