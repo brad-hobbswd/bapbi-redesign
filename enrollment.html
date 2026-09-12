@@ -350,7 +350,7 @@
                     as needed before final enrollment confirmation.
        </p>
       </div>
-      <form action="https://docs.google.com/forms/d/e/1FAIpQLSdhTVnBqgugFXN6K8W9XS4MP1AmtkK_IcDzwUiWsahAytSn5w/formResponse" class="enrollment-form" id="enrollment-form" method="POST" target="_blank">
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSdhTVnBqgugFXN6K8W9XS4MP1AmtkK_IcDzwUiWsahAytSn5w/formResponse" class="enrollment-form" id="enrollment-form" method="POST">
        <fieldset>
         <legend>
          Student Information
@@ -761,9 +761,48 @@
     </p>
    </div>
   </footer>
+
   <!-- =====================================================
-     FORM SUBMISSION
-===================================================== -->
+       FORM SUBMISSION
+  ===================================================== -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("enrollment-form");
+
+      if (!form) {
+          return;
+      }
+
+      form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (form.dataset.submitting === "true") {
+              return;
+          }
+
+          form.dataset.submitting = "true";
+
+          const submitButton = form.querySelector('button[type="submit"]');
+
+          if (submitButton) {
+              submitButton.disabled = true;
+              submitButton.textContent = "Submitting Application...";
+          }
+
+          const formData = new FormData(form);
+
+          fetch(form.action, {
+              method: "POST",
+              mode: "no-cors",
+              body: formData
+          });
+
+          setTimeout(function () {
+              window.location.href = "thank-you.html";
+          }, 1000);
+      });
+  });
+  </script>
 
 </body>
 </html>
