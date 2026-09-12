@@ -1,0 +1,60 @@
+/* =========================================================
+   BAPBI WEBMASTER PAGE
+   Uses css/styles.css as the master theme.
+========================================================= */
+
+.webmaster-page main { margin: 0; }
+.webmaster-page .content-container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+.webmaster-page .section-eyebrow { display:block; margin-bottom:18px; color:var(--gold); font-family:Inter,sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; }
+.webmaster-page h1,.webmaster-page h2,.webmaster-page h3 { font-family:"Cormorant Garamond",serif; }
+.webmaster-page h1 { margin:0; color:var(--white); font-size:clamp(3rem,6vw,5.5rem); line-height:.95; }
+.webmaster-page h2 { margin:0 0 24px; font-size:clamp(2.1rem,4vw,3.4rem); line-height:1.05; }
+.webmaster-page p { line-height:1.8; }
+.webmaster-introduction { padding:100px 0 90px; background:var(--espresso); color:var(--ivory); }
+.webmaster-introduction .intro-lead { max-width:760px; margin:30px 0 0; color:rgba(247,240,230,.78); font-size:1.12rem; }
+.webmaster-profile-section { padding:110px 0; background:var(--ivory); color:var(--espresso); }
+.webmaster-profile-grid { display:grid; grid-template-columns:minmax(280px,390px) 1fr; gap:76px; align-items:start; }
+.webmaster-photo { display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border:1px solid rgba(16,27,43,.16); }
+.webmaster-identity { padding:28px 0 0; }
+.webmaster-identity h2 { margin-bottom:8px; }
+.webmaster-identity p { margin:5px 0; color:rgba(16,27,43,.72); }
+.webmaster-identity .webmaster-title { color:var(--gold-dark,var(--gold)); font-weight:700; text-transform:uppercase; letter-spacing:.12em; font-size:.78rem; }
+.webmaster-identity .webmaster-role { margin-top:18px; font-size:.78rem; text-transform:uppercase; letter-spacing:.14em; color:var(--gold-dark,var(--gold)); }
+.webmaster-profile-copy { max-width:720px; }
+.webmaster-profile-copy h2 { color:var(--espresso); }
+.webmaster-profile-copy p,.webmaster-light-section p,.webmaster-contact-section p { color:rgba(16,27,43,.78); }
+.webmaster-light-section { padding:105px 0; background:#fffaf3; color:var(--espresso); }
+.webmaster-two-column { display:grid; grid-template-columns:1fr 1fr; gap:76px; }
+.webmaster-two-column article { max-width:540px; }
+.webmaster-dark-section { padding:105px 0; background:var(--espresso); color:var(--ivory); }
+.webmaster-dark-section h2,.webmaster-dark-section p { color:var(--ivory); }
+.webmaster-dark-section p { color:rgba(247,240,230,.78); }
+.webmaster-copy-narrow { max-width:850px; }
+.webmaster-projects-section { padding:105px 0; background:var(--ivory); color:var(--espresso); }
+.webmaster-projects-section .section-lead { max-width:800px; color:rgba(16,27,43,.72); }
+.webmaster-project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:45px; }
+.webmaster-project-card { display:block; padding:34px; background:#fff; border:1px solid rgba(16,27,43,.12); color:var(--espresso); text-decoration:none; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.webmaster-project-card:hover,.webmaster-project-card:focus-visible { transform:translateY(-5px); border-color:var(--gold); box-shadow:0 18px 40px rgba(16,27,43,.10); }
+.webmaster-project-card > span { color:var(--gold-dark,var(--gold)); font-family:Inter,sans-serif; font-size:.75rem; font-weight:700; letter-spacing:.14em; }
+.webmaster-project-card h3 { margin:22px 0 10px; font-size:1.8rem; line-height:1.1; }
+.webmaster-project-card strong { color:var(--gold-dark,var(--gold)); font-size:.78rem; letter-spacing:.13em; text-transform:uppercase; }
+.webmaster-project-card p { color:rgba(16,27,43,.72); }
+.webmaster-testimony-section { padding:105px 0; background:var(--navy,#101b2b); color:var(--ivory); }
+.webmaster-testimony-section h2,.webmaster-testimony-section p { color:var(--ivory); }
+.webmaster-testimony-section p { color:rgba(247,240,230,.80); }
+.webmaster-timeline { list-style:none; margin:35px 0 0; padding:0; border-left:1px solid rgba(200,164,93,.65); }
+.webmaster-timeline li { position:relative; padding:0 0 30px 34px; }
+.webmaster-timeline li::before { content:""; position:absolute; left:-6px; top:5px; width:11px; height:11px; border-radius:50%; background:var(--gold); }
+.webmaster-timeline strong { color:var(--gold-dark,var(--gold)); font-family:Inter,sans-serif; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; }
+.webmaster-timeline p { margin:8px 0 0; }
+.webmaster-scripture-section { padding:105px 0; background:#fffaf3; color:var(--espresso); }
+.webmaster-scripture-section blockquote { margin:35px 0 0; padding:32px 0 32px 30px; border-left:3px solid var(--gold); }
+.webmaster-scripture-section blockquote p { margin:0 0 18px; font-family:"Cormorant Garamond",serif; font-size:clamp(1.5rem,2.5vw,2.1rem); line-height:1.35; color:var(--espresso); }
+.webmaster-scripture-section blockquote footer { color:var(--gold-dark,var(--gold)); font-family:Inter,sans-serif; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; }
+.webmaster-scripture-section .scripture-note { color:rgba(16,27,43,.7); }
+.webmaster-contact-section { padding:105px 0; background:var(--espresso); color:var(--ivory); }
+.webmaster-contact-section h2,.webmaster-contact-section p { color:var(--ivory); }
+.webmaster-contact-section p { color:rgba(247,240,230,.78); }
+.webmaster-contact-section .button { margin-top:18px; }
+@media (max-width:900px) { .webmaster-profile-grid,.webmaster-two-column { grid-template-columns:1fr; gap:45px; } .webmaster-profile-copy,.webmaster-two-column article,.webmaster-copy-narrow { max-width:none; } }
+@media (max-width:650px) { .webmaster-page .content-container { width:min(100% - 34px,1180px); } .webmaster-introduction,.webmaster-profile-section,.webmaster-light-section,.webmaster-dark-section,.webmaster-projects-section,.webmaster-testimony-section,.webmaster-scripture-section,.webmaster-contact-section { padding:72px 0; } .webmaster-project-grid { grid-template-columns:1fr; } .webmaster-project-card { padding:26px; } }
