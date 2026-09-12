@@ -1,15 +1,31 @@
 /* =========================================================
    FALL STUDY GUIDES
-   Uses the current BAPBI master theme
+   Page-specific styles for the current BAPBI theme
 ========================================================= */
 
+.fall-study-guides-page main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .fall-study-guides-section {
+    width: 100%;
+    margin: 0;
     padding: 96px 0 110px;
     background: var(--ivory, #f7f0e6);
 }
 
+.fall-study-guides-section > .content-container {
+    width: min(1120px, calc(100% - 48px));
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .fall-study-guides-section .section-heading {
-    max-width: 760px;
+    width: 100%;
+    max-width: 780px;
     margin: 0 auto 24px;
     text-align: center;
 }
@@ -21,17 +37,20 @@
     font-size: .78rem;
     font-weight: 700;
     letter-spacing: .18em;
+    text-align: center;
 }
 
 .fall-study-guides-section h1 {
     margin: 0;
     color: var(--espresso, #271c16);
+    text-align: center;
 }
 
 .fall-study-guides-section .section-lead {
-    max-width: 720px;
+    display: block;
+    width: min(720px, 100%);
     margin: 18px auto 42px;
-    color: var(--dark-muted, #766960);
+    color: #766960;
     font-size: 1.08rem;
     line-height: 1.8;
     text-align: center;
@@ -45,27 +64,31 @@
     font-size: .75rem;
     font-weight: 700;
     letter-spacing: .08em;
+    line-height: 1.2;
     text-transform: uppercase;
 }
 
 .study-status-live {
     background: #287a46;
-    color: #fff;
+    color: #ffffff;
 }
 
 .fall-study-guides-grid {
     display: grid;
-    grid-template-columns: minmax(0, 560px);
-    justify-content: center;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 38px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 28px;
-    margin-bottom: 38px;
 }
 
 .fall-study-guide-card {
+    width: 100%;
+    box-sizing: border-box;
     padding: 38px;
     border: 1px solid rgba(39, 28, 22, .12);
     border-radius: 12px;
-    background: #fff;
+    background: #ffffff;
     box-shadow: 0 16px 36px rgba(39, 28, 22, .09);
     text-align: center;
 }
@@ -86,7 +109,8 @@
 
 .fall-study-guide-card h2 {
     margin: 0 0 16px;
-    color: #fff;
+    color: #ffffff;
+    font-family: "Cinzel", serif;
 }
 
 .fall-study-guide-card p {
@@ -105,6 +129,15 @@
 }
 
 @media (max-width: 640px) {
-    .fall-study-guides-section { padding: 70px 0 80px; }
-    .fall-study-guide-card { padding: 28px 22px; }
+    .fall-study-guides-section {
+        padding: 70px 0 80px;
+    }
+
+    .fall-study-guides-section > .content-container {
+        width: calc(100% - 32px);
+    }
+
+    .fall-study-guide-card {
+        padding: 28px 22px;
+    }
 }
