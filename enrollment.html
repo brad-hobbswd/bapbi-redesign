@@ -765,51 +765,48 @@
      FORM SUBMISSION
 ===================================================== -->
   <script>
-   const enrollmentForm =
-    document.querySelector(".enrollment-form");
+    document
+      .querySelector(".enrollment-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
 
+        const form = this;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const formData = new FormData(form);
 
-if (enrollmentForm) {
-
-    enrollmentForm.addEventListener(
-        "submit",
-        function(event) {
-
-            event.preventDefault();
-
-
-            const form = this;
-
-            const formData =
-                new FormData(form);
-
-
-            fetch(
-                form.action,
-                {
-                    method: "POST",
-                    mode: "no-cors",
-                    body: formData
-                }
-            );
-
-
-            setTimeout(
-                function() {
-
-                    window.location.href =
-                        "thank-you.html";
-
-                },
-                1000
-            );
-
+        if (form.dataset.submitting === "true") {
+          return;
         }
-    );
 
-}
+        form.dataset.submitting = "true";
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = "Submitting Application...";
+        }
+
+        let statusMessage = form.querySelector(".form-status");
+
+        if (!statusMessage) {
+          statusMessage = document.createElement("p");
+          statusMessage.className = "form-status";
+          statusMessage.setAttribute("role", "status");
+          form.appendChild(statusMessage);
+        }
+
+        statusMessage.textContent =
+          "Your application is being submitted. Please wait...";
+
+        fetch(form.action, {
+          method: "POST",
+          mode: "no-cors",
+          body: formData
+        });
+
+        setTimeout(function () {
+          window.location.href = "thank-you.html";
+        }, 1000);
+      });
   </script>
-  <script defer="True" src="js/main.js?v=20260912-enrollment">
-  </script>
- </body>
-</html>
+  <script defer src="js/main.js?v=20260912-enrollment"></script>
+>
