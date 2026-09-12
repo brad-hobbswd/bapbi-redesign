@@ -13,7 +13,7 @@
   <!-- BAPBI Master Theme -->
   <link href="css/styles.css" rel="stylesheet">
    <!-- Contact Page Styles -->
-   <link href="css/contact.css?v=20260912-contact-2" rel="stylesheet">
+   <link href="css/contact.css?v=20260912-contact-3" rel="stylesheet">
    
   
  </head>
@@ -212,7 +212,7 @@
        We Would Be Glad to Hear From You
       </h2>
       <p>
-       Use the form here to your right, to send a message to BAPBI. Please provide accurate contact information so a response can be sent.
+       Use the form below to send a message to BAPBI. Please provide accurate contact information so a response can be sent.
       </p>
       <div class="contact-address-inline">
        <span class="contact-address-label">
@@ -227,8 +227,7 @@
       <form
             action="https://docs.google.com/forms/d/e/1FAIpQLSe3NdMpWjIyQa0EoHc4YW2k39IDhd9eIxKr_hfxDpVX8oFepA/formResponse"
             class="bapbi-contact-form"
-            method="POST"
-            target="_blank">
+            method="POST">
 
             <div class="form-field">
                 <label for="name">Name</label>
@@ -256,6 +255,8 @@
                     rows="7"
                     required></textarea>
             </div>
+
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 
             <button class="button button-gold" type="submit">
                 Send Message
@@ -365,5 +366,38 @@
     </p>
    </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".bapbi-contact-form");
+      const status = document.getElementById("form-status");
+      const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+
+      if (!form) return;
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        status.textContent = "Sending your message...";
+        status.classList.remove("form-status-error");
+        submitButton.disabled = true;
+
+        try {
+          await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            mode: "no-cors"
+          });
+
+          window.location.href = "thank-you.html";
+        } catch (error) {
+          status.textContent = "We were unable to send your message. Please try again.";
+          status.classList.add("form-status-error");
+          submitButton.disabled = false;
+        }
+      });
+    });
+  </script>
+
  </body>
 </html>
