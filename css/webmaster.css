@@ -28,6 +28,8 @@
 .webmaster-light-section { padding:105px 0; background:#fffaf3; color:var(--espresso); }
 .webmaster-two-column { display:grid; grid-template-columns:1fr 1fr; gap:76px; }
 .webmaster-two-column article { max-width:540px; }
+.webmaster-two-column article p { margin:0 0 1.35rem; }
+.webmaster-two-column article p:last-child { margin-bottom:0; }
 .webmaster-dark-section { padding:105px 0; background:var(--espresso); color:var(--ivory); }
 .webmaster-dark-section h2,.webmaster-dark-section p { color:var(--ivory); }
 .webmaster-dark-section p { color:rgba(247,240,230,.78); }
