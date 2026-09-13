@@ -124,7 +124,10 @@
 }
 
 .connect-page .facebook-feed-card {
+    display: flex;
+    flex-direction: column;
     width: min(100%, 405px);
+    height: 600px;
     margin-inline: auto;
     overflow: hidden;
     background: #ffffff;
@@ -132,10 +135,20 @@
 }
 
 .connect-page .facebook-feed {
+    flex: 1 1 auto;
+    min-height: 0;
     padding: 0.5rem;
 }
 
+.connect-page .facebook-feed .fb-page,
+.connect-page .facebook-feed .fb-page > span,
+.connect-page .facebook-feed .fb-page iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
 .connect-page .feed-header {
+    flex: 0 0 auto;
     padding: 0.25rem 0.75rem 0.75rem;
     color: #2d1a0c;
     font-family: "Inter", Arial, sans-serif;
@@ -310,6 +323,7 @@
 
     .connect-page .facebook-feed-card {
         width: min(100%, 405px);
+        height: 600px;
         margin-inline: auto;
     }
 
