@@ -135,6 +135,41 @@
     padding: 0.5rem;
 }
 
+.connect-page .feed-header {
+    padding: 0.25rem 0.75rem 0.75rem;
+    color: #2d1a0c;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.connect-page .feed-label {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: #a66b16;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.connect-page .feed-header h3 {
+    margin: 0 0 0.35rem;
+    color: #2d1a0c;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.connect-page .service-time {
+    display: block;
+    color: #756b63;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
 .connect-page .connect-button {
     display: inline-flex;
     align-items: center;
