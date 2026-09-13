@@ -209,6 +209,74 @@
     background: rgba(200, 164, 93, 0.55);
 }
 
+.connect-page .service-section {
+    grid-column: 1 / -1;
+    padding: 3.5rem 0 4rem;
+    background: var(--ivory, #f7f0e6);
+}
+
+.connect-page .service-section .content-container {
+    width: min(calc(100% - 2rem), 1100px);
+    margin-inline: auto;
+}
+
+.connect-page .service-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    padding: 2.5rem 3rem;
+    background: #eee4d3;
+    border-top: 1px solid rgba(200, 164, 93, 0.65);
+    border-bottom: 1px solid rgba(200, 164, 93, 0.65);
+}
+
+.connect-page .service-content {
+    min-width: 0;
+}
+
+.connect-page .service-content h2 {
+    margin: 0 0 0.75rem;
+    color: #2d1a0c;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.connect-page .service-content > p:not(.eyebrow):not(.service-caption) {
+    margin: 0;
+    color: #756b63;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.connect-page .service-countdown {
+    margin: 1rem 0 0;
+    color: #a66b16;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.connect-page .service-caption {
+    margin: 0.35rem 0 0;
+    color: #756b63;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.connect-page .service-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
 @media (max-width: 900px) {
     .connect-page main {
         display: block;
@@ -247,5 +315,23 @@
 
     .connect-page .tabernacle-section::before {
         display: none;
+    }
+
+    .connect-page .service-section {
+        padding: 2.5rem 0 3rem;
+    }
+
+    .connect-page .service-card {
+        display: block;
+        padding: 2rem 1.25rem;
+    }
+
+    .connect-page .service-content h2 {
+        font-size: clamp(2rem, 8vw, 2.6rem);
+    }
+
+    .connect-page .service-actions {
+        justify-content: flex-start;
+        margin-top: 1.5rem;
     }
 }
