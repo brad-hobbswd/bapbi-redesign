@@ -405,3 +405,177 @@
         gap: 14px 18px;
     }
 }
+
+/* =========================================================
+   ADDITIONAL MOBILE HARDENING
+   ========================================================= */
+
+.curriculum-area-content,
+.progression-panel,
+.study-list > div {
+    box-sizing: border-box;
+}
+
+.curriculum-area h3,
+.study-list h4,
+.progression-panel h2,
+.purpose-panel h2 {
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SMALLER DEVICES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .page-intro {
+        padding: 68px 0 60px;
+    }
+
+    .page-intro h1 {
+        font-size: clamp(2.4rem, 12vw, 3.8rem);
+        line-height: 1.05;
+    }
+
+    .intro-lead {
+        font-size: clamp(1.25rem, 5vw, 1.55rem);
+        line-height: 1.3;
+    }
+
+    .intro-support {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .content-section {
+        padding: 68px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(1.8rem, 8.5vw, 2.6rem);
+        line-height: 1.15;
+    }
+
+    .section-lead {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .curriculum-number {
+        padding: 15px 20px;
+        font-size: 1.05rem;
+    }
+
+    .curriculum-area-content {
+        padding: 26px 20px 30px;
+    }
+
+    .curriculum-area h3 {
+        font-size: clamp(1.4rem, 6vw, 1.85rem);
+        line-height: 1.2;
+    }
+
+    .curriculum-area-content > p:not(.area-label) {
+        font-size: 0.94rem;
+        line-height: 1.75;
+    }
+
+    .study-list {
+        gap: 22px;
+        margin-top: 26px;
+        padding-top: 22px;
+    }
+
+    .study-list > div {
+        padding-left: 15px;
+    }
+
+    .study-list h4 {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    .study-list p {
+        font-size: 0.85rem;
+        line-height: 1.65;
+    }
+
+    .progression-section {
+        padding: 68px 0;
+    }
+
+    .progression-panel {
+        width: 100%;
+        padding: 34px 22px;
+    }
+
+    .progression-panel h2 {
+        font-size: clamp(1.75rem, 8vw, 2.65rem);
+        line-height: 1.2;
+    }
+
+    .progression-panel p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .purpose-section {
+        padding: 70px 0;
+    }
+
+    .purpose-panel h2 {
+        font-size: clamp(2rem, 9vw, 3.2rem);
+        line-height: 1.12;
+    }
+
+    .purpose-panel .purpose-statement {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .page-intro {
+        padding: 58px 0 52px;
+    }
+
+    .content-section,
+    .progression-section,
+    .purpose-section {
+        padding: 58px 0;
+    }
+
+    .curriculum-area-content {
+        padding: 24px 17px 28px;
+    }
+
+    .progression-panel {
+        padding: 30px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.85rem;
+    }
+
+    .progression-panel h2 {
+        font-size: 1.85rem;
+    }
+
+    .purpose-panel h2 {
+        font-size: 2.25rem;
+    }
+
+}
