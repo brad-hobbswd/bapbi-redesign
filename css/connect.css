@@ -191,6 +191,28 @@
     max-width: 100%;
 }
 
+/* =========================================================
+   FACEBOOK EMBED MOBILE PROTECTION
+========================================================= */
+
+.connect-page .facebook-feed-card,
+.connect-page .facebook-feed,
+.connect-page .fb-page,
+.connect-page .fb-page > span,
+.connect-page .fb-page iframe {
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+.connect-page .facebook-feed {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+.connect-page .fb-page {
+    width: 100% !important;
+}
 
 /*========================================================
     TABERNACLE SECTION
@@ -417,21 +439,28 @@
     }
 
     .connect-page .page-intro h1 {
-        font-size: 3.2rem;
+        font-size: clamp(2.5rem, 11vw, 3.2rem);
+        line-height: 1;
     }
 
     .connect-page .page-intro-text {
         font-size: 1rem;
+        line-height: 1.7;
     }
 
     .connect-page .section-heading h2 {
-        font-size: 2.6rem;
+        font-size: clamp(2.1rem, 9vw, 2.6rem);
+        line-height: 1.08;
     }
 
     .connect-page .facebook-section,
     .connect-page .tabernacle-section,
     .connect-page .service-section {
         padding: 4rem 0;
+    }
+
+    .connect-page .facebook-feed-card {
+        width: 100%;
     }
 
     .connect-page .facebook-feed {
@@ -454,7 +483,8 @@
     }
 
     .connect-page .service-content h2 {
-        font-size: 2.5rem;
+        font-size: clamp(2.1rem, 9vw, 2.5rem);
+        line-height: 1.08;
     }
 
     .connect-page .service-actions {
