@@ -256,23 +256,102 @@
     }
 }
 
+/* =========================================================
+   CONTACT PAGE MOBILE IMPROVEMENTS
+========================================================= */
+
 @media (max-width: 640px) {
+
     .contact-introduction-section,
     .contact-form-section {
-        padding: 68px 0;
+        padding: 56px 0;
     }
 
-    .contact-form-card {
-        padding: 24px 18px;
+    .contact-intro-grid,
+    .contact-form-grid {
+        gap: 30px;
+    }
+
+    .contact-intro-content h1 {
+        font-size: clamp(2.6rem, 13vw, 3.5rem);
+        line-height: 1;
+    }
+
+    .contact-intro-content p,
+    .contact-section-heading > p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .contact-intro-content .contact-intro-lead {
+        font-size: 1.12rem;
+        line-height: 1.65;
     }
 
     .contact-information-panel {
-        padding: 30px 24px;
+        width: 100%;
+        padding: 28px 20px;
+        box-sizing: border-box;
     }
 
     .contact-information-panel > a {
-        font-size: 1.9rem;
+        font-size: clamp(1.75rem, 8vw, 2.2rem);
+        overflow-wrap: anywhere;
     }
+
+    .contact-address-inline {
+        margin-top: 24px;
+        padding-top: 20px;
+    }
+
+    .contact-address-inline p {
+        font-size: 1rem;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-form-card {
+        width: 100%;
+        padding: 24px 16px;
+        box-sizing: border-box;
+    }
+
+    .bapbi-contact-form {
+        gap: 20px;
+    }
+
+    .form-field input,
+    .form-field textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    .form-field textarea {
+        min-height: 150px;
+    }
+
+    .button.button-gold {
+        width: 100%;
+        min-height: 52px;
+        padding: 14px 18px;
+    }
+
+    .form-note {
+        font-size: 0.82rem;
+    }
+
+    .google-form-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .google-form-wrapper iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+
 }
 
 
