@@ -22,6 +22,8 @@
 .webmaster-identity .webmaster-role { margin-top:18px; font-size:.78rem; text-transform:uppercase; letter-spacing:.14em; color:var(--gold-dark,var(--gold)); }
 .webmaster-profile-copy { max-width:720px; }
 .webmaster-profile-copy h2 { color:var(--espresso); }
+.webmaster-profile-copy p { margin:0 0 1.35rem; }
+.webmaster-profile-copy p:last-child { margin-bottom:0; }
 .webmaster-profile-copy p,.webmaster-light-section p,.webmaster-contact-section p { color:rgba(16,27,43,.78); }
 .webmaster-light-section { padding:105px 0; background:#fffaf3; color:var(--espresso); }
 .webmaster-two-column { display:grid; grid-template-columns:1fr 1fr; gap:76px; }
