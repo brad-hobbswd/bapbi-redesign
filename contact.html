@@ -398,6 +398,43 @@
       });
     });
   </script>
+  
+  <script src="js/main.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".bapbi-contact-form");
+    const status = document.getElementById("form-status");
+    const submitButton = form
+      ? form.querySelector('button[type="submit"]')
+      : null;
+
+    if (!form) return;
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      status.textContent = "Sending your message...";
+      status.classList.remove("form-status-error");
+      submitButton.disabled = true;
+
+      try {
+        await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          mode: "no-cors"
+        });
+
+        window.location.href = "thank-you.html";
+      } catch (error) {
+        status.textContent =
+          "We were unable to send your message. Please try again.";
+        status.classList.add("form-status-error");
+        submitButton.disabled = false;
+      }
+    });
+  });
+</script>
 
  </body>
 </html>
