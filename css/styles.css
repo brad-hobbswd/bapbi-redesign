@@ -76,7 +76,7 @@ body {
 
     color: var(--text-light);
 
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
 
     line-height: 1.7;
 
