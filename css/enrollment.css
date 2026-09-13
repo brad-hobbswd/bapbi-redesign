@@ -581,3 +581,217 @@
     cursor: wait;
     opacity: .72;
 }
+
+/* =========================================================
+   ADDITIONAL MOBILE HARDENING
+   ========================================================= */
+
+/* Prevent padding and borders from creating horizontal overflow. */
+
+.application-card,
+.deadline-card,
+.process-card,
+.class-card,
+.information-card,
+.support-card,
+.accreditation-card,
+.enrollment-form fieldset,
+.enrollment-form input,
+.enrollment-form select,
+.enrollment-form textarea {
+    box-sizing: border-box;
+}
+
+
+/* Allow long headings and email-style text to wrap safely. */
+
+.page-intro h1,
+.overview-copy h2,
+.section-heading h2,
+.application-heading h2,
+.process-card h3,
+.class-card h3,
+.information-card h3,
+.support-card h3,
+.accreditation-card h2,
+.final-callout h2,
+.deadline-date,
+.enrollment-form legend,
+.information-card p,
+.support-card p {
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   MOBILE FORM IMPROVEMENTS
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .page-intro,
+    .enrollment-overview,
+    .process-section,
+    .application-section,
+    .class-section,
+    .communication-section,
+    .accreditation-section,
+    .support-section,
+    .final-callout {
+        padding: 60px 0;
+    }
+
+    .page-intro h1 {
+        font-size: clamp(2.25rem, 11vw, 3.35rem);
+        line-height: 1.08;
+    }
+
+    .page-intro p {
+        font-size: 0.98rem;
+        line-height: 1.75;
+    }
+
+    .overview-copy h2,
+    .section-heading h2,
+    .application-heading h2,
+    .accreditation-card h2 {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.12;
+    }
+
+    .overview-copy p,
+    .section-heading p,
+    .application-heading p,
+    .class-card p,
+    .information-card p,
+    .support-card p,
+    .accreditation-card p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .deadline-card {
+        padding: 30px 24px;
+    }
+
+    .deadline-date {
+        font-size: clamp(1.75rem, 8vw, 2.2rem);
+        line-height: 1.15;
+    }
+
+    .process-card,
+    .class-card,
+    .information-card,
+    .support-card {
+        padding: 28px 24px;
+    }
+
+    .process-card h3,
+    .class-card h3,
+    .information-card h3,
+    .support-card h3 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+
+    .application-card {
+        width: 100%;
+        padding: 24px 18px;
+    }
+
+    .enrollment-form fieldset {
+        width: 100%;
+        padding: 22px 16px;
+    }
+
+    .enrollment-form legend {
+        max-width: 100%;
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+    .enrollment-form input[type="text"],
+    .enrollment-form input[type="email"],
+    .enrollment-form select,
+    .enrollment-form textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    .checkbox-row {
+        grid-template-columns: 20px minmax(0, 1fr);
+        gap: 10px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .checkbox-row input {
+        width: 17px;
+        height: 17px;
+    }
+
+    .submit-button {
+        width: 100%;
+        min-height: 52px;
+        padding: 14px 18px;
+        line-height: 1.35;
+    }
+
+    .accreditation-card {
+        width: 100%;
+        padding: 30px 22px;
+    }
+
+    .final-callout h2 {
+        font-size: clamp(2.15rem, 9vw, 3.2rem);
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .page-intro,
+    .enrollment-overview,
+    .process-section,
+    .application-section,
+    .class-section,
+    .communication-section,
+    .accreditation-section,
+    .support-section,
+    .final-callout {
+        padding: 52px 0;
+    }
+
+    .application-card {
+        padding: 22px 15px;
+    }
+
+    .enrollment-form fieldset {
+        padding: 20px 14px;
+    }
+
+    .deadline-card,
+    .process-card,
+    .class-card,
+    .information-card,
+    .support-card {
+        padding: 26px 20px;
+    }
+
+    .enrollment-form legend {
+        font-size: 1.3rem;
+    }
+
+    .submit-button {
+        font-size: 0.72rem;
+    }
+
+}
