@@ -11,13 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
     const mobileMenuButton =
-        document.getElementById("mobileMenuButton");
+        document.getElementById("mobileMenuButton") ||
+        document.querySelector(".mobile-menu-button");
 
     const mobileNavigation =
-        document.getElementById("mobileNavigation");
+        document.getElementById("mobileNavigation") ||
+        document.querySelector(".mobile-navigation");
 
     const mobileMenuClose =
-        document.getElementById("mobileMenuClose");
+        document.getElementById("mobileMenuClose") ||
+        document.querySelector(".mobile-nav-close");
 
 
     /* -----------------------------------------------------
