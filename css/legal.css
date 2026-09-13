@@ -1,347 +1,231 @@
 /* =========================================================
    LEGAL PAGES
-   Shared styling for privacy, terms, copyright, and 404 pages
-========================================================= */
-
-
-/* =========================================================
-   LEGAL PAGE
+   Shared styling for privacy, terms, copyright, and 404
 ========================================================= */
 
 .legal-page {
-
-    padding: 110px 0;
-    background: var(--ivory, #f7f0e6);
+    position: relative;
+    padding: 120px 0 110px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(16, 7, 5, 0.98) 0%,
+            rgba(39, 28, 22, 0.96) 30%,
+            var(--ivory, #f7f0e6) 30%,
+            var(--ivory, #f7f0e6) 100%
+        );
     color: #271c16;
-
 }
-
 
 .legal-shell {
-
     width: min(calc(100% - 48px), 920px);
     margin: 0 auto;
-
 }
 
-
-/* =========================================================
-   LEGAL PAGE HEADER
-========================================================= */
-
 .legal-kicker {
-
+    display: inline-block;
     margin-bottom: 18px;
-
-    color: var(--gold-dark, #a77a22);
+    color: var(--gold-light, #e8c56a);
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.2em;
     line-height: 1.5;
     text-transform: uppercase;
-
 }
 
+.legal-kicker::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 2px;
+    margin-top: 14px;
+    background: var(--gold-dark, #a77a22);
+}
 
 .legal-page h1 {
-
-    margin: 0 0 24px;
-
-    color: #271c16;
-
+    max-width: 850px;
+    margin: 22px 0 20px;
+    color: #ffffff;
     font-family: "Cinzel", serif;
-    font-size: clamp(2.5rem, 5vw, 4.6rem);
+    font-size: clamp(2.35rem, 5vw, 4.6rem);
     font-weight: 600;
+    letter-spacing: 0.01em;
     line-height: 1.08;
-
 }
-
 
 .legal-intro {
-
-    max-width: 760px;
-    margin: 0 0 48px;
-
-    color: #6d6058;
-    font-size: 1.05rem;
-    line-height: 1.8;
-
+    max-width: 700px;
+    margin: 0 0 76px;
+    color: #e9e0d5;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    line-height: 1.55;
 }
-
-
-/* =========================================================
-   LEGAL CONTENT CARD
-========================================================= */
 
 .legal-card {
-
+    position: relative;
     padding: clamp(28px, 5vw, 58px);
-
     background: #fffdf9;
     border: 1px solid var(--border-light, #e5d8c8);
-
-    box-shadow: 0 18px 45px rgba(38, 20, 8, 0.08);
-
+    border-top: 3px solid var(--gold-dark, #a77a22);
+    box-shadow: 0 22px 55px rgba(38, 20, 8, 0.12);
 }
 
-
-/* =========================================================
-   LEGAL HEADINGS
-========================================================= */
-
 .legal-card h2 {
-
     margin: 38px 0 14px;
-
     color: var(--bronze, #8d5f2a);
-
     font-family: "Cinzel", serif;
     font-size: 1.35rem;
     font-weight: 600;
     line-height: 1.3;
-
 }
-
 
 .legal-card h2:first-child {
-
     margin-top: 0;
-
 }
-
-
-/* =========================================================
-   LEGAL TEXT
-========================================================= */
 
 .legal-card p,
 .legal-card li {
-
     color: #6d6058;
     font-size: 1rem;
     line-height: 1.8;
-
 }
-
 
 .legal-card p {
-
     margin: 0 0 16px;
-
 }
-
-
-/* =========================================================
-   LEGAL LISTS
-========================================================= */
 
 .legal-card ul {
-
     margin: 0 0 22px 24px;
     padding: 0;
-
 }
-
 
 .legal-card li {
-
     margin-bottom: 10px;
-
 }
 
-
-/* =========================================================
-   LEGAL LINKS
-========================================================= */
-
 .legal-card a {
-
     color: var(--gold-dark, #a77a22);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-
 }
-
 
 .legal-card a:hover,
 .legal-card a:focus-visible {
-
     color: var(--bronze, #8d5f2a);
-
 }
-
-
-/* =========================================================
-   LAST UPDATED TEXT
-========================================================= */
 
 .legal-updated {
-
     margin-top: 38px !important;
     padding-top: 24px;
-
     border-top: 1px solid var(--border-light, #e5d8c8);
-
     color: #6d6058;
     font-size: 0.9rem !important;
-
 }
-
-
-/* =========================================================
-   LEGAL PAGE SITE HEADER
-   Keeps the shared navigation visually consistent
-========================================================= */
 
 .legal-page ~ .site-footer {
     margin-top: 0;
 }
 
-
-/* =========================================================
-   LEGAL PAGE SITE FOOTER
-========================================================= */
-
 .site-footer {
-
     background: #100705;
     border-top: 1px solid rgba(213, 163, 47, 0.18);
     color: #e9e0d5;
-
 }
 
-
 .site-footer .footer-grid {
-
     display: grid;
     grid-template-columns: 1.1fr 1fr 1fr;
     gap: 55px;
     align-items: start;
     padding-top: 55px;
     padding-bottom: 45px;
-
 }
 
-
 .site-footer .footer-brand {
-
     display: flex;
     align-items: center;
     gap: 16px;
     color: inherit;
     text-decoration: none;
-
 }
 
-
 .site-footer .footer-brand img {
-
     width: 78px;
     height: 78px;
     object-fit: contain;
-
 }
 
-
 .site-footer .footer-brand h2 {
-
     margin: 0 0 6px;
     color: var(--gold-light, #e8c56a);
     font-family: "Cinzel", serif;
     font-size: 1.5rem;
     line-height: 1.2;
-
 }
-
 
 .site-footer .footer-brand p,
 .site-footer .footer-description {
-
     color: #a99b91;
     font-size: 0.75rem;
     line-height: 1.6;
-
 }
-
 
 .site-footer .footer-description {
-
     max-width: 290px;
     margin: 20px 0 0;
-
 }
 
-
 .site-footer .footer-eyebrow {
-
     display: block;
     margin: 0 0 18px;
-
     color: var(--gold-light, #e8c56a);
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.16em;
     line-height: 1.5;
     text-transform: uppercase;
-
 }
 
-
 .site-footer .footer-quote {
-
     padding: 15px 40px;
     border-left: 1px solid rgba(213, 163, 47, 0.45);
     border-right: 1px solid rgba(213, 163, 47, 0.45);
     text-align: center;
-
 }
 
-
 .site-footer .footer-quote p {
-
     margin: 0;
     color: #eee5da;
     font-family: "Cormorant Garamond", serif;
     font-size: 1.2rem;
     font-style: italic;
     line-height: 1.6;
-
 }
 
-
 .site-footer .footer-links {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     gap: 12px 24px;
-
 }
-
 
 .site-footer .footer-links a,
 .site-footer .footer-legal a,
 .site-footer .footer-bottom a {
-
     display: inline-flex;
     align-items: center;
     min-height: 30px;
     padding: 4px 0;
-
     color: #b9aaa0;
     font-size: 0.78rem;
     font-weight: 500;
     line-height: 1.5;
     text-decoration: none;
-
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-
+    transition: color 0.2s ease, transform 0.2s ease;
 }
-
 
 .site-footer .footer-links a:hover,
 .site-footer .footer-links a:focus-visible,
@@ -349,22 +233,15 @@
 .site-footer .footer-legal a:focus-visible,
 .site-footer .footer-bottom a:hover,
 .site-footer .footer-bottom a:focus-visible {
-
     color: var(--gold-light, #e8c56a);
     transform: translateY(-1px);
-
 }
-
 
 .site-footer .footer-divider {
-
     border-top: 1px solid rgba(213, 163, 47, 0.13);
-
 }
 
-
 .site-footer .footer-bottom {
-
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -372,63 +249,42 @@
     gap: 20px 30px;
     padding-top: 25px;
     padding-bottom: 25px;
-
 }
 
-
 .site-footer .footer-bottom p {
-
     margin: 0;
     color: #82756d;
     font-size: 0.68rem;
     line-height: 1.6;
-
 }
 
-
 .site-footer .footer-legal {
-
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 8px 22px;
-
 }
 
-
 .site-footer .footer-legal a:not(:last-child)::after {
-
     content: "•";
     margin-left: 22px;
     color: var(--gold-dark, #a77a22);
     pointer-events: none;
-
 }
 
-
 .site-footer .footer-motto {
-
     color: var(--gold-dark, #a77a22) !important;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-
 }
 
-
-/* =========================================================
-   MOBILE RESPONSIVE STYLES
-========================================================= */
-
 @media (max-width: 900px) {
-
     .site-footer .footer-grid {
-
         grid-template-columns: 1fr;
         gap: 35px;
         text-align: center;
-
     }
 
     .site-footer .footer-brand {
@@ -442,13 +298,11 @@
     }
 
     .site-footer .footer-quote {
-
         padding: 25px 20px;
         border-left: none;
         border-right: none;
         border-top: 1px solid rgba(213, 163, 47, 0.45);
         border-bottom: 1px solid rgba(213, 163, 47, 0.45);
-
     }
 
     .site-footer .footer-links,
@@ -460,14 +314,20 @@
         justify-content: center;
         text-align: center;
     }
-
 }
 
-
 @media (max-width: 600px) {
-
     .legal-page {
-        padding: 75px 0;
+        padding: 75px 0 65px;
+        background:
+            linear-gradient(
+                180deg,
+                rgba(16, 7, 5, 0.98) 0%,
+                rgba(39, 28, 22, 0.96) 0%,
+                rgba(39, 28, 22, 0.96) 315px,
+                var(--ivory, #f7f0e6) 315px,
+                var(--ivory, #f7f0e6) 100%
+            );
     }
 
     .legal-shell {
@@ -478,8 +338,17 @@
         font-size: 2.5rem;
     }
 
+    .legal-intro {
+        margin-bottom: 42px;
+        font-size: 1.18rem;
+    }
+
     .legal-card {
         padding: 28px 22px;
+    }
+
+    .legal-card h2 {
+        font-size: 1.18rem;
     }
 
     .site-footer .footer-links {
@@ -507,5 +376,4 @@
     .site-footer .footer-legal a:not(:last-child)::after {
         margin-left: 18px;
     }
-
 }
