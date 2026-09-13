@@ -1,9 +1,5 @@
 /*========================================================
-
-    BAPBI CONNECT PAGE STYLESHEET
-
-    Unified connection center layout
-
+    BAPBI CONNECT PAGE
 ========================================================*/
 
 .connect-page {
@@ -11,17 +7,20 @@
 }
 
 .connect-page main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
     overflow: hidden;
 }
 
 .connect-page .content-container {
-    width: min(calc(100% - 4rem), var(--container-width, 1200px));
+    width: min(calc(100% - 3rem), 1200px);
     margin-inline: auto;
 }
 
 .connect-page .eyebrow {
     margin: 0 0 1rem;
-    color: var(--gold);
+    color: var(--gold-dark, var(--gold));
     font-family: var(--font-body, "Inter", Arial, sans-serif);
     font-size: 0.75rem;
     font-weight: 700;
@@ -35,7 +34,8 @@
 ========================================================*/
 
 .connect-page .page-intro {
-    padding: 5.5rem 0 4.5rem;
+    grid-column: 1 / -1;
+    padding: 5rem 0 4rem;
     background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
     text-align: center;
 }
@@ -62,100 +62,106 @@
 }
 
 /*========================================================
-    UNIFIED CONNECTION CENTER
+    FACEBOOK SECTIONS
 ========================================================*/
 
 .connect-page .facebook-section,
 .connect-page .tabernacle-section {
-    padding: 0;
+    grid-column: span 1;
+    min-width: 0;
+    padding: 4.5rem 0 4rem;
     background: var(--ivory);
 }
 
 .connect-page .facebook-section .content-container,
 .connect-page .tabernacle-section .content-container {
-    width: min(calc(100% - 4rem), var(--container-width, 1200px));
+    width: min(calc(100% - 3rem), 560px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.connect-page .facebook-section .section-heading,
-.connect-page .tabernacle-section .section-heading {
-    display: none;
-}
-
-.connect-page .facebook-section .content-container,
-.connect-page .tabernacle-section .content-container {
-    max-width: 1200px;
-}
-
-.connect-page .facebook-section .content-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-
-.connect-page .tabernacle-section .content-container {
+.connect-page .section-heading {
     display: block;
-    padding-bottom: 3rem;
+    min-height: 220px;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.connect-page .facebook-section .facebook-feed-card,
-.connect-page .tabernacle-section .facebook-feed-card {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    background: var(--white);
-    border: 1px solid rgba(72, 43, 20, 0.14);
-    box-shadow: 0 1rem 2.5rem rgba(45, 26, 12, 0.08);
-}
-
-.connect-page .facebook-section .facebook-feed-card::before,
-.connect-page .tabernacle-section .facebook-feed-card::before {
-    display: block;
-    padding: 1.5rem 1.75rem 1.25rem;
-    color: var(--gold-dark, var(--gold));
-    font-family: var(--font-body, "Inter", Arial, sans-serif);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
-    text-transform: uppercase;
-    border-bottom: 1px solid rgba(72, 43, 20, 0.12);
-}
-
-.connect-page .facebook-section .facebook-feed-card::after,
-.connect-page .tabernacle-section .facebook-feed-card::after {
-    display: block;
-    padding: 0 1.75rem 1.25rem;
+.connect-page .section-heading h2 {
+    margin: 0 0 1rem;
     color: var(--espresso);
     font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
-    font-size: 1.8rem;
+    font-size: clamp(2rem, 3vw, 3rem);
     font-weight: 600;
     line-height: 1.05;
 }
 
-.connect-page .facebook-section .facebook-feed-card::before {
-    content: "Official BAPBI Page";
+.connect-page .section-heading p:not(.eyebrow) {
+    max-width: 480px;
+    margin: 0 auto 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
 }
 
-.connect-page .facebook-section .facebook-feed-card::after {
-    content: "BAPBI Official Updates";
+.connect-page .section-heading .connect-button {
+    display: inline-flex;
 }
 
-.connect-page .tabernacle-section .facebook-feed-card::before {
-    content: "Spiritual Covering";
+.connect-page .facebook-feed-card {
+    width: 100%;
+    margin-top: auto;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid rgba(72, 43, 20, 0.14);
+    border-radius: 2px;
+    box-shadow: 0 1rem 2.5rem rgba(45, 26, 12, 0.08);
 }
 
-.connect-page .tabernacle-section .facebook-feed-card::after {
-    content: "Bethesda Tabernacle Live Worship";
+.connect-page .feed-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(72, 43, 20, 0.12);
+}
+
+.connect-page .feed-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--gold-dark, var(--gold));
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.connect-page .feed-header h3 {
+    margin: 0;
+    color: var(--espresso);
+    font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.connect-page .service-time {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: right;
 }
 
 .connect-page .facebook-feed {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 300px;
-    padding: 1rem 1.25rem 1.5rem;
+    min-height: 500px;
+    padding: 1rem;
     overflow: hidden;
+    background: var(--white);
 }
 
 .connect-page .fb-page,
@@ -166,17 +172,22 @@
     box-sizing: border-box;
 }
 
-.connect-page .tabernacle-section .facebook-feed-card {
-    max-width: 100%;
+.connect-page .fb-xfbml-parse-ignore {
+    margin: 0;
+    padding: 2rem 1rem;
+    color: var(--text-muted);
+    text-align: center;
 }
 
-.connect-page .tabernacle-section .feed-header {
-    display: none;
+.connect-page .fb-xfbml-parse-ignore a {
+    color: var(--gold-dark, var(--gold));
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.connect-page .tabernacle-section .facebook-feed {
-    padding-top: 1rem;
-}
+/*========================================================
+    BUTTONS
+========================================================*/
 
 .connect-page .connect-button {
     display: inline-flex;
@@ -215,16 +226,13 @@
     transform: translateX(4px);
 }
 
-.connect-page .facebook-section .section-heading .connect-button {
-    display: none;
-}
-
 /*========================================================
     NEXT LIVE SERVICE
 ========================================================*/
 
 .connect-page .service-section {
-    padding: 0 0 5rem;
+    grid-column: 1 / -1;
+    padding: 1rem 0 5rem;
     background: var(--ivory);
 }
 
@@ -233,6 +241,8 @@
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 2.5rem;
+    max-width: 1100px;
+    margin-inline: auto;
     padding: clamp(2rem, 4vw, 3.5rem);
     background: var(--espresso);
     border: 1px solid rgba(200, 164, 93, 0.45);
@@ -307,44 +317,30 @@
 }
 
 /*========================================================
-    FALLBACK CONTENT
-========================================================*/
-
-.connect-page .fb-xfbml-parse-ignore {
-    margin: 0;
-    padding: 2rem 1rem;
-    color: var(--text-muted);
-    text-align: center;
-}
-
-.connect-page .fb-xfbml-parse-ignore a {
-    color: var(--gold-dark, var(--gold));
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.connect-page .fb-xfbml-parse-ignore a:hover {
-    text-decoration: underline;
-}
-
-/*========================================================
     RESPONSIVE DESIGN
 ========================================================*/
 
 @media (max-width: 900px) {
-    .connect-page .content-container,
+    .connect-page main {
+        display: block;
+    }
+
+    .connect-page .facebook-section,
+    .connect-page .tabernacle-section {
+        padding: 4rem 0;
+    }
+
     .connect-page .facebook-section .content-container,
     .connect-page .tabernacle-section .content-container {
-        width: min(calc(100% - 3rem), var(--container-width, 1200px));
+        width: min(calc(100% - 3rem), 700px);
     }
 
-    .connect-page .facebook-section .content-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .connect-page .section-heading {
+        min-height: 0;
     }
 
-    .connect-page .tabernacle-section .content-container {
-        padding-bottom: 2rem;
+    .connect-page .service-section {
+        padding: 1rem 0 4rem;
     }
 
     .connect-page .service-card {
@@ -363,7 +359,7 @@
     .connect-page .content-container,
     .connect-page .facebook-section .content-container,
     .connect-page .tabernacle-section .content-container {
-        width: min(calc(100% - 2rem), var(--container-width, 1200px));
+        width: min(calc(100% - 2rem), 700px);
     }
 
     .connect-page .page-intro {
@@ -374,23 +370,12 @@
         font-size: clamp(2.5rem, 11vw, 3.2rem);
     }
 
-    .connect-page .page-intro-text {
-        font-size: 1rem;
-    }
-
-    .connect-page .facebook-section .facebook-feed-card::before,
-    .connect-page .tabernacle-section .facebook-feed-card::before {
-        padding-inline: 1.25rem;
-    }
-
-    .connect-page .facebook-section .facebook-feed-card::after,
-    .connect-page .tabernacle-section .facebook-feed-card::after {
-        padding-inline: 1.25rem;
-        font-size: 1.65rem;
+    .connect-page .section-heading h2 {
+        font-size: 2.25rem;
     }
 
     .connect-page .facebook-feed {
-        padding-inline: 0.75rem;
+        padding-inline: 0.5rem;
     }
 
     .connect-page .service-card {
@@ -399,21 +384,5 @@
 
     .connect-page .service-actions {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .connect-page .page-intro h1 {
-        font-size: 2.7rem;
-    }
-
-    .connect-page .connect-button {
-        width: 100%;
-        box-sizing: border-box;
-        font-size: 0.7rem;
-    }
-
-    .connect-page .service-content h2 {
-        font-size: 2.2rem;
     }
 }
