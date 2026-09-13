@@ -2,17 +2,8 @@
 
     BAPBI CONNECT PAGE STYLESHEET
 
-    Master stylesheet:
-    css/styles.css
+    Unified connection center layout
 
-    This file is loaded after styles.css.
-    It styles only the Connect page content.
-
-========================================================*/
-
-
-/*========================================================
-    CONNECT PAGE FOUNDATION
 ========================================================*/
 
 .connect-page {
@@ -24,37 +15,14 @@
 }
 
 .connect-page .content-container {
-    width: min(
-        calc(100% - 4rem),
-        var(--container-width, 1200px)
-    );
+    width: min(calc(100% - 4rem), var(--container-width, 1200px));
     margin-inline: auto;
-}
-
-
-/*========================================================
-    PAGE INTRODUCTION
-========================================================*/
-
-.connect-page .page-intro {
-    padding: 6rem 0 5rem;
-    background:
-        linear-gradient(
-            180deg,
-            var(--ivory) 0%,
-            var(--cream) 100%
-        );
-    text-align: center;
-}
-
-.connect-page .page-intro .content-container {
-    max-width: 900px;
 }
 
 .connect-page .eyebrow {
     margin: 0 0 1rem;
     color: var(--gold);
-    font-family: "Inter", Arial, sans-serif;
+    font-family: var(--font-body, "Inter", Arial, sans-serif);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -62,84 +30,172 @@
     text-transform: uppercase;
 }
 
+/*========================================================
+    PAGE INTRODUCTION
+========================================================*/
+
+.connect-page .page-intro {
+    padding: 5.5rem 0 4.5rem;
+    background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+    text-align: center;
+}
+
+.connect-page .page-intro .content-container {
+    max-width: 850px;
+}
+
 .connect-page .page-intro h1 {
     margin: 0 0 1.25rem;
     color: var(--espresso);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
+    font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 600;
     line-height: 0.98;
 }
 
 .connect-page .page-intro-text {
-    max-width: 700px;
+    max-width: 680px;
     margin: 0 auto;
     color: var(--text-muted);
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     line-height: 1.8;
 }
 
-
 /*========================================================
-    SECTION HEADINGS
+    UNIFIED CONNECTION CENTER
 ========================================================*/
 
-.connect-page .section-heading {
-    max-width: 850px;
-    margin: 0 auto 3rem;
-    text-align: center;
+.connect-page .facebook-section,
+.connect-page .tabernacle-section {
+    padding: 0;
+    background: var(--ivory);
 }
 
-.connect-page .section-heading h2 {
-    margin: 0 0 1rem;
+.connect-page .facebook-section .content-container,
+.connect-page .tabernacle-section .content-container {
+    width: min(calc(100% - 4rem), var(--container-width, 1200px));
+}
+
+.connect-page .facebook-section .section-heading,
+.connect-page .tabernacle-section .section-heading {
+    display: none;
+}
+
+.connect-page .facebook-section .content-container,
+.connect-page .tabernacle-section .content-container {
+    max-width: 1200px;
+}
+
+.connect-page .facebook-section .content-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.connect-page .tabernacle-section .content-container {
+    display: block;
+    padding-bottom: 3rem;
+}
+
+.connect-page .facebook-section .facebook-feed-card,
+.connect-page .tabernacle-section .facebook-feed-card {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid rgba(72, 43, 20, 0.14);
+    box-shadow: 0 1rem 2.5rem rgba(45, 26, 12, 0.08);
+}
+
+.connect-page .facebook-section .facebook-feed-card::before,
+.connect-page .tabernacle-section .facebook-feed-card::before {
+    display: block;
+    padding: 1.5rem 1.75rem 1.25rem;
+    color: var(--gold-dark, var(--gold));
+    font-family: var(--font-body, "Inter", Arial, sans-serif);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(72, 43, 20, 0.12);
+}
+
+.connect-page .facebook-section .facebook-feed-card::after,
+.connect-page .tabernacle-section .facebook-feed-card::after {
+    display: block;
+    padding: 0 1.75rem 1.25rem;
     color: var(--espresso);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.05;
 }
 
-.connect-page .section-heading p:not(.eyebrow) {
-    max-width: 700px;
-    margin: 0 auto 1.5rem;
-    color: var(--text-muted);
-    font-size: 1rem;
-    line-height: 1.8;
+.connect-page .facebook-section .facebook-feed-card::before {
+    content: "Official BAPBI Page";
 }
 
+.connect-page .facebook-section .facebook-feed-card::after {
+    content: "BAPBI Official Updates";
+}
 
-/*========================================================
-    CONNECT BUTTON
-========================================================*/
+.connect-page .tabernacle-section .facebook-feed-card::before {
+    content: "Spiritual Covering";
+}
+
+.connect-page .tabernacle-section .facebook-feed-card::after {
+    content: "Bethesda Tabernacle Live Worship";
+}
+
+.connect-page .facebook-feed {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 300px;
+    padding: 1rem 1.25rem 1.5rem;
+    overflow: hidden;
+}
+
+.connect-page .fb-page,
+.connect-page .fb-page > span,
+.connect-page .fb-page iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+.connect-page .tabernacle-section .facebook-feed-card {
+    max-width: 100%;
+}
+
+.connect-page .tabernacle-section .feed-header {
+    display: none;
+}
+
+.connect-page .tabernacle-section .facebook-feed {
+    padding-top: 1rem;
+}
 
 .connect-page .connect-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    min-height: 3.25rem;
-    padding: 0.9rem 1.5rem;
+    gap: 0.75rem;
+    min-height: 3.1rem;
+    padding: 0.85rem 1.35rem;
     color: var(--espresso);
     background: var(--gold);
     border: 1px solid var(--gold);
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 0.78rem;
+    font-family: var(--font-body, "Inter", Arial, sans-serif);
+    font-size: 0.76rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.07em;
     line-height: 1.3;
     text-decoration: none;
     text-transform: uppercase;
-    transition:
-        background-color 0.25s ease,
-        border-color 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.connect-page .connect-button span {
-    font-size: 1.25rem;
-    line-height: 1;
-    transition: transform 0.25s ease;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 .connect-page .connect-button:hover {
@@ -149,157 +205,42 @@
     transform: translateY(-2px);
 }
 
+.connect-page .connect-button span {
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
 .connect-page .connect-button:hover span {
     transform: translateX(4px);
 }
 
-
-/*========================================================
-    BAPBI FACEBOOK SECTION
-========================================================*/
-
-.connect-page .facebook-section {
-    padding: 6rem 0;
-    background: var(--white);
-}
-
-.connect-page .facebook-feed-card {
-    width: min(100%, 950px);
-    margin: 0 auto;
-    background: var(--ivory);
-    border: 1px solid rgba(72, 43, 20, 0.16);
-    box-shadow:
-        0 1.5rem 4rem rgba(45, 26, 12, 0.1);
-}
-
-.connect-page .facebook-feed {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 300px;
-    padding: 2rem;
-    overflow: hidden;
-}
-
-.connect-page .fb-page {
-    width: 100%;
-    max-width: 900px;
-}
-
-.connect-page .fb-page > span,
-.connect-page .fb-page iframe {
-    max-width: 100%;
-}
-
-/* =========================================================
-   FACEBOOK EMBED MOBILE PROTECTION
-========================================================= */
-
-.connect-page .facebook-feed-card,
-.connect-page .facebook-feed,
-.connect-page .fb-page,
-.connect-page .fb-page > span,
-.connect-page .fb-page iframe {
-    max-width: 100% !important;
-    box-sizing: border-box;
-}
-
-.connect-page .facebook-feed {
-    width: 100%;
-    min-width: 0;
-    overflow-x: hidden;
-}
-
-.connect-page .fb-page {
-    width: 100% !important;
+.connect-page .facebook-section .section-heading .connect-button {
+    display: none;
 }
 
 /*========================================================
-    TABERNACLE SECTION
-========================================================*/
-
-.connect-page .tabernacle-section {
-    padding: 6rem 0;
-    background:
-        linear-gradient(
-            180deg,
-            var(--cream) 0%,
-            var(--ivory) 100%
-        );
-}
-
-.connect-page .tabernacle-section .facebook-feed-card {
-    background: var(--white);
-}
-
-.connect-page .feed-header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 2rem 2rem 1.5rem;
-    border-bottom: 1px solid rgba(72, 43, 20, 0.14);
-}
-
-.connect-page .feed-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--gold-dark, var(--gold));
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
-    text-transform: uppercase;
-}
-
-.connect-page .feed-header h3 {
-    margin: 0;
-    color: var(--espresso);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(1.6rem, 3vw, 2.3rem);
-    font-weight: 600;
-    line-height: 1.1;
-}
-
-.connect-page .service-time {
-    flex-shrink: 0;
-    color: var(--gold-dark, var(--gold));
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    line-height: 1.5;
-    text-align: right;
-    text-transform: uppercase;
-}
-
-
-/*========================================================
-    SERVICE SECTION
+    NEXT LIVE SERVICE
 ========================================================*/
 
 .connect-page .service-section {
-    padding: 6rem 0;
-    background: var(--espresso);
+    padding: 0 0 5rem;
+    background: var(--ivory);
 }
 
 .connect-page .service-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 3rem;
-    padding: clamp(2rem, 5vw, 4rem);
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.06),
-            rgba(255, 255, 255, 0.015)
-        );
+    gap: 2.5rem;
+    padding: clamp(2rem, 4vw, 3.5rem);
+    background: var(--espresso);
     border: 1px solid rgba(200, 164, 93, 0.45);
+    box-shadow: 0 1rem 2.5rem rgba(45, 26, 12, 0.12);
 }
 
 .connect-page .service-content {
-    max-width: 700px;
+    max-width: 720px;
 }
 
 .connect-page .service-content .eyebrow {
@@ -307,10 +248,10 @@
 }
 
 .connect-page .service-content h2 {
-    margin: 0 0 1.25rem;
+    margin: 0 0 1rem;
     color: var(--white);
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
+    font-size: clamp(2.2rem, 4vw, 3.7rem);
     font-weight: 600;
     line-height: 1.05;
 }
@@ -318,24 +259,24 @@
 .connect-page .service-content > p:not(.eyebrow) {
     margin: 0;
     color: rgba(255, 255, 255, 0.78);
-    font-size: 1.05rem;
+    font-size: 1rem;
     line-height: 1.8;
 }
 
 .connect-page .service-countdown {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     color: var(--gold-light, var(--gold));
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     font-weight: 600;
     letter-spacing: 0.04em;
     line-height: 1.1;
 }
 
 .connect-page .service-caption {
-    margin: 0.75rem 0 0;
+    margin: 0.65rem 0 0;
     color: rgba(255, 255, 255, 0.58);
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     line-height: 1.6;
 }
 
@@ -343,8 +284,8 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 1rem;
-    min-width: 230px;
+    gap: 0.85rem;
+    min-width: 240px;
 }
 
 .connect-page .service-actions .connect-button {
@@ -365,14 +306,13 @@
     border-color: var(--white);
 }
 
-
 /*========================================================
-    FACEBOOK FALLBACK CONTENT
+    FALLBACK CONTENT
 ========================================================*/
 
 .connect-page .fb-xfbml-parse-ignore {
     margin: 0;
-    padding: 2rem;
+    padding: 2rem 1rem;
     color: var(--text-muted);
     text-align: center;
 }
@@ -387,28 +327,24 @@
     text-decoration: underline;
 }
 
-
 /*========================================================
     RESPONSIVE DESIGN
 ========================================================*/
 
 @media (max-width: 900px) {
-
-    .connect-page .content-container {
-        width: min(
-            calc(100% - 3rem),
-            var(--container-width, 1200px)
-        );
+    .connect-page .content-container,
+    .connect-page .facebook-section .content-container,
+    .connect-page .tabernacle-section .content-container {
+        width: min(calc(100% - 3rem), var(--container-width, 1200px));
     }
 
-    .connect-page .page-intro {
-        padding: 5rem 0 4rem;
+    .connect-page .facebook-section .content-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .connect-page .facebook-section,
-    .connect-page .tabernacle-section,
-    .connect-page .service-section {
-        padding: 5rem 0;
+    .connect-page .tabernacle-section .content-container {
+        padding-bottom: 2rem;
     }
 
     .connect-page .service-card {
@@ -421,17 +357,13 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         min-width: 0;
     }
-
 }
 
-
 @media (max-width: 700px) {
-
-    .connect-page .content-container {
-        width: min(
-            calc(100% - 2rem),
-            var(--container-width, 1200px)
-        );
+    .connect-page .content-container,
+    .connect-page .facebook-section .content-container,
+    .connect-page .tabernacle-section .content-container {
+        width: min(calc(100% - 2rem), var(--container-width, 1200px));
     }
 
     .connect-page .page-intro {
@@ -440,115 +372,48 @@
 
     .connect-page .page-intro h1 {
         font-size: clamp(2.5rem, 11vw, 3.2rem);
-        line-height: 1;
     }
 
     .connect-page .page-intro-text {
         font-size: 1rem;
-        line-height: 1.7;
     }
 
-    .connect-page .section-heading h2 {
-        font-size: clamp(2.1rem, 9vw, 2.6rem);
-        line-height: 1.08;
+    .connect-page .facebook-section .facebook-feed-card::before,
+    .connect-page .tabernacle-section .facebook-feed-card::before {
+        padding-inline: 1.25rem;
     }
 
-    .connect-page .facebook-section,
-    .connect-page .tabernacle-section,
-    .connect-page .service-section {
-        padding: 4rem 0;
-    }
-
-    .connect-page .facebook-feed-card {
-        width: 100%;
+    .connect-page .facebook-section .facebook-feed-card::after,
+    .connect-page .tabernacle-section .facebook-feed-card::after {
+        padding-inline: 1.25rem;
+        font-size: 1.65rem;
     }
 
     .connect-page .facebook-feed {
-        padding: 1rem;
-    }
-
-    .connect-page .feed-header {
-        display: block;
-        padding: 1.5rem;
-    }
-
-    .connect-page .service-time {
-        display: block;
-        margin-top: 1rem;
-        text-align: left;
+        padding-inline: 0.75rem;
     }
 
     .connect-page .service-card {
         padding: 2rem 1.5rem;
     }
 
-    .connect-page .service-content h2 {
-        font-size: clamp(2.1rem, 9vw, 2.5rem);
-        line-height: 1.08;
-    }
-
     .connect-page .service-actions {
         grid-template-columns: 1fr;
     }
-
 }
 
-
 @media (max-width: 480px) {
-
     .connect-page .page-intro h1 {
         font-size: 2.7rem;
-    }
-
-    .connect-page .section-heading h2 {
-        font-size: 2.25rem;
     }
 
     .connect-page .connect-button {
         width: 100%;
         box-sizing: border-box;
-        padding-inline: 1rem;
         font-size: 0.7rem;
     }
 
     .connect-page .service-content h2 {
         font-size: 2.2rem;
     }
-
-    .connect-page .service-countdown {
-        font-size: 2rem;
-    }
-
-}
-
-
-/*========================================================
-    SIDE BY SIDE FACEBOOK FEEDS
-========================================================*/
-
-@media (min-width: 901px) {
-
-    .connect-page .facebook-section,
-    .connect-page .tabernacle-section {
-        float: left;
-        width: 50%;
-        box-sizing: border-box;
-    }
-
-    .connect-page .facebook-section .content-container,
-    .connect-page .tabernacle-section .content-container {
-        width: min(
-            calc(100% - 3rem),
-            600px
-        );
-    }
-
-    .connect-page .facebook-feed-card {
-        width: 100%;
-    }
-
-    .connect-page .service-section {
-        clear: both;
-    }
-
 }
