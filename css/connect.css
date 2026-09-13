@@ -520,3 +520,35 @@
     }
 
 }
+
+
+/*========================================================
+    SIDE BY SIDE FACEBOOK FEEDS
+========================================================*/
+
+@media (min-width: 901px) {
+
+    .connect-page .facebook-section,
+    .connect-page .tabernacle-section {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .connect-page .facebook-section .content-container,
+    .connect-page .tabernacle-section .content-container {
+        width: min(
+            calc(100% - 3rem),
+            600px
+        );
+    }
+
+    .connect-page .facebook-feed-card {
+        width: 100%;
+    }
+
+    .connect-page .service-section {
+        clear: both;
+    }
+
+}
