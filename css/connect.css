@@ -7,12 +7,12 @@
 @import url("https://raw.githubusercontent.com/brad-hobbswd/bapbi-redesign/5ff339f43612b31dcf5100fafcecd082637091e0/css/connect.css");
 
 .connect-page {
-    background: var(--ivory);
+    background: var(--ivory, #f7f0e6);
+    color: #222222;
     font-family: "Inter", Arial, sans-serif;
 }
 
 @media (min-width: 901px) {
-
     .connect-page main {
         display: grid;
         grid-template-columns: minmax(0, 500px) minmax(0, 500px);
@@ -25,7 +25,7 @@
     .connect-page .tabernacle-section {
         position: relative;
         padding: 3.5rem 0 3rem;
-        background: var(--ivory);
+        background: var(--ivory, #f7f0e6);
     }
 
     .connect-page .facebook-section .content-container,
@@ -40,8 +40,8 @@
     }
 
     .connect-page .section-heading h2 {
-        margin-bottom: 1rem;
-        color: var(--espresso);
+        margin: 0 0 1rem;
+        color: #171717;
         font-family: "Cormorant Garamond", Georgia, serif;
         font-size: clamp(1.8rem, 2.4vw, 2.55rem);
         font-weight: 600;
@@ -51,8 +51,25 @@
     .connect-page .section-heading p:not(.eyebrow) {
         max-width: 480px;
         margin: 0 auto 1.5rem;
+        color: #77716b;
         font-family: "Inter", Arial, sans-serif;
+        font-size: 0.98rem;
         line-height: 1.7;
+    }
+
+    .connect-page .section-heading .eyebrow {
+        margin: 0 0 1rem;
+        color: #9a641f;
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    .connect-page .section-heading .connect-button {
+        display: inline-flex;
     }
 
     .connect-page .facebook-section .section-heading h2 {
@@ -63,6 +80,7 @@
     .connect-page .facebook-section .section-heading h2::before {
         content: "BAPBI";
         display: block;
+        color: #171717;
         font-family: "Cormorant Garamond", Georgia, serif;
         font-size: clamp(2.5rem, 4vw, 3.5rem);
         font-weight: 600;
@@ -95,11 +113,26 @@
     }
 }
 
-@media (max-width: 900px) {
+.connect-page .connect-button {
+    color: #171717;
+    background: var(--gold, #c8a45d);
+    border-color: var(--gold, #c8a45d);
+    font-family: "Inter", Arial, sans-serif;
+}
 
+@media (max-width: 900px) {
     .connect-page .section-heading h2 {
+        color: #171717;
         font-family: "Cormorant Garamond", Georgia, serif;
         font-size: clamp(2rem, 7vw, 2.7rem);
+    }
+
+    .connect-page .section-heading p:not(.eyebrow) {
+        color: #77716b;
+    }
+
+    .connect-page .section-heading .eyebrow {
+        color: #9a641f;
     }
 
     .connect-page .facebook-section .section-heading h2 {
@@ -109,6 +142,7 @@
     .connect-page .facebook-section .section-heading h2::before {
         content: "BAPBI";
         display: block;
+        color: #171717;
         font-family: "Cormorant Garamond", Georgia, serif;
         font-size: clamp(2.5rem, 10vw, 3.5rem);
         font-weight: 600;
