@@ -35,9 +35,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         mobileNavigation.classList.add("open");
 
+        mobileNavigation.style.display = "flex";
+        mobileNavigation.style.position = "fixed";
+        mobileNavigation.style.inset = "0";
+        mobileNavigation.style.zIndex = "2000";
+        mobileNavigation.style.overflowY = "auto";
+        mobileNavigation.style.flexDirection = "column";
+
         document.body.classList.add(
             "mobile-navigation-open"
         );
+
+        document.body.style.overflow = "hidden";
 
         if (mobileMenuButton) {
 
@@ -68,9 +77,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         mobileNavigation.classList.remove("open");
 
+        mobileNavigation.style.display = "none";
+        mobileNavigation.style.position = "";
+        mobileNavigation.style.inset = "";
+        mobileNavigation.style.zIndex = "";
+        mobileNavigation.style.overflowY = "";
+        mobileNavigation.style.flexDirection = "";
+
         document.body.classList.remove(
             "mobile-navigation-open"
         );
+
+        document.body.style.overflow = "";
 
         if (mobileMenuButton) {
 
