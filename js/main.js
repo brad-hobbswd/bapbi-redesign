@@ -18,16 +18,6 @@
             if (event) event.preventDefault();
             mobileNavigation.classList.add("open");
             mobileNavigation.setAttribute("aria-hidden", "false");
-            mobileNavigation.style.display = "flex";
-            mobileNavigation.style.position = "fixed";
-            mobileNavigation.style.inset = "0";
-            mobileNavigation.style.zIndex = "9999";
-            mobileNavigation.style.width = "100%";
-            mobileNavigation.style.height = "100dvh";
-            mobileNavigation.style.overflowY = "auto";
-            mobileNavigation.style.flexDirection = "column";
-            mobileNavigation.style.background = "#120906";
-            mobileNavigation.style.padding = "24px 24px 40px";
             document.body.classList.add("mobile-navigation-open");
             document.body.style.overflow = "hidden";
             if (mobileMenuButton) {
@@ -40,16 +30,6 @@
             if (event) event.preventDefault();
             mobileNavigation.classList.remove("open");
             mobileNavigation.setAttribute("aria-hidden", "true");
-            mobileNavigation.style.display = "none";
-            mobileNavigation.style.position = "";
-            mobileNavigation.style.inset = "";
-            mobileNavigation.style.zIndex = "";
-            mobileNavigation.style.width = "";
-            mobileNavigation.style.height = "";
-            mobileNavigation.style.overflowY = "";
-            mobileNavigation.style.flexDirection = "";
-            mobileNavigation.style.background = "";
-            mobileNavigation.style.padding = "";
             document.body.classList.remove("mobile-navigation-open");
             document.body.style.overflow = "";
             if (mobileMenuButton) {
@@ -59,7 +39,6 @@
         }
 
         if (mobileMenuButton) {
-            mobileMenuButton.style.display = "inline-flex";
             mobileMenuButton.setAttribute("aria-expanded", "false");
             mobileMenuButton.addEventListener("click", function (event) {
                 event.stopPropagation();
