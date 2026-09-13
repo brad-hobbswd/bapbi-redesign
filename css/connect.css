@@ -4,7 +4,6 @@
 ========================================================*/
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap");
-@import url("https://raw.githubusercontent.com/brad-hobbswd/bapbi-redesign/5ff339f43612b31dcf5100fafcecd082637091e0/css/connect.css");
 
 .connect-page {
     background: var(--ivory, #f7f0e6);
@@ -44,7 +43,7 @@
 .connect-page .page-intro-text {
     max-width: 680px;
     margin: 0 auto;
-    color: var(--text-muted, #756b63);
+    color: #756b63;
     font-family: "Inter", Arial, sans-serif;
     font-size: 1.08rem;
     line-height: 1.8;
@@ -57,7 +56,7 @@
 
 .connect-page .eyebrow {
     margin: 0 0 1rem;
-    color: var(--gold-dark, var(--gold, #c8a45d));
+    color: #a66b16;
     font-family: "Inter", Arial, sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
@@ -90,7 +89,7 @@
 
 .connect-page .section-heading h2 {
     margin: 0 0 1rem;
-    color: var(--espresso, #2d1a0c);
+    color: #2d1a0c;
     font-family: "Cormorant Garamond", Georgia, serif;
     font-size: clamp(1.8rem, 2.4vw, 2.55rem);
     font-weight: 600;
@@ -100,7 +99,7 @@
 .connect-page .section-heading p:not(.eyebrow) {
     max-width: 480px;
     margin: 0 auto 1.5rem;
-    color: var(--text-muted, #756b63);
+    color: #756b63;
     font-family: "Inter", Arial, sans-serif;
     font-size: 0.98rem;
     line-height: 1.7;
@@ -114,7 +113,7 @@
 .connect-page .facebook-section .section-heading h2::before {
     content: "BAPBI";
     display: block;
-    color: var(--espresso, #2d1a0c);
+    color: #2d1a0c;
     font-family: "Cormorant Garamond", Georgia, serif;
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 600;
@@ -126,7 +125,7 @@
     width: min(100%, 405px);
     margin-inline: auto;
     overflow: hidden;
-    background: var(--white, #ffffff);
+    background: #ffffff;
     box-shadow: 0 0.75rem 2rem rgba(45, 26, 12, 0.06);
 }
 
@@ -141,9 +140,9 @@
     gap: 0.75rem;
     min-height: 3.1rem;
     padding: 0.85rem 1.35rem;
-    color: var(--espresso, #2d1a0c);
-    background: var(--gold, #c8a45d);
-    border: 1px solid var(--gold, #c8a45d);
+    color: #2d1a0c;
+    background: #c8a45d;
+    border: 1px solid #c8a45d;
     font-family: "Inter", Arial, sans-serif;
     font-size: 0.76rem;
     font-weight: 700;
@@ -154,9 +153,9 @@
 }
 
 .connect-page .connect-button:hover {
-    color: var(--white, #ffffff);
-    background: var(--espresso, #2d1a0c);
-    border-color: var(--espresso, #2d1a0c);
+    color: #ffffff;
+    background: #2d1a0c;
+    border-color: #2d1a0c;
 }
 
 .connect-page .tabernacle-section {
