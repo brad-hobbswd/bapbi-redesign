@@ -130,12 +130,28 @@
 
 .fall-semester-page .course-study-panel {
     display:grid;
-    grid-template-columns:90px minmax(0,1fr);
+    grid-template-columns:180px 90px minmax(0,1fr);
+    align-items:start;
     gap:2rem;
     padding:3rem;
     margin-bottom:7rem;
     background:var(--espresso);
     border:1px solid rgba(200,164,93,.5);
+}
+
+.fall-semester-page .course-study-panel::before {
+    content:"";
+    display:block;
+    width:180px;
+    aspect-ratio:2 / 3;
+    background-image:url("https://m.media-amazon.com/images/I/61qiYOvYJHL._AC_UF1000,1000_QL80_.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    border:1px solid rgba(247,240,230,.2);
+    box-shadow:0 1.25rem 2.5rem rgba(0,0,0,.25);
+    grid-column:1;
+    grid-row:1 / span 2;
 }
 
 .fall-semester-page .course-study-number,
@@ -145,6 +161,16 @@
     font-size:.72rem;
     font-weight:700;
     letter-spacing:.18em;
+}
+
+.fall-semester-page .course-study-number {
+    grid-column:2;
+    grid-row:1;
+}
+
+.fall-semester-page .course-study-panel > div:last-child {
+    grid-column:3;
+    grid-row:1;
 }
 
 .fall-semester-page .course-study-panel h3 {
@@ -299,6 +325,16 @@
         grid-template-columns:1fr;
         gap:1.25rem;
         margin-bottom:4.5rem;
+    }
+    .fall-semester-page .course-study-panel::before,
+    .fall-semester-page .course-study-number,
+    .fall-semester-page .course-study-panel > div:last-child {
+        grid-column:1;
+        grid-row:auto;
+    }
+    .fall-semester-page .course-study-panel::before {
+        width:min(230px,100%);
+        margin:0 auto .5rem;
     }
     .fall-semester-page .student-access-panel {
         margin-top:4.5rem;
