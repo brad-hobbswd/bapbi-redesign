@@ -34,6 +34,10 @@
     --text-light: #e9e4dc;
     --text-muted: #b9b0a7;
 
+    --font-body: "Inter", sans-serif;
+    --font-display: "Cinzel", serif;
+    --font-serif: "Cormorant Garamond", serif;
+
     --border-dark: rgba(213, 163, 47, 0.22);
     --border-light: rgba(38, 20, 8, 0.15);
 
