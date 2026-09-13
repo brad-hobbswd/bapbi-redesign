@@ -205,11 +205,11 @@
 }
 
 .archive-section .section-heading h2 {
-    color: var(--dark-text);
+    color: #2a211a;
 }
 
 .archive-section .section-heading p {
-    color: var(--dark-muted);
+    color: #62584e;
 }
 
 .archive-card {
@@ -240,7 +240,7 @@
 
 .archive-content h3 {
     margin: 0 0 12px;
-    color: var(--dark-text);
+    color: #2a211a;
     font-family: var(--font-display);
     font-size: 1.55rem;
     font-weight: 600;
@@ -250,7 +250,7 @@
 .archive-content p {
     max-width: 700px;
     margin: 0 0 24px;
-    color: var(--dark-muted);
+    color: #62584e;
     font-size: 0.9rem;
     line-height: 1.8;
 }
@@ -297,7 +297,7 @@
 
 .service-card h3 {
     margin: 0 0 13px;
-    color: var(--dark-text);
+    color: #2a211a;
     font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 600;
@@ -306,7 +306,7 @@
 
 .service-card p {
     margin: 0;
-    color: var(--dark-muted);
+    color: #62584e;
     font-size: 0.88rem;
     line-height: 1.8;
 }
@@ -387,11 +387,11 @@
 }
 
 .church-schedule-section .section-heading h2 {
-    color: var(--dark-text);
+    color: #2a211a;
 }
 
 .church-schedule-section .section-heading p {
-    color: var(--dark-muted);
+    color: #62584e;
 }
 
 .service-time {
