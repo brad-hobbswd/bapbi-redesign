@@ -2414,8 +2414,20 @@ a {
         display:
             flex;
 
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
         margin-left:
             auto;
+
+        position:
+            relative;
+
+        z-index:
+            2100;
 
     }
 
@@ -2431,11 +2443,17 @@ a {
         right:
             0;
 
+        bottom:
+            0;
+
         z-index:
             2000;
 
         display:
-            block;
+            flex;
+
+        flex-direction:
+            column;
 
         width:
             min(
@@ -2444,6 +2462,9 @@ a {
             );
 
         height:
+            100vh;
+
+        min-height:
             100vh;
 
         padding:
@@ -2459,19 +2480,35 @@ a {
             -20px 0 60px
             rgba(0, 0, 0, 0.5);
 
+        overflow-y:
+            auto;
+
+        overscroll-behavior:
+            contain;
+
+        visibility:
+            hidden;
+
+        pointer-events:
+            none;
+
         transform:
             translateX(110%);
 
         transition:
-            transform 0.35s ease;
-
-        overflow-y:
-            auto;
+            transform 0.35s ease,
+            visibility 0.35s ease;
 
     }
 
 
     .mobile-navigation.open {
+
+        visibility:
+            visible;
+
+        pointer-events:
+            auto;
 
         transform:
             translateX(0);
@@ -2517,13 +2554,26 @@ a {
     }
 
 
-    .mobile-nav-header button {
+    .mobile-nav-header button,
+    .mobile-menu-close {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
 
         width:
             40px;
 
         height:
             40px;
+
+        padding:
+            0;
 
         background:
             transparent;
@@ -2537,8 +2587,28 @@ a {
         font-size:
             1.8rem;
 
+        line-height:
+            1;
+
         cursor:
             pointer;
+
+    }
+
+
+    .mobile-nav-header button:hover,
+    .mobile-nav-header button:focus-visible,
+    .mobile-menu-close:hover,
+    .mobile-menu-close:focus-visible {
+
+        background:
+            var(--gold);
+
+        border-color:
+            var(--gold);
+
+        color:
+            var(--espresso);
 
     }
 
@@ -2567,6 +2637,26 @@ a {
         font-weight:
             700;
 
+        line-height:
+            1.5;
+
+        transition:
+            color 0.2s ease,
+            background 0.2s ease,
+            border-color 0.2s ease;
+
+    }
+
+
+    .mobile-navigation a:hover,
+    .mobile-navigation a:focus-visible {
+
+        color:
+            var(--gold-light);
+
+        background:
+            rgba(213, 163, 47, 0.08);
+
     }
 
 
@@ -2584,6 +2674,14 @@ a {
 
         border:
             1px solid var(--border-dark);
+
+    }
+
+
+    body.mobile-navigation-open {
+
+        overflow:
+            hidden;
 
     }
 
