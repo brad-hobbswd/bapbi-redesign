@@ -1,0 +1,218 @@
+/* =========================================================
+   BAPBI WEEKLY ASSIGNMENTS PAGE
+   Uses the shared BAPBI theme from css/styles.css.
+========================================================= */
+
+.weekly-assign-page main { margin: 0; }
+.weekly-assign-page .section-eyebrow {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    color: var(--gold);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+.weekly-assign-page h1,
+.weekly-assign-page h2,
+.weekly-assign-page h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+}
+.weekly-assign-page .weekly-hero {
+    padding: 7rem 0 6rem;
+    background: var(--espresso);
+    border-bottom: 1px solid rgba(200,164,93,.25);
+}
+.weekly-assign-page .weekly-hero h1 {
+    margin: 0;
+    color: var(--ivory);
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 600;
+    letter-spacing: -.035em;
+    line-height: .95;
+    text-transform: uppercase;
+}
+.weekly-assign-page .weekly-hero p {
+    max-width: 720px;
+    margin: 1.75rem 0 0;
+    color: rgba(247,240,230,.72);
+    font-family: Inter, Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+.weekly-assign-page .weekly-content-section {
+    padding: 7rem 0;
+    background: var(--ivory);
+}
+.weekly-assign-page .weekly-introduction {
+    display: grid;
+    grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr);
+    gap: 5rem;
+    align-items: end;
+    margin-bottom: 3.5rem;
+}
+.weekly-assign-page .weekly-introduction h2,
+.weekly-assign-page .section-heading h2 {
+    margin: 0;
+    color: var(--espresso);
+    font-size: clamp(2.7rem, 5vw, 4.5rem);
+    font-weight: 600;
+    letter-spacing: -.025em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.weekly-assign-page .weekly-introduction p,
+.weekly-assign-page .section-heading p {
+    margin: 0;
+    color: var(--text-muted);
+    font-family: Inter, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.85;
+}
+.weekly-assign-page .current-assignment-panel {
+    display: grid;
+    grid-template-columns: 180px minmax(0,1fr);
+    gap: 2.5rem;
+    padding: 3rem;
+    margin-bottom: 7rem;
+    background: var(--espresso);
+    border: 1px solid rgba(200,164,93,.5);
+}
+.weekly-assign-page .current-assignment-label {
+    color: var(--gold);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+.weekly-assign-page .assignment-week,
+.weekly-assign-page .assignment-date {
+    display: block;
+    color: var(--gold);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+.weekly-assign-page .current-assignment-content h2 {
+    margin: .75rem 0 1rem;
+    color: var(--ivory);
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-weight: 600;
+    line-height: 1;
+}
+.weekly-assign-page .current-assignment-content p {
+    max-width: 780px;
+    margin: 0 0 1rem;
+    color: rgba(247,240,230,.75);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .98rem;
+    line-height: 1.85;
+}
+.weekly-assign-page .current-assignment-content .assignment-focus {
+    color: var(--gold);
+    font-weight: 600;
+}
+.weekly-assign-page .assignment-status,
+.weekly-assign-page .assignment-card-status {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--gold);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.weekly-assign-page .section-heading {
+    max-width: 760px;
+    margin-bottom: 2.5rem;
+}
+.weekly-assign-page .assignment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 1.5rem;
+}
+.weekly-assign-page .assignment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 300px;
+    padding: 2.5rem;
+    background: #fff;
+    border: 1px solid rgba(16,27,43,.12);
+    box-shadow: 0 1rem 2.5rem rgba(16,27,43,.05);
+}
+.weekly-assign-page .assignment-card h3 {
+    margin: 1.5rem 0 1rem;
+    color: var(--espresso);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+.weekly-assign-page .assignment-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .94rem;
+    line-height: 1.8;
+}
+.weekly-assign-page .assignment-card-status { margin-top: auto; }
+.weekly-assign-page .weekly-note {
+    max-width: 850px;
+    margin-top: 5rem;
+    padding: 2rem 2.25rem;
+    border-left: 3px solid var(--gold);
+    background: rgba(255,255,255,.55);
+}
+.weekly-assign-page .weekly-note .section-eyebrow { margin-bottom: .75rem; }
+.weekly-assign-page .weekly-note p {
+    margin: 0;
+    color: var(--text-muted);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .95rem;
+    line-height: 1.8;
+}
+.weekly-assign-page .weekly-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.weekly-assign-page .weekly-actions .button-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 52px;
+    padding: 0 25px;
+    background: var(--espresso);
+    color: var(--ivory);
+    border: 1px solid var(--espresso);
+    text-decoration: none;
+}
+.weekly-assign-page .weekly-actions .button-outline span { color: var(--gold); font-size: 1.15rem; }
+.weekly-assign-page .weekly-actions .button-outline:hover,
+.weekly-assign-page .weekly-actions .button-outline:focus-visible {
+    background: var(--gold);
+    color: #261606;
+    border-color: var(--gold);
+}
+@media (max-width: 900px) {
+    .weekly-assign-page .weekly-introduction { grid-template-columns: 1fr; gap: 2rem; }
+    .weekly-assign-page .current-assignment-panel { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+@media (max-width: 650px) {
+    .weekly-assign-page .weekly-hero,
+    .weekly-assign-page .weekly-content-section { padding: 4.5rem 0; }
+    .weekly-assign-page .current-assignment-panel,
+    .weekly-assign-page .assignment-card { padding: 2rem 1.5rem; }
+    .weekly-assign-page .assignment-grid { grid-template-columns: 1fr; }
+    .weekly-assign-page .weekly-actions .button-outline { width: 100%; }
+}
