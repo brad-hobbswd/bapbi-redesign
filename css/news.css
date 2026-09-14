@@ -9,6 +9,24 @@
 .news-page {
     background: var(--news-ivory);
     color: var(--news-charcoal);
+    font-family: var(--font-body), "Inter", sans-serif;
+}
+
+.news-page h1,
+.news-page h2,
+.news-page h3,
+.news-page h4,
+.news-page h5,
+.news-page h6 {
+    font-family: var(--font-display), "Cinzel", serif;
+}
+
+.news-page p,
+.news-page li,
+.news-page time,
+.news-page a,
+.news-page span {
+    font-family: var(--font-body), "Inter", sans-serif;
 }
 
 .news-hero {
@@ -42,6 +60,7 @@
 .news-hero h1 {
     margin: 0 auto 24px;
     color: var(--news-white);
+    font-family: var(--font-display), "Cinzel", serif;
 }
 
 .news-hero p:not(.section-eyebrow) {
@@ -138,8 +157,40 @@
     font-style: italic;
 }
 
+/* Keep the shared BAPBI footer readable and on theme. */
+.news-page .site-footer,
+.news-page .site-footer p,
+.news-page .site-footer a,
+.news-page .site-footer span {
+    font-family: var(--font-body), "Inter", sans-serif;
+}
+
 .news-page .site-footer {
-    margin-top: 0;
+    background: var(--espresso);
+    color: var(--text-light);
+}
+
+.news-page .site-footer h2,
+.news-page .site-footer .footer-brand h2 {
+    font-family: var(--font-display), "Cinzel", serif;
+    color: var(--gold-light);
+}
+
+.news-page .site-footer .footer-description,
+.news-page .site-footer .footer-quote p,
+.news-page .site-footer .footer-bottom p,
+.news-page .site-footer .footer-links a,
+.news-page .site-footer .footer-brand p {
+    color: var(--text-muted);
+}
+
+.news-page .site-footer .footer-eyebrow {
+    color: var(--gold-light);
+}
+
+.news-page .site-footer .footer-links a:hover,
+.news-page .site-footer .footer-legal a:hover {
+    color: var(--gold-light);
 }
 
 @media (max-width: 700px) {
