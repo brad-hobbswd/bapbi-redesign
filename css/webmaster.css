@@ -50,7 +50,7 @@
 .webmaster-testimony-section { padding:105px 0; background:var(--navy,#101b2b); color:var(--ivory); }
 .webmaster-testimony-section h2,.webmaster-testimony-section p { color:var(--ivory); }
 .webmaster-testimony-section p { color:rgba(247,240,230,.80); }
-.webmaster-testimony-section .webmaster-copy-narrow p { margin:0 0 1.35rem; }
+.webmaster-testimony-section .webmaster-copy-narrow p { margin:0 0 1.6rem; }
 .webmaster-testimony-section .webmaster-copy-narrow p:last-child { margin-bottom:0; }
 .webmaster-timeline { list-style:none; margin:35px 0 0; padding:0; border-left:1px solid rgba(200,164,93,.65); }
 .webmaster-timeline li { position:relative; padding:0 0 30px 34px; }
