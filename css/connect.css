@@ -349,3 +349,13 @@
         margin-top: 1.5rem;
     }
 }
+
+/* =========================================================
+   SHARED STICKY SITE NAVIGATION
+   Keeps the BAPBI header visible while scrolling on every page.
+========================================================= */
+.site-header {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+}
