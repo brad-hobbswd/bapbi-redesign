@@ -1,0 +1,298 @@
+/* =========================================================
+   BAPBI SHARED FOOTER
+   Unified footer styling used across every BAPBI page.
+========================================================= */
+
+.site-footer {
+    position: relative;
+    width: 100%;
+    padding: 55px 0 0;
+    background: #100705;
+    border-top: 1px solid rgba(213, 163, 47, 0.28);
+    color: #f7f0e6;
+}
+
+.site-footer .content-container {
+    width: min(100% - 64px, 1280px);
+    margin: 0 auto;
+}
+
+.site-footer .footer-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 55px;
+    align-items: start;
+    padding-bottom: 45px;
+}
+
+.site-footer .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-footer .footer-brand img {
+    width: 78px;
+    height: 78px;
+    flex: 0 0 78px;
+    object-fit: contain;
+}
+
+.site-footer .footer-brand h2 {
+    margin: 0;
+    color: #e8c56a;
+    font-family: "Cinzel", Georgia, serif;
+    font-size: 1.5rem;
+    line-height: 1.1;
+}
+
+.site-footer .footer-brand p {
+    max-width: 260px;
+    margin: 4px 0 0;
+    color: #b8aaa0;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.site-footer .footer-description {
+    max-width: 460px;
+    margin: 14px 0 0;
+    color: #f2e9df;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.site-footer .footer-quote {
+    min-height: 115px;
+    padding: 15px 40px;
+    border-left: 1px solid #a77a22;
+    border-right: 1px solid #a77a22;
+    text-align: center;
+}
+
+.site-footer .footer-eyebrow {
+    display: block;
+    margin: 0 0 10px;
+    color: #f2e9df;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: none;
+}
+
+.site-footer .footer-quote p {
+    margin: 0;
+    color: #f7f0e6;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.45;
+}
+
+.site-footer .footer-links-section {
+    text-align: left;
+}
+
+.site-footer .footer-links-section .footer-eyebrow {
+    margin-bottom: 9px;
+    font-size: .95rem;
+}
+
+.site-footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px 25px;
+}
+
+.site-footer .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 3px 0;
+    color: #b8aaa0;
+    font-size: .78rem;
+    line-height: 1.4;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-links a:focus-visible {
+    color: #e8c56a;
+    transform: translateY(-1px);
+}
+
+.site-footer .footer-divider {
+    width: min(100% - 64px, 1280px);
+    height: 1px;
+    margin: 0 auto;
+    background: rgba(213, 163, 47, .18);
+}
+
+.site-footer .footer-divider .content-container {
+    width: 100%;
+}
+
+.site-footer .footer-divider span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(213, 163, 47, .55), transparent);
+}
+
+.site-footer .footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 25px 30px;
+    padding: 25px 0 28px;
+}
+
+.site-footer .footer-bottom p {
+    margin: 0;
+    color: #82756d;
+    font-size: .68rem;
+    line-height: 1.6;
+}
+
+.site-footer .footer-legal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.site-footer .footer-legal a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 3px 0;
+    color: #b8aaa0;
+    font-size: .78rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.site-footer .footer-legal a:not(:last-child)::after {
+    content: "•";
+    margin: 0 20px;
+    color: #a77a22;
+}
+
+.site-footer .footer-legal a:hover,
+.site-footer .footer-legal a:focus-visible {
+    color: #e8c56a;
+}
+
+.site-footer .footer-motto {
+    justify-self: end;
+    color: #a77a22 !important;
+    font-size: .68rem !important;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .site-footer {
+        padding-top: 45px;
+    }
+
+    .site-footer .content-container,
+    .site-footer .footer-divider {
+        width: min(100% - 40px, 760px);
+    }
+
+    .site-footer .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .site-footer .footer-brand {
+        justify-content: center;
+    }
+
+    .site-footer .footer-brand p,
+    .site-footer .footer-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .site-footer .footer-quote {
+        min-height: 0;
+        padding: 28px 20px;
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid #a77a22;
+        border-bottom: 1px solid #a77a22;
+    }
+
+    .site-footer .footer-links-section {
+        text-align: center;
+    }
+
+    .site-footer .footer-links {
+        justify-content: center;
+    }
+
+    .site-footer .footer-bottom {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .site-footer .footer-motto {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer .content-container,
+    .site-footer .footer-divider {
+        width: min(100% - 32px, 520px);
+    }
+
+    .site-footer .footer-brand {
+        flex-direction: column;
+    }
+
+    .site-footer .footer-brand img {
+        width: 72px;
+        height: 72px;
+        flex-basis: 72px;
+    }
+
+    .site-footer .footer-description {
+        font-size: .9rem;
+        line-height: 1.65;
+    }
+
+    .site-footer .footer-quote p {
+        font-size: 1.2rem;
+    }
+
+    .site-footer .footer-links {
+        gap: 8px 18px;
+    }
+
+    .site-footer .footer-links a,
+    .site-footer .footer-legal a {
+        font-size: .76rem;
+    }
+
+    .site-footer .footer-bottom {
+        padding-bottom: 24px;
+    }
+}
