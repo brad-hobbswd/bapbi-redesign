@@ -17,7 +17,14 @@
 .top-message p { color: var(--gold-light); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; }
 .top-message span { color: var(--gold); padding: 0 5px; }
 
-.site-header { position: relative; z-index: 1000; background: linear-gradient(180deg, #160b07, #100807); border-bottom: 1px solid var(--border-dark); }
+/* Keep the entire site header visible while the page scrolls. */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(180deg, #160b07, #100807);
+    border-bottom: 1px solid var(--border-dark);
+}
 
 .main-navigation { width: min(calc(100% - 48px), 1400px); min-height: 82px; margin: 0 auto; display: flex; align-items: center; gap: 34px; }
 .brand { display: inline-flex; align-items: center; gap: 14px; flex-shrink: 0; }
