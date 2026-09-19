@@ -296,3 +296,61 @@
         padding-bottom: 24px;
     }
 }
+
+
+/* =========================================================
+   FINAL FOOTER NORMALIZATION
+   Keeps page specific styles from changing the shared footer.
+========================================================= */
+
+body .site-footer.site-footer {
+    background: #100705 !important;
+    color: #f7f0e6 !important;
+    border-top-color: rgba(213, 163, 47, 0.28) !important;
+}
+
+body .site-footer.site-footer .footer-brand h2 {
+    color: #e8c56a !important;
+    font-family: "Cinzel", Georgia, serif !important;
+}
+
+body .site-footer.site-footer .footer-brand p,
+body .site-footer.site-footer .footer-links a,
+body .site-footer.site-footer .footer-legal a {
+    color: #b8aaa0 !important;
+}
+
+body .site-footer.site-footer .footer-description {
+    color: #f2e9df !important;
+}
+
+body .site-footer.site-footer .footer-eyebrow {
+    color: #f2e9df !important;
+}
+
+body .site-footer.site-footer .footer-quote {
+    border-left-color: #a77a22 !important;
+    border-right-color: #a77a22 !important;
+}
+
+body .site-footer.site-footer .footer-quote p {
+    color: #f7f0e6 !important;
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+}
+
+body .site-footer.site-footer .footer-motto {
+    color: #a77a22 !important;
+}
+
+body .site-footer.site-footer .footer-legal a:not(:last-child)::after {
+    color: #a77a22 !important;
+}
+
+@media (max-width: 900px) {
+    body .site-footer.site-footer .footer-quote {
+        border-left: 0 !important;
+        border-right: 0 !important;
+        border-top-color: #a77a22 !important;
+        border-bottom-color: #a77a22 !important;
+    }
+}
