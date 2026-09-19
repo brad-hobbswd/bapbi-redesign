@@ -14,6 +14,51 @@
     <link rel="stylesheet" href="css/legal.css">
     <link rel="stylesheet" href="css/footer.css">
 
+    <style>
+        .error-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .error-actions .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
+            min-height: 48px;
+            padding: 12px 22px;
+            border: 1px solid var(--gold-dark);
+            border-radius: 3px;
+            background: var(--gold);
+            color: #160b07;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-decoration: none;
+            text-align: center;
+            transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease;
+        }
+
+        .error-actions .btn:hover,
+        .error-actions .btn:focus-visible {
+            background: var(--gold-light);
+            color: #100705;
+            border-color: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .error-actions {
+                flex-direction: column;
+            }
+
+            .error-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+
 </head>
 <body>
     <header class="site-header">
@@ -101,7 +146,7 @@
                 <article class="legal-card">
                     <h2>The page you requested could not be found.</h2>
                     <p>The address may be incorrect, the page may have moved, or the link may no longer be available. Please use one of the options below to continue.</p>
-                    <div class="hero-actions" style="margin-top:24px;display:flex;flex-wrap:wrap;gap:14px;">
+                    <div class="hero-actions error-actions">
                         <a class="btn primary" href="index.html">Return Home</a>
                         <a class="btn primary" href="enrollment.html">Enrollment</a>
                         <a class="btn primary" href="contact.html">Contact BAPBI</a>
