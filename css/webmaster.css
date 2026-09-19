@@ -69,3 +69,7 @@
 .webmaster-contact-section .button { margin-top:18px; }
 @media (max-width:900px) { .webmaster-profile-grid,.webmaster-two-column { grid-template-columns:1fr; gap:45px; } .webmaster-profile-copy,.webmaster-two-column article,.webmaster-copy-narrow { max-width:none; } }
 @media (max-width:650px) { .webmaster-page .content-container { width:min(100% - 34px,1180px); } .webmaster-introduction,.webmaster-profile-section,.webmaster-light-section,.webmaster-dark-section,.webmaster-projects-section,.webmaster-testimony-section,.webmaster-scripture-section,.webmaster-contact-section { padding:72px 0; } .webmaster-project-grid { grid-template-columns:1fr; } .webmaster-project-card { padding:26px; } }
+
+
+/* Shared sticky site navigation */
+.site-header { position: sticky !important; top: 0; z-index: 1000; }
