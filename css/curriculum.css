@@ -1,187 +1,317 @@
 /* =========================================================
-   BAPBI CURRICULUM
-   SCRIPTURE PRESENTATION
-   This file supplements curriculum.css only.
-   ========================================================= */
+   BAPBI CURRICULUM PAGE
+   Page specific styles only
+   Works with css/styles.css
+========================================================= */
 
+/* PAGE INTRO */
 
-/* =========================================================
-   SCRIPTURE REFERENCES
-   Keeps Scripture beneath each curriculum area instead of
-   squeezing it into the narrow number/content columns.
-   ========================================================= */
-
-.curriculum-area > .scripture-reference {
-    grid-column: 1 / -1;
-    width: 100%;
-    box-sizing: border-box;
-
-    margin: 0;
-    padding: 24px 44px 28px 134px;
-
-    border-top: 1px solid var(--border-light);
-
-    background: transparent;
+.page-intro {
+    padding: 88px 0 78px;
+    background:
+        linear-gradient(
+            180deg,
+            var(--espresso) 0%,
+            var(--espresso-light) 100%
+        );
+    border-bottom: 1px solid var(--border-dark);
 }
 
-
-/* Scripture text */
-
-.curriculum-area > .scripture-reference p {
-    max-width: 850px;
-    margin: 0;
-
-    color: var(--curriculum-dark-text);
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.22rem;
-    font-style: italic;
-    font-weight: 600;
-    line-height: 1.55;
-}
-
-
-/* Scripture reference */
-
-.curriculum-area > .scripture-reference span {
-    display: block;
-
-    margin-top: 7px;
-
-    color: var(--gold-dark);
-
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
-    text-transform: uppercase;
-}
-
-
-/* =========================================================
-   PROGRESSION SCRIPTURE
-   ========================================================= */
-
-.progression-scripture {
-    max-width: 850px;
-    margin-top: 34px;
-    padding-top: 28px;
-    border-top: 1px solid var(--border-dark);
-}
-
-.progression-scripture p {
-    margin: 0;
-
+.page-intro h1 {
+    margin: 18px 0 22px;
     color: var(--ivory);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.25rem;
-    font-style: italic;
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
     font-weight: 600;
-    line-height: 1.65;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
 }
 
-.progression-scripture span {
-    display: block;
-    margin-top: 8px;
-
+.page-intro .intro-lead {
+    max-width: 760px;
+    margin: 0 0 22px;
     color: var(--gold-light);
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-family: var(--font-serif);
+    font-size: clamp(1.45rem, 2.4vw, 2rem);
+    line-height: 1.25;
 }
 
-
-/* =========================================================
-   PURPOSE SCRIPTURE
-   ========================================================= */
-
-.purpose-scripture {
-    max-width: 520px;
-    margin-top: 28px;
-    padding-top: 22px;
-    border-top: 1px solid var(--border-dark);
-}
-
-.purpose-scripture p {
+.page-intro .intro-support {
+    max-width: 760px;
     margin: 0;
-
     color: var(--text-muted);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight: 600;
-    line-height: 1.65;
+    font-size: 1rem;
+    line-height: 1.85;
 }
 
-.purpose-scripture span {
-    display: block;
-    margin-top: 8px;
+/* CURRICULUM OVERVIEW */
 
-    color: var(--gold-light);
-    font-size: 0.68rem;
+.content-section {
+    padding: 92px 0;
+}
+
+.curriculum-overview {
+    background: var(--ivory);
+    color: #2b1a11;
+}
+
+.curriculum-overview .section-heading {
+    margin-bottom: 56px;
+}
+
+.curriculum-overview .section-eyebrow {
+    color: var(--gold-dark);
+}
+
+.curriculum-overview .section-heading h2 {
+    color: #2b1a11;
+}
+
+.curriculum-overview .section-heading > p:last-child {
+    color: #6d6058;
+}
+
+.curriculum-path {
+    display: grid;
+    gap: 24px;
+}
+
+/* CURRICULUM AREAS */
+
+.curriculum-area {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    column-gap: 30px;
+    align-items: start;
+    padding: 42px 44px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 15px 35px rgba(38, 20, 8, 0.06);
+}
+
+.curriculum-number {
+    color: var(--gold-dark);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.curriculum-area-content {
+    min-width: 0;
+}
+
+.area-label {
+    margin: 0 0 12px;
+    color: var(--gold-dark);
+    font-size: 0.72rem;
     font-weight: 800;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 }
 
+.curriculum-area-content h3 {
+    margin: 0 0 16px;
+    color: #2b1a11;
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+    font-weight: 600;
+    line-height: 1.2;
+}
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+.curriculum-area-content > p {
+    max-width: 760px;
+    margin: 0 0 28px;
+    color: #5e514a;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.study-list {
+    display: grid;
+    gap: 16px;
+}
+
+.study-list > div {
+    padding: 18px 20px;
+    background: rgba(246, 240, 229, 0.72);
+    border-left: 3px solid var(--gold);
+}
+
+.study-list h4 {
+    margin: 0 0 6px;
+    color: #351707;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.study-list p {
+    margin: 0;
+    color: #6d6058;
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+/* PROGRESSION */
+
+.progression-section {
+    padding: 92px 0;
+    background:
+        linear-gradient(
+            135deg,
+            var(--espresso) 0%,
+            var(--brown) 100%
+        );
+}
+
+.progression-panel {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 64px;
+    text-align: center;
+    border: 1px solid var(--border-dark);
+    background: rgba(18, 9, 6, 0.48);
+    box-shadow: var(--shadow);
+}
+
+.progression-panel .section-eyebrow {
+    color: var(--gold-light);
+}
+
+.progression-panel h2 {
+    margin: 16px auto 22px;
+    color: var(--ivory);
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 3.1rem);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.progression-panel > p:not(.section-eyebrow) {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    line-height: 1.85;
+}
+
+/* PURPOSE */
+
+.purpose-section {
+    padding: 100px 0;
+    background: var(--ivory);
+}
+
+.purpose-panel {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 68px;
+    background: #fff;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 20px 55px rgba(38, 20, 8, 0.08);
+}
+
+.purpose-content {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.purpose-content .section-eyebrow {
+    color: var(--gold-dark);
+}
+
+.purpose-content h2 {
+    margin: 16px 0 26px;
+    color: #2b1a11;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.purpose-content h2 span {
+    display: block;
+    color: var(--gold-dark);
+}
+
+.purpose-statement {
+    margin: 0;
+    color: #5e514a;
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
-
-    .curriculum-area > .scripture-reference {
-        padding: 22px 32px 26px 104px;
+    .page-intro {
+        padding: 72px 0 62px;
     }
 
+    .content-section,
+    .progression-section {
+        padding: 72px 0;
+    }
+
+    .curriculum-area {
+        grid-template-columns: 70px minmax(0, 1fr);
+        column-gap: 22px;
+        padding: 34px 30px;
+    }
+
+    .progression-panel,
+    .purpose-panel {
+        padding: 48px 38px;
+    }
+
+    .purpose-section {
+        padding: 76px 0;
+    }
 }
 
-
-@media (max-width: 600px) {
-
-    .curriculum-area > .scripture-reference {
-        grid-column: 1;
-        padding: 22px 20px 26px;
+@media (max-width: 640px) {
+    .page-intro {
+        padding: 58px 0 52px;
     }
 
-    .curriculum-area > .scripture-reference p {
-        font-size: 1.08rem;
-        line-height: 1.6;
+    .page-intro h1 {
+        font-size: clamp(2.35rem, 12vw, 3.6rem);
     }
 
-    .curriculum-area > .scripture-reference span {
-        font-size: 0.63rem;
+    .content-section,
+    .progression-section {
+        padding: 58px 0;
     }
 
-    .progression-scripture {
-        margin-top: 28px;
-        padding-top: 22px;
+    .curriculum-area {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 28px 22px;
     }
 
-    .progression-scripture p {
-        font-size: 1.1rem;
-        line-height: 1.6;
+    .curriculum-number {
+        font-size: 2.2rem;
     }
 
-    .purpose-scripture {
-        margin-top: 24px;
-        padding-top: 20px;
+    .curriculum-area-content h3 {
+        font-size: 1.55rem;
     }
 
-    .purpose-scripture p {
-        font-size: 1.08rem;
-        line-height: 1.6;
+    .study-list {
+        gap: 12px;
     }
 
-}
-
-
-@media (max-width: 400px) {
-
-    .curriculum-area > .scripture-reference {
-        padding: 20px 17px 24px;
+    .study-list > div {
+        padding: 16px;
     }
 
+    .progression-panel,
+    .purpose-panel {
+        padding: 34px 24px;
+    }
+
+    .purpose-section {
+        padding: 62px 0;
+    }
 }
