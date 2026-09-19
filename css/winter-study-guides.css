@@ -190,3 +190,7 @@
         text-align: center;
     }
 }
+
+
+/* Shared sticky site navigation */
+.site-header { position: sticky !important; top: 0; z-index: 1000; }
