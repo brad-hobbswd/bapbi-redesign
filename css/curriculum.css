@@ -221,6 +221,39 @@
 }
 
 /* =========================================================
+   SCRIPTURE REFERENCES
+   Scripture is integrated into each curriculum area.
+   ========================================================= */
+
+.scripture-reference {
+    max-width: 760px;
+    margin-top: 30px;
+    padding: 20px 24px;
+    border-left: 3px solid var(--gold-dark);
+    background: rgba(159, 104, 22, 0.06);
+}
+
+.scripture-reference p {
+    margin: 0;
+    color: var(--curriculum-dark-text);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+.scripture-reference span {
+    display: block;
+    margin-top: 10px;
+    color: var(--gold-dark);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+/* =========================================================
    CURRICULUM PROGRESSION
    ========================================================= */
 
