@@ -106,3 +106,7 @@
     .legal-card { padding: 28px 22px; }
     .legal-card h2 { font-size: 1.18rem; }
 }
+
+
+/* Shared sticky site navigation */
+.site-header { position: sticky !important; top: 0; z-index: 1000; }
