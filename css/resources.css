@@ -132,3 +132,7 @@
 @media (prefers-reduced-motion:reduce) {
     *,*::before,*::after { transition-duration:.01ms !important; }
 }
+
+
+/* Shared sticky site navigation */
+.site-header { position: sticky !important; top: 0; z-index: 1000; }
