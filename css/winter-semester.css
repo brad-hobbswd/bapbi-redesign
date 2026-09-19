@@ -315,3 +315,7 @@
 .winter-semester-page .winter-study-panel p {
     color: #e6d9ca !important;
 }
+
+
+/* Shared sticky site navigation */
+.site-header { position: sticky !important; top: 0; z-index: 1000; }
