@@ -118,6 +118,95 @@
     color: var(--gold);
     font-weight: 600;
 }
+.weekly-assign-page .assignment-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 1px;
+    margin: 2rem 0 2.5rem;
+    background: rgba(200,164,93,.25);
+    border: 1px solid rgba(200,164,93,.25);
+}
+.weekly-assign-page .assignment-details > div {
+    display: flex;
+    flex-direction: column;
+    gap: .45rem;
+    padding: 1.25rem;
+    background: rgba(255,255,255,.035);
+}
+.weekly-assign-page .assignment-details strong {
+    color: var(--gold);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.weekly-assign-page .assignment-details span {
+    color: rgba(247,240,230,.78);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .88rem;
+    line-height: 1.55;
+}
+.weekly-assign-page .discussion-questions {
+    margin-top: 2.5rem;
+    padding: 2.25rem;
+    background: rgba(255,255,255,.055);
+    border: 1px solid rgba(200,164,93,.28);
+}
+.weekly-assign-page .discussion-questions .section-eyebrow {
+    margin-bottom: .5rem;
+}
+.weekly-assign-page .discussion-questions h3 {
+    margin: 0 0 1rem;
+    color: var(--ivory);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+.weekly-assign-page .discussion-questions .discussion-intro {
+    max-width: 760px;
+    margin-bottom: 1.75rem;
+}
+.weekly-assign-page .discussion-questions ol {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding-left: 1.7rem;
+}
+.weekly-assign-page .discussion-questions li {
+    padding-left: .55rem;
+    color: rgba(247,240,230,.82);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .94rem;
+    line-height: 1.7;
+}
+.weekly-assign-page .discussion-questions li::marker {
+    color: var(--gold);
+    font-weight: 700;
+}
+.weekly-assign-page .discussion-questions li strong {
+    font-weight: 600;
+}
+.weekly-assign-page .assignment-preparation-note {
+    margin-top: 1.75rem;
+    padding: 1.5rem 1.75rem;
+    background: rgba(200,164,93,.08);
+    border-left: 3px solid var(--gold);
+}
+.weekly-assign-page .assignment-preparation-note strong {
+    display: block;
+    margin-bottom: .4rem;
+    color: var(--gold);
+    font-family: Inter, Arial, sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+.weekly-assign-page .assignment-preparation-note p {
+    margin: 0;
+}
 .weekly-assign-page .assignment-status,
 .weekly-assign-page .assignment-card-status {
     display: inline-block;
@@ -207,16 +296,17 @@
 @media (max-width: 900px) {
     .weekly-assign-page .weekly-introduction { grid-template-columns: 1fr; gap: 2rem; }
     .weekly-assign-page .current-assignment-panel { grid-template-columns: 1fr; gap: 1.25rem; }
+    .weekly-assign-page .assignment-details { grid-template-columns: 1fr; }
 }
 @media (max-width: 650px) {
     .weekly-assign-page .weekly-hero,
     .weekly-assign-page .weekly-content-section { padding: 4.5rem 0; }
     .weekly-assign-page .current-assignment-panel,
     .weekly-assign-page .assignment-card { padding: 2rem 1.5rem; }
+    .weekly-assign-page .discussion-questions { padding: 1.5rem; }
     .weekly-assign-page .assignment-grid { grid-template-columns: 1fr; }
     .weekly-assign-page .weekly-actions .button-outline { width: 100%; }
 }
-
 
 /* Shared sticky site navigation */
 .site-header { position: sticky !important; top: 0; z-index: 1000; }
